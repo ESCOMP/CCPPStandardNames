@@ -156,7 +156,7 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
 * `pressure_dependent_ratio_of_dry_air_to_water_vapor_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
     * `real(kind=kind_phys)`: units = 1
 ## diagnostics
-* `total_precipitation_at_surface`: Total precipitation at surface
+* `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1
 ## constituents
 * `water_vapor_specific_humidity`: Water vapor specific humidity
