@@ -20,7 +20,7 @@ Dimension standard names come in sets of six related standard names for each dim
 ```
 Note that the cap generator may substitute among standard names in this category in order to properly call suite parts and individual schemes. In the substitutions below, the name on the left is the standard_name in the dimensions field of the caller while the name(s) on the right is (are) the standard name(s) of the callee (in the form used in the subroutine call).
 ```
-[dim_name]_dimension ==> 1:[dim_name]_loop_extent
+[dim_name]_dimension ==> 1:[dim_name]_dimension
 [dim_name]_loop_extent ==> 1:[dim_name]_loop_extent
 [dim_name]_begin:[dim_name]_end ==> 1:[dim_name]_loop_extent
 [dim_name]_begin:[dim_name]_end ==> 1:[dim_name]_dimension
