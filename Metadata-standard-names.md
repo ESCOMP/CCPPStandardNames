@@ -9,7 +9,7 @@
 * [standard_variables](#standard_variables)
 
 ## dimensions
-Dimension standard names come in sets of six related standard names for each dimension:
+Dimension standard names may come in sets of six related standard names for each dimension:
 ```
 [dim_name]_dimension -- The full dimension size
 [dim_name]_loop_extent -- Size of dim for current call
@@ -26,12 +26,16 @@ Note that the cap generator may substitute among standard names in this category
 [dim_name]_begin:[dim_name]_end ==> 1:[dim_name]_dimension
 ```
 Also note that horizontal_dimension should be used in xxx_[timestep_]init and xxx_[timestep_]final routines but not in xxx_run routines.
-Below are the currently recognized dimension types
+Currently, the only dimension which supports all six dimension types is horizontal_dimension. This and other supported dimension standard names are listed below.
 * `horizontal_dimension`: Size horizontal dimension
     * `integer`: units = count
 * `vertical_layer_dimension`: number of vertical levels
     * `integer`: units = count
 * `vertical_interface_dimension`: number of vertical interfaces
+    * `integer`: units = count
+* `vertical_layer_index`: index of a particular vertical level
+    * `integer`: units = count
+* `vertical_interface_index`: index of a particular vertical level
     * `integer`: units = count
 * `index_of_bottom_vertical_layer`: Index of bottom vertical layer
     * `integer`: units = index
@@ -41,7 +45,9 @@ Below are the currently recognized dimension types
     * `integer`: units = index
 * `index_of_top_vertical_interface`: Index of top vertical interface
     * `integer`: units = index
-* `thread_block_dimension`: Number of thread blocks
+* `thread_block_dimension`: Total number of thread blocks which the host model may use to call CCPP physics run groups during the CCPP run phase.
+    * `integer`: units = none
+* `thread_block_index`: Number of current thread block. This variable may only be used during CCPP run phase
     * `integer`: units = none
 ## constants
 * `gas_constant_dry_air`: Gas constant dry air

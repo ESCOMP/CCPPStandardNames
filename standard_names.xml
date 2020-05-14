@@ -1,6 +1,6 @@
 <standard_names name="CCPP Standard Name Library" version="1.0">
   <section name="dimensions"
-           comment="Dimension standard names come in sets of six
+           comment="Dimension standard names may come in sets of six
                     related standard names for each dimension:\n
                     ```\n
                     [dim_name]_dimension -- The full dimension size\n
@@ -28,7 +28,10 @@
                     Also note that horizontal_dimension should be used in
                     xxx_[timestep_]init and xxx_[timestep_]final routines
                     but not in xxx_run routines.\n
-                    Below are the currently recognized dimension types\n">
+                    Currently, the only dimension which supports all
+                    six dimension types is horizontal_dimension. This and
+                    other supported dimension standard names are
+                    listed below.\n">
     <standard_name name="horizontal_dimension"
                    long_name="Size horizontal dimension">
       <type units="count">integer</type>
@@ -39,6 +42,14 @@
     </standard_name>
     <standard_name name="vertical_interface_dimension"
                    long_name="number of vertical interfaces">
+      <type units="count">integer</type>
+    </standard_name>
+    <standard_name name="vertical_layer_index"
+                   long_name="index of a particular vertical level">
+      <type units="count">integer</type>
+    </standard_name>
+    <standard_name name="vertical_interface_index"
+                   long_name="index of a particular vertical level">
       <type units="count">integer</type>
     </standard_name>
     <standard_name name="index_of_bottom_vertical_layer">
@@ -54,7 +65,11 @@
       <type units="index">integer</type>
     </standard_name>
     <standard_name name="thread_block_dimension"
-                   long_name="Number of thread blocks">
+                   long_name="Total number of thread blocks which the host model may use to call CCPP physics run groups during the CCPP run phase.">
+      <type units="none">integer</type>
+    </standard_name>
+    <standard_name name="thread_block_index"
+                   long_name="Number of current thread block. This variable may only be used during CCPP run phase">
       <type units="none">integer</type>
     </standard_name>
   </section>
