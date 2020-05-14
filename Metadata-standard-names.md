@@ -35,7 +35,7 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `integer`: units = count
 * `vertical_layer_index`: index of a particular vertical level
     * `integer`: units = count
-* `vertical_interface_index`: index of a particular vertical level
+* `vertical_interface_index`: index of a particular vertical interface
     * `integer`: units = count
 * `index_of_bottom_vertical_layer`: Index of bottom vertical layer
     * `integer`: units = index
