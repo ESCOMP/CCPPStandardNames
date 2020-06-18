@@ -92,7 +92,7 @@
       <type kind="kind_phys" units="kg m-3">real</type>
     </standard_name>
     <standard_name
-        name="ratio_of_dry_air_to_water_vapor_gas_constants_minus_one"
+        name="ratio_of_water_vapor_to_dry_air_gas_constants_minus_one"
         long_name="(Rwv / Rdair) - 1.0">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
