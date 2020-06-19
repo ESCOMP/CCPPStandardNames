@@ -60,7 +60,7 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `None(kind=kind_phys)`: units = kg m-3
 * `density_of_liquid_water_at_0c`: density of liquid water at 0C
     * `real(kind=kind_phys)`: units = kg m-3
-* `ratio_of_dry_air_to_water_vapor_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
+* `ratio_of_water_vapor_to_dry_air_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
     * `real(kind=kind_phys)`: units = 1
 ## coordinates
 * `latitude`: Latitude
