@@ -213,7 +213,7 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
     * `integer(kind=kind_phys)`: units = count
 * `water_vapor_specific_humidity`: Water vapor specific humidity
     * `real(kind=kind_phys)`: units = kg kg-1
-* `water_vapor_mole_fraction`: Water vapor mole fraction
+* `mole_fraction_of_water_vapor`: Mole fraction of water vapor
     * `real(kind=kind_phys)`: units = mole mole-1
 * `cloud_liquid_water_mixing_ratio_of_moist_air`: Cloud liquid water mixing ratio of moist air
     * `real(kind=kind_phys)`: units = kg kg-1

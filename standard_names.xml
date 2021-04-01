@@ -347,7 +347,7 @@
     <standard_name name="water_vapor_specific_humidity">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-    <standard_name name="water_vapor_mole_fraction">
+    <standard_name name="mole_fraction_of_water_vapor">
       <type kind="kind_phys" units="mole mole-1">real</type>
     </standard_name>
     <standard_name name="cloud_liquid_water_mixing_ratio_of_moist_air">
