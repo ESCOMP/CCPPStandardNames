@@ -66,7 +66,7 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `real(kind=kind_phys)`: units = ??????????
 * `latent_heat_of_vaporization_of_water_at_0c`: latent heat of vaporization of water at 0C
     * `real(kind=kind_phys)`: units = J kg-1
-* `density_of dry_air_at_stp`: Density of dry air at stp
+* `density_of_dry_air_at_stp`: Density of dry air at stp
     * `None(kind=kind_phys)`: units = kg m-3
 * `density_of_liquid_water_at_0c`: density of liquid water at 0C
     * `real(kind=kind_phys)`: units = kg m-3

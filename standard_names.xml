@@ -99,7 +99,7 @@
                    long_name="latent heat of vaporization of water at 0C">
       <type kind="kind_phys" units="J kg-1">real</type>
     </standard_name>
-    <standard_name name="density_of dry_air_at_stp">
+    <standard_name name="density_of_dry_air_at_stp">
       <type kind="kind_phys" units="kg m-3"></type>
     </standard_name>
     <standard_name name="density_of_liquid_water_at_0c"
