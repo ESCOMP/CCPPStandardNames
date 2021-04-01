@@ -161,7 +161,6 @@
     <standard_name name="air_temperature_on_previous_timestep">
       <type kind="kind_phys" units="K">real</type>
     </standard_name>
-    </standard_name>
     <standard_name name="equivalent_potential_temperature">
       <type kind="kind_phys" units="K">real</type>
     </standard_name>
