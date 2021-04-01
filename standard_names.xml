@@ -80,7 +80,7 @@
     <standard_name name="base_state_surface_pressure_for_hybrid_vertical_coordinate">
       <type kind="kind_phys" units="molecules kmole-1">real</type>
     </standard_name>
-    <standard_name name="boltzman_constant">
+    <standard_name name="boltzmann_constant">
       <type kind="kind_phys" units="J K-1">real</type>
     </standard_name>
     <standard_name name="gas_constant_of_dry_air">

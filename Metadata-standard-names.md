@@ -54,7 +54,7 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `real(kind=kind_phys)`: units = molecules kmole-1
 * `base_state_surface_pressure_for_hybrid_vertical_coordinate`: Base state surface pressure for hybrid vertical coordinate
     * `real(kind=kind_phys)`: units = molecules kmole-1
-* `boltzman_constant`: Boltzman constant
+* `boltzmann_constant`: Boltzmann constant
     * `real(kind=kind_phys)`: units = J K-1
 * `gas_constant_of_dry_air`: Gas constant of dry air
     * `real(kind=kind_phys)`: units = J kg-1 K-1
