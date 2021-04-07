@@ -123,7 +123,7 @@
       <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
     <standard_name name="cell_area">
-      <type kind="kind_phys" units="radian+2">real</type>
+      <type kind="kind_phys" units="steradian">real</type>
     </standard_name>
     <standard_name name="cell_weight">
       <type kind="kind_phys" units="none">real</type>
@@ -205,7 +205,7 @@
       <type kind="kind_phys" units="Pa-1">real</type>
     </standard_name>
     <standard_name name="ln_of_air_pressure">
-      <type kind="kind_phys" units="ln(Pa)">real</type>
+      <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="log_of_air_pressure_of_dry_air">
       <type kind="kind_phys" units="Pa">real</type>
@@ -227,10 +227,10 @@
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="ln_of_air_pressure_at_interface">
-      <type kind="kind_phys" units="ln(Pa)">real</type>
+      <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="ln_of_air_pressure_of_dry_air_at_interface">
-      <type kind="kind_phys" units="ln(Pa)">real</type>
+      <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="largest_model_top_pressure_that_allows_molecular_diffusion">
       <type kind="kind_phys" units="Pa">real</type>

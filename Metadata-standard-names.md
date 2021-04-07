@@ -80,7 +80,7 @@ Currently, the only dimension which supports all six dimension types is horizont
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
 * `cell_area`: Cell area
-    * `real(kind=kind_phys)`: units = radian+2
+    * `real(kind=kind_phys)`: units = steradian
 * `cell_weight`: Cell weight
     * `real(kind=kind_phys)`: units = none
 ## state_variables
@@ -130,7 +130,7 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
 * `reciprocal_of_pressure_thickness_of_dry_air`: Reciprocal of pressure thickness of dry air
     * `real(kind=kind_phys)`: units = Pa-1
 * `ln_of_air_pressure`: Ln of air pressure
-    * `real(kind=kind_phys)`: units = ln(Pa)
+    * `real(kind=kind_phys)`: units = 1
 * `log_of_air_pressure_of_dry_air`: Log of air pressure of dry air
     * `real(kind=kind_phys)`: units = Pa
 * `inverse_dimensionless_exner_function_wrt_surface_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
@@ -144,9 +144,9 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
 * `air_pressure_of_dry_air_at_interface`: Air pressure of dry air at interface
     * `real(kind=kind_phys)`: units = Pa
 * `ln_of_air_pressure_at_interface`: Ln of air pressure at interface
-    * `real(kind=kind_phys)`: units = ln(Pa)
+    * `real(kind=kind_phys)`: units = 1
 * `ln_of_air_pressure_of_dry_air_at_interface`: Ln of air pressure of dry air at interface
-    * `real(kind=kind_phys)`: units = ln(Pa)
+    * `real(kind=kind_phys)`: units = 1
 * `largest_model_top_pressure_that_allows_molecular_diffusion`: Largest model top pressure that allows molecular diffusion
     * `real(kind=kind_phys)`: units = Pa
 * `flag_for_molecular_diffusion`: Flag for molecular diffusion
