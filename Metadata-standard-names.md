@@ -62,11 +62,11 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `integer(kind=kind_phys)`: units = s
 * `specific_heat_of_dry_air_at_constant_pressure`: Specific heat of dry air at constant pressure
     * `real(kind=kind_phys)`: units = J kg-1 K-1
-* `specific_heat_of_liquid_water_at_20c`: Specific heat of liquid water at 20c
+* `specific_heat_of_liquid_water_at_20c`: specific heat of liquid water at 20C
     * `real(kind=kind_phys)`: units = J kg-1 K-1
 * `latent_heat_of_vaporization_of_water_at_0c`: latent heat of vaporization of water at 0C
     * `real(kind=kind_phys)`: units = J kg-1
-* `density_of_dry_air_at_stp`: Density of dry air at stp
+* `density_of_dry_air_at_stp`: density of dry air at STP
     * `real(kind=kind_phys)`: units = kg m-3
 * `density_of_liquid_water_at_0c`: density of liquid water at 0C
     * `real(kind=kind_phys)`: units = kg m-3
@@ -84,7 +84,7 @@ Currently, the only dimension which supports all six dimension types is horizont
 * `cell_weight`: Cell weight
     * `real(kind=kind_phys)`: units = none
 ## state_variables
-Note that appending '_from_previous_timestep' to standard_names in this section yields another valid standard_name
+Note that appending '_on_previous_timestep' to standard_names in this section yields another valid standard_name
 * `physics_state_due_to_dynamics`: Physics state due to dynamics
     * `physics_state(kind=kind_phys)`: units = none
 * `timestep_for_physics`: Timestep for physics
@@ -151,7 +151,7 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
     * `real(kind=kind_phys)`: units = Pa
 * `flag_for_molecular_diffusion`: Flag for molecular diffusion
     * `logical(kind=kind_phys)`: units = flag
-* `flag_for_physics_grid_initialization`: Flag for physics grid initialization
+* `flag_for_physics_grid_initialization`: Flag to indicate if physics grid is initialized
     * `logical(kind=kind_phys)`: units = flag
 * `geopotential_height_at_interface`: Geopotential height at interface
     * `real(kind=kind_phys)`: units = m
@@ -161,7 +161,7 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
     * `real(kind=kind_phys)`: units = J m-2
 * `column_integrated_total_water_of_initial_state`: Column integrated total water of initial state
     * `real(kind=kind_phys)`: units = kg m-2
-* `column_integrated_total_water_of_new_state`: Column integrated total water of new state
+* `column_integrated_total_water_of_current_state`: Column integrated total water of current state
     * `real(kind=kind_phys)`: units = kg m-2
 * `tendency_of_temperature`: Change in temperature from a parameterization
     * `real(kind=kind_phys)`: units = K s-1
@@ -192,7 +192,7 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
 * `reference_pressure_at_surface`: reference pressure at surface
     * `real(kind=kind_phys)`: units = Pa
 * `reference_pressure_normalized_by_surface_pressure`: reference pressure normalized by surface pressure
-    * `real(kind=kind_phys)`: units = none
+    * `real(kind=kind_phys)`: units = 1
 * `exner_function`: exner function
     * `real(kind=kind_phys)`: units = none
 * `potential_temperature`: potential temperature
