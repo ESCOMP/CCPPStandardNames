@@ -209,7 +209,7 @@
     <standard_name name="log_of_air_pressure_of_dry_air">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="inverse_dimensionless_exner_function_wrt_surface_pressure"
+    <standard_name name="inverse_exner_function_wrt_surface_pressure"
                    long_name="inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>

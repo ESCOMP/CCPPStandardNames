@@ -131,7 +131,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `log_of_air_pressure_of_dry_air`: Log of air pressure of dry air
     * `real(kind=kind_phys)`: units = Pa
-* `inverse_dimensionless_exner_function_wrt_surface_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
+* `inverse_exner_function_wrt_surface_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
     * `real(kind=kind_phys)`: units = 1
 * `geopotential_height`: Geopotential height
     * `real(kind=kind_phys)`: units = m
