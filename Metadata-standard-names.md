@@ -105,11 +105,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = K
 * `air_temperature_on_previous_timestep`: Air temperature on previous timestep
     * `real(kind=kind_phys)`: units = K
-* `equivalent_potential_temperature`: Equivalent potential temperature
-    * `real(kind=kind_phys)`: units = K
-* `x_wind`: Zonal wind
+* `x_wind`: Horizontal wind in a direction perdendicular to y_wind
     * `real(kind=kind_phys)`: units = m s-1
-* `y_wind`: Meridional wind
+* `y_wind`: Horizontal wind in a direction perdendicular to x_wind
     * `real(kind=kind_phys)`: units = m s-1
 * `dry_static_energy`: Dry static energy Content of Atmosphere Layer
     * `real(kind=kind_phys)`: units = J kg-1
@@ -171,11 +169,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = K s-1
 * `total_tendency_of_potential_temperature`: Total tendency of potential temperature
     * `real(kind=kind_phys)`: units = K s-1
-* `tendency_of_x_wind`: Change in zonal wind from a parameterization
+* `tendency_of_x_wind`: Change in x wind from a parameterization
     * `real(kind=kind_phys)`: units = m s-2
 * `total_tendency_of_x_wind`: Total tendency of x wind
     * `real(kind=kind_phys)`: units = m s-2
-* `tendency_of_y_wind`: Change in meridional from a parameterization
+* `tendency_of_y_wind`: Change in y wind from a parameterization
     * `real(kind=kind_phys)`: units = m s-2
 * `total_tendency_of_y_wind`: Total tendency of y wind
     * `real(kind=kind_phys)`: units = m s-2
