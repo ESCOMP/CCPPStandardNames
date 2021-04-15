@@ -313,7 +313,7 @@
     </standard_name>
     <standard_name name="exner_function"
                    long_name="exner function">
-      <type kind="kind_phys" units="none">real</type>
+      <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="potential_temperature"
                    long_name="potential temperature">

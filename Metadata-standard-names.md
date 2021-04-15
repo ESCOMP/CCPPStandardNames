@@ -192,7 +192,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `reference_pressure_normalized_by_surface_pressure`: reference pressure normalized by surface pressure
     * `real(kind=kind_phys)`: units = 1
 * `exner_function`: exner function
-    * `real(kind=kind_phys)`: units = none
+    * `real(kind=kind_phys)`: units = 1
 * `potential_temperature`: potential temperature
     * `real(kind=kind_phys)`: units = K
 * `potential_temperature_on_previous_timestep`: potential temperature on previous timestep
