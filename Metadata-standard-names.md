@@ -50,14 +50,24 @@ Currently, the only dimension which supports all six dimension types is horizont
 * `thread_block_index`: Number of current thread block. This variable may only be used during CCPP run phase
     * `integer`: units = none
 ## constants
-* `gas_constant_dry_air`: Gas constant dry air
+* `avogadro_number`: Avogadro number
+    * `real(kind=kind_phys)`: units = molecules mole-1
+* `base_state_surface_pressure_for_hybrid_vertical_coordinate`: Base state surface pressure for hybrid vertical coordinate
+    * `real(kind=kind_phys)`: units = Pa
+* `boltzmann_constant`: Boltzmann constant
+    * `real(kind=kind_phys)`: units = J K-1
+* `gas_constant_of_dry_air`: Gas constant of dry air
     * `real(kind=kind_phys)`: units = J kg-1 K-1
+* `seconds_in_calendar_day`: Seconds in calendar day
+    * `integer(kind=kind_phys)`: units = s
 * `specific_heat_of_dry_air_at_constant_pressure`: Specific heat of dry air at constant pressure
+    * `real(kind=kind_phys)`: units = J kg-1 K-1
+* `specific_heat_of_liquid_water_at_20c`: specific heat of liquid water at 20C
     * `real(kind=kind_phys)`: units = J kg-1 K-1
 * `latent_heat_of_vaporization_of_water_at_0c`: latent heat of vaporization of water at 0C
     * `real(kind=kind_phys)`: units = J kg-1
-* `density_of dry_air_at_STP`: Density of dry air at STP
-    * `None(kind=kind_phys)`: units = kg m-3
+* `density_of_dry_air_at_stp`: density of dry air at STP
+    * `real(kind=kind_phys)`: units = kg m-3
 * `density_of_liquid_water_at_0c`: density of liquid water at 0C
     * `real(kind=kind_phys)`: units = kg m-3
 * `ratio_of_water_vapor_to_dry_air_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
@@ -69,24 +79,40 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `real(kind=kind_phys)`: units = radians
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
+* `cell_area`: Cell area
+    * `real(kind=kind_phys)`: units = steradian
+* `cell_weight`: Cell weight
+    * `real(kind=kind_phys)`: units = none
 ## state_variables
-Note that appending '_from_previous_timestep' to standard_names in this section yields another valid standard_name
+Note that appending '_on_previous_timestep' to standard_names in this section yields another valid standard_name
+* `physics_state_due_to_dynamics`: Physics state due to dynamics
+    * `physics_state(kind=kind_phys)`: units = none
+* `timestep_for_physics`: Timestep for physics
+    * `integer(kind=kind_phys)`: units = s
+* `total_tendency_of_physics`: Total tendency of physics
+    * `physics_tend(kind=kind_phys)`: units = none
+* `air_pressure_at_top_of_atmosphere_model`: Air pressure at top of atmosphere model
+    * `real(kind=kind_phys)`: units = Pa
+* `air_pressure_at_sea_level`: Air pressure at sea level
+    * `real(kind=kind_phys)`: units = Pa
 * `surface_air_pressure`: Surface air pressure
     * `real(kind=kind_phys)`: units = Pa
 * `surface_pressure_of_dry_air`: Surface pressure of dry air
     * `real(kind=kind_phys)`: units = Pa
 * `geopotential_at_surface`: Geopotential at surface
     * `real(kind=kind_phys)`: units = m2 s-2
-* `temperature`: Temperature
+* `air_temperature`: Air temperature
     * `real(kind=kind_phys)`: units = K
-* `temperature_from_previous_timestep`: Temperature from previous timestep
+* `air_temperature_on_previous_timestep`: Air temperature on previous timestep
     * `real(kind=kind_phys)`: units = K
-* `eastward_wind`: Zonal wind
+* `x_wind`: Horizontal wind in a direction perdendicular to y_wind
     * `real(kind=kind_phys)`: units = m s-1
-* `northward_wind`: Meridional wind
+* `y_wind`: Horizontal wind in a direction perdendicular to x_wind
     * `real(kind=kind_phys)`: units = m s-1
-* `dry_static_energy_content_of_atmosphere_layer`: Dry static energy
-    * `real(kind=kind_phys)`: units = J m-2
+* `dry_static_energy`: Dry static energy Content of Atmosphere Layer
+    * `real(kind=kind_phys)`: units = J kg-1
+* `lagrangian_vertical_coordinate`: flag indicating if vertical coordinate is lagrangian
+    * `logical(kind=)`: units = flag
 * `lagrangian_tendency_of_air_pressure`: Vertical pressure velocity
     * `real(kind=kind_phys)`: units = Pa s-1
 * `air_pressure`: Midpoint air pressure
@@ -101,8 +127,8 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
     * `real(kind=kind_phys)`: units = Pa-1
 * `reciprocal_of_pressure_thickness_of_dry_air`: Reciprocal of pressure thickness of dry air
     * `real(kind=kind_phys)`: units = Pa-1
-* `natural_log_of_air_pressure`: Natural log of air pressure
-    * `real(kind=kind_phys)`: units = pmid
+* `ln_of_air_pressure`: Ln of air pressure
+    * `real(kind=kind_phys)`: units = 1
 * `log_of_air_pressure_of_dry_air`: Log of air pressure of dry air
     * `real(kind=kind_phys)`: units = Pa
 * `inverse_exner_function_wrt_surface_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
@@ -115,35 +141,41 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
     * `real(kind=kind_phys)`: units = Pa
 * `air_pressure_of_dry_air_at_interface`: Air pressure of dry air at interface
     * `real(kind=kind_phys)`: units = Pa
-* `natural_log_of_air_pressure_at_interface`: Natural log of air pressure at interface
-    * `real(kind=kind_phys)`: units = ln(Pa)
-* `natural_log_of_air_pressure_of_dry_air_at_interface`: Natural log of air pressure of dry air at interface
-    * `real(kind=kind_phys)`: units = ln(Pa)
+* `ln_of_air_pressure_at_interface`: Ln of air pressure at interface
+    * `real(kind=kind_phys)`: units = 1
+* `ln_of_air_pressure_of_dry_air_at_interface`: Ln of air pressure of dry air at interface
+    * `real(kind=kind_phys)`: units = 1
+* `largest_model_top_pressure_that_allows_molecular_diffusion`: Largest model top pressure that allows molecular diffusion
+    * `real(kind=kind_phys)`: units = Pa
+* `flag_for_molecular_diffusion`: Flag for molecular diffusion
+    * `logical(kind=kind_phys)`: units = flag
+* `flag_for_physics_grid_initialization`: Flag to indicate if physics grid is initialized
+    * `logical(kind=kind_phys)`: units = flag
 * `geopotential_height_at_interface`: Geopotential height at interface
     * `real(kind=kind_phys)`: units = m
-* `vertically_integrated_total_kinetic_and_static_energy_of_initial_state`: Vertically integrated total kinetic and static energy of initial state
+* `column_integrated_total_kinetic_and_static_energy_of_initial_state`: Column integrated total kinetic and static energy of initial state
     * `real(kind=kind_phys)`: units = J m-2
-* `vertically_integrated_total_kinetic_and_static_energy_of_current_state`: Vertically integrated total kinetic and static energy of current state
+* `column_integrated_total_kinetic_and_static_energy_of_current_state`: Column integrated total kinetic and static energy of current state
     * `real(kind=kind_phys)`: units = J m-2
-* `vertically_integrated_total_water_of_initial_state`: Vertically integrated total water of initial state
-    * `real(kind=kind_phys)`: units = Pa s2 m-1
-* `vertically_integrated_total_water_of_new_state`: Vertically integrated total water of new state
-    * `real(kind=kind_phys)`: units = Pa s2 m-1
+* `column_integrated_total_water_of_initial_state`: Column integrated total water of initial state
+    * `real(kind=kind_phys)`: units = kg m-2
+* `column_integrated_total_water_of_current_state`: Column integrated total water of current state
+    * `real(kind=kind_phys)`: units = kg m-2
 * `tendency_of_temperature`: Change in temperature from a parameterization
     * `real(kind=kind_phys)`: units = K s-1
-* `total_tendency_of_temperature`: Total change in temperature from a                               physics suite
+* `total_tendency_of_air_temperature`: Total change in temperature from a                               physics suite
     * `real(kind=kind_phys)`: units = K s-1
 * `tendency_of_potential_temperature`: Change in potential temperature from a parameterization
     * `real(kind=kind_phys)`: units = K s-1
 * `total_tendency_of_potential_temperature`: Total tendency of potential temperature
     * `real(kind=kind_phys)`: units = K s-1
-* `tendency_of_eastward_wind`: Change in zonal wind from a parameterization
+* `tendency_of_x_wind`: Change in x wind from a parameterization
     * `real(kind=kind_phys)`: units = m s-2
-* `total_tendency_of_eastward_wind`: Total tendency of eastward wind
+* `total_tendency_of_x_wind`: Total tendency of x wind
     * `real(kind=kind_phys)`: units = m s-2
-* `tendency_of_northward_wind`: Change in meridional from a parameterization
+* `tendency_of_y_wind`: Change in y wind from a parameterization
     * `real(kind=kind_phys)`: units = m s-2
-* `total_tendency_of_northward_wind`: Total tendency of northward wind
+* `total_tendency_of_y_wind`: Total tendency of y wind
     * `real(kind=kind_phys)`: units = m s-2
 * `surface_energy_flux`: Surface energy flux
     * `real(kind=kind_phys)`: units = W m-2
@@ -151,11 +183,19 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
     * `real(kind=kind_phys)`: units = W m-2
 * `cumulative_boundary_flux_of_total_water`: Cumulative boundary flux of total water
     * `real(kind=kind_phys)`: units = W m-2
-* `reference_pressure_at_sea_level`: reference pressure at sea level
-    * `real(kind=kind_phys)`: units = mb
+* `reference_pressure`: reference pressure 
+    * `real(kind=kind_phys)`: units = Pa
+* `us_standard_atmospheric_pressure_at_sea_level`: US Standard Atmospheric pressure at sea level
+    * `real(kind=kind_phys)`: units = Pa
+* `reference_pressure_at_surface`: reference pressure at surface
+    * `real(kind=kind_phys)`: units = Pa
+* `reference_pressure_normalized_by_surface_pressure`: reference pressure normalized by surface pressure
+    * `real(kind=kind_phys)`: units = 1
 * `exner_function`: exner function
-    * `real(kind=kind_phys)`: units = none
+    * `real(kind=kind_phys)`: units = 1
 * `potential_temperature`: potential temperature
+    * `real(kind=kind_phys)`: units = K
+* `potential_temperature_on_previous_timestep`: potential temperature on previous timestep
     * `real(kind=kind_phys)`: units = K
 * `pressure_dependent_gas_constant_of_dry_air`: Pressure dependent gas constant of dry air
     * `real(kind=kind_phys)`: units = J kg-1 K-1
@@ -165,11 +205,19 @@ Note that appending '_from_previous_timestep' to standard_names in this section 
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1
 ## constituents
+* `number_of_chemical_species`: Number of chemical species
+    * `integer(kind=kind_phys)`: units = count
+* `number_of_tracers`: Number of tracers
+    * `integer(kind=kind_phys)`: units = count
 * `water_vapor_specific_humidity`: Water vapor specific humidity
     * `real(kind=kind_phys)`: units = kg kg-1
-* `water_vapor_mole_fraction`: Water vapor mole fraction
+* `mole_fraction_of_water_vapor`: Mole fraction of water vapor
     * `real(kind=kind_phys)`: units = mole mole-1
+* `cloud_liquid_water_mixing_ratio_of_moist_air`: Cloud liquid water mixing ratio of moist air
+    * `real(kind=kind_phys)`: units = kg kg-1
 * `cloud_liquid_water_mixing_ratio`: Cloud liquid water mixing ratio
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `cloud_ice_mixing_ratio`: Ratio of the mass of ice to the mass of dry air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `rain_water_mixing_ratio`: Rain water mixing ratio
     * `real(kind=kind_phys)`: units = kg kg-1
