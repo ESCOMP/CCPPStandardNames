@@ -16,7 +16,7 @@ for use with the Common Community Physics Package (CCPP). It describes the
 * Acronyms, abbreviations, and aliases
 
 .. _Rules
-========================
+
 CCPP Standard Name Rules
 ========================
 
@@ -44,7 +44,7 @@ CCPP Standard Name Rules
    [*surface*] [*component*] standard_name [``at`` *surface*] [``in`` *medium*]
    [``due_to`` *process*] [``assuming`` *condition*]
 
-   See the list of currently-used :numref:`qualifications %s <qualifiers>` for help.
+   See the list of currently-used :ref:`qualifications %s <qualifiers>` for help.
 
 #. Variables are current and instantaneous unless specified. Variables that are not
    current (e.g., previous timestep) or non-instantaneous (e.g., accumulated values)
@@ -64,7 +64,7 @@ CCPP Standard Name Rules
 
 #. Spell out acronyms unless they are obvious to a vast majority of
    scientists/developers who may come across them. Here is a
-   :numref:`list of currently-used aliases %s <Aliases>` where either is
+   :ref:`list of currently-used aliases %s <Aliases>` where either is
    acceptable.
 
 #. For control-oriented variables, if the variable is a Fortran logical,
@@ -77,26 +77,25 @@ CCPP Standard Name Rules
 
 .. _qualifiers:
 
-========================
 Qualifiers
 ========================
+
 black = existing CF qualifier
 
 **bold** = **proposed new qualifier**
 
-----------
 XY-surface
 ----------
 
 Prefixes
-========
+^^^^^^^^
 
 | toa
 | tropopause
 | surface
 
 Suffixes
-========
+^^^^^^^^
 
 | at_adiabatic_condensation_level
 | at_cloud_top
@@ -120,12 +119,12 @@ Suffixes
 | **at_top_of_viscous_sublayer**
 | **at_various_atmosphere_layers**
 
----------
+
 Component
 ---------
 
 Prefixes
-========
+^^^^^^^^
 
 | upward
 | downward
@@ -136,25 +135,23 @@ Prefixes
 | x
 | y
 
----------------------------
 Special Radiation Component
 ---------------------------
 
 Prefixes
-========
+^^^^^^^^
 
 | net
 | upwelling
 | downwelling
 | incoming
-voutgoing
+| outgoing
 
-------
 Medium
 ------
 
 Suffixes
-========
+^^^^^^^^
 
 | in_air
 | in_atmosphere_boundary_layer
@@ -176,12 +173,11 @@ Suffixes
 | **in_convective_tower**
 | **between_soil_bottom_and_water_table**
 
--------
 Process
 -------
 
 Suffixes
-========
+^^^^^^^^
 
 | due_to_advection
 | due_to_convection
@@ -207,12 +203,11 @@ Suffixes
 | **due_to_shoc**
 | **due_to_dynamics**
 
----------
 Condition
 ---------
 
 Suffixes
-========
+^^^^^^^^
 
 | assuming_clear_sky
 | assuming_deep_snow
@@ -227,12 +222,11 @@ Suffixes
 | **assuming_shallow**
 | **assuming_deep**
 
-----
 Time
 ----
 
 Suffixes
-========
+^^^^^^^^
 
 | **of_new_state OR updated_by_physics**
 | **on_physics_timestep**
@@ -241,12 +235,11 @@ Suffixes
 | **on_previous_timestep**
 | **N_timesteps_back**
 
--------------
 Computational
 -------------
 
 Prefixes and Suffixes
-=====================
+^^^^^^^^^^^^^^^^^^^^^
 
 | **real**
 | **for_coupling**
@@ -287,12 +280,11 @@ Prefixes and Suffixes
 | **tunable_parameters[s]_for_X**
 | **map_of**
 
----------------
 Transformations
 ---------------
 
 Prefixes
-========
+^^^^^^^^
 | change_over_time_in_X
 | [horizontal_]convergence_of_X
 | correlation_of_X_and_Y[_over_Z]
@@ -318,11 +310,9 @@ Prefixes
 | **sine_of_X**
 | **variance_of_X**
 
-=====================================
 Other common standard name components
 =====================================
 
----------------
 Special phrases
 ---------------
 
@@ -362,8 +352,6 @@ Special phrases
 | **diffuse**            | **used in radiation (as opposed to direct)**                                        |
 +------------------------+-------------------------------------------------------------------------------------+
 
-
-----------------
 Chemical Species
 ----------------
 
@@ -393,16 +381,13 @@ Chemical Species
 |sulfur_dioxide          |
 +------------------------+
 
-
 Generic Names
+-------------
+
 The following names are used with consistent meanings and units as elements in
 other standard names, although they are themselves too general to be chosen as
 standard names. They are recorded here for reference only. These are not
 standard names.
-
-------------
-Generic Name
-------------
 
 +-------------------------------------------+-----------------+
 | **Generic Name**                          |  **Units**      |
@@ -490,7 +475,6 @@ Generic Name
 
 .. _Aliases:
 
-====================================
 Acronyms, Abbreviations, and Aliases
 ====================================
 
@@ -511,11 +495,11 @@ Acronyms, Abbreviations, and Aliases
 +---------------------+---------------------------------------------------------+
 | stp                 | standard temperature (0 degC) and pressure (101325 Pa)  |
 +---------------------+---------------------------------------------------------+
-| toa                 | top of atmosphere                                       |
+| tke                 | turbulent kinetic energy                                |
 +---------------------+---------------------------------------------------------+
 | TKE                 | turbulent kinetic energy                                |
 +---------------------+---------------------------------------------------------+
-| tke                 | turbulent kinetic energy                                |
+| toa                 | top of atmosphere                                       |
 +---------------------+---------------------------------------------------------+
 | uv                  | ultraviolet part of the EM spectrum (radiation)         |
 +---------------------+---------------------------------------------------------+
