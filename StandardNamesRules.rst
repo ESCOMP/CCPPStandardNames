@@ -44,7 +44,7 @@ CCPP Standard Name Rules
    [*surface*] [*component*] standard_name [``at`` *surface*] [``in`` *medium*]
    [``due_to`` *process*] [``assuming`` *condition*]
 
-   See the list of currently-used :ref:`qualifications %s <qualifiers>` for help.
+   See the list of currently-used :ref:`qualifications <qualifiers>` for help.
 
 #. Variables are current and instantaneous unless specified. Variables that are not
    current (e.g., previous timestep) or non-instantaneous (e.g., accumulated values)
@@ -64,7 +64,7 @@ CCPP Standard Name Rules
 
 #. Spell out acronyms unless they are obvious to a vast majority of
    scientists/developers who may come across them. Here is a
-   :ref:`list of currently-used aliases %s <Aliases>` where either is
+   :ref:`list of currently-used aliases <Aliases>` where either is
    acceptable.
 
 #. For control-oriented variables, if the variable is a Fortran logical,
