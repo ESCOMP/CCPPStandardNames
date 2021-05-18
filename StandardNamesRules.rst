@@ -10,19 +10,20 @@ CCPP Standard Names
 This document contains information about the rules used to create Standard Names
 for use with the Common Community Physics Package (CCPP). It describes the
 
-* CCPP Standard Name Rules
-* Standard Name Qualifiers
+* CCPP Standard Name rules
+* Standard Name qualifiers
 * Other common standard name components
-* Acronyms, Abbreviations, Aliases
+* Acronyms, abbreviations, and aliases
 
-.. _Rules:
+.. _Rules
 ========================
 CCPP Standard Name Rules
 ========================
 
-#. Standard names should be identical to those from the Climate and Forecast (CF)
-   metadata conventions unless an appropriate name does not exist in that standard.
-   https://cfconventions.org/standard-names.html (use the latest version).
+#. Standard names should be identical to those from the latest version of the
+  `Climate and Forecast (CF)
+   metadata conventions <https://cfconventions.org/standard-names.html>`_
+   unless an appropriate name does not exist in that standard.
 
 #. When a standard name doesn’t exist in the CF conventions, follow their
    guidelines for standard name construction at this URL:
@@ -58,12 +59,13 @@ CCPP Standard Name Rules
 #. If possible, qualifiers should be limited in order to allow for a wide
    applicability of the variable. In other words, don't qualify with _for_xyz
    unless a variable could not conceivably be used outside of the more
-   narrowly-defined context OR a variable without the scope-narrowing qualifiers
+   narrowly-defined context or a variable without the scope-narrowing qualifiers
    already exists and cannot be reused.
 
 #. Spell out acronyms unless they are obvious to a vast majority of
-   scientists/developers who may come across them. Here is a list of
-   currently-used aliases where either is acceptable.
+   scientists/developers who may come across them. Here is a
+   :numref:`list of currently-used aliases %s <Aliases>` where either is 
+   acceptable.
 
 #. For control-oriented variables, if the variable is a Fortran logical,
    use flag_for_X. If it is any other data type, use control_for_X.All flags
@@ -74,10 +76,12 @@ CCPP Standard Name Rules
 #. Standard names are case insensitive, i.e. example = EXAMPLE.
 
 .. _Qualifiers:
+
 ========================
 Qualifiers
 ========================
 black = existing CF qualifier
+
 **bold** = **proposed new qualifier**
 
 ----------
@@ -87,16 +91,16 @@ XY-surface
 Prefixes
 ========
 
-|toa
-|tropopause
-|surface
+| toa
+| tropopause
+| surface
 
 Suffixes
 ========
 
-|at_adiabatic_condensation_level
-|at_cloud_top
-|at_convective_cloud_top
+| at_adiabatic_condensation_level
+| at_cloud_top
+| at_convective_cloud_top
 at_cloud_base
 at_convective_cloud_base
 at_freezing_level
@@ -165,7 +169,7 @@ in_thermosphere
 in_troposphere
 in_atmosphere
 in_surface_snow
-**in__thermocline**
+**in_diurnal_thermocline**
 **in_canopy**
 **in_lake**
 **in_aquifer**
@@ -338,7 +342,7 @@ Special phrases
 +------------------------+-------------------------------------------------------------------------------------+
 | longwave               | longwave radiation                                                                  |
 +------------------------+-------------------------------------------------------------------------------------+
-| moisture                | water in all phases contained in soil                                              |
+| moisture               | water in all phases contained in soil                                               |
 +------------------------+-------------------------------------------------------------------------------------+
 | ocean                  | used instead of in_sea_water for quantities which are large-scale rather than local |
 +------------------------+-------------------------------------------------------------------------------------+
@@ -368,15 +372,25 @@ Chemical Species
 | **Species**            |
 +========================+
 |carbon_dioxide          |
++------------------------+
 |dimethyl_sulfide        |
++------------------------+
 |nitrate                 |
++------------------------+
 |nitrate_and_nitrite     |
++------------------------+
 |nitrite                 |
++------------------------+
 |oxygen                  |
++------------------------+
 |ozone                   |
++------------------------+
 |phosphate               |
++------------------------+
 |silicate                |
++------------------------+
 |sulfate                 |
++------------------------+
 |sulfur_dioxide          |
 +------------------------+
 
@@ -475,10 +489,11 @@ Generic Name
 | vorticity                                 | s-1             |
 +-------------------------------------------+-----------------+
 
-================================
-Acronyms, Abbreviations, Aliases
-================================
+.. _Aliases:
 
+====================================
+Acronyms, Abbreviations, and Aliases
+====================================
 
 +---------------------+---------------------------------------------------------+
 | **Short**           |  **Meaning**                                            |
