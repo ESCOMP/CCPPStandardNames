@@ -501,8 +501,6 @@ Acronyms, Abbreviations, and Aliases
 +---------------------+---------------------------------------------------------+
 | uv                  | ultraviolet part of the EM spectrum (radiation)         |
 +---------------------+---------------------------------------------------------+
-| UV                  | ultraviolet part of the EM spectrum (radiation)         |
-+---------------------+---------------------------------------------------------+
 | vis                 | visible part of the EM spectrum (radiation)             |
 +---------------------+---------------------------------------------------------+
 | wrt                 | with respect to                                         |
