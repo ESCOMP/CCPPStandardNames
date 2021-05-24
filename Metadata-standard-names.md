@@ -32,7 +32,7 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `integer`: units = count
 * `vertical_dimension`: number of vertical levels
     * `integer`: units = count
-* `vertical_dimension_plus_one`: number of vertical levels + 1
+* `vertical_interface_dimension`: number of vertical interfaces
     * `integer`: units = count
 * `vertical_layer_index`: index of a particular vertical level
     * `integer`: units = count
@@ -53,7 +53,7 @@ Currently, the only dimension which supports all six dimension types is horizont
 ## constants
 * `avogadro_number`: Avogadro number
     * `real(kind=kind_phys)`: units = molecules mole-1
-* `reference_air_pressure_for_atmosphere_vertical_coordinate`: Reference air pressure for atmosphere vertical coordinate
+* `reference_surface_air_pressure_for_atmosphere_vertical_coordinate`: Reference surface air pressure for atmosphere vertical coordinate
     * `real(kind=kind_phys)`: units = Pa
 * `boltzmann_constant`: Boltzmann constant
     * `real(kind=kind_phys)`: units = J K-1
@@ -81,7 +81,7 @@ Currently, the only dimension which supports all six dimension types is horizont
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
 * `cell_area`: Cell area
-    * `real(kind=kind_phys)`: units = steradian
+    * `real(kind=kind_phys)`: units = m2
 * `cell_weight`: Cell weight
     * `real(kind=kind_phys)`: units = none
 ## state_variables
@@ -98,7 +98,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = Pa
 * `surface_air_pressure`: Surface air pressure
     * `real(kind=kind_phys)`: units = Pa
-* `surface_dry_air_pressure`: Surface dry air pressure
+* `surface_pressure_of_dry_air`: Surface pressure of dry air
     * `real(kind=kind_phys)`: units = Pa
 * `surface_geopotential`: Surface geopotential
     * `real(kind=kind_phys)`: units = m2 s-2
@@ -118,19 +118,19 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = Pa s-1
 * `air_pressure`: Midpoint air pressure
     * `real(kind=kind_phys)`: units = Pa
-* `dry_air_pressure`: Dry midpoint pressure
+* `air_pressure_of_dry_air`: Dry midpoint pressure
     * `real(kind=kind_phys)`: units = Pa
 * `air_pressure_thickness`: Air pressure thickness
     * `real(kind=kind_phys)`: units = Pa
-* `dry_air_pressure_thickness`: Dry air pressure thickness
+* `air_pressure_thickness_of_dry_air`: Air pressure thickness of dry air
     * `real(kind=kind_phys)`: units = Pa
 * `reciprocal_of_air_pressure_thickness`: Reciprocal of air pressure thickness
     * `real(kind=kind_phys)`: units = Pa-1
-* `reciprocal_of_dry_air_pressure_thickness`: Reciprocal of dry air pressure thickness
+* `reciprocal_of_air_pressure_thickness_of_dry_air`: Reciprocal of air pressure thickness of dry air
     * `real(kind=kind_phys)`: units = Pa-1
 * `ln_air_pressure`: Ln air pressure
     * `real(kind=kind_phys)`: units = 1
-* `ln_dry_air_pressure`: Ln dry air pressure
+* `ln_air_pressure_of_dry_air`: Ln air pressure of dry air
     * `real(kind=kind_phys)`: units = 1
 * `reciprocal_of_dimensionless_exner_function_wrt_surface_air_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
     * `real(kind=kind_phys)`: units = 1
@@ -140,11 +140,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg/kg moist or dry air depending on type
 * `air_pressure_at_interface`: Air pressure at interface
     * `real(kind=kind_phys)`: units = Pa
-* `dry_air_pressure_at_interface`: Dry air pressure at interface
+* `air_pressure_of_dry_air_at_interface`: Air pressure of dry air at interface
     * `real(kind=kind_phys)`: units = Pa
 * `ln_air_pressure_at_interface`: Ln air pressure at interface
     * `real(kind=kind_phys)`: units = 1
-* `ln_dry_air_pressure_at_interface`: Ln dry air pressure at interface
+* `ln_air_pressure_of_dry_air_at_interface`: Ln air pressure of dry air at interface
     * `real(kind=kind_phys)`: units = 1
 * `largest_model_top_pressure_that_allows_molecular_diffusion`: Largest model top pressure that allows molecular diffusion
     * `real(kind=kind_phys)`: units = Pa
@@ -1093,8 +1093,6 @@ Standard / required CCPP variables
     * `real`: units = flag
 * `number_of_timesteps_for_concurrent_radiation_and_remainder_physics_calls_after_model_initialization`: Number of timesteps for concurrent radiation and remainder physics calls after model initialization
     * `integer`: units = count
-* `gravitational_acceleration`: Gravitational acceleration
-    * `real(kind=kind_phys)`: units = m s-2
 * `gas_constant_dry_air`: Gas constant dry air
     * `real(kind=kind_phys)`: units = J kg-1 K-1
 * `gas_constant_water_vapor`: Gas constant water vapor
@@ -1107,12 +1105,6 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = none
 * `ratio_of_dry_air_to_water_vapor_gas_constants_minus_one`: Ratio of dry air to water vapor gas constants minus one
     * `real(kind=kind_phys)`: units = none
-* `tendency_of_y_wind_due_to_model_physics`: Tendency of y wind due to model physics
-    * `real(kind=kind_phys)`: units = m s-2
-* `tendency_of_x_wind_due_to_model_physics`: Tendency of x wind due to model physics
-    * `real(kind=kind_phys)`: units = m s-2
-* `tendency_of_air_temperature_due_to_model_physics`: Tendency of air temperature due to model physics
-    * `real(kind=kind_phys)`: units = K s-1
 * `tendency_of_vertically_diffused_tracer_concentration`: Tendency of vertically diffused tracer concentration
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
 * `vertically_diffused_tracer_concentration`: Vertically diffused tracer concentration
@@ -1301,8 +1293,6 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = frac
 * `surface_albedo_diffuse_NIR`: Surface albedo diffuse NIR
     * `real(kind=kind_phys)`: units = frac
-* `area_type`: Area type
-    * `real(kind=kind_phys)`: units = flag
 * `surface_stochastic_weights_from_coupled_process`: Surface stochastic weights from coupled process
     * `real(kind=kind_phys)`: units = none
 * `air_pressure_at_layer_for_RRTMGP_in_hPa`: Air pressure at layer for RRTMGP in hPa
@@ -2193,7 +2183,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = um
 * `sppt_weights_from_coupled_process`: Sppt weights from coupled process
     * `real(kind=kind_phys)`: units = none
-* `total_ampltiude_of_sppt_perturbation`: Total ampltiude of sppt perturbation
+* `total_amplitude_of_sppt_perturbation`: Total amplitude of sppt perturbation
     * `real(kind=kind_phys)`: units = none
 * `convective_cloud_water_mixing_ratio_in_xyz_dimensioned_restart_array`: Convective cloud water mixing ratio in xyz dimensioned restart array
     * `real(kind=kind_phys)`: units = kg kg-1
@@ -2843,8 +2833,6 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = none
 * `tendency_of_air_temperature_due_to_shortwave_heating_assuming_clear_sky_on_radiation_time_step_and_radiation_levels`: Tendency of air temperature due to shortwave heating assuming clear sky on radiation time step and radiation levels
     * `real(kind=kind_phys)`: units = K s-1
-* `air_temperature_on_previous_timestep`: Air temperature on previous timestep
-    * `real(kind=kind_phys)`: units = K
 * `specific_humidity_on_previous_timestep`: Specific humidity on previous timestep
     * `real(kind=kind_phys)`: units = kg kg-1
 * `lwe_surface_snow_from_coupled_process`: Lwe surface snow from coupled process
