@@ -470,7 +470,7 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = flag
 * `identifier_for_fer_hires_microphysics_scheme`: Identifier for fer hires microphysics scheme
     * `integer(kind=)`: units = flag
-* `flag_for_first_time_step`: Flag for first time step
+* `flag_for_first_timestep`: Flag for first timestep
     * `logical(kind=)`: units = flag
 * `flag_for_surface_flux_coupling`: Flag for surface flux coupling
     * `logical(kind=)`: units = flag
@@ -852,7 +852,7 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = index
 * `index_of_subgrid_cloud_area_fracation_in_atmosphere_layer_in_xyz_dimensioned_restart_array`: Index of subgrid cloud area fracation in atmosphere layer in xyz dimensioned restart array
     * `integer(kind=)`: units = index
-* `index_of_time_step`: Index of time step
+* `index_of_timestep`: Index of timestep
     * `integer(kind=)`: units = index
 * `reciprocal_of_grid_scale_range`: Reciprocal of grid scale range
     * `real(kind=kind_phys)`: units = rad2 m-2
@@ -1780,7 +1780,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = W m-2
 * `surface_upwelling_longwave_flux_from_coupled_process`: Surface upwelling longwave flux from coupled process
     * `real(kind=kind_phys)`: units = W m-2
-* `surface_upwelling_longwave_flux_on_radiation_time_step`: Surface upwelling longwave flux on radiation time step
+* `surface_upwelling_longwave_flux_on_radiation_timestep`: Surface upwelling longwave flux on radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
 * `surface_vis_albedo_diffuse_rad_for_coupling`: Surface vis albedo diffuse rad for coupling
     * `real(kind=kind_phys)`: units = frac
@@ -1794,7 +1794,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = kg-1 s-1
 * `tendency_of_hygroscopic_aerosols_at_surface_adjacent_layer`: Tendency of hygroscopic aerosols at surface adjacent layer
     * `real(kind=kind_phys)`: units = kg-1 s-1
-* `updated_tendency_of_air_temperature_due_to_longwave_heating_on_physics_time_step`: Updated tendency of air temperature due to longwave heating on physics time step
+* `updated_tendency_of_air_temperature_due_to_longwave_heating_on_physics_timestep`: Updated tendency of air temperature due to longwave heating on physics timestep
     * `real(kind=kind_phys)`: units = K s-1
 * `cellular_automata_vertical_weight`: Cellular automata vertical weight
     * `real(kind=kind_phys)`: units = frac
