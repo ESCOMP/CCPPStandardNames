@@ -736,7 +736,7 @@
       <standard_name name="identifier_for_fer_hires_microphysics_scheme">
          <type kind="" units="flag">integer</type>
       </standard_name>
-      <standard_name name="flag_for_first_time_step">
+      <standard_name name="flag_for_first_timestep">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="flag_for_surface_flux_coupling">
@@ -1309,7 +1309,7 @@
       <standard_name name="index_of_subgrid_cloud_area_fracation_in_atmosphere_layer_in_xyz_dimensioned_restart_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_time_step">
+      <standard_name name="index_of_timestep">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="reciprocal_of_grid_scale_range">
@@ -2703,7 +2703,7 @@
       <standard_name name="surface_upwelling_longwave_flux_from_coupled_process">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="surface_upwelling_longwave_flux_on_radiation_time_step">
+      <standard_name name="surface_upwelling_longwave_flux_on_radiation_timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="surface_vis_albedo_diffuse_rad_for_coupling">
@@ -2724,7 +2724,7 @@
       <standard_name name="tendency_of_hygroscopic_aerosols_at_surface_adjacent_layer">
          <type kind="kind_phys" units="kg-1 s-1">real</type>
       </standard_name>
-      <standard_name name="updated_tendency_of_air_temperature_due_to_longwave_heating_on_physics_time_step">
+      <standard_name name="updated_tendency_of_air_temperature_due_to_longwave_heating_on_physics_timestep">
          <type kind="kind_phys" units="K s-1">real</type>
       </standard_name>
       <standard_name name="cellular_automata_vertical_weight">
