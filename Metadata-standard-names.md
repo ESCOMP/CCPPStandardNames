@@ -39,7 +39,7 @@ Also note that horizontal_dimension should be used in xxx_[timestep_]init and xx
 Currently, the only dimension which supports all six dimension types is horizontal_dimension. This and other supported dimension standard names are listed below.
 * `horizontal_dimension`: Size horizontal dimension
     * `integer`: units = count
-* `vertical_dimension`: number of vertical layers
+* `vertical_layer_dimension`: number of vertical layers
     * `integer`: units = count
 * `vertical_interface_dimension`: number of vertical interfaces
     * `integer`: units = count
@@ -62,7 +62,7 @@ Currently, the only dimension which supports all six dimension types is horizont
 ## constants
 * `avogadro_number`: Avogadro number
     * `real(kind=kind_phys)`: units = molecules mole-1
-* `reference_surface_air_pressure_for_atmosphere_vertical_coordinate`: Reference surface air pressure for atmosphere vertical coordinate
+* `base_state_surface_pressure_for_hybrid_vertical_coordinate`: Base state surface pressure for hybrid vertical coordinate
     * `real(kind=kind_phys)`: units = Pa
 * `boltzmann_constant`: Boltzmann constant
     * `real(kind=kind_phys)`: units = J K-1
@@ -193,11 +193,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = W m-2
 * `cumulative_boundary_flux_of_total_water`: Cumulative boundary flux of total water
     * `real(kind=kind_phys)`: units = W m-2
-* `reference_air_pressure`: reference pressure 
+* `reference_pressure`: reference pressure 
     * `real(kind=kind_phys)`: units = Pa
 * `US_standard_air_pressure_at_sea_level`: US Standard Atmospheric pressure at sea level
     * `real(kind=kind_phys)`: units = Pa
-* `surface_reference_air_pressure`: reference pressure at surface
+* `reference_pressure_at_surface`: reference pressure at surface
     * `real(kind=kind_phys)`: units = Pa
 * `reference_air_pressure_normalized_by_surface_air_pressure`: reference pressure normalized by surface pressure
     * `real(kind=kind_phys)`: units = 1
@@ -848,7 +848,7 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = index
 * `index_of_atmosphere_heat_diffusivity_in_xyz_dimensioned_restart_array`: Index of atmosphere heat diffusivity in xyz dimensioned restart array
     * `integer(kind=)`: units = index
-* `index_of_kinematic_buoyancy_flux_in_xyz_dimensioned_restart_array`: Index of kinematic buoyancy flux in xyz dimensioned restart array
+* `index_of_upward_virtual_potential_temperature_flux_in_xyz_dimensioned_restart_array`: Index of upward virtual potential temperature flux in xyz dimensioned restart array
     * `integer(kind=)`: units = index
 * `index_of_subgrid_cloud_area_fracation_in_atmosphere_layer_in_xyz_dimensioned_restart_array`: Index of subgrid cloud area fracation in atmosphere layer in xyz dimensioned restart array
     * `integer(kind=)`: units = index
@@ -1144,7 +1144,7 @@ Standard / required CCPP variables
     * `character(kind=len=3)`: units = none
 * `control_for_vegetation_dataset`: Control for vegetation dataset
     * `integer(kind=)`: units = index
-* `vertical_dimension_minus_one`: Vertical dimension minus one
+* `vertical_layer_dimension_minus_one`: Vertical layer dimension minus one
     * `integer(kind=)`: units = count
 * `sigma_pressure_hybrid_vertical_coordinate`: Sigma pressure hybrid vertical coordinate
     * `real(kind=kind_phys)`: units = none
@@ -1236,9 +1236,9 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = m s-1
 * `ice_nucleation_number_from_climatology`: Ice nucleation number from climatology
     * `real(kind=kind_phys)`: units = kg-1
-* `kinematic_buoyancy_flux`: Kinematic buoyancy flux
+* `upward_virtual_potential_temperature_flux`: Upward virtual potential temperature flux
     * `real(kind=kind_phys)`: units = K m s-1
-* `kinematic_surface_latent_heat_flux`: Kinematic surface latent heat flux
+* `surface_upward_specific_humidity_flux_for_mellor_yamada_janic_surface_layer_scheme`: Surface upward specific humidity flux for mellor yamada janic surface layer scheme
     * `real(kind=kind_phys)`: units = m s-1 kg kg-1
 * `cumulative_max_vertical_index_at_cloud_base_between_sw_radiation_calls`: Cumulative max vertical index at cloud base between sw radiation calls
     * `real(kind=kind_phys)`: units = index
@@ -1393,9 +1393,9 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = index
 * `temperature_in_ice_layer`: Temperature in ice layer
     * `real(kind=kind_phys)`: units = K
-* `kinematic_surface_upward_latent_heat_flux`: Kinematic surface upward latent heat flux
+* `surface_upward_specific_humidity_flux`: Surface upward specific humidity flux
     * `real(kind=kind_phys)`: units = kg kg-1 m s-1
-* `kinematic_surface_upward_sensible_heat_flux`: Kinematic surface upward sensible heat flux
+* `surface_upward_temperature_flux`: Surface upward temperature flux
     * `real(kind=kind_phys)`: units = K m s-1
 * `lake_area_fraction`: Lake area fraction
     * `real(kind=kind_phys)`: units = frac
@@ -1509,9 +1509,9 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = m3 m-3
 * `specific_humidity_at_2m`: Specific humidity at 2m
     * `real(kind=kind_phys)`: units = kg kg-1
-* `specified_kinematic_surface_upward_latent_heat_flux`: Specified kinematic surface upward latent heat flux
+* `specified_surface_upward_specific_humidity_flux`: Specified surface upward specific humidity flux
     * `real(kind=kind_phys)`: units = kg kg-1 m s-1
-* `specified_kinematic_surface_upward_sensible_heat_flux`: Specified kinematic surface upward sensible heat flux
+* `specified_surface_upward_temperature_flux`: Specified surface upward temperature flux
     * `real(kind=kind_phys)`: units = K m s-1
 * `standard_deviation_of_subgrid_orography`: Standard deviation of subgrid orography
     * `real(kind=kind_phys)`: units = m

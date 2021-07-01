@@ -36,7 +36,7 @@
                    long_name="Size horizontal dimension">
       <type units="count">integer</type>
     </standard_name>
-    <standard_name name="vertical_dimension"
+    <standard_name name="vertical_layer_dimension"
                    long_name="number of vertical layers">
       <type units="count">integer</type>
     </standard_name>
@@ -77,7 +77,7 @@
     <standard_name name="avogadro_number">
       <type kind="kind_phys" units="molecules mole-1">real</type>
     </standard_name>
-    <standard_name name="reference_surface_air_pressure_for_atmosphere_vertical_coordinate">
+    <standard_name name="base_state_surface_pressure_for_hybrid_vertical_coordinate">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="boltzmann_constant">
@@ -295,7 +295,7 @@
     <standard_name name="cumulative_boundary_flux_of_total_water">
       <type kind="kind_phys" units="W m-2">real</type>
     </standard_name>
-    <standard_name name="reference_air_pressure"
+    <standard_name name="reference_pressure"
                    long_name="reference pressure ">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
@@ -303,7 +303,7 @@
                    long_name="US Standard Atmospheric pressure at sea level">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="surface_reference_air_pressure"
+    <standard_name name="reference_pressure_at_surface"
                    long_name="reference pressure at surface">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
@@ -1303,7 +1303,7 @@
       <standard_name name="index_of_atmosphere_heat_diffusivity_in_xyz_dimensioned_restart_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_kinematic_buoyancy_flux_in_xyz_dimensioned_restart_array">
+      <standard_name name="index_of_upward_virtual_potential_temperature_flux_in_xyz_dimensioned_restart_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_subgrid_cloud_area_fracation_in_atmosphere_layer_in_xyz_dimensioned_restart_array">
@@ -1747,7 +1747,7 @@
       <standard_name name="control_for_vegetation_dataset">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="vertical_dimension_minus_one">
+      <standard_name name="vertical_layer_dimension_minus_one">
          <type kind="" units="count">integer</type>
       </standard_name>
       <standard_name name="sigma_pressure_hybrid_vertical_coordinate">
@@ -1886,10 +1886,10 @@
       <standard_name name="ice_nucleation_number_from_climatology">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="kinematic_buoyancy_flux">
+      <standard_name name="upward_virtual_potential_temperature_flux">
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
-      <standard_name name="kinematic_surface_latent_heat_flux">
+      <standard_name name="surface_upward_specific_humidity_flux_for_mellor_yamada_janic_surface_layer_scheme">
          <type kind="kind_phys" units="m s-1 kg kg-1">real</type>
       </standard_name>
       <standard_name name="cumulative_max_vertical_index_at_cloud_base_between_sw_radiation_calls">
@@ -2122,10 +2122,10 @@
       <standard_name name="temperature_in_ice_layer">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="kinematic_surface_upward_latent_heat_flux">
+      <standard_name name="surface_upward_specific_humidity_flux">
          <type kind="kind_phys" units="kg kg-1 m s-1">real</type>
       </standard_name>
-      <standard_name name="kinematic_surface_upward_sensible_heat_flux">
+      <standard_name name="surface_upward_temperature_flux">
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
       <standard_name name="lake_area_fraction">
@@ -2296,10 +2296,10 @@
       <standard_name name="specific_humidity_at_2m">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="specified_kinematic_surface_upward_latent_heat_flux">
+      <standard_name name="specified_surface_upward_specific_humidity_flux">
          <type kind="kind_phys" units="kg kg-1 m s-1">real</type>
       </standard_name>
-      <standard_name name="specified_kinematic_surface_upward_sensible_heat_flux">
+      <standard_name name="specified_surface_upward_temperature_flux">
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
       <standard_name name="standard_deviation_of_subgrid_orography">
