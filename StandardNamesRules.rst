@@ -243,10 +243,6 @@ Computational
 Prefixes
 ^^^^^^^^
 
-| **for_coupling**
-| **for_chemistry_coupling**
-| **from_coupled_process**
-| **from_wave_model**
 | **lower_bound_of**
 | **upper_bound_of**
 | **unfiltered**
@@ -270,9 +266,20 @@ Prefixes
 | **tunable_parameter[s]_for** ``_X``
 | **map_of**
 
+
+Infixes
+^^^^^^^
+
+| **directory_for** ``_X`` **_source_code**
+| **flag_for_reading** ``_X`` **_from_input**
+
 Suffixes
 ^^^^^^^^
 
+| **for_coupling**
+| **for_chemistry_coupling**
+| **from_coupled_process**
+| **from_wave_model**
 | **collection_array**
 | **multiplied_by_timestep**
 | **for_current_mpi_rank**
@@ -282,8 +289,6 @@ Suffixes
 | **for_radiation**
 | **for_deep_convection**
 | **for_microphysics**
-| **directory_for** ``_X`` **_source_code**
-| **flag_for_reading** ``_X`` **_from_input**
 
 Transformations
 ---------------
