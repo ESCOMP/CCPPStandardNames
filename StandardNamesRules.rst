@@ -20,7 +20,7 @@ for use with the Common Community Physics Package (CCPP). It describes the
 CCPP Standard Name Rules
 ========================
 
-#. Standard names should be identical to those from the latest version
+#. Standard names should be identical to those from the la\ version
    of the `Climate and Forecast (CF) metadata
    conventions <https://cfconventions.org/standard-names.html>`_ unless
    an appropriate name does not exist in that standard.
@@ -36,15 +36,15 @@ CCPP Standard Name Rules
    assuming_clear_sky). The order defined by the CF rules should be observed. These
    qualifications do not change the units of the quantity.
 
-   All of the following phrases in brackets are optional. The words in ``this font``
-   appear explicitly as stated, while the words in *italic* indicate other
+   All of the following phrases in brackets are optional. The words in *italic*
+   appear explicitly as stated, while the words in ``this font`` indicate other
    words or phrases to be substituted. The new standard name is constructed by
    joining the base standard name to the qualifiers using underscores.
 
-   [*surface*] [*component*] standard_name [``at`` *surface*] [``in`` *medium*]
-   [``due_to`` *process*] [``assuming`` *condition*]
+   [``surface``] [``component``] standard_name [*at* ``surface``] [*in* ``medium``]
+   [*due_to* ``process``] [*assuming* ``condition``]
 
-   See the list of currently-used :ref:`qualifications <qualifiers>` for help.
+   See the list of currently-used qualifiers below for help.
 
 #. Variables are current and instantaneous unless specified. Variables that are not
    current (e.g., previous timestep) or non-instantaneous (e.g., accumulated values)
@@ -57,18 +57,17 @@ CCPP Standard Name Rules
    use at_interface.
 
 #. If possible, qualifiers should be limited in order to allow for a wide
-   applicability of the variable. In other words, don't qualify with _for_xyz
+   applicability of the variable. In other words, don't qualify with _for ``_xyz``
    unless a variable could not conceivably be used outside of the more
    narrowly-defined context or a variable without the scope-narrowing qualifiers
    already exists and cannot be reused.
 
 #. Spell out acronyms unless they are obvious to a vast majority of
-   scientists/developers who may come across them. Here is a
-   :ref:`list of currently-used aliases <Aliases>` where either is
-   acceptable.
+   scientists/developers who may come across them. A
+   list of currently-used aliases is below.
 
 #. For control-oriented variables, if the variable is a Fortran logical,
-   use flag_for_X. If it is any other data type, use control_for_X.All flags
+   use flag_for ``_X``. If it is any other data type, use control_for ``_X``. All flags
    should be Fortran logicals.
 
 #. No punctuation should appear in standard names except for underscores (_).
@@ -83,6 +82,8 @@ Qualifiers
 black = existing CF qualifier
 
 **bold** = **proposed new qualifier**
+
+``this font`` = words or phrases to be substituted
 
 XY-surface
 ----------
@@ -111,7 +112,7 @@ Suffixes
 | at_top_of_atmosphere_model
 | at_top_of_dry_convection
 | **at_interface**
-| **at_surface_adjacent_layer OR at_bottom_layer OR at_lowest_model_layer**
+| **at_surface_adjacent_layer**
 | **at_2m**
 | **at_10m**
 | **at_bottom_interface**
@@ -228,25 +229,24 @@ Time
 Suffixes
 ^^^^^^^^
 
-| **of_new_state OR updated_by_physics**
+| **of_new_state**
 | **on_physics_timestep**
 | **on_dynamics_timestep**
+
 | **on_radiation_timestep**
 | **on_previous_timestep**
-| **N_timesteps_back**
+| ``N`` **_timesteps_back**
 
 Computational
 -------------
 
-Prefixes and Suffixes
-^^^^^^^^^^^^^^^^^^^^^
+Prefixes
+^^^^^^^^
 
-| **real**
 | **for_coupling**
 | **for_chemistry_coupling**
 | **from_coupled_process**
 | **from_wave_model**
-| **collection_array**
 | **lower_bound_of**
 | **upper_bound_of**
 | **unfiltered**
@@ -259,56 +259,61 @@ Prefixes and Suffixes
 | **vertical_dimension_of**
 | **volumetric**
 | **cumulative**
-| **multiplied_by_timestep**
 | **iounit_of**
 | **filename_of**
 | **frequency_of**
 | **period_of**
 | **XYZ_dimensioned**
-| **tendency_of_X**
+| **tendency_of** ``X``
 | **generic_tendency**
+| **one_way_coupling_of** ``_X`` **_to** ``_Y``
+| **tunable_parameter[s]_for** ``_X``
+| **map_of**
+
+Suffixes
+^^^^^^^^
+
+| **collection_array**
+| **multiplied_by_timestep**
 | **for_current_mpi_rank**
 | **for_current_cubed_sphere_tile**
 | **plus_one**
 | **minus_one**
-| **one_way_coupling_of_X_to_Y**
 | **for_radiation**
 | **for_deep_convection**
 | **for_microphysics**
-| **directory_for_X_source_code**
-| **flag_for_reading_X_from_input**
-| **tunable_parameters[s]_for_X**
-| **map_of**
+| **directory_for** ``_X`` **_source_code**
+| **flag_for_reading** ``_X`` **_from_input**
 
 Transformations
 ---------------
 
 Prefixes
 ^^^^^^^^
-| change_over_time_in_X
-| [horizontal_]convergence_of_X
-| correlation_of_X_and_Y[_over_Z]
-| covariance_of_X_and_Y[_over_Z]
-| component_derivative_of_X
-| derivative_of_X_wrt_Y
-| direction_of_X
-| [horizontal_]divergence_of_X
-| histogram_of_X[_over_Z]
-| integral_of_Y_wrt_X
-| ln_X
-| log10_X
-| magnitude_of_X
-| probability_distribution_of_X[_over_Z]
-| probability_density_function_of_X[_over_Z]
-| product_of_X_and_Y
-| ratio_of_X_to_Y
-| square_of_X
-| tendency_of_X
-| **standard_deviation_of_X**
-| **reciprocal_of_X**
-| **cosine_of_X**
-| **sine_of_X**
-| **variance_of_X**
+| change_over_time_in ``_X``
+| convergence_of ``_X`` or horizontal_convergence_of ``_X``
+| correlation_of ``_X`` _and ``_Y`` [_over ``_Z``]
+| covariance_of ``_X`` _and ``_Y`` [_over ``_Z``]
+| component_derivative_of ``_X``
+| derivative_of ``_X`` _wrt ``_Y``
+| direction_of ``_X``
+| divergence_of ``_X`` or horizontal_divergence_of ``_X``
+| histogram_of ``_X`` [_over ``_Z``]
+| integral_of ``_Y`` _wrt ``_X``
+| ln ``_X``
+| log10 ``_X``
+| magnitude_of ``_X``
+| probability_distribution_of ``_X`` [_over ``_Z``]
+| probability_density_function_of ``_X``[_over ``_Z``]
+| product_of ``_X`` _and ``_Y``
+| ratio_of ``_X`` _to ``_Y``
+| square_of ``_X``
+| tendency_of ``_X``
+| **standard_deviation_of** ``_X``
+| **reciprocal_of** ``_X``
+| **cosine_of** ``_X``
+| **sine_of** ``_X``
+| **variance_of** ``_X``
 
 Other common standard name components
 =====================================
@@ -481,9 +486,7 @@ Acronyms, Abbreviations, and Aliases
 +---------------------+---------------------------------------------------------+
 | **Short**           |  **Meaning**                                            |
 +=====================+=========================================================+
-| ir                  | infrared                                                |
-+---------------------+---------------------------------------------------------+
-| IR                  | infared                                                 |
+| ir                  | infared                                                 |
 +---------------------+---------------------------------------------------------+
 | lwe                 | liquid water equivalent                                 |
 +---------------------+---------------------------------------------------------+
