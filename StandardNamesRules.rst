@@ -304,7 +304,7 @@ Prefixes
 | log10 ``_X``
 | magnitude_of ``_X``
 | probability_distribution_of ``_X`` [_over ``_Z``]
-| probability_density_function_of ``_X``[_over ``_Z``]
+| probability_density_function_of ``_X`` [_over ``_Z``]
 | product_of ``_X`` _and ``_Y``
 | ratio_of ``_X`` _to ``_Y``
 | square_of ``_X``
