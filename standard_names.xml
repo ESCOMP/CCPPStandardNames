@@ -367,43 +367,43 @@
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_ch4"
                    long_name="CH4 volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_co"
                    long_name="CO volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_co2"
                    long_name="CO2 volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_ccl4"
                    long_name="CCL4 volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc11"
                    long_name="CFC11 volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc12"
                    long_name="CFC12 volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc113"
                    long_name="CFC113 volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc22"
                    long_name="CFC22 volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_o2"
                    long_name="O2 volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_n2o"
                    long_name="N2O volume mixing ratio">
-      <type kind="kind_phys" units="kg kg-1">real</type>
+      <type kind="kind_phys" units="m3 m-3">real</type>
     </standard_name>
   </section>
   <section name="standard_variables"
