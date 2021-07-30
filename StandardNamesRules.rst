@@ -56,6 +56,15 @@ CCPP Standard Name Rules
    representing quantities at the interface between grid cells vertically,
    use at_interface.
 
+#. By default, *mixing_ratio* refers to mass mixing ratios. Volume mixing ratios should be
+   qualified as *volume_mixing_ratio*. Mass mixing ratios should contain information regarding 
+   with respect to what quantity they are defined, and options are *wrt_dry_air*, *wrt_moist_air*, 
+   or *wrt_total_mass*, where *moist_air* refers to dry air plus vapor and *total_mass* refers
+   to dry air plus vapor and hydrometeors. A special case exists in the case of mixing ratio 
+   of vapor: the standard name *specific_humidity* should be used instead of 
+   *mixing_ratio_of_vapor_wrt_moist_air*. When referring to soil quantities, 
+   *volume_fraction* should be used to express the volumetric soil moisture.
+
 #. If possible, qualifiers should be limited in order to allow for a wide
    applicability of the variable. In other words, don't qualify with _for ``_xyz``
    unless a variable could not conceivably be used outside of the more
@@ -253,7 +262,6 @@ Prefixes
 | **index_of**
 | **vertical_index_at**
 | **vertical_dimension_of**
-| **volumetric**
 | **cumulative**
 | **iounit_of**
 | **filename_of**
@@ -438,7 +446,7 @@ standard names.
 +-------------------------------------------+-----------------+
 | mass_fraction                             | 1               |
 +-------------------------------------------+-----------------+
-| mass_mixing_ratio                         | 1               |
+| mixing_ratio                              | kg kg-1         |
 +-------------------------------------------+-----------------+
 | mass_transport k                          | g s-1           |
 +-------------------------------------------+-----------------+
@@ -477,6 +485,8 @@ standard names.
 | volume_flux                               | m s-1           |
 +-------------------------------------------+-----------------+
 | volume_fraction                           | 1               |
++-------------------------------------------+-----------------+
+| volume_mixing_ratio                       | mol mol-1       |
 +-------------------------------------------+-----------------+
 | volume_transport                          | m3 s-1          |
 +-------------------------------------------+-----------------+
