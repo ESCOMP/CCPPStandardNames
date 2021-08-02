@@ -56,14 +56,23 @@ CCPP Standard Name Rules
    representing quantities at the interface between grid cells vertically,
    use at_interface.
 
-#. By default, *mixing_ratio* refers to mass mixing ratios. Volume mixing ratios should be
-   qualified as *volume_mixing_ratio*. Mass mixing ratios should contain information regarding 
+#. By default, *mixing_ratio* refers to mass mixing ratios. The long name should
+   explicitly specify that it refers to the *mass* mixing ratio. 
+   Mass mixing ratios should contain information regarding 
    with respect to what quantity they are defined, and options are *wrt_dry_air*, *wrt_moist_air*, 
    or *wrt_total_mass*, where *moist_air* refers to dry air plus vapor and *total_mass* refers
    to dry air plus vapor and hydrometeors. A special case exists in the case of mixing ratio 
    of vapor: the standard name *specific_humidity* should be used instead of 
-   *mixing_ratio_of_vapor_wrt_moist_air*. When referring to soil quantities, 
+   *mixing_ratio_of_vapor_wrt_moist_air*. 
+
+#. Volume mixing ratios should be qualified as *volume_mixing_ratio*.
+
+#. When referring to soil quantities, 
    *volume_fraction* should be used to express the volumetric soil moisture.
+
+#. Number concentration should appear as a prefix, that is, *number_concentration_of*. By default, 
+   number concentrations are specified per unit of volume. When they are specified per
+   unit of mass, they should be written as *mass_number_concentration_of*. 
 
 #. If possible, qualifiers should be limited in order to allow for a wide
    applicability of the variable. In other words, don't qualify with _for ``_xyz``
