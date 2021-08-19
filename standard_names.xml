@@ -75,7 +75,7 @@
   </section>
   <section name="constants">
     <standard_name name="avogadro_number">
-      <type kind="kind_phys" units="molecules mole-1">real</type>
+      <type kind="kind_phys" units="molecules mol-1">real</type>
     </standard_name>
     <standard_name name="base_state_surface_pressure_for_hybrid_vertical_coordinate">
       <type kind="kind_phys" units="Pa">real</type>
@@ -175,7 +175,7 @@
                    long_name="Dry static energy Content of Atmosphere Layer">
       <type kind="kind_phys" units="J kg-1">real</type>
     </standard_name>
-    <standard_name name="flag_for_lagrangian_vertical_coordinate"
+    <standard_name name="do_lagrangian_vertical_coordinate"
                    long_name="flag indicating if vertical coordinate is lagrangian">
       <type kind="" units="flag">logical</type>
     </standard_name>
@@ -216,8 +216,8 @@
     <standard_name name="geopotential_height">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
-    <standard_name name="constituent_mixing_ratio">
-      <type kind="kind_phys" units="kg/kg moist or dry air depending on type">real</type>
+    <standard_name name="potentially_advected_quantities">
+      <type kind="kind_phys" units="various">real</type>
     </standard_name>
     <standard_name name="air_pressure_at_interface">
       <type kind="kind_phys" units="Pa">real</type>
@@ -234,10 +234,10 @@
     <standard_name name="largest_model_top_pressure_that_allows_molecular_diffusion">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="flag_for_molecular_diffusion">
+    <standard_name name="do_molecular_diffusion">
       <type kind="kind_phys" units="flag">logical</type>
     </standard_name>
-    <standard_name name="flag_for_physics_grid_initialization" 
+    <standard_name name="is_initialized_physics_grid" 
               long_name="Flag to indicate if physics grid is initialized">
       <type kind="kind_phys" units="flag">logical</type>
     </standard_name>
@@ -348,62 +348,63 @@
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="mole_fraction_of_water_vapor">
-      <type kind="kind_phys" units="mole mole-1">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
-    <standard_name name="cloud_liquid_water_mixing_ratio_of_moist_air">
+    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air">
                    long_name="Ratio of the mass of liquid water to the mass of moist air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-    <standard_name name="cloud_liquid_water_mixing_ratio">
+    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_dry_air">
                    long_name="Ratio of the mass of liquid water to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-    <standard_name name="cloud_ice_mixing_ratio"
+    <standard_name name="cloud_ice_mixing_ratio_wrt_dry_air"
                    long_name="Ratio of the mass of ice to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-    <standard_name name="rain_mixing_ratio">
+    <standard_name name="rain_mixing_ratio_wrt_moist_air"
+                   long_name="ratio of the mass of rain to the mass of moist air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_ch4"
                    long_name="CH4 volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_co"
                    long_name="CO volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_co2"
                    long_name="CO2 volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_ccl4"
                    long_name="CCL4 volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc11"
                    long_name="CFC11 volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc12"
                    long_name="CFC12 volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc113"
                    long_name="CFC113 volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc22"
                    long_name="CFC22 volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_o2"
                    long_name="O2 volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_n2o"
                    long_name="N2O volume mixing ratio">
-      <type kind="kind_phys" units="m3 m-3">real</type>
+      <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
   </section>
   <section name="standard_variables"
@@ -414,7 +415,7 @@
     </standard_name>
     <standard_name name="ccpp_error_flag"
                    long_name="Error flag for error handling in CCPP">
-      <type kind="" units="flag">integer</type>
+      <type kind="" units="index">integer</type>
     </standard_name>
   </section>
   <section name="GFS_typedefs_GFS_control_type">
@@ -488,7 +489,7 @@
          <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="control_for_cloud_area_fraction_option">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="reciprocal_of_cloud_phase_transition_temperature_range">
          <type kind="kind_phys" units="K-1">real</type>
@@ -497,10 +498,10 @@
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
       <standard_name name="control_for_cloud_species_mixing_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_cloud_pdf_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="precipitation_evaporation_coefficient">
          <type kind="kind_phys" units="none">real</type>
@@ -536,7 +537,7 @@
          <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="control_for_sgs_cloud_radiation_coupling_in_mellor_yamamda_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="tunable_parameter_for_critical_cloud_top_entrainment_instability_criteria">
          <type kind="kind_phys" units="none">real</type>
@@ -577,10 +578,10 @@
       <standard_name name="detrainment_conversion_parameter_for_shallow_convection">
          <type kind="kind_phys" units="m-1">real</type>
       </standard_name>
-      <standard_name name="flag_for_unified_gravity_wave_physics_diagnostics">
+      <standard_name name="do_unified_gravity_wave_physics_diagnostics">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flags_for_chemical_tracer_diagnostics">
+      <standard_name name="do_chemical_tracer_diagnostics">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="sigma_pressure_threshold_at_upper_extent_of_background_diffusion">
@@ -589,19 +590,19 @@
       <standard_name name="directory_for_rte_rrtmgp_source_code">
          <type kind="len=128" units="none">character</type>
       </standard_name>
-      <standard_name name="flag_for_mellor_yamada_janic_pbl_scheme">
+      <standard_name name="do_mellor_yamada_janic_pbl_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_mellor_yamada_janic_surface_layer_scheme">
+      <standard_name name="do_mellor_yamada_janic_surface_layer_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_mellor_yamada_nakanishi_niino_pbl_scheme">
+      <standard_name name="do_mellor_yamada_nakanishi_niino_pbl_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_mellor_yamada_nakanishi_niino_surface_layer_scheme">
+      <standard_name name="do_mellor_yamada_nakanishi_niino_surface_layer_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_unified_gravity_wave_physics_gravity_wave_drag_scheme">
+      <standard_name name="do_unified_gravity_wave_physics_gravity_wave_drag_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="downdraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme">
@@ -614,16 +615,16 @@
          <type kind="kind_phys" units="frac">real</type>
       </standard_name>
       <standard_name name="control_for_edmf_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_edmf_momentum_transport_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_edmf_partitioning_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_edmf_tke_transport_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="surface_layer_scheme_enthalpy_flux_factor">
          <type kind="kind_phys" units="none">real</type>
@@ -643,370 +644,370 @@
       <standard_name name="relative_humidity_threshold_for_condensation">
          <type kind="kind_phys" units="none">real</type>
       </standard_name>
-      <standard_name name="flag_for_arakawa_wu_downdrafts_for_deep_convection">
+      <standard_name name="do_arakawa_wu_downdrafts_for_deep_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_debug_output">
+      <standard_name name="do_debug_output">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_diagnostics">
+      <standard_name name="do_diagnostics">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_XYZ_dimensioned_diagnostics">
+      <standard_name name="do_XYZ_dimensioned_diagnostics">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_flip">
+      <standard_name name="do_flip">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_flux_adjusting_surface_data_assimilation_system">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_flux_form_in chikira_sugiyama_deep_convection_scheme">
+      <standard_name name="do_flux_form_in chikira_sugiyama_deep_convection_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_nrl_2015_ozone_scheme">
+      <standard_name name="do_nrl_2015_ozone_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_prescribed_aerosols">
+      <standard_name name="do_prescribed_aerosols">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_aerosol_physics">
+      <standard_name name="do_aerosol_physics">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_arakawa_wu_adjustment">
+      <standard_name name="do_arakawa_wu_adjustment">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_canopy_heat_storage_in_land_surface_scheme">
+      <standard_name name="do_canopy_heat_storage_in_land_surface_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_canopy_stomatal_resistance">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_cellular_automata">
+      <standard_name name="do_cellular_automata">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_chemistry_coupling">
+      <standard_name name="do_chemistry_coupling">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_chikira_sugiyama_deep_convection_scheme">
+      <standard_name name="do_chikira_sugiyama_deep_convection_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_in_cloud_condensate">
+      <standard_name name="do_in_cloud_condensate">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_cloud_effective_radii">
+      <standard_name name="do_cloud_effective_radii">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_cloud_overlap_method_for_radiation">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_cloud_overlap_method_for_radiation">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_constant_decorrelation_length_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="identifier_for_constant_decorrelation_length_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_convective_gravity_wave_drag">
+      <standard_name name="do_convective_gravity_wave_drag">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_convective_transport_of_tracers">
+      <standard_name name="do_convective_transport_of_tracers">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_converting_hydrometeors_from_moist_to_dry_air">
+      <standard_name name="do_converting_hydrometeors_from_moist_to_dry_air">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_crick_elimination">
+      <standard_name name="do_crick_elimination">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_decorrelation_length_cloud_overlap_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="identifier_for_decorrelation_length_cloud_overlap_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_decorrelation_length_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_decorrelation_length_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_shortwave_radiation_aerosols">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_dynamic_vegetation">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_exponential_cloud_overlap_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="indentifier_for_exponential_cloud_overlap_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_exponential_random_cloud_overlap_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="identifier_for_exponential_random_cloud_overlap_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_fer_hires_microphysics_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_first_timestep">
+      <standard_name name="is_first_timestep">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_surface_flux_coupling">
+      <standard_name name="do_surface_flux_coupling">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_fractional_landmask">
+      <standard_name name="do_fractional_landmask">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_frozen_soil_permeability">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name=" flag_for_cellular_automata_gaussian_spatial_filter">
+      <standard_name name=" do_cellular_automata_gaussian_spatial_filter">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_gcycle_surface_option">
+      <standard_name name="do_gcycle_surface_option">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_generic_tendency_due_to_deep_convection">
+      <standard_name name="do_generic_tendency_due_to_deep_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_generic_tendency_due_to_gravity_wave_drag">
+      <standard_name name="do_generic_tendency_due_to_gravity_wave_drag">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_generic_tendency_due_to_planetary_boundary_layer">
+      <standard_name name="do_generic_tendency_due_to_planetary_boundary_layer">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_generic_tendency_due_to_shallow_convection">
+      <standard_name name="do_generic_tendency_due_to_shallow_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="identifier_for_grell_freitas_deep_convection">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_grell_freitas_shallow_convection">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_gfdl_microphysics_radiation_interaction">
+      <standard_name name="do_gfdl_microphysics_radiation_interaction">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="identifier_for_gfdl_microphysics_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_global_cellular_automata">
+      <standard_name name="do_global_cellular_automata">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_global_cellular_automata_closure">
+      <standard_name name="do_global_cellular_automata_closure">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name=" flag_for_global_cellular_automata_deep_convective_entrainment">
+      <standard_name name=" do_global_cellular_automata_deep_convective_entrainment">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_global_cellular_automata_trigger">
+      <standard_name name="do_global_cellular_automata_trigger">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_gravity_wave_drag">
+      <standard_name name="do_gravity_wave_drag">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_surface_snow_albedo">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_gsl_drag_suite_large_scale_orographic_and_blocking_drag">
+      <standard_name name="do_gsl_drag_suite_large_scale_orographic_and_blocking_drag">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_gsl_drag_suite_small_scale_orographic_drag">
+      <standard_name name="do_gsl_drag_suite_small_scale_orographic_drag">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_gsl_drag_suite_turbulent_orographic_form_drag">
+      <standard_name name="do_gsl_drag_suite_turbulent_orographic_form_drag">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_hybrid_edmf_pbl_scheme">
+      <standard_name name="do_hybrid_edmf_pbl_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_hogan_decorrelation_length_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="identifier_for_hogan_decorrelation_length_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_hurricane_specific_code_in_scale_aware_mass_flux_deep_convection">
+      <standard_name name="do_hurricane_specific_code_in_scale_aware_mass_flux_deep_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_hurricane_specific_code_in_scale_aware_mass_flux_shallow_convection">
+      <standard_name name="do_hurricane_specific_code_in_scale_aware_mass_flux_shallow_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_hydrostatic_solver">
+      <standard_name name="do_hydrostatic_solver">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_ice_cloud_condensation_nuclei_forcing">
          <type kind="" units="none">integer</type>
       </standard_name>
-      <standard_name name="flag_for_separate_advection_of_condensate_species">
+      <standard_name name="do_separate_advection_of_condensate_species">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_initial_time_date_control">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_initial_time_date">
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_lake_surface_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_cloud_area_fraction_option_for_radiation">
+      <standard_name name="do_cloud_area_fraction_option_for_radiation">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_lower_boundary_soil_temperature">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_lw_clouds_sub_grid_approximation">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_lw_clouds_subgrid_approximation">
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_deep_convection_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_shallow_convection_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_maximum_cloud_overlap_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_maximum_cloud_overlap_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_maximum_random_cloud_overlap_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="identifier_for_maximum_random_cloud_overlap_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_microphysics_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_moorthi_stratus">
+      <standard_name name="do_moorthi_stratus">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="identifier_for_morrison_gettelman_microphysics_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_mountain_blocking_for_sppt">
+      <standard_name name="do_mountain_blocking_for_sppt">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="identifier_for_noah_land_surface_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_noah_lsm_ua_extension">
+      <standard_name name="do_noah_lsm_ua_extension">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="identifier_for_noah_wrfv4_land_surface_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_noahmp_land_surface_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_nsstm_analysis_in_gcycle">
+      <standard_name name="do_nsstm_analysis_in_gcycle">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_nsstm">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_new_tiedtke_deep_convection">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_new_tiedtke_shallow_convection">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_surface_layer_scheme_ocean_currents">
+      <standard_name name="do_surface_layer_scheme_ocean_currents">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_old_pbl_scheme">
+      <standard_name name="do_old_pbl_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_optical_property_for_ice_clouds_for_longwave_radiation">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_optical_property_for_ice_clouds_for_longwave_radiation">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_optical_property_for_ice_clouds_for_shortwave_radiation">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_optical_property_for_ice_clouds_for_shortwave_radiation">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_optical_property_for_liquid_clouds_for_longwave_radiation">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_optical_property_for_liquid_clouds_for_longwave_radiation">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="control_for_shortwave_radiation_liquid_clouds">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_optical_property_for_liquid_clouds_for_shortwave_radiation">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_oreopoulos_decorrelation_length_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="identifier_for_oreopoulos_decorrelation_length_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_output_of_tendency_of_air_temperature_due_to_longwave_heating_on_radiation_timestep_assuming_clear_sky">
+      <standard_name name="do_output_of_tendency_of_air_temperature_due_to_longwave_heating_on_radiation_timestep_assuming_clear_sky">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_output_of_tendency_of_air_temperature_due_to_shortwave_heating_on_radiation_timestep_assuming_clear_sky">
+      <standard_name name="do_output_of_tendency_of_air_temperature_due_to_shortwave_heating_on_radiation_timestep_assuming_clear_sky">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_nrl_2006_ozone_scheme">
+      <standard_name name="do_nrl_2006_ozone_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_pdf_shape_for_microphysics">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_surface_layer_scheme_surface_drag_coefficient_for_momentum_in_air_perturbations">
+      <standard_name name="do_surface_layer_scheme_surface_drag_coefficient_for_momentum_in_air_perturbations">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_turning_off_precipitation_radiative_effect">
+      <standard_name name="disable_precipitation_radiative_effect">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_precipitation_type_partition">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_dominant_precipitation_type_partition">
+      <standard_name name="do_dominant_precipitation_type_partition">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_radar_reflectivity">
+      <standard_name name="do_radar_reflectivity">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_radiative_transfer">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_random_cloud_overlap_method">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="identifier_for_random_cloud_overlap_method">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_random_clouds_in_relaxed_arakawa_schubert_deep_convection">
+      <standard_name name="do_random_clouds_in_relaxed_arakawa_schubert_deep_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_relaxed_arakawa_schubert_deep_convection">
+      <standard_name name="do_relaxed_arakawa_schubert_deep_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_reading_leaf_area_index_from_input">
+      <standard_name name="do_read_leaf_area_index_from_input">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_reading_surface_albedo_for_diffused_shortwave_from_input">
+      <standard_name name="do_read_surface_albedo_for_diffused_shortwave_from_input">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_limited_surface_roughness_length_over_ocean">
+      <standard_name name="do_limited_surface_roughness_length_over_ocean">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_reference_pressure_theta">
+      <standard_name name="do_reference_pressure_theta">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_restart">
+      <standard_name name="is_restart">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_rrtmgp_radiation_scheme">
+      <standard_name name="do_rrtmgp_radiation_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="identifier_for_ruc_land_surface_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_runoff_and_groundwater">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifer_for_scale_aware_mass_flux_deep_convection">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_scale_aware_mass_flux_shallow_convection">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_simplified_arakawa_schubert_deep_convection">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_simplified_arakawa_schubert_shallow_convection">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_scale_aware_mass_flux_deep_convection_for_radiation">
+      <standard_name name="do_scale_aware_mass_flux_deep_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_scale_aware_shin_hong_pbl_scheme">
+      <standard_name name="do_scale_aware_shin_hong_pbl_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_scale_aware_tke_moist_edmf_pbl">
+      <standard_name name="do_scale_aware_tke_moist_edmf_pbl">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_sgs_cellular_automata">
+      <standard_name name="do_sgs_cellular_automata">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_simplified_arakawa_schubert_shallow_convection">
+      <standard_name name="do_simplified_arakawa_schubert_shallow_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_shoc">
+      <standard_name name="do_shoc">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_shoc_after_convection">
+      <standard_name name="do_shoc_after_convection">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_soil_and_snow_temperature_time_integration">
@@ -1016,142 +1017,142 @@
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_solar_constant">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_stochastic_cloud_fraction_perturbations">
+      <standard_name name="do_stochastic_cloud_fraction_perturbations">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_stochastic_microphysics_perturbations">
+      <standard_name name="do_stochastic_microphysics_perturbations">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_stochastic_physics_perturbations">
+      <standard_name name="do_stochastic_physics_perturbations">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_stochastic_radiative_heating_perturbations">
+      <standard_name name="do_stochastic_radiative_heating_perturbations">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_stochastic_shum_option">
+      <standard_name name="do_stochastic_shum_option">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_stochastic_skeb_option">
+      <standard_name name="do_stochastic_skeb_option">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_stratospheric_water_vapor_physics">
+      <standard_name name="do_stratospheric_water_vapor_physics">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_supercooled_liquid_water">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_surface_emissivity">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_surface_layer_drag_coefficient">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_surface_roughness_option_over_water">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_surface_roughness_option_over_water">
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_sw_clouds_grid_approximation">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_sw_clouds_subgrid_approximation">
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_land_surface_scheme_thermal_conductivity_option">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_thompson_microphysics_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_ugwp_version_0">
+      <standard_name name="do_ugwp_version_0">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_ugwp_version_0_nonorographic_gwd">
+      <standard_name name="do_ugwp_version_0_nonorographic_gwd">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_ugwp_version_0_orographic_gwd">
+      <standard_name name="do_ugwp_version_0_orographic_gwd">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_ugwp_version_1">
+      <standard_name name="do_ugwp_version_1">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_ugwp_version_1_nonorographic_gwd">
+      <standard_name name="do_ugwp_version_1_nonorographic_gwd">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_ugwp_version_1_orographic_gwd">
+      <standard_name name="do_ugwp_version_1_orographic_gwd">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_shoc_cloud_area_fraction_for_radiation">
+      <standard_name name="do_shoc_cloud_area_fraction_for_radiation">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_surface_layer_scheme_skin_temperature_update">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_surface_albedo">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="control_for_co2">
-         <type kind="" units="flag">integer</type>
+      <standard_name name="control_for_prescribed_co2">
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_vertical_index_direction">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_ocean_wave_coupling">
+      <standard_name name="do_ocean_wave_coupling">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_one_way_ocean_wave_coupling_to_atmosphere">
+      <standard_name name="do_one_way_ocean_wave_coupling_to_atmosphere">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="identifier_for_wsm6_microphysics_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_ysu_pbl_scheme">
+      <standard_name name="do_ysu_pbl_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="identifier_for_zhao_carr_microphysics_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="identifier_for_zhao_carr_pdf_microphysics_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="flag_for_hurricane_specific_code_in_hybrid_edmf_pbl_scheme">
+      <standard_name name="do_hurricane_specific_code_in_hybrid_edmf_pbl_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_integrated_dynamics_through_earths_atmosphere">
+      <standard_name name="do_integrated_dynamics_through_earths_atmosphere">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_print">
+      <standard_name name="do_print">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_saving_shallow_convective_cloud_area_fraction">
+      <standard_name name="do_save_shallow_convective_cloud_area_fraction">
          <type kind="" units="">logical</type>
       </standard_name>
-      <standard_name name="flag_tke_dissipation_heating">
+      <standard_name name="do_tke_dissipation_heating">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_calling_longwave_radiation">
+      <standard_name name="do_call_longwave_radiation">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_using_rrtmg_cloud_optics">
+      <standard_name name="do_rrtmg_cloud_optics">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_using_rrtmgp_cloud_optics_look_up_table">
+      <standard_name name="do_rrtmgp_cloud_optics_look_up_table">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_using_rrtmgp_cloud_optics_with_pade_approximation">
+      <standard_name name="do_rrtmgp_cloud_optics_with_pade_approximation">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_rrtmgp_longwave_jacobian">
+      <standard_name name="do_rrtmgp_longwave_jacobian">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_calling_shortwave_radiation">
+      <standard_name name="do_call_shortwave_radiation">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_to_include_longwave_scattering_in_cloud_optics">
+      <standard_name name="do_longwave_scattering_in_cloud_optics">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_tracer_XYZ_dimensioned_diagnostics">
+      <standard_name name="do_tracer_XYZ_dimensioned_diagnostics">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_variable_bulk_richardson_number">
-         <type kind="kind_phys" units="flag">real</type>
+         <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="date_and_time_of_forecast_in_United_States_order">
          <type kind="" units="none">integer</type>
@@ -1175,10 +1176,10 @@
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
       <standard_name name="control_for_gravitational_settling_of_cloud_droplets">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_drag_suite_gravity_wave_drag">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="horizontal_loop_extent">
          <type kind="" units="count">integer</type>
@@ -1213,7 +1214,7 @@
       <standard_name name="index_of_convective_cloud_area_fraction_in_xyz_dimensioned_restart_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_convective_cloud_condensate_mixing_ratio_in_xyz_dimensioned_restart_array">
+      <standard_name name="index_of_convective_cloud_condensate_mixing_ratio_wrt_moist_air_in_xyz_dimensioned_restart_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_horizontal_gridpoint_for_debug_output">
@@ -1222,7 +1223,7 @@
       <standard_name name="index_of_first_chemical_tracer_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_graupel_mixing_ratio_in_tracer_concentration_array">
+      <standard_name name="index_of_graupel_mixing_ratio_wrt_moist_air_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_graupel_effective_radius_in_xyz_dimensioned_restart_array">
@@ -1231,7 +1232,7 @@
       <standard_name name="index_of_mass_number_concentration_of_graupel_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_cloud_ice_mixing_ratio_in_tracer_concentration_array">
+      <standard_name name="index_of_cloud_ice_mixing_ratio_wrt_moist_air_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_mass_number_concentration_of_cloud_ice_in_tracer_concentration_array">
@@ -1243,7 +1244,7 @@
       <standard_name name="index_of_mass_number_concentration_of_nonhygroscopic_ice_nucleating_aerosols_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_cloud_liquid_water_mixing_ratio_in_tracer_concentration_array">
+      <standard_name name="index_of_cloud_liquid_water_mixing_ratio_wrt_moist_air_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_mass_number_concentration_of_cloud_droplets_in_tracer_concentration_array">
@@ -1252,7 +1253,7 @@
       <standard_name name="index_of_mass_weighted_rime_factor_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_ozone_mixing_ratio_in_tracer_concentration_array">
+      <standard_name name="index_of_ozone_mixing_ratio_wrt_moist_air_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_rain_effective_radius_in_xyz_dimensioned_restart_array">
@@ -1261,7 +1262,7 @@
       <standard_name name="index_of_mass_number_concentration_of_rain_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_rain_mixing_ratio_in_tracer_concentration_array">
+      <standard_name name="index_of_rain_mixing_ratio_wrt_moist_air_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_snow_effective_radius_in_xyz_dimensioned_restart_array">
@@ -1270,7 +1271,7 @@
       <standard_name name="index_of_mass_number_concentration_of_snow_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_snow_mixing_ratio_in_tracer_concentration_array">
+      <standard_name name="index_of_snow_mixing_ratio_wrt_moist_air_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_specific_humidity_on_previous_timestep_in_xyz_dimensioned_restart_array">
@@ -1348,7 +1349,7 @@
       <standard_name name="maximum_soil_moisture_content_for_land_surface_model">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
-      <standard_name name="flag_for_allowance_of_supersaturation_after_sedimentation">
+      <standard_name name="do_allow_supersaturation_after_sedimentation">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="autoconverion_to_snow_size_threshold">
@@ -1360,55 +1361,55 @@
       <standard_name name="relative_variance_of_subgrid_cloud_condensate_distribution">
          <type kind="kind_phys" units="kg2 kg-2">real</type>
       </standard_name>
-      <standard_name name="prescribed_cloud_droplet_number_concentration">
+      <standard_name name="prescribed_number_concentration_of_cloud_droplets">
          <type kind="kind_phys" units="m-3">real</type>
       </standard_name>
-      <standard_name name="flag_for_prescribed_cloud_droplet_number_concentration">
+      <standard_name name="do_prescribed_number_concentration_of_cloud_droplets">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_cloud_ice_processes">
+      <standard_name name="do_cloud_ice_processes">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_gmao_autoconversion_to_snow">
+      <standard_name name="do_gmao_autoconversion_to_snow">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_graupel_instead_of_hail">
+      <standard_name name="do_graupel_instead_of_hail">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_hail_instead_of_graupel">
+      <standard_name name="do_hail_instead_of_graupel">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_heterogeneous_nucleation">
+      <standard_name name="do_heterogeneous_nucleation">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_liu_autoconversion_to_rain">
+      <standard_name name="do_liu_autoconversion_to_rain">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_seifert_and_beheng_2001_autoconversion">
+      <standard_name name="do_seifert_and_beheng_2001_autoconversion">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_uniform_subcolumns">
+      <standard_name name="do_uniform_subcolumns">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_prescribed_graupel_number_concentration">
+      <standard_name name="do_prescribed_number_concentration_of_graupel">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="flag_for_prescribed_cloud_ice_number_concentration">
+      <standard_name name="do_prescribed_number_concentration_of_cloud_ice">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="prescribed_graupel_number_concentration">
+      <standard_name name="prescribed_number_concentration_of_graupel">
          <type kind="kind_phys" units="m-3">real</type>
       </standard_name>
-      <standard_name name="prescribed_cloud_ice_number_concentration">
+      <standard_name name="prescribed_number_concentration_of_cloud_ice">
          <type kind="kind_phys" units="m-3">real</type>
       </standard_name>
-      <standard_name name="minimum_cloud_condensate_mixing_ratio_threshold">
+      <standard_name name="minimum_cloud_condensate_mixing_ratio_wrt_moist_air_threshold">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="minimum_cloud_liquid_water_mixing_ratio_threshold">
+      <standard_name name="minimum_cloud_liquid_water_mixing_ratio_wrt_moist_air_threshold">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="minimum_cloud_ice_mixing_ratio_threshold">
+      <standard_name name="minimum_cloud_ice_mixing_ratio_wrt_moist_air_threshold">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="relative_humidity_threshold_for_ice_nucleation">
@@ -1439,10 +1440,10 @@
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
       <standard_name name="control_for_total_water_mixing_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_mixing_length_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="momentum_transport_reduction_factor_due_to_pressure_gradient_force_for_deep_convection">
          <type kind="kind_phys" units="frac">real</type>
@@ -1472,7 +1473,7 @@
          <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="control_for_additional_diagnostics_in_mellor_yamada_nakanishi_niino_pbl_scheme">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="filename_of_namelist">
          <type kind="len=64" units="none">character</type>
@@ -1636,7 +1637,7 @@
       <standard_name name="filename_of_rrtmgp_shortwave_k_distribution">
          <type kind="len=128" units="none">character</type>
       </standard_name>
-      <standard_name name="flag_for_rrtmgp_shortwave_and_rrtmg_longwave_radiation">
+      <standard_name name="do_rrtmgp_shortwave_and_rrtmg_longwave_radiation">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="min_sea_ice_area_fraction">
@@ -1711,11 +1712,11 @@
       <standard_name name="timestep_for_dynamics">
          <type kind="kind_phys" units="s">real</type>
       </standard_name>
-      <standard_name name="flag_for_tke_advection">
+      <standard_name name="do_tke_advection">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_tke_budget_output">
-         <type kind="" units="flag">integer</type>
+         <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="multiplicative_tuning_parameter_for_tke_dissipative_heating">
          <type kind="kind_phys" units="none">real</type>
@@ -1723,7 +1724,7 @@
       <standard_name name="total_amplitude_of_sppt_perturbation">
          <type kind="kind_phys" units="none">real</type>
       </standard_name>
-      <standard_name name="flag_for_turbulent_orographic_form_drag_in_unified_gravity_wave_physics_gravitiy_wave_drag_scheme">
+      <standard_name name="do_turbulent_orographic_form_drag_in_unified_gravity_wave_physics_gravitiy_wave_drag_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="updraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme">
@@ -1764,10 +1765,10 @@
       </standard_name>
    </section>
    <section name="GFS_typedefs_GFS_interstitial_type">
-      <standard_name name="cloud_ice_mixing_ratio_interstitial">
+      <standard_name name="cloud_ice_mixing_ratio_wrt_moist_air_interstitial">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="cloud_liquid_water_mixing_ratio_interstitial">
+      <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air_interstitial">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="radiatively_active_gases">
@@ -1779,10 +1780,10 @@
       <standard_name name="process_split_cumulative_tendency_of_mass_number_concentration_of_cloud_liquid_water_particles_in_air">
          <type kind="kind_phys" units="kg-1 s-1">real</type>
       </standard_name>
-      <standard_name name="process_split_cumulative_tendency_of_graupel_mixing_ratio">
+      <standard_name name="process_split_cumulative_tendency_of_graupel_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
-      <standard_name name="process_split_cumulative_tendency_of_cloud_ice_mixing_ratio">
+      <standard_name name="process_split_cumulative_tendency_of_cloud_ice_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
       <standard_name name="process_split_cumulative_tendency_of_mass_number_concentration_of_nonhygroscopic_ice_nucleating_aerosols">
@@ -1791,16 +1792,16 @@
       <standard_name name="process_split_cumulative_tendency_of_mass_number_concentration_of_cloud_ice_water_crystals_in_air">
          <type kind="kind_phys" units="kg-1 s-1">real</type>
       </standard_name>
-      <standard_name name="process_split_cumulative_tendency_of_cloud_liquid_water_mixing_ratio">
+      <standard_name name="process_split_cumulative_tendency_of_cloud_liquid_water_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
-      <standard_name name="process_split_cumulative_tendency_of_ozone_mixing_ratio">
+      <standard_name name="process_split_cumulative_tendency_of_ozone_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
-      <standard_name name="process_split_cumulative_tendency_of_rain_mixing_ratio">
+      <standard_name name="process_split_cumulative_tendency_of_rain_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
-      <standard_name name="process_split_cumulative_tendency_of_snow_mixing_ratio">
+      <standard_name name="process_split_cumulative_tendency_of_snow_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
       <standard_name name="process_split_cumulative_tendency_of_tracers">
@@ -1859,7 +1860,7 @@
       <standard_name name="convective_cloud_area_fraction">
          <type kind="kind_phys" units="frac">real</type>
       </standard_name>
-      <standard_name name="convective_cloud_condensate_mixing_ratio">
+      <standard_name name="convective_cloud_condensate_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="effective_radius_of_stratiform_cloud_graupel_particle">
@@ -1943,10 +1944,10 @@
       <standard_name name="subgrid_scale_cloud_area_fraction_in_atmosphere_layer">
          <type kind="kind_phys" units="frac">real</type>
       </standard_name>
-      <standard_name name="subgrid_scale_cloud_ice_mixing_ratio">
+      <standard_name name="subgrid_scale_cloud_ice_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="subgrid_scale_cloud_liquid_water_mixing_ratio">
+      <standard_name name="subgrid_scale_cloud_liquid_water_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="subgrid_scale_cloud_fraction_from_shoc">
@@ -2038,10 +2039,10 @@
       <standard_name name="canopy_water_amount">
          <type kind="kind_phys" units="kg m-2">real</type>
       </standard_name>
-      <standard_name name="cloud_condensed_water_mixing_ratio_at_surface_over_ice">
+      <standard_name name="cloud_condensed_water_mixing_ratio_wrt_moist_air_at_surface_over_ice">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="cloud_condensed_water_mixing_ratio_at_surface_over_land">
+      <standard_name name="cloud_condensed_water_mixing_ratio_wrt_moist_air_at_surface_over_land">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="coefficient_c_0">
@@ -2090,10 +2091,10 @@
          <type kind="kind_phys" units="g m-2">real</type>
       </standard_name>
       <standard_name name="control_for_frozen_soil_physics">
-         <type kind="kind_phys" units="flag">real</type>
+         <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="precipitation_type">
-         <type kind="kind_phys" units="flag">real</type>
+         <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="strong_cosz_area_fraction">
          <type kind="kind_phys" units="frac">real</type>
@@ -2231,7 +2232,7 @@
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
       <standard_name name="area_type">
-         <type kind="kind_phys" units="flag">real</type>
+         <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="reference_sea_surface_temperature">
          <type kind="kind_phys" units="K">real</type>
@@ -2485,10 +2486,10 @@
       <standard_name name="water_table_recharge_assuming_shallow">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
-      <standard_name name="water_vapor_mixing_ratio_at_surface_over_ice">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_surface_over_ice">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="water_vapor_mixing_ratio_at_surface_over_land">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_surface_over_land">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="wood_mass_content">
@@ -2497,7 +2498,7 @@
    </section>
    <section name="GFS_typedefs_GFS_coupling_type">
       <standard_name name="cellular_automata_global_pattern_from_coupled_process">
-         <type kind="kind_phys" units="flag">real</type>
+         <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="convective_cloud_condesate_after_rainout">
          <type kind="kind_phys" units="kg kg-1">real</type>
@@ -2650,7 +2651,7 @@
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="area_type_from_coupled_process">
-         <type kind="kind_phys" units="flag">real</type>
+         <type kind="kind_phys" units="none">real</type>
       </standard_name>
       <standard_name name="surface_downwelling_diffuse_nir_shortwave_flux_on_radiation_timestep">
          <type kind="kind_phys" units="W m-2">real</type>
@@ -2756,7 +2757,7 @@
       <standard_name name="air_temperature_at_surface_adjacent_layer">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="cloud_liquid_water_mixing_ratio_at_surface_adjacent_layer">
+      <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air_at_surface_adjacent_layer">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="mass_number_concentration_of_cloud_liquid_water_particles_in_air">
@@ -2780,7 +2781,7 @@
       <standard_name name="geopotential_at_interface">
          <type kind="kind_phys" units="m2 s-2">real</type>
       </standard_name>
-      <standard_name name="graupel_mixing_ratio">
+      <standard_name name="graupel_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="mass_number_concentration_of_graupel_in_air">
@@ -2792,7 +2793,7 @@
       <standard_name name="mass_number_concentration_of_cloud_ice_water_crystals_in_air">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="ozone_mixing_ratio">
+      <standard_name name="ozone_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="mass_number_concentration_of_rain_water_in_air">
@@ -2801,7 +2802,7 @@
       <standard_name name="mass_number_concentration_of_snow_in_air">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="snow_mixing_ratio">
+      <standard_name name="snow_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="tracer_concentration">
@@ -2956,7 +2957,7 @@
       <standard_name name="air_temperature_of_new_state">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="cloud_liquid_water_mixing_ratio_of_new_state">
+      <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air_of_new_state">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="mass_number_concentration_of_cloud_liquid_water_particles_in_air_of_new_state">
@@ -2965,7 +2966,7 @@
       <standard_name name="cloud_area_fraction_in_atmosphere_layer_of_new_state">
          <type kind="kind_phys" units="frac">real</type>
       </standard_name>
-      <standard_name name="graupel_mixing_ratio_of_new_state">
+      <standard_name name="graupel_mixing_ratio_wrt_moist_air_of_new_state">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="mass_number_concentration_of_graupel_of_new_state">
@@ -2977,7 +2978,7 @@
       <standard_name name="mass_number_concentration_of_cloud_ice_water_crystals_in_air_of_new_state">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="cloud_ice_mixing_ratio_of_new_state">
+      <standard_name name="cloud_ice_mixing_ratio_wrt_moist_air_of_new_state">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="mass_weighted_rime_factor_of_new_state">
@@ -2989,13 +2990,13 @@
       <standard_name name="mass_number_concentration_of_rain_of_new_state">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="rain_mixing_ratio_of_new_state">
+      <standard_name name="rain_mixing_ratio_wrt_moist_air_of_new_state">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="mass_number_concentration_of_snow_of_new_state">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="snow_mixing_ratio_of_new_state">
+      <standard_name name="snow_mixing_ratio_wrt_moist_air_of_new_state">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="tracer_concentration_of_new_state">
