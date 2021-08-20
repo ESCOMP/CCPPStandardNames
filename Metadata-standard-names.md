@@ -61,7 +61,7 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `integer`: units = none
 ## constants
 * `avogadro_number`: Avogadro number
-    * `real(kind=kind_phys)`: units = molecules mole-1
+    * `real(kind=kind_phys)`: units = molecules mol-1
 * `base_state_surface_pressure_for_hybrid_vertical_coordinate`: Base state surface pressure for hybrid vertical coordinate
     * `real(kind=kind_phys)`: units = Pa
 * `boltzmann_constant`: Boltzmann constant
@@ -121,7 +121,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-1
 * `dry_static_energy`: Dry static energy Content of Atmosphere Layer
     * `real(kind=kind_phys)`: units = J kg-1
-* `flag_for_lagrangian_vertical_coordinate`: flag indicating if vertical coordinate is lagrangian
+* `do_lagrangian_vertical_coordinate`: flag indicating if vertical coordinate is lagrangian
     * `logical(kind=)`: units = flag
 * `lagrangian_tendency_of_air_pressure`: Vertical pressure velocity
     * `real(kind=kind_phys)`: units = Pa s-1
@@ -145,8 +145,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `geopotential_height`: Geopotential height
     * `real(kind=kind_phys)`: units = m
-* `constituent_mixing_ratio`: Constituent mixing ratio
-    * `real(kind=kind_phys)`: units = kg/kg moist or dry air depending on type
+* `potentially_advected_quantities`: Potentially advected quantities
+    * `real(kind=kind_phys)`: units = various
 * `air_pressure_at_interface`: Air pressure at interface
     * `real(kind=kind_phys)`: units = Pa
 * `air_pressure_of_dry_air_at_interface`: Air pressure of dry air at interface
@@ -157,9 +157,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `largest_model_top_pressure_that_allows_molecular_diffusion`: Largest model top pressure that allows molecular diffusion
     * `real(kind=kind_phys)`: units = Pa
-* `flag_for_molecular_diffusion`: Flag for molecular diffusion
+* `do_molecular_diffusion`: Do molecular diffusion
     * `logical(kind=kind_phys)`: units = flag
-* `flag_for_physics_grid_initialization`: Flag to indicate if physics grid is initialized
+* `is_initialized_physics_grid`: Flag to indicate if physics grid is initialized
     * `logical(kind=kind_phys)`: units = flag
 * `geopotential_height_at_interface`: Geopotential height at interface
     * `real(kind=kind_phys)`: units = m
@@ -222,41 +222,41 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `specific_humidity`: Specific humidity
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mole_fraction_of_water_vapor`: Mole fraction of water vapor
-    * `real(kind=kind_phys)`: units = mole mole-1
-* `cloud_liquid_water_mixing_ratio_of_moist_air`: Cloud liquid water mixing ratio of moist air
+    * `real(kind=kind_phys)`: units = mol mol-1
+* `cloud_liquid_water_mixing_ratio_wrt_moist_air`: Cloud liquid water mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
-* `cloud_liquid_water_mixing_ratio`: Cloud liquid water mixing ratio
+* `cloud_liquid_water_mixing_ratio_wrt_dry_air`: Cloud liquid water mixing ratio wrt dry air
     * `real(kind=kind_phys)`: units = kg kg-1
-* `cloud_ice_mixing_ratio`: Ratio of the mass of ice to the mass of dry air
+* `cloud_ice_mixing_ratio_wrt_dry_air`: Ratio of the mass of ice to the mass of dry air
     * `real(kind=kind_phys)`: units = kg kg-1
-* `rain_mixing_ratio`: Rain mixing ratio
+* `rain_mixing_ratio_wrt_moist_air`: ratio of the mass of rain to the mass of moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `volume_mixing_ratio_of_ch4`: CH4 volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_co`: CO volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_co2`: CO2 volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_ccl4`: CCL4 volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_cfc11`: CFC11 volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_cfc12`: CFC12 volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_cfc113`: CFC113 volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_cfc22`: CFC22 volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_o2`: O2 volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_n2o`: N2O volume mixing ratio
-    * `real(kind=kind_phys)`: units = kg kg-1
+    * `real(kind=kind_phys)`: units = mol mol-1
 ## standard_variables
 Standard / required CCPP variables
 * `ccpp_error_message`: Error message for error handling in CCPP
     * `character(kind=len=512)`: units = 1
 * `ccpp_error_flag`: Error flag for error handling in CCPP
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 ## GFS_typedefs_GFS_control_type
 * `sigma_pressure_hybrid_coordinate_a_coefficient`: Sigma pressure hybrid coordinate a coefficient
     * `real(kind=kind_phys)`: units = Pa
@@ -305,15 +305,15 @@ Standard / required CCPP variables
 * `cloud_condensate_autoconversion_threshold_coefficient_for_deep_convection`: Cloud condensate autoconversion threshold coefficient for deep convection
     * `real(kind=kind_phys)`: units = none
 * `control_for_cloud_area_fraction_option`: Control for cloud area fraction option
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `reciprocal_of_cloud_phase_transition_temperature_range`: Reciprocal of cloud phase transition temperature range
     * `real(kind=kind_phys)`: units = K-1
 * `cloud_phase_transition_threshold_temperature`: Cloud phase transition threshold temperature
     * `real(kind=kind_phys)`: units = K
 * `control_for_cloud_species_mixing_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for cloud species mixing in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_cloud_pdf_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for cloud pdf in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `precipitation_evaporation_coefficient`: Precipitation evaporation coefficient
     * `real(kind=kind_phys)`: units = none
 * `coefficient_for_variable_bulk_richardson_number_over_land`: Coefficient for variable bulk richardson number over land
@@ -337,7 +337,7 @@ Standard / required CCPP variables
 * `cosine_of_solar_declination_angle`: Cosine of solar declination angle
     * `real(kind=kind_phys)`: units = none
 * `control_for_sgs_cloud_radiation_coupling_in_mellor_yamamda_nakanishi_niino_pbl_scheme`: Control for sgs cloud radiation coupling in mellor yamamda nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `tunable_parameter_for_critical_cloud_top_entrainment_instability_criteria`: Tunable parameter for critical cloud top entrainment instability criteria
     * `real(kind=kind_phys)`: units = none
 * `critical_relative_humidity_at_top_of_atmosphere_boundary_layer`: Critical relative humidity at top of atmosphere boundary layer
@@ -364,23 +364,23 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = m-1
 * `detrainment_conversion_parameter_for_shallow_convection`: Detrainment conversion parameter for shallow convection
     * `real(kind=kind_phys)`: units = m-1
-* `flag_for_unified_gravity_wave_physics_diagnostics`: Flag for unified gravity wave physics diagnostics
+* `do_unified_gravity_wave_physics_diagnostics`: Do unified gravity wave physics diagnostics
     * `logical(kind=)`: units = flag
-* `flags_for_chemical_tracer_diagnostics`: Flags for chemical tracer diagnostics
+* `do_chemical_tracer_diagnostics`: Do chemical tracer diagnostics
     * `logical(kind=)`: units = flag
 * `sigma_pressure_threshold_at_upper_extent_of_background_diffusion`: Sigma pressure threshold at upper extent of background diffusion
     * `real(kind=kind_phys)`: units = none
 * `directory_for_rte_rrtmgp_source_code`: Directory for rte rrtmgp source code
     * `character(kind=len=128)`: units = none
-* `flag_for_mellor_yamada_janic_pbl_scheme`: Flag for mellor yamada janic pbl scheme
+* `do_mellor_yamada_janic_pbl_scheme`: Do mellor yamada janic pbl scheme
     * `logical(kind=)`: units = flag
-* `flag_for_mellor_yamada_janic_surface_layer_scheme`: Flag for mellor yamada janic surface layer scheme
+* `do_mellor_yamada_janic_surface_layer_scheme`: Do mellor yamada janic surface layer scheme
     * `logical(kind=)`: units = flag
-* `flag_for_mellor_yamada_nakanishi_niino_pbl_scheme`: Flag for mellor yamada nakanishi niino pbl scheme
+* `do_mellor_yamada_nakanishi_niino_pbl_scheme`: Do mellor yamada nakanishi niino pbl scheme
     * `logical(kind=)`: units = flag
-* `flag_for_mellor_yamada_nakanishi_niino_surface_layer_scheme`: Flag for mellor yamada nakanishi niino surface layer scheme
+* `do_mellor_yamada_nakanishi_niino_surface_layer_scheme`: Do mellor yamada nakanishi niino surface layer scheme
     * `logical(kind=)`: units = flag
-* `flag_for_unified_gravity_wave_physics_gravity_wave_drag_scheme`: Flag for unified gravity wave physics gravity wave drag scheme
+* `do_unified_gravity_wave_physics_gravity_wave_drag_scheme`: Do unified gravity wave physics gravity wave drag scheme
     * `logical(kind=)`: units = flag
 * `downdraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme`: Downdraft area fraction in scale aware tke moist edmf pbl scheme
     * `real(kind=kind_phys)`: units = none
@@ -389,13 +389,13 @@ Standard / required CCPP variables
 * `downdraft_fraction_reaching_surface_over_water_for_deep_convection`: Downdraft fraction reaching surface over water for deep convection
     * `real(kind=kind_phys)`: units = frac
 * `control_for_edmf_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for edmf in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_edmf_momentum_transport_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for edmf momentum transport in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_edmf_partitioning_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for edmf partitioning in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_edmf_tke_transport_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for edmf tke transport in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `surface_layer_scheme_enthalpy_flux_factor`: Surface layer scheme enthalpy flux factor
     * `real(kind=kind_phys)`: units = none
 * `tunable_parameter_for_entrainment_efficiency_in_chikira_sugiyama_deep_convection`: Tunable parameter for entrainment efficiency in chikira sugiyama deep convection
@@ -408,346 +408,346 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = radian
 * `relative_humidity_threshold_for_condensation`: Relative humidity threshold for condensation
     * `real(kind=kind_phys)`: units = none
-* `flag_for_arakawa_wu_downdrafts_for_deep_convection`: Flag for arakawa wu downdrafts for deep convection
+* `do_arakawa_wu_downdrafts_for_deep_convection`: Do arakawa wu downdrafts for deep convection
     * `logical(kind=)`: units = flag
-* `flag_for_debug_output`: Flag for debug output
+* `do_debug_output`: Do debug output
     * `logical(kind=)`: units = flag
-* `flag_for_diagnostics`: Flag for diagnostics
+* `do_diagnostics`: Do diagnostics
     * `logical(kind=)`: units = flag
-* `flag_for_XYZ_dimensioned_diagnostics`: Flag for XYZ dimensioned diagnostics
+* `do_XYZ_dimensioned_diagnostics`: Do XYZ dimensioned diagnostics
     * `logical(kind=)`: units = flag
-* `flag_flip`: Flag flip
+* `do_flip`: Do flip
     * `logical(kind=)`: units = flag
 * `control_for_flux_adjusting_surface_data_assimilation_system`: Control for flux adjusting surface data assimilation system
-    * `integer(kind=)`: units = flag
-* `flag_for_flux_form_in chikira_sugiyama_deep_convection_scheme`: Flag for flux form in chikira sugiyama deep convection scheme
+    * `integer(kind=)`: units = index
+* `do_flux_form_in chikira_sugiyama_deep_convection_scheme`: Do flux form in chikira sugiyama deep convection scheme
     * `logical(kind=)`: units = flag
-* `flag_for_nrl_2015_ozone_scheme`: Flag for nrl 2015 ozone scheme
+* `do_nrl_2015_ozone_scheme`: Do nrl 2015 ozone scheme
     * `logical(kind=)`: units = flag
-* `flag_for_prescribed_aerosols`: Flag for prescribed aerosols
+* `do_prescribed_aerosols`: Do prescribed aerosols
     * `logical(kind=)`: units = flag
-* `flag_for_aerosol_physics`: Flag for aerosol physics
+* `do_aerosol_physics`: Do aerosol physics
     * `logical(kind=)`: units = flag
-* `flag_for_arakawa_wu_adjustment`: Flag for arakawa wu adjustment
+* `do_arakawa_wu_adjustment`: Do arakawa wu adjustment
     * `logical(kind=)`: units = flag
-* `flag_for_canopy_heat_storage_in_land_surface_scheme`: Flag for canopy heat storage in land surface scheme
+* `do_canopy_heat_storage_in_land_surface_scheme`: Do canopy heat storage in land surface scheme
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_canopy_stomatal_resistance`: Control for land surface scheme canopy stomatal resistance
     * `integer(kind=)`: units = index
-* `flag_for_cellular_automata`: Flag for cellular automata
+* `do_cellular_automata`: Do cellular automata
     * `logical(kind=)`: units = flag
-* `flag_for_chemistry_coupling`: Flag for chemistry coupling
+* `do_chemistry_coupling`: Do chemistry coupling
     * `logical(kind=)`: units = flag
-* `flag_for_chikira_sugiyama_deep_convection_scheme`: Flag for chikira sugiyama deep convection scheme
+* `do_chikira_sugiyama_deep_convection_scheme`: Do chikira sugiyama deep convection scheme
     * `logical(kind=)`: units = flag
-* `flag_for_in_cloud_condensate`: Flag for in cloud condensate
+* `do_in_cloud_condensate`: Do in cloud condensate
     * `logical(kind=)`: units = flag
-* `flag_for_cloud_effective_radii`: Flag for cloud effective radii
+* `do_cloud_effective_radii`: Do cloud effective radii
     * `logical(kind=)`: units = flag
-* `flag_for_cloud_overlap_method_for_radiation`: Flag for cloud overlap method for radiation
-    * `integer(kind=)`: units = flag
-* `flag_for_constant_decorrelation_length_method`: Flag for constant decorrelation length method
-    * `integer(kind=)`: units = flag
-* `flag_for_convective_gravity_wave_drag`: Flag for convective gravity wave drag
+* `control_for_cloud_overlap_method_for_radiation`: Control for cloud overlap method for radiation
+    * `integer(kind=)`: units = index
+* `identifier_for_constant_decorrelation_length_method`: Identifier for constant decorrelation length method
+    * `integer(kind=)`: units = index
+* `do_convective_gravity_wave_drag`: Do convective gravity wave drag
     * `logical(kind=)`: units = flag
-* `flag_for_convective_transport_of_tracers`: Flag for convective transport of tracers
+* `do_convective_transport_of_tracers`: Do convective transport of tracers
     * `logical(kind=)`: units = flag
-* `flag_for_converting_hydrometeors_from_moist_to_dry_air`: Flag for converting hydrometeors from moist to dry air
+* `do_converting_hydrometeors_from_moist_to_dry_air`: Do converting hydrometeors from moist to dry air
     * `logical(kind=)`: units = flag
-* `flag_for_crick_elimination`: Flag for crick elimination
+* `do_crick_elimination`: Do crick elimination
     * `logical(kind=)`: units = flag
-* `flag_for_decorrelation_length_cloud_overlap_method`: Flag for decorrelation length cloud overlap method
-    * `integer(kind=)`: units = flag
-* `flag_for_decorrelation_length_method`: Flag for decorrelation length method
-    * `integer(kind=)`: units = flag
+* `identifier_for_decorrelation_length_cloud_overlap_method`: Identifier for decorrelation length cloud overlap method
+    * `integer(kind=)`: units = index
+* `control_for_decorrelation_length_method`: Control for decorrelation length method
+    * `integer(kind=)`: units = index
 * `control_for_shortwave_radiation_aerosols`: Control for shortwave radiation aerosols
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_land_surface_scheme_dynamic_vegetation`: Control for land surface scheme dynamic vegetation
     * `integer(kind=)`: units = index
-* `flag_for_exponential_cloud_overlap_method`: Flag for exponential cloud overlap method
-    * `integer(kind=)`: units = flag
-* `flag_for_exponential_random_cloud_overlap_method`: Flag for exponential random cloud overlap method
-    * `integer(kind=)`: units = flag
+* `indentifier_for_exponential_cloud_overlap_method`: Indentifier for exponential cloud overlap method
+    * `integer(kind=)`: units = index
+* `identifier_for_exponential_random_cloud_overlap_method`: Identifier for exponential random cloud overlap method
+    * `integer(kind=)`: units = index
 * `identifier_for_fer_hires_microphysics_scheme`: Identifier for fer hires microphysics scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_first_timestep`: Flag for first timestep
+    * `integer(kind=)`: units = index
+* `is_first_timestep`: Is first timestep
     * `logical(kind=)`: units = flag
-* `flag_for_surface_flux_coupling`: Flag for surface flux coupling
+* `do_surface_flux_coupling`: Do surface flux coupling
     * `logical(kind=)`: units = flag
-* `flag_for_fractional_landmask`: Flag for fractional landmask
+* `do_fractional_landmask`: Do fractional landmask
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_frozen_soil_permeability`: Control for land surface scheme frozen soil permeability
     * `integer(kind=)`: units = index
-* ` flag_for_cellular_automata_gaussian_spatial_filter`:  flag for cellular automata gaussian spatial filter
+* ` do_cellular_automata_gaussian_spatial_filter`:  do cellular automata gaussian spatial filter
     * `logical(kind=)`: units = flag
-* `flag_for_gcycle_surface_option`: Flag for gcycle surface option
+* `do_gcycle_surface_option`: Do gcycle surface option
     * `logical(kind=)`: units = flag
-* `flag_for_generic_tendency_due_to_deep_convection`: Flag for generic tendency due to deep convection
+* `do_generic_tendency_due_to_deep_convection`: Do generic tendency due to deep convection
     * `logical(kind=)`: units = flag
-* `flag_for_generic_tendency_due_to_gravity_wave_drag`: Flag for generic tendency due to gravity wave drag
+* `do_generic_tendency_due_to_gravity_wave_drag`: Do generic tendency due to gravity wave drag
     * `logical(kind=)`: units = flag
-* `flag_for_generic_tendency_due_to_planetary_boundary_layer`: Flag for generic tendency due to planetary boundary layer
+* `do_generic_tendency_due_to_planetary_boundary_layer`: Do generic tendency due to planetary boundary layer
     * `logical(kind=)`: units = flag
-* `flag_for_generic_tendency_due_to_shallow_convection`: Flag for generic tendency due to shallow convection
+* `do_generic_tendency_due_to_shallow_convection`: Do generic tendency due to shallow convection
     * `logical(kind=)`: units = flag
 * `identifier_for_grell_freitas_deep_convection`: Identifier for grell freitas deep convection
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `identifier_for_grell_freitas_shallow_convection`: Identifier for grell freitas shallow convection
-    * `integer(kind=)`: units = flag
-* `flag_for_gfdl_microphysics_radiation_interaction`: Flag for gfdl microphysics radiation interaction
+    * `integer(kind=)`: units = index
+* `do_gfdl_microphysics_radiation_interaction`: Do gfdl microphysics radiation interaction
     * `logical(kind=)`: units = flag
 * `identifier_for_gfdl_microphysics_scheme`: Identifier for gfdl microphysics scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_global_cellular_automata`: Flag for global cellular automata
+    * `integer(kind=)`: units = index
+* `do_global_cellular_automata`: Do global cellular automata
     * `logical(kind=)`: units = flag
-* `flag_for_global_cellular_automata_closure`: Flag for global cellular automata closure
+* `do_global_cellular_automata_closure`: Do global cellular automata closure
     * `logical(kind=)`: units = flag
-* ` flag_for_global_cellular_automata_deep_convective_entrainment`:  flag for global cellular automata deep convective entrainment
+* ` do_global_cellular_automata_deep_convective_entrainment`:  do global cellular automata deep convective entrainment
     * `logical(kind=)`: units = flag
-* `flag_for_global_cellular_automata_trigger`: Flag for global cellular automata trigger
+* `do_global_cellular_automata_trigger`: Do global cellular automata trigger
     * `logical(kind=)`: units = flag
-* `flag_for_gravity_wave_drag`: Flag for gravity wave drag
+* `do_gravity_wave_drag`: Do gravity wave drag
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_surface_snow_albedo`: Control for land surface scheme surface snow albedo
     * `integer(kind=)`: units = index
-* `flag_for_gsl_drag_suite_large_scale_orographic_and_blocking_drag`: Flag for gsl drag suite large scale orographic and blocking drag
+* `do_gsl_drag_suite_large_scale_orographic_and_blocking_drag`: Do gsl drag suite large scale orographic and blocking drag
     * `logical(kind=)`: units = flag
-* `flag_for_gsl_drag_suite_small_scale_orographic_drag`: Flag for gsl drag suite small scale orographic drag
+* `do_gsl_drag_suite_small_scale_orographic_drag`: Do gsl drag suite small scale orographic drag
     * `logical(kind=)`: units = flag
-* `flag_for_gsl_drag_suite_turbulent_orographic_form_drag`: Flag for gsl drag suite turbulent orographic form drag
+* `do_gsl_drag_suite_turbulent_orographic_form_drag`: Do gsl drag suite turbulent orographic form drag
     * `logical(kind=)`: units = flag
-* `flag_for_hybrid_edmf_pbl_scheme`: Flag for hybrid edmf pbl scheme
+* `do_hybrid_edmf_pbl_scheme`: Do hybrid edmf pbl scheme
     * `logical(kind=)`: units = flag
-* `flag_for_hogan_decorrelation_length_method`: Flag for hogan decorrelation length method
-    * `integer(kind=)`: units = flag
-* `flag_for_hurricane_specific_code_in_scale_aware_mass_flux_deep_convection`: Flag for hurricane specific code in scale aware mass flux deep convection
+* `identifier_for_hogan_decorrelation_length_method`: Identifier for hogan decorrelation length method
+    * `integer(kind=)`: units = index
+* `do_hurricane_specific_code_in_scale_aware_mass_flux_deep_convection`: Do hurricane specific code in scale aware mass flux deep convection
     * `logical(kind=)`: units = flag
-* `flag_for_hurricane_specific_code_in_scale_aware_mass_flux_shallow_convection`: Flag for hurricane specific code in scale aware mass flux shallow convection
+* `do_hurricane_specific_code_in_scale_aware_mass_flux_shallow_convection`: Do hurricane specific code in scale aware mass flux shallow convection
     * `logical(kind=)`: units = flag
-* `flag_for_hydrostatic_solver`: Flag for hydrostatic solver
+* `do_hydrostatic_solver`: Do hydrostatic solver
     * `logical(kind=)`: units = flag
 * `control_for_ice_cloud_condensation_nuclei_forcing`: Control for ice cloud condensation nuclei forcing
     * `integer(kind=)`: units = none
-* `flag_for_separate_advection_of_condensate_species`: Flag for separate advection of condensate species
+* `do_separate_advection_of_condensate_species`: Do separate advection of condensate species
     * `logical(kind=)`: units = flag
-* `flag_for_initial_time_date_control`: Flag for initial time date control
-    * `integer(kind=)`: units = flag
+* `control_for_initial_time_date`: Control for initial time date
+    * `integer(kind=)`: units = index
 * `control_for_lake_surface_scheme`: Control for lake surface scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_land_surface_scheme`: Control for land surface scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_cloud_area_fraction_option_for_radiation`: Flag for cloud area fraction option for radiation
+    * `integer(kind=)`: units = index
+* `do_cloud_area_fraction_option_for_radiation`: Do cloud area fraction option for radiation
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_lower_boundary_soil_temperature`: Control for land surface scheme lower boundary soil temperature
     * `integer(kind=)`: units = index
-* `flag_for_lw_clouds_sub_grid_approximation`: Flag for lw clouds sub grid approximation
-    * `integer(kind=)`: units = flag
+* `control_for_lw_clouds_subgrid_approximation`: Control for lw clouds subgrid approximation
+    * `integer(kind=)`: units = index
 * `control_for_deep_convection_scheme`: Control for deep convection scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_shallow_convection_scheme`: Control for shallow convection scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_maximum_cloud_overlap_method`: Flag for maximum cloud overlap method
-    * `integer(kind=)`: units = flag
-* `flag_for_maximum_random_cloud_overlap_method`: Flag for maximum random cloud overlap method
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
+* `control_for_maximum_cloud_overlap_method`: Control for maximum cloud overlap method
+    * `integer(kind=)`: units = index
+* `identifier_for_maximum_random_cloud_overlap_method`: Identifier for maximum random cloud overlap method
+    * `integer(kind=)`: units = index
 * `control_for_microphysics_scheme`: Control for microphysics scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_moorthi_stratus`: Flag for moorthi stratus
+    * `integer(kind=)`: units = index
+* `do_moorthi_stratus`: Do moorthi stratus
     * `logical(kind=)`: units = flag
 * `identifier_for_morrison_gettelman_microphysics_scheme`: Identifier for morrison gettelman microphysics scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_mountain_blocking_for_sppt`: Flag for mountain blocking for sppt
+    * `integer(kind=)`: units = index
+* `do_mountain_blocking_for_sppt`: Do mountain blocking for sppt
     * `logical(kind=)`: units = flag
 * `identifier_for_noah_land_surface_scheme`: Identifier for noah land surface scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_noah_lsm_ua_extension`: Flag for noah lsm ua extension
+    * `integer(kind=)`: units = index
+* `do_noah_lsm_ua_extension`: Do noah lsm ua extension
     * `logical(kind=)`: units = flag
 * `identifier_for_noah_wrfv4_land_surface_scheme`: Identifier for noah wrfv4 land surface scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `identifier_for_noahmp_land_surface_scheme`: Identifier for noahmp land surface scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_nsstm_analysis_in_gcycle`: Flag for nsstm analysis in gcycle
+    * `integer(kind=)`: units = index
+* `do_nsstm_analysis_in_gcycle`: Do nsstm analysis in gcycle
     * `logical(kind=)`: units = flag
 * `control_for_nsstm`: Control for nsstm
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `identifier_for_new_tiedtke_deep_convection`: Identifier for new tiedtke deep convection
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `identifier_for_new_tiedtke_shallow_convection`: Identifier for new tiedtke shallow convection
-    * `integer(kind=)`: units = flag
-* `flag_for_surface_layer_scheme_ocean_currents`: Flag for surface layer scheme ocean currents
+    * `integer(kind=)`: units = index
+* `do_surface_layer_scheme_ocean_currents`: Do surface layer scheme ocean currents
     * `logical(kind=)`: units = flag
-* `flag_for_old_pbl_scheme`: Flag for old pbl scheme
+* `do_old_pbl_scheme`: Do old pbl scheme
     * `logical(kind=)`: units = flag
-* `flag_for_optical_property_for_ice_clouds_for_longwave_radiation`: Flag for optical property for ice clouds for longwave radiation
-    * `integer(kind=)`: units = flag
-* `flag_for_optical_property_for_ice_clouds_for_shortwave_radiation`: Flag for optical property for ice clouds for shortwave radiation
-    * `integer(kind=)`: units = flag
-* `flag_for_optical_property_for_liquid_clouds_for_longwave_radiation`: Flag for optical property for liquid clouds for longwave radiation
-    * `integer(kind=)`: units = flag
-* `control_for_shortwave_radiation_liquid_clouds`: Control for shortwave radiation liquid clouds
-    * `integer(kind=)`: units = flag
-* `flag_for_oreopoulos_decorrelation_length_method`: Flag for oreopoulos decorrelation length method
-    * `integer(kind=)`: units = flag
-* `flag_for_output_of_tendency_of_air_temperature_due_to_longwave_heating_on_radiation_timestep_assuming_clear_sky`: Flag for output of tendency of air temperature due to longwave heating on radiation timestep assuming clear sky
+* `control_for_optical_property_for_ice_clouds_for_longwave_radiation`: Control for optical property for ice clouds for longwave radiation
+    * `integer(kind=)`: units = index
+* `control_for_optical_property_for_ice_clouds_for_shortwave_radiation`: Control for optical property for ice clouds for shortwave radiation
+    * `integer(kind=)`: units = index
+* `control_for_optical_property_for_liquid_clouds_for_longwave_radiation`: Control for optical property for liquid clouds for longwave radiation
+    * `integer(kind=)`: units = index
+* `control_for_optical_property_for_liquid_clouds_for_shortwave_radiation`: Control for optical property for liquid clouds for shortwave radiation
+    * `integer(kind=)`: units = index
+* `identifier_for_oreopoulos_decorrelation_length_method`: Identifier for oreopoulos decorrelation length method
+    * `integer(kind=)`: units = index
+* `do_output_of_tendency_of_air_temperature_due_to_longwave_heating_on_radiation_timestep_assuming_clear_sky`: Do output of tendency of air temperature due to longwave heating on radiation timestep assuming clear sky
     * `logical(kind=)`: units = flag
-* `flag_for_output_of_tendency_of_air_temperature_due_to_shortwave_heating_on_radiation_timestep_assuming_clear_sky`: Flag for output of tendency of air temperature due to shortwave heating on radiation timestep assuming clear sky
+* `do_output_of_tendency_of_air_temperature_due_to_shortwave_heating_on_radiation_timestep_assuming_clear_sky`: Do output of tendency of air temperature due to shortwave heating on radiation timestep assuming clear sky
     * `logical(kind=)`: units = flag
-* `flag_for_nrl_2006_ozone_scheme`: Flag for nrl 2006 ozone scheme
+* `do_nrl_2006_ozone_scheme`: Do nrl 2006 ozone scheme
     * `logical(kind=)`: units = flag
 * `control_for_pdf_shape_for_microphysics`: Control for pdf shape for microphysics
-    * `integer(kind=)`: units = flag
-* `flag_for_surface_layer_scheme_surface_drag_coefficient_for_momentum_in_air_perturbations`: Flag for surface layer scheme surface drag coefficient for momentum in air perturbations
+    * `integer(kind=)`: units = index
+* `do_surface_layer_scheme_surface_drag_coefficient_for_momentum_in_air_perturbations`: Do surface layer scheme surface drag coefficient for momentum in air perturbations
     * `logical(kind=)`: units = flag
-* `flag_for_turning_off_precipitation_radiative_effect`: Flag for turning off precipitation radiative effect
+* `disable_precipitation_radiative_effect`: Disable precipitation radiative effect
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_precipitation_type_partition`: Control for land surface scheme precipitation type partition
     * `integer(kind=)`: units = index
-* `flag_for_dominant_precipitation_type_partition`: Flag for dominant precipitation type partition
+* `do_dominant_precipitation_type_partition`: Do dominant precipitation type partition
     * `logical(kind=)`: units = flag
-* `flag_for_radar_reflectivity`: Flag for radar reflectivity
+* `do_radar_reflectivity`: Do radar reflectivity
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_radiative_transfer`: Control for land surface scheme radiative transfer
     * `integer(kind=)`: units = index
-* `flag_for_random_cloud_overlap_method`: Flag for random cloud overlap method
-    * `integer(kind=)`: units = flag
-* `flag_for_random_clouds_in_relaxed_arakawa_schubert_deep_convection`: Flag for random clouds in relaxed arakawa schubert deep convection
+* `identifier_for_random_cloud_overlap_method`: Identifier for random cloud overlap method
+    * `integer(kind=)`: units = index
+* `do_random_clouds_in_relaxed_arakawa_schubert_deep_convection`: Do random clouds in relaxed arakawa schubert deep convection
     * `logical(kind=)`: units = flag
-* `flag_for_relaxed_arakawa_schubert_deep_convection`: Flag for relaxed arakawa schubert deep convection
+* `do_relaxed_arakawa_schubert_deep_convection`: Do relaxed arakawa schubert deep convection
     * `logical(kind=)`: units = flag
-* `flag_for_reading_leaf_area_index_from_input`: Flag for reading leaf area index from input
+* `do_read_leaf_area_index_from_input`: Do read leaf area index from input
     * `logical(kind=)`: units = flag
-* `flag_for_reading_surface_albedo_for_diffused_shortwave_from_input`: Flag for reading surface albedo for diffused shortwave from input
+* `do_read_surface_albedo_for_diffused_shortwave_from_input`: Do read surface albedo for diffused shortwave from input
     * `logical(kind=)`: units = flag
-* `flag_for_limited_surface_roughness_length_over_ocean`: Flag for limited surface roughness length over ocean
+* `do_limited_surface_roughness_length_over_ocean`: Do limited surface roughness length over ocean
     * `logical(kind=)`: units = flag
-* `flag_for_reference_pressure_theta`: Flag for reference pressure theta
+* `do_reference_pressure_theta`: Do reference pressure theta
     * `logical(kind=)`: units = flag
-* `flag_for_restart`: Flag for restart
+* `is_restart`: Is restart
     * `logical(kind=)`: units = flag
-* `flag_for_rrtmgp_radiation_scheme`: Flag for rrtmgp radiation scheme
+* `do_rrtmgp_radiation_scheme`: Do rrtmgp radiation scheme
     * `logical(kind=)`: units = flag
 * `identifier_for_ruc_land_surface_scheme`: Identifier for ruc land surface scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_land_surface_scheme_runoff_and_groundwater`: Control for land surface scheme runoff and groundwater
     * `integer(kind=)`: units = index
 * `identifer_for_scale_aware_mass_flux_deep_convection`: Identifer for scale aware mass flux deep convection
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `identifier_for_scale_aware_mass_flux_shallow_convection`: Identifier for scale aware mass flux shallow convection
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `identifier_for_simplified_arakawa_schubert_deep_convection`: Identifier for simplified arakawa schubert deep convection
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `identifier_for_simplified_arakawa_schubert_shallow_convection`: Identifier for simplified arakawa schubert shallow convection
-    * `integer(kind=)`: units = flag
-* `flag_for_scale_aware_mass_flux_deep_convection_for_radiation`: Flag for scale aware mass flux deep convection for radiation
+    * `integer(kind=)`: units = index
+* `do_scale_aware_mass_flux_deep_convection`: Do scale aware mass flux deep convection
     * `logical(kind=)`: units = flag
-* `flag_for_scale_aware_shin_hong_pbl_scheme`: Flag for scale aware shin hong pbl scheme
+* `do_scale_aware_shin_hong_pbl_scheme`: Do scale aware shin hong pbl scheme
     * `logical(kind=)`: units = flag
-* `flag_for_scale_aware_tke_moist_edmf_pbl`: Flag for scale aware tke moist edmf pbl
+* `do_scale_aware_tke_moist_edmf_pbl`: Do scale aware tke moist edmf pbl
     * `logical(kind=)`: units = flag
-* `flag_for_sgs_cellular_automata`: Flag for sgs cellular automata
+* `do_sgs_cellular_automata`: Do sgs cellular automata
     * `logical(kind=)`: units = flag
-* `flag_for_simplified_arakawa_schubert_shallow_convection`: Flag for simplified arakawa schubert shallow convection
+* `do_simplified_arakawa_schubert_shallow_convection`: Do simplified arakawa schubert shallow convection
     * `logical(kind=)`: units = flag
-* `flag_for_shoc`: Flag for shoc
+* `do_shoc`: Do shoc
     * `logical(kind=)`: units = flag
-* `flag_for_shoc_after_convection`: Flag for shoc after convection
+* `do_shoc_after_convection`: Do shoc after convection
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_soil_and_snow_temperature_time_integration`: Control for land surface scheme soil and snow temperature time integration
     * `integer(kind=)`: units = index
 * `control_for_land_surface_scheme_soil_moisture_factor_stomatal_resistance`: Control for land surface scheme soil moisture factor stomatal resistance
     * `integer(kind=)`: units = index
 * `control_for_solar_constant`: Control for solar constant
-    * `integer(kind=)`: units = flag
-* `flag_for_stochastic_cloud_fraction_perturbations`: Flag for stochastic cloud fraction perturbations
+    * `integer(kind=)`: units = index
+* `do_stochastic_cloud_fraction_perturbations`: Do stochastic cloud fraction perturbations
     * `logical(kind=)`: units = flag
-* `flag_for_stochastic_microphysics_perturbations`: Flag for stochastic microphysics perturbations
+* `do_stochastic_microphysics_perturbations`: Do stochastic microphysics perturbations
     * `logical(kind=)`: units = flag
-* `flag_for_stochastic_physics_perturbations`: Flag for stochastic physics perturbations
+* `do_stochastic_physics_perturbations`: Do stochastic physics perturbations
     * `logical(kind=)`: units = flag
-* `flag_for_stochastic_radiative_heating_perturbations`: Flag for stochastic radiative heating perturbations
+* `do_stochastic_radiative_heating_perturbations`: Do stochastic radiative heating perturbations
     * `logical(kind=)`: units = flag
-* `flag_for_stochastic_shum_option`: Flag for stochastic shum option
+* `do_stochastic_shum_option`: Do stochastic shum option
     * `logical(kind=)`: units = flag
-* `flag_for_stochastic_skeb_option`: Flag for stochastic skeb option
+* `do_stochastic_skeb_option`: Do stochastic skeb option
     * `logical(kind=)`: units = flag
-* `flag_for_stratospheric_water_vapor_physics`: Flag for stratospheric water vapor physics
+* `do_stratospheric_water_vapor_physics`: Do stratospheric water vapor physics
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_supercooled_liquid_water`: Control for land surface scheme supercooled liquid water
     * `integer(kind=)`: units = index
 * `control_for_surface_emissivity`: Control for surface emissivity
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_land_surface_scheme_surface_layer_drag_coefficient`: Control for land surface scheme surface layer drag coefficient
     * `integer(kind=)`: units = index
-* `flag_for_surface_roughness_option_over_water`: Flag for surface roughness option over water
-    * `integer(kind=)`: units = flag
-* `flag_for_sw_clouds_grid_approximation`: Flag for sw clouds grid approximation
-    * `integer(kind=)`: units = flag
+* `control_for_surface_roughness_option_over_water`: Control for surface roughness option over water
+    * `integer(kind=)`: units = index
+* `control_for_sw_clouds_subgrid_approximation`: Control for sw clouds subgrid approximation
+    * `integer(kind=)`: units = index
 * `control_for_land_surface_scheme_thermal_conductivity_option`: Control for land surface scheme thermal conductivity option
     * `integer(kind=)`: units = index
 * `identifier_for_thompson_microphysics_scheme`: Identifier for thompson microphysics scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_ugwp_version_0`: Flag for ugwp version 0
+    * `integer(kind=)`: units = index
+* `do_ugwp_version_0`: Do ugwp version 0
     * `logical(kind=)`: units = flag
-* `flag_for_ugwp_version_0_nonorographic_gwd`: Flag for ugwp version 0 nonorographic gwd
+* `do_ugwp_version_0_nonorographic_gwd`: Do ugwp version 0 nonorographic gwd
     * `logical(kind=)`: units = flag
-* `flag_for_ugwp_version_0_orographic_gwd`: Flag for ugwp version 0 orographic gwd
+* `do_ugwp_version_0_orographic_gwd`: Do ugwp version 0 orographic gwd
     * `logical(kind=)`: units = flag
-* `flag_for_ugwp_version_1`: Flag for ugwp version 1
+* `do_ugwp_version_1`: Do ugwp version 1
     * `logical(kind=)`: units = flag
-* `flag_for_ugwp_version_1_nonorographic_gwd`: Flag for ugwp version 1 nonorographic gwd
+* `do_ugwp_version_1_nonorographic_gwd`: Do ugwp version 1 nonorographic gwd
     * `logical(kind=)`: units = flag
-* `flag_for_ugwp_version_1_orographic_gwd`: Flag for ugwp version 1 orographic gwd
+* `do_ugwp_version_1_orographic_gwd`: Do ugwp version 1 orographic gwd
     * `logical(kind=)`: units = flag
-* `flag_for_shoc_cloud_area_fraction_for_radiation`: Flag for shoc cloud area fraction for radiation
+* `do_shoc_cloud_area_fraction_for_radiation`: Do shoc cloud area fraction for radiation
     * `logical(kind=)`: units = flag
 * `control_for_surface_layer_scheme_skin_temperature_update`: Control for surface layer scheme skin temperature update
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_surface_albedo`: Control for surface albedo
-    * `integer(kind=)`: units = flag
-* `control_for_co2`: Control for co2
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
+* `control_for_prescribed_co2`: Control for prescribed co2
+    * `integer(kind=)`: units = index
 * `control_for_vertical_index_direction`: Control for vertical index direction
-    * `integer(kind=)`: units = flag
-* `flag_for_ocean_wave_coupling`: Flag for ocean wave coupling
+    * `integer(kind=)`: units = index
+* `do_ocean_wave_coupling`: Do ocean wave coupling
     * `logical(kind=)`: units = flag
-* `flag_for_one_way_ocean_wave_coupling_to_atmosphere`: Flag for one way ocean wave coupling to atmosphere
+* `do_one_way_ocean_wave_coupling_to_atmosphere`: Do one way ocean wave coupling to atmosphere
     * `logical(kind=)`: units = flag
 * `identifier_for_wsm6_microphysics_scheme`: Identifier for wsm6 microphysics scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_ysu_pbl_scheme`: Flag for ysu pbl scheme
+    * `integer(kind=)`: units = index
+* `do_ysu_pbl_scheme`: Do ysu pbl scheme
     * `logical(kind=)`: units = flag
 * `identifier_for_zhao_carr_microphysics_scheme`: Identifier for zhao carr microphysics scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `identifier_for_zhao_carr_pdf_microphysics_scheme`: Identifier for zhao carr pdf microphysics scheme
-    * `integer(kind=)`: units = flag
-* `flag_for_hurricane_specific_code_in_hybrid_edmf_pbl_scheme`: Flag for hurricane specific code in hybrid edmf pbl scheme
+    * `integer(kind=)`: units = index
+* `do_hurricane_specific_code_in_hybrid_edmf_pbl_scheme`: Do hurricane specific code in hybrid edmf pbl scheme
     * `logical(kind=)`: units = flag
-* `flag_for_integrated_dynamics_through_earths_atmosphere`: Flag for integrated dynamics through earths atmosphere
+* `do_integrated_dynamics_through_earths_atmosphere`: Do integrated dynamics through earths atmosphere
     * `logical(kind=)`: units = flag
-* `flag_print`: Flag print
+* `do_print`: Do print
     * `logical(kind=)`: units = flag
-* `flag_for_saving_shallow_convective_cloud_area_fraction`: Flag for saving shallow convective cloud area fraction
+* `do_save_shallow_convective_cloud_area_fraction`: Do save shallow convective cloud area fraction
     * `logical(kind=)`: units = 
-* `flag_tke_dissipation_heating`: Flag tke dissipation heating
+* `do_tke_dissipation_heating`: Do tke dissipation heating
     * `logical(kind=)`: units = flag
-* `flag_for_calling_longwave_radiation`: Flag for calling longwave radiation
+* `do_call_longwave_radiation`: Do call longwave radiation
     * `logical(kind=)`: units = flag
-* `flag_for_using_rrtmg_cloud_optics`: Flag for using rrtmg cloud optics
+* `do_rrtmg_cloud_optics`: Do rrtmg cloud optics
     * `logical(kind=)`: units = flag
-* `flag_for_using_rrtmgp_cloud_optics_look_up_table`: Flag for using rrtmgp cloud optics look up table
+* `do_rrtmgp_cloud_optics_look_up_table`: Do rrtmgp cloud optics look up table
     * `logical(kind=)`: units = flag
-* `flag_for_using_rrtmgp_cloud_optics_with_pade_approximation`: Flag for using rrtmgp cloud optics with pade approximation
+* `do_rrtmgp_cloud_optics_with_pade_approximation`: Do rrtmgp cloud optics with pade approximation
     * `logical(kind=)`: units = flag
-* `flag_for_rrtmgp_longwave_jacobian`: Flag for rrtmgp longwave jacobian
+* `do_rrtmgp_longwave_jacobian`: Do rrtmgp longwave jacobian
     * `logical(kind=)`: units = flag
-* `flag_for_calling_shortwave_radiation`: Flag for calling shortwave radiation
+* `do_call_shortwave_radiation`: Do call shortwave radiation
     * `logical(kind=)`: units = flag
-* `flag_to_include_longwave_scattering_in_cloud_optics`: Flag to include longwave scattering in cloud optics
+* `do_longwave_scattering_in_cloud_optics`: Do longwave scattering in cloud optics
     * `logical(kind=)`: units = flag
-* `flag_for_tracer_XYZ_dimensioned_diagnostics`: Flag for tracer XYZ dimensioned diagnostics
+* `do_tracer_XYZ_dimensioned_diagnostics`: Do tracer XYZ dimensioned diagnostics
     * `logical(kind=)`: units = flag
 * `control_for_variable_bulk_richardson_number`: Control for variable bulk richardson number
-    * `real(kind=kind_phys)`: units = flag
+    * `real(kind=kind_phys)`: units = none
 * `date_and_time_of_forecast_in_United_States_order`: Date and time of forecast in United States order
     * `integer(kind=)`: units = none
 * `forecast_utc_hour`: Forecast utc hour
@@ -763,9 +763,9 @@ Standard / required CCPP variables
 * `all_ice_cloud_threshold_temperature`: All ice cloud threshold temperature
     * `real(kind=kind_phys)`: units = K
 * `control_for_gravitational_settling_of_cloud_droplets`: Control for gravitational settling of cloud droplets
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_drag_suite_gravity_wave_drag`: Control for drag suite gravity wave drag
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `horizontal_loop_extent`: Horizontal loop extent
     * `integer(kind=)`: units = count
 * `period_of_diagnostics_reset`: Period of diagnostics reset
@@ -788,19 +788,19 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = index
 * `index_of_convective_cloud_area_fraction_in_xyz_dimensioned_restart_array`: Index of convective cloud area fraction in xyz dimensioned restart array
     * `integer(kind=)`: units = index
-* `index_of_convective_cloud_condensate_mixing_ratio_in_xyz_dimensioned_restart_array`: Index of convective cloud condensate mixing ratio in xyz dimensioned restart array
+* `index_of_convective_cloud_condensate_mixing_ratio_wrt_moist_air_in_xyz_dimensioned_restart_array`: Index of convective cloud condensate mixing ratio wrt moist air in xyz dimensioned restart array
     * `integer(kind=)`: units = index
 * `index_of_horizontal_gridpoint_for_debug_output`: Index of horizontal gridpoint for debug output
     * `integer(kind=)`: units = index
 * `index_of_first_chemical_tracer_in_tracer_concentration_array`: Index of first chemical tracer in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_graupel_mixing_ratio_in_tracer_concentration_array`: Index of graupel mixing ratio in tracer concentration array
+* `index_of_graupel_mixing_ratio_wrt_moist_air_in_tracer_concentration_array`: Index of graupel mixing ratio wrt moist air in tracer concentration array
     * `integer(kind=)`: units = index
 * `index_of_graupel_effective_radius_in_xyz_dimensioned_restart_array`: Index of graupel effective radius in xyz dimensioned restart array
     * `integer(kind=)`: units = index
 * `index_of_mass_number_concentration_of_graupel_in_tracer_concentration_array`: Index of mass number concentration of graupel in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_cloud_ice_mixing_ratio_in_tracer_concentration_array`: Index of cloud ice mixing ratio in tracer concentration array
+* `index_of_cloud_ice_mixing_ratio_wrt_moist_air_in_tracer_concentration_array`: Index of cloud ice mixing ratio wrt moist air in tracer concentration array
     * `integer(kind=)`: units = index
 * `index_of_mass_number_concentration_of_cloud_ice_in_tracer_concentration_array`: Index of mass number concentration of cloud ice in tracer concentration array
     * `integer(kind=)`: units = index
@@ -808,25 +808,25 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = index
 * `index_of_mass_number_concentration_of_nonhygroscopic_ice_nucleating_aerosols_in_tracer_concentration_array`: Index of mass number concentration of nonhygroscopic ice nucleating aerosols in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_cloud_liquid_water_mixing_ratio_in_tracer_concentration_array`: Index of cloud liquid water mixing ratio in tracer concentration array
+* `index_of_cloud_liquid_water_mixing_ratio_wrt_moist_air_in_tracer_concentration_array`: Index of cloud liquid water mixing ratio wrt moist air in tracer concentration array
     * `integer(kind=)`: units = index
 * `index_of_mass_number_concentration_of_cloud_droplets_in_tracer_concentration_array`: Index of mass number concentration of cloud droplets in tracer concentration array
     * `integer(kind=)`: units = index
 * `index_of_mass_weighted_rime_factor_in_tracer_concentration_array`: Index of mass weighted rime factor in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_ozone_mixing_ratio_in_tracer_concentration_array`: Index of ozone mixing ratio in tracer concentration array
+* `index_of_ozone_mixing_ratio_wrt_moist_air_in_tracer_concentration_array`: Index of ozone mixing ratio wrt moist air in tracer concentration array
     * `integer(kind=)`: units = index
 * `index_of_rain_effective_radius_in_xyz_dimensioned_restart_array`: Index of rain effective radius in xyz dimensioned restart array
     * `integer(kind=)`: units = index
 * `index_of_mass_number_concentration_of_rain_in_tracer_concentration_array`: Index of mass number concentration of rain in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_rain_mixing_ratio_in_tracer_concentration_array`: Index of rain mixing ratio in tracer concentration array
+* `index_of_rain_mixing_ratio_wrt_moist_air_in_tracer_concentration_array`: Index of rain mixing ratio wrt moist air in tracer concentration array
     * `integer(kind=)`: units = index
 * `index_of_snow_effective_radius_in_xyz_dimensioned_restart_array`: Index of snow effective radius in xyz dimensioned restart array
     * `integer(kind=)`: units = index
 * `index_of_mass_number_concentration_of_snow_in_tracer_concentration_array`: Index of mass number concentration of snow in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_snow_mixing_ratio_in_tracer_concentration_array`: Index of snow mixing ratio in tracer concentration array
+* `index_of_snow_mixing_ratio_wrt_moist_air_in_tracer_concentration_array`: Index of snow mixing ratio wrt moist air in tracer concentration array
     * `integer(kind=)`: units = index
 * `index_of_specific_humidity_on_previous_timestep_in_xyz_dimensioned_restart_array`: Index of specific humidity on previous timestep in xyz dimensioned restart array
     * `integer(kind=)`: units = 
@@ -878,7 +878,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = m2 rad-2
 * `maximum_soil_moisture_content_for_land_surface_model`: Maximum soil moisture content for land surface model
     * `real(kind=kind_phys)`: units = m
-* `flag_for_allowance_of_supersaturation_after_sedimentation`: Flag for allowance of supersaturation after sedimentation
+* `do_allow_supersaturation_after_sedimentation`: Do allow supersaturation after sedimentation
     * `logical(kind=)`: units = flag
 * `autoconverion_to_snow_size_threshold`: Autoconverion to snow size threshold
     * `real(kind=kind_phys)`: units = um
@@ -886,39 +886,39 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = frac
 * `relative_variance_of_subgrid_cloud_condensate_distribution`: Relative variance of subgrid cloud condensate distribution
     * `real(kind=kind_phys)`: units = kg2 kg-2
-* `prescribed_cloud_droplet_number_concentration`: Prescribed cloud droplet number concentration
+* `prescribed_number_concentration_of_cloud_droplets`: Prescribed number concentration of cloud droplets
     * `real(kind=kind_phys)`: units = m-3
-* `flag_for_prescribed_cloud_droplet_number_concentration`: Flag for prescribed cloud droplet number concentration
+* `do_prescribed_number_concentration_of_cloud_droplets`: Do prescribed number concentration of cloud droplets
     * `logical(kind=)`: units = flag
-* `flag_for_cloud_ice_processes`: Flag for cloud ice processes
+* `do_cloud_ice_processes`: Do cloud ice processes
     * `logical(kind=)`: units = flag
-* `flag_for_gmao_autoconversion_to_snow`: Flag for gmao autoconversion to snow
+* `do_gmao_autoconversion_to_snow`: Do gmao autoconversion to snow
     * `logical(kind=)`: units = flag
-* `flag_for_graupel_instead_of_hail`: Flag for graupel instead of hail
+* `do_graupel_instead_of_hail`: Do graupel instead of hail
     * `logical(kind=)`: units = flag
-* `flag_for_hail_instead_of_graupel`: Flag for hail instead of graupel
+* `do_hail_instead_of_graupel`: Do hail instead of graupel
     * `logical(kind=)`: units = flag
-* `flag_for_heterogeneous_nucleation`: Flag for heterogeneous nucleation
+* `do_heterogeneous_nucleation`: Do heterogeneous nucleation
     * `logical(kind=)`: units = flag
-* `flag_for_liu_autoconversion_to_rain`: Flag for liu autoconversion to rain
+* `do_liu_autoconversion_to_rain`: Do liu autoconversion to rain
     * `logical(kind=)`: units = flag
-* `flag_for_seifert_and_beheng_2001_autoconversion`: Flag for seifert and beheng 2001 autoconversion
+* `do_seifert_and_beheng_2001_autoconversion`: Do seifert and beheng 2001 autoconversion
     * `logical(kind=)`: units = flag
-* `flag_for_uniform_subcolumns`: Flag for uniform subcolumns
+* `do_uniform_subcolumns`: Do uniform subcolumns
     * `logical(kind=)`: units = flag
-* `flag_for_prescribed_graupel_number_concentration`: Flag for prescribed graupel number concentration
+* `do_prescribed_number_concentration_of_graupel`: Do prescribed number concentration of graupel
     * `logical(kind=)`: units = flag
-* `flag_for_prescribed_cloud_ice_number_concentration`: Flag for prescribed cloud ice number concentration
+* `do_prescribed_number_concentration_of_cloud_ice`: Do prescribed number concentration of cloud ice
     * `logical(kind=)`: units = flag
-* `prescribed_graupel_number_concentration`: Prescribed graupel number concentration
+* `prescribed_number_concentration_of_graupel`: Prescribed number concentration of graupel
     * `real(kind=kind_phys)`: units = m-3
-* `prescribed_cloud_ice_number_concentration`: Prescribed cloud ice number concentration
+* `prescribed_number_concentration_of_cloud_ice`: Prescribed number concentration of cloud ice
     * `real(kind=kind_phys)`: units = m-3
-* `minimum_cloud_condensate_mixing_ratio_threshold`: Minimum cloud condensate mixing ratio threshold
+* `minimum_cloud_condensate_mixing_ratio_wrt_moist_air_threshold`: Minimum cloud condensate mixing ratio wrt moist air threshold
     * `real(kind=kind_phys)`: units = kg kg-1
-* `minimum_cloud_liquid_water_mixing_ratio_threshold`: Minimum cloud liquid water mixing ratio threshold
+* `minimum_cloud_liquid_water_mixing_ratio_wrt_moist_air_threshold`: Minimum cloud liquid water mixing ratio wrt moist air threshold
     * `real(kind=kind_phys)`: units = kg kg-1
-* `minimum_cloud_ice_mixing_ratio_threshold`: Minimum cloud ice mixing ratio threshold
+* `minimum_cloud_ice_mixing_ratio_wrt_moist_air_threshold`: Minimum cloud ice mixing ratio wrt moist air threshold
     * `real(kind=kind_phys)`: units = kg kg-1
 * `relative_humidity_threshold_for_ice_nucleation`: Relative humidity threshold for ice nucleation
     * `real(kind=kind_phys)`: units = none
@@ -939,9 +939,9 @@ Standard / required CCPP variables
 * `minimum_temperature_in_rrtmgp`: Minimum temperature in rrtmgp
     * `real(kind=kind_phys)`: units = K
 * `control_for_total_water_mixing_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for total water mixing in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `control_for_mixing_length_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for mixing length in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `momentum_transport_reduction_factor_due_to_pressure_gradient_force_for_deep_convection`: Momentum transport reduction factor due to pressure gradient force for deep convection
     * `real(kind=kind_phys)`: units = frac
 * `momentum_transport_reduction_factor_due_to_pressure_gradient_force_for_shallow_convection`: Momentum transport reduction factor due to pressure gradient force for shallow convection
@@ -961,7 +961,7 @@ Standard / required CCPP variables
 * `multiplicative_tunable_parameters_for_mountain_blocking_and_orographic_gravity_wave_drag`: Multiplicative tunable parameters for mountain blocking and orographic gravity wave drag
     * `real(kind=kind_phys)`: units = none
 * `control_for_additional_diagnostics_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for additional diagnostics in mellor yamada nakanishi niino pbl scheme
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `filename_of_namelist`: Filename of namelist
     * `character(kind=len=64)`: units = none
 * `filename_of_internal_namelist`: Filename of internal namelist
@@ -1070,7 +1070,7 @@ Standard / required CCPP variables
     * `character(kind=len=128)`: units = none
 * `filename_of_rrtmgp_shortwave_k_distribution`: Filename of rrtmgp shortwave k distribution
     * `character(kind=len=128)`: units = none
-* `flag_for_rrtmgp_shortwave_and_rrtmg_longwave_radiation`: Flag for rrtmgp shortwave and rrtmg longwave radiation
+* `do_rrtmgp_shortwave_and_rrtmg_longwave_radiation`: Do rrtmgp shortwave and rrtmg longwave radiation
     * `logical(kind=)`: units = flag
 * `min_sea_ice_area_fraction`: Min sea ice area fraction
     * `real(kind=kind_phys)`: units = frac
@@ -1120,15 +1120,15 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = h
 * `timestep_for_dynamics`: Timestep for dynamics
     * `real(kind=kind_phys)`: units = s
-* `flag_for_tke_advection`: Flag for tke advection
+* `do_tke_advection`: Do tke advection
     * `logical(kind=)`: units = flag
 * `control_for_tke_budget_output`: Control for tke budget output
-    * `integer(kind=)`: units = flag
+    * `integer(kind=)`: units = index
 * `multiplicative_tuning_parameter_for_tke_dissipative_heating`: Multiplicative tuning parameter for tke dissipative heating
     * `real(kind=kind_phys)`: units = none
 * `total_amplitude_of_sppt_perturbation`: Total amplitude of sppt perturbation
     * `real(kind=kind_phys)`: units = none
-* `flag_for_turbulent_orographic_form_drag_in_unified_gravity_wave_physics_gravitiy_wave_drag_scheme`: Flag for turbulent orographic form drag in unified gravity wave physics gravitiy wave drag scheme
+* `do_turbulent_orographic_form_drag_in_unified_gravity_wave_physics_gravitiy_wave_drag_scheme`: Do turbulent orographic form drag in unified gravity wave physics gravitiy wave drag scheme
     * `logical(kind=)`: units = flag
 * `updraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme`: Updraft area fraction in scale aware tke moist edmf pbl scheme
     * `real(kind=kind_phys)`: units = none
@@ -1155,9 +1155,9 @@ Standard / required CCPP variables
 * `index_of_water_vegetation_category`: Index of water vegetation category
     * `integer(kind=)`: units = index
 ## GFS_typedefs_GFS_interstitial_type
-* `cloud_ice_mixing_ratio_interstitial`: Cloud ice mixing ratio interstitial
+* `cloud_ice_mixing_ratio_wrt_moist_air_interstitial`: Cloud ice mixing ratio wrt moist air interstitial
     * `real(kind=kind_phys)`: units = kg kg-1
-* `cloud_liquid_water_mixing_ratio_interstitial`: Cloud liquid water mixing ratio interstitial
+* `cloud_liquid_water_mixing_ratio_wrt_moist_air_interstitial`: Cloud liquid water mixing ratio wrt moist air interstitial
     * `real(kind=kind_phys)`: units = kg kg-1
 * `radiatively_active_gases`: Radiatively active gases
     * `character(kind=len=128)`: units = none
@@ -1165,21 +1165,21 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = K s-1
 * `process_split_cumulative_tendency_of_mass_number_concentration_of_cloud_liquid_water_particles_in_air`: Process split cumulative tendency of mass number concentration of cloud liquid water particles in air
     * `real(kind=kind_phys)`: units = kg-1 s-1
-* `process_split_cumulative_tendency_of_graupel_mixing_ratio`: Process split cumulative tendency of graupel mixing ratio
+* `process_split_cumulative_tendency_of_graupel_mixing_ratio_wrt_moist_air`: Process split cumulative tendency of graupel mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
-* `process_split_cumulative_tendency_of_cloud_ice_mixing_ratio`: Process split cumulative tendency of cloud ice mixing ratio
+* `process_split_cumulative_tendency_of_cloud_ice_mixing_ratio_wrt_moist_air`: Process split cumulative tendency of cloud ice mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
 * `process_split_cumulative_tendency_of_mass_number_concentration_of_nonhygroscopic_ice_nucleating_aerosols`: Process split cumulative tendency of mass number concentration of nonhygroscopic ice nucleating aerosols
     * `real(kind=kind_phys)`: units = kg-1 s-1
 * `process_split_cumulative_tendency_of_mass_number_concentration_of_cloud_ice_water_crystals_in_air`: Process split cumulative tendency of mass number concentration of cloud ice water crystals in air
     * `real(kind=kind_phys)`: units = kg-1 s-1
-* `process_split_cumulative_tendency_of_cloud_liquid_water_mixing_ratio`: Process split cumulative tendency of cloud liquid water mixing ratio
+* `process_split_cumulative_tendency_of_cloud_liquid_water_mixing_ratio_wrt_moist_air`: Process split cumulative tendency of cloud liquid water mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
-* `process_split_cumulative_tendency_of_ozone_mixing_ratio`: Process split cumulative tendency of ozone mixing ratio
+* `process_split_cumulative_tendency_of_ozone_mixing_ratio_wrt_moist_air`: Process split cumulative tendency of ozone mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
-* `process_split_cumulative_tendency_of_rain_mixing_ratio`: Process split cumulative tendency of rain mixing ratio
+* `process_split_cumulative_tendency_of_rain_mixing_ratio_wrt_moist_air`: Process split cumulative tendency of rain mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
-* `process_split_cumulative_tendency_of_snow_mixing_ratio`: Process split cumulative tendency of snow mixing ratio
+* `process_split_cumulative_tendency_of_snow_mixing_ratio_wrt_moist_air`: Process split cumulative tendency of snow mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
 * `process_split_cumulative_tendency_of_tracers`: Process split cumulative tendency of tracers
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
@@ -1218,7 +1218,7 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = none
 * `convective_cloud_area_fraction`: Convective cloud area fraction
     * `real(kind=kind_phys)`: units = frac
-* `convective_cloud_condensate_mixing_ratio`: Convective cloud condensate mixing ratio
+* `convective_cloud_condensate_mixing_ratio_wrt_moist_air`: Convective cloud condensate mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `effective_radius_of_stratiform_cloud_graupel_particle`: Effective radius of stratiform cloud graupel particle
     * `real(kind=kind_phys)`: units = um
@@ -1274,9 +1274,9 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = none
 * `subgrid_scale_cloud_area_fraction_in_atmosphere_layer`: Subgrid scale cloud area fraction in atmosphere layer
     * `real(kind=kind_phys)`: units = frac
-* `subgrid_scale_cloud_ice_mixing_ratio`: Subgrid scale cloud ice mixing ratio
+* `subgrid_scale_cloud_ice_mixing_ratio_wrt_moist_air`: Subgrid scale cloud ice mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
-* `subgrid_scale_cloud_liquid_water_mixing_ratio`: Subgrid scale cloud liquid water mixing ratio
+* `subgrid_scale_cloud_liquid_water_mixing_ratio_wrt_moist_air`: Subgrid scale cloud liquid water mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `subgrid_scale_cloud_fraction_from_shoc`: Subgrid scale cloud fraction from shoc
     * `real(kind=kind_phys)`: units = frac
@@ -1337,9 +1337,9 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = mm
 * `canopy_water_amount`: Canopy water amount
     * `real(kind=kind_phys)`: units = kg m-2
-* `cloud_condensed_water_mixing_ratio_at_surface_over_ice`: Cloud condensed water mixing ratio at surface over ice
+* `cloud_condensed_water_mixing_ratio_wrt_moist_air_at_surface_over_ice`: Cloud condensed water mixing ratio wrt moist air at surface over ice
     * `real(kind=kind_phys)`: units = kg kg-1
-* `cloud_condensed_water_mixing_ratio_at_surface_over_land`: Cloud condensed water mixing ratio at surface over land
+* `cloud_condensed_water_mixing_ratio_wrt_moist_air_at_surface_over_land`: Cloud condensed water mixing ratio wrt moist air at surface over land
     * `real(kind=kind_phys)`: units = kg kg-1
 * `coefficient_c_0`: Coefficient c 0
     * `real(kind=kind_phys)`: units = none
@@ -1372,9 +1372,9 @@ Standard / required CCPP variables
 * `fine_root_mass_content`: Fine root mass content
     * `real(kind=kind_phys)`: units = g m-2
 * `control_for_frozen_soil_physics`: Control for frozen soil physics
-    * `real(kind=kind_phys)`: units = flag
+    * `real(kind=kind_phys)`: units = none
 * `precipitation_type`: Precipitation type
-    * `real(kind=kind_phys)`: units = flag
+    * `real(kind=kind_phys)`: units = none
 * `strong_cosz_area_fraction`: Strong cosz area fraction
     * `real(kind=kind_phys)`: units = frac
 * `weak_cosz_area_fraction`: Weak cosz area fraction
@@ -1466,7 +1466,7 @@ Standard / required CCPP variables
 * `sea_ice_thickness`: Sea ice thickness
     * `real(kind=kind_phys)`: units = m
 * `area_type`: Area type
-    * `real(kind=kind_phys)`: units = flag
+    * `real(kind=kind_phys)`: units = none
 * `reference_sea_surface_temperature`: Reference sea surface temperature
     * `real(kind=kind_phys)`: units = K
 * `sea_surface_temperature`: Sea surface temperature
@@ -1635,15 +1635,15 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = m
 * `water_table_recharge_assuming_shallow`: Water table recharge assuming shallow
     * `real(kind=kind_phys)`: units = m
-* `water_vapor_mixing_ratio_at_surface_over_ice`: Water vapor mixing ratio at surface over ice
+* `water_vapor_mixing_ratio_wrt_moist_air_at_surface_over_ice`: Water vapor mixing ratio wrt moist air at surface over ice
     * `real(kind=kind_phys)`: units = kg kg-1
-* `water_vapor_mixing_ratio_at_surface_over_land`: Water vapor mixing ratio at surface over land
+* `water_vapor_mixing_ratio_wrt_moist_air_at_surface_over_land`: Water vapor mixing ratio wrt moist air at surface over land
     * `real(kind=kind_phys)`: units = kg kg-1
 * `wood_mass_content`: Wood mass content
     * `real(kind=kind_phys)`: units = g m-2
 ## GFS_typedefs_GFS_coupling_type
 * `cellular_automata_global_pattern_from_coupled_process`: Cellular automata global pattern from coupled process
-    * `real(kind=kind_phys)`: units = flag
+    * `real(kind=kind_phys)`: units = none
 * `convective_cloud_condesate_after_rainout`: Convective cloud condesate after rainout
     * `real(kind=kind_phys)`: units = kg kg-1
 * `cumulative_surface_downwelling_diffuse_nir_shortwave_flux_for_coupling_multiplied_by_timestep`: Cumulative surface downwelling diffuse nir shortwave flux for coupling multiplied by timestep
@@ -1745,7 +1745,7 @@ Standard / required CCPP variables
 * `rrtmgp_lw_flux_profile_upward_allsky`: Rrtmgp lw flux profile upward allsky
     * `real(kind=kind_phys)`: units = W m-2
 * `area_type_from_coupled_process`: Area type from coupled process
-    * `real(kind=kind_phys)`: units = flag
+    * `real(kind=kind_phys)`: units = none
 * `surface_downwelling_diffuse_nir_shortwave_flux_on_radiation_timestep`: Surface downwelling diffuse nir shortwave flux on radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
 * `surface_downwelling_diffuse_uv_and_vis_shortwave_flux_on_radiation_timestep`: Surface downwelling diffuse uv and vis shortwave flux on radiation timestep
@@ -1815,7 +1815,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = Pa
 * `air_temperature_at_surface_adjacent_layer`: Air temperature at surface adjacent layer
     * `real(kind=kind_phys)`: units = K
-* `cloud_liquid_water_mixing_ratio_at_surface_adjacent_layer`: Cloud liquid water mixing ratio at surface adjacent layer
+* `cloud_liquid_water_mixing_ratio_wrt_moist_air_at_surface_adjacent_layer`: Cloud liquid water mixing ratio wrt moist air at surface adjacent layer
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_cloud_liquid_water_particles_in_air`: Mass number concentration of cloud liquid water particles in air
     * `real(kind=kind_phys)`: units = kg-1
@@ -1831,7 +1831,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = m2 s-2
 * `geopotential_at_interface`: Geopotential at interface
     * `real(kind=kind_phys)`: units = m2 s-2
-* `graupel_mixing_ratio`: Graupel mixing ratio
+* `graupel_mixing_ratio_wrt_moist_air`: Graupel mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_graupel_in_air`: Mass number concentration of graupel in air
     * `real(kind=kind_phys)`: units = kg-1
@@ -1839,13 +1839,13 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = kg-1
 * `mass_number_concentration_of_cloud_ice_water_crystals_in_air`: Mass number concentration of cloud ice water crystals in air
     * `real(kind=kind_phys)`: units = kg-1
-* `ozone_mixing_ratio`: Ozone mixing ratio
+* `ozone_mixing_ratio_wrt_moist_air`: Ozone mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_rain_water_in_air`: Mass number concentration of rain water in air
     * `real(kind=kind_phys)`: units = kg-1
 * `mass_number_concentration_of_snow_in_air`: Mass number concentration of snow in air
     * `real(kind=kind_phys)`: units = kg-1
-* `snow_mixing_ratio`: Snow mixing ratio
+* `snow_mixing_ratio_wrt_moist_air`: Snow mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `tracer_concentration`: Tracer concentration
     * `real(kind=kind_phys)`: units = kg kg-1
@@ -1947,13 +1947,13 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = K
 * `air_temperature_of_new_state`: Air temperature of new state
     * `real(kind=kind_phys)`: units = K
-* `cloud_liquid_water_mixing_ratio_of_new_state`: Cloud liquid water mixing ratio of new state
+* `cloud_liquid_water_mixing_ratio_wrt_moist_air_of_new_state`: Cloud liquid water mixing ratio wrt moist air of new state
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_cloud_liquid_water_particles_in_air_of_new_state`: Mass number concentration of cloud liquid water particles in air of new state
     * `real(kind=kind_phys)`: units = kg-1
 * `cloud_area_fraction_in_atmosphere_layer_of_new_state`: Cloud area fraction in atmosphere layer of new state
     * `real(kind=kind_phys)`: units = frac
-* `graupel_mixing_ratio_of_new_state`: Graupel mixing ratio of new state
+* `graupel_mixing_ratio_wrt_moist_air_of_new_state`: Graupel mixing ratio wrt moist air of new state
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_graupel_of_new_state`: Mass number concentration of graupel of new state
     * `real(kind=kind_phys)`: units = kg-1
@@ -1961,7 +1961,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = kg-1
 * `mass_number_concentration_of_cloud_ice_water_crystals_in_air_of_new_state`: Mass number concentration of cloud ice water crystals in air of new state
     * `real(kind=kind_phys)`: units = kg-1
-* `cloud_ice_mixing_ratio_of_new_state`: Cloud ice mixing ratio of new state
+* `cloud_ice_mixing_ratio_wrt_moist_air_of_new_state`: Cloud ice mixing ratio wrt moist air of new state
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_weighted_rime_factor_of_new_state`: Mass weighted rime factor of new state
     * `real(kind=kind_phys)`: units = kg kg-1
@@ -1969,11 +1969,11 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_rain_of_new_state`: Mass number concentration of rain of new state
     * `real(kind=kind_phys)`: units = kg-1
-* `rain_mixing_ratio_of_new_state`: Rain mixing ratio of new state
+* `rain_mixing_ratio_wrt_moist_air_of_new_state`: Rain mixing ratio wrt moist air of new state
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_snow_of_new_state`: Mass number concentration of snow of new state
     * `real(kind=kind_phys)`: units = kg-1
-* `snow_mixing_ratio_of_new_state`: Snow mixing ratio of new state
+* `snow_mixing_ratio_wrt_moist_air_of_new_state`: Snow mixing ratio wrt moist air of new state
     * `real(kind=kind_phys)`: units = kg kg-1
 * `tracer_concentration_of_new_state`: Tracer concentration of new state
     * `real(kind=kind_phys)`: units = kg kg-1
