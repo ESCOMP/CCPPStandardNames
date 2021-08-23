@@ -553,7 +553,8 @@ Units
 | flag                   | logicals/booleans that can be either true or false                                  |
 | index                  | integers that can be an index in an array                                           |
 | kg kg-1                | mass mixing ratios                                                                  |
-| mol mol-1              | volume mixing ratios                                                                |
+| m3 m-3                 | volumetric mixing ratios (e.g. for soil moisture)                                   |
+| mol mol-1              | molar mixing ratios (also volumetric mixing ratio for gases)                        |
 | none                   | strings and character arrays                                                        |
 | 1                      | any number (integer, real, complex), e.g. fractions, scaling factors, ...           |
 +------------------------+-------------------------------------------------------------------------------------+
