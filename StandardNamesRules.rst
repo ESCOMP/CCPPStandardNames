@@ -14,13 +14,14 @@ for use with the Common Community Physics Package (CCPP). It describes the
 * Standard Name qualifiers
 * Other common standard name components
 * Acronyms, abbreviations, and aliases
+* Units
 
 .. _Rules
 
 CCPP Standard Name Rules
 ========================
 
-#. Standard names should be identical to those from the la\ version
+#. Standard names should be identical to those from the latest version
    of the `Climate and Forecast (CF) metadata
    conventions <https://cfconventions.org/standard-names.html>`_ unless
    an appropriate name does not exist in that standard.
@@ -532,3 +533,27 @@ Acronyms, Abbreviations, and Aliases
 +---------------------+---------------------------------------------------------+
 | wrt                 | with respect to                                         |
 +---------------------+---------------------------------------------------------+
+
+Units
+=====
+
+#. For variables with an existing match in the `Climate and Forecast (CF) metadata
+   conventions <https://cfconventions.org/standard-names.html>`, the units should
+   be identical to the canonical units listed there
+
+#. For variables without an existing match in the CF conventions, the units should
+   follow the International System of Units (SI/metric system), see https://www.nist.gov/pml/weights-and-measures/metric-si/si-units
+   
+#. For dimensionless variables, the following units can be used:
+
++------------------------+-------------------------------------------------------------------------------------+
+| **Unit**               |  **Use case**                                                                       |
++========================+=====================================================================================+
+| count                  | integers that describe the dimension/length of an array                             |
+| flag                   | logicals/booleans that can be either true or false                                  |
+| index                  | integers that can be an index in an array                                           |
+| kg kg-1                | mass mixing ratios                                                                  |
+| mol mol-1              | volume mixing ratios                                                                |
+| none                   | strings and character arrays                                                        |
+| 1                      | any number (integer, real, complex), e.g. fractions, scaling factors, ...           |
++------------------------+-------------------------------------------------------------------------------------+
