@@ -590,10 +590,10 @@
       <standard_name name="directory_for_rte_rrtmgp_source_code">
          <type kind="len=128" units="none">character</type>
       </standard_name>
-      <standard_name name="do_mellor_yamada_janic_pbl_scheme">
+      <standard_name name="do_mellor_yamada_janjic_pbl_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="do_mellor_yamada_janic_surface_layer_scheme">
+      <standard_name name="do_mellor_yamada_janjic_surface_layer_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_mellor_yamada_nakanishi_niino_pbl_scheme">
@@ -1890,7 +1890,7 @@
       <standard_name name="upward_virtual_potential_temperature_flux">
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
-      <standard_name name="surface_upward_specific_humidity_flux_for_mellor_yamada_janic_surface_layer_scheme">
+      <standard_name name="surface_upward_specific_humidity_flux_for_mellor_yamada_janjic_surface_layer_scheme">
          <type kind="kind_phys" units="m s-1 kg kg-1">real</type>
       </standard_name>
       <standard_name name="cumulative_max_vertical_index_at_cloud_base_between_sw_radiation_calls">

@@ -372,9 +372,9 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = 1
 * `directory_for_rte_rrtmgp_source_code`: Directory for rte rrtmgp source code
     * `character(kind=len=128)`: units = none
-* `do_mellor_yamada_janic_pbl_scheme`: Do mellor yamada janic pbl scheme
+* `do_mellor_yamada_janjic_pbl_scheme`: Do mellor yamada janjic pbl scheme
     * `logical(kind=)`: units = flag
-* `do_mellor_yamada_janic_surface_layer_scheme`: Do mellor yamada janic surface layer scheme
+* `do_mellor_yamada_janjic_surface_layer_scheme`: Do mellor yamada janjic surface layer scheme
     * `logical(kind=)`: units = flag
 * `do_mellor_yamada_nakanishi_niino_pbl_scheme`: Do mellor yamada nakanishi niino pbl scheme
     * `logical(kind=)`: units = flag
@@ -1238,7 +1238,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = kg-1
 * `upward_virtual_potential_temperature_flux`: Upward virtual potential temperature flux
     * `real(kind=kind_phys)`: units = K m s-1
-* `surface_upward_specific_humidity_flux_for_mellor_yamada_janic_surface_layer_scheme`: Surface upward specific humidity flux for mellor yamada janic surface layer scheme
+* `surface_upward_specific_humidity_flux_for_mellor_yamada_janjic_surface_layer_scheme`: Surface upward specific humidity flux for mellor yamada janjic surface layer scheme
     * `real(kind=kind_phys)`: units = m s-1 kg kg-1
 * `cumulative_max_vertical_index_at_cloud_base_between_sw_radiation_calls`: Cumulative max vertical index at cloud base between sw radiation calls
     * `real(kind=kind_phys)`: units = 1
