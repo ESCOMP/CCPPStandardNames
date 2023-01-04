@@ -207,6 +207,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = K
 * `air_potential_temperature_on_previous_timestep`: air potential temperature on previous timestep
     * `real(kind=kind_phys)`: units = K
+* `virtual_temperature`: virtual temperature
+    * `real(kind=kind_phys)`: units = K
 * `pressure_dependent_gas_constant_of_dry_air`: Pressure dependent gas constant of dry air
     * `real(kind=kind_phys)`: units = J kg-1 K-1
 * `pressure_dependent_ratio_of_dry_air_to_water_vapor_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
