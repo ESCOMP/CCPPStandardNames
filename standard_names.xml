@@ -171,6 +171,14 @@
                    long_name="Horizontal wind in a direction perdendicular to x_wind">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
+    <standard_name name="eastward_wind"
+                   long_name="Wind vector component, positive when directed eastward">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
+    <standard_name name="northward_wind"
+                   long_name="Wind vector component, positive when directed northward">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
     <standard_name name="dry_static_energy"
                    long_name="Dry static energy Content of Atmosphere Layer">
       <type kind="kind_phys" units="J kg-1">real</type>
