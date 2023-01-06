@@ -221,6 +221,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg m-2
 * `mass_content_of_cloud_liquid_water_in_atmosphere_layer`: mass content of cloud liquid water in atmosphere layer
     * `real(kind=kind_phys)`: units = kg m-2
+* `cloud_area_fraction_in_atmosphere_layer`: cloud area fraction in atmosphere layer
+    * `real(kind=kind_phys)`: units = 1
 ## diagnostics
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1
