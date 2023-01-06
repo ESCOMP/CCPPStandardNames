@@ -352,6 +352,9 @@
     <standard_name name="cloud_area_fraction_in_atmosphere_layer">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
+    <standard_name name="relative_humidity">
+      <type kind="kind_phys" units="1">real</type>
+    </standard_name>
   </section>
   <section name="diagnostics">
     <standard_name name="total_precipitation_rate_at_surface">
