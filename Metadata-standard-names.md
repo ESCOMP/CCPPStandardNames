@@ -243,6 +243,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = mol mol-1
 * `mole_fraction_of_carbon_dioxide_in_air`: Mole fraction of carbon dioxide in air
     * `real(kind=kind_phys)`: units = mol mol-1
+* `humidity_mixing_ratio`: Water vapor mixing ratio wrt dry air
+    * `real(kind=kind_phys)`: units = kg kg-1
 * `cloud_liquid_water_mixing_ratio_wrt_moist_air`: Cloud liquid water mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `cloud_liquid_water_mixing_ratio_wrt_dry_air`: Cloud liquid water mixing ratio wrt dry air
