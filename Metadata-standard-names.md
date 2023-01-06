@@ -149,6 +149,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `geopotential_height`: Geopotential height
     * `real(kind=kind_phys)`: units = m
+* `height`: Vertical distance above the surface
+    * `real(kind=kind_phys)`: units = m
 * `potentially_advected_quantities`: Potentially advected quantities
     * `real(kind=kind_phys)`: units = various
 * `air_pressure_at_interface`: Air pressure at interface

@@ -224,6 +224,9 @@
     <standard_name name="geopotential_height">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
+    <standard_name name="height">
+      <type kind="kind_phys" units="m">real</type>
+    </standard_name>
     <standard_name name="potentially_advected_quantities">
       <type kind="kind_phys" units="various">real</type>
     </standard_name>
