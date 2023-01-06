@@ -217,6 +217,10 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = J kg-1 K-1
 * `pressure_dependent_ratio_of_dry_air_to_water_vapor_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
     * `real(kind=kind_phys)`: units = 1
+* `mass_content_of_cloud_ice_in_atmosphere_layer`: mass content of cloud ice in atmosphere layer
+    * `real(kind=kind_phys)`: units = kg m-2
+* `mass_content_of_cloud_liquid_water_in_atmosphere_layer`: mass content of cloud liquid water in atmosphere layer
+    * `real(kind=kind_phys)`: units = kg m-2
 ## diagnostics
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1
