@@ -229,6 +229,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mole_fraction_of_water_vapor`: Mole fraction of water vapor
     * `real(kind=kind_phys)`: units = mol mol-1
+* `mole_fraction_of_ozone_in_air`: Mole fraction of ozone in air
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `cloud_liquid_water_mixing_ratio_wrt_moist_air`: Cloud liquid water mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `cloud_liquid_water_mixing_ratio_wrt_dry_air`: Cloud liquid water mixing ratio wrt dry air
