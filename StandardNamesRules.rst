@@ -68,6 +68,10 @@ CCPP Standard Name Rules
 
 #. Volume mixing ratios should be qualified as *volume_mixing_ratio*.
 
+#. By default, *mole_fraction_of_X_in_Y* refers to the total amount of *Y*. So, for example,
+   *mole_fraction_of_ozone_in_air* refers to the total amount of air. When this is not the case,
+   a qualifier should be used to denote this. *e.g.*, *mole_fraction_of_ozone_in_dry_air*.
+
 #. When referring to soil quantities, 
    *volume_fraction* should be used to express the volumetric soil moisture.
 
