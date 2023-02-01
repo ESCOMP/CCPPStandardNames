@@ -119,6 +119,10 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-1
 * `y_wind`: Horizontal wind in a direction perdendicular to x_wind
     * `real(kind=kind_phys)`: units = m s-1
+* `eastward_wind`: Wind vector component, positive when directed eastward
+    * `real(kind=kind_phys)`: units = m s-1
+* `northward_wind`: Wind vector component, positive when directed northward
+    * `real(kind=kind_phys)`: units = m s-1
 * `dry_static_energy`: Dry static energy Content of Atmosphere Layer
     * `real(kind=kind_phys)`: units = J kg-1
 * `do_lagrangian_vertical_coordinate`: flag indicating if vertical coordinate is lagrangian
@@ -207,9 +211,19 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = K
 * `air_potential_temperature_on_previous_timestep`: air potential temperature on previous timestep
     * `real(kind=kind_phys)`: units = K
+* `virtual_temperature`: virtual temperature
+    * `real(kind=kind_phys)`: units = K
 * `pressure_dependent_gas_constant_of_dry_air`: Pressure dependent gas constant of dry air
     * `real(kind=kind_phys)`: units = J kg-1 K-1
 * `pressure_dependent_ratio_of_dry_air_to_water_vapor_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
+    * `real(kind=kind_phys)`: units = 1
+* `mass_content_of_cloud_ice_in_atmosphere_layer`: Mass content of cloud ice in atmosphere layer
+    * `real(kind=kind_phys)`: units = kg m-2
+* `mass_content_of_cloud_liquid_water_in_atmosphere_layer`: Mass content of cloud liquid water in atmosphere layer
+    * `real(kind=kind_phys)`: units = kg m-2
+* `cloud_area_fraction_in_atmosphere_layer`: Cloud area fraction in atmosphere layer
+    * `real(kind=kind_phys)`: units = 1
+* `relative_humidity`: Relative humidity
     * `real(kind=kind_phys)`: units = 1
 ## diagnostics
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
@@ -223,9 +237,15 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mole_fraction_of_water_vapor`: Mole fraction of water vapor
     * `real(kind=kind_phys)`: units = mol mol-1
-* `cloud_liquid_water_mixing_ratio_wrt_moist_air`: Cloud liquid water mixing ratio wrt moist air
+* `mole_fraction_of_ozone_in_air`: Mole fraction of ozone in air
+    * `real(kind=kind_phys)`: units = mol mol-1
+* `mole_fraction_of_carbon_dioxide_in_air`: Mole fraction of carbon dioxide in air
+    * `real(kind=kind_phys)`: units = mol mol-1
+* `water_vapor_mixing_ratio_wrt_dry_air`: Ratio of the mass of water vapor to the mass of dry air
     * `real(kind=kind_phys)`: units = kg kg-1
-* `cloud_liquid_water_mixing_ratio_wrt_dry_air`: Cloud liquid water mixing ratio wrt dry air
+* `cloud_liquid_water_mixing_ratio_wrt_moist_air`: Ratio of the mass of liquid water to the mass of moist air
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `cloud_liquid_water_mixing_ratio_wrt_dry_air`: Ratio of the mass of liquid water to the mass of dry air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `cloud_ice_mixing_ratio_wrt_dry_air`: Ratio of the mass of ice to the mass of dry air
     * `real(kind=kind_phys)`: units = kg kg-1

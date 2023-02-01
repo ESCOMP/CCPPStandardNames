@@ -171,6 +171,14 @@
                    long_name="Horizontal wind in a direction perdendicular to x_wind">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
+    <standard_name name="eastward_wind"
+                   long_name="Wind vector component, positive when directed eastward">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
+    <standard_name name="northward_wind"
+                   long_name="Wind vector component, positive when directed northward">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
     <standard_name name="dry_static_energy"
                    long_name="Dry static energy Content of Atmosphere Layer">
       <type kind="kind_phys" units="J kg-1">real</type>
@@ -323,12 +331,28 @@
                    long_name="air potential temperature on previous timestep">
       <type kind="kind_phys" units="K">real</type>
     </standard_name>
+    <standard_name name="virtual_temperature"
+                   long_name="virtual temperature">
+      <type kind="kind_phys" units="K">real</type>
+    </standard_name>
     <standard_name name="pressure_dependent_gas_constant_of_dry_air">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
     </standard_name>
     <standard_name
         name="pressure_dependent_ratio_of_dry_air_to_water_vapor_gas_constants_minus_one"
         long_name="(Rwv / Rdair) - 1.0">
+      <type kind="kind_phys" units="1">real</type>
+    </standard_name>
+    <standard_name name="mass_content_of_cloud_ice_in_atmosphere_layer">
+      <type kind="kind_phys" units="kg m-2">real</type>
+    </standard_name>
+    <standard_name name="mass_content_of_cloud_liquid_water_in_atmosphere_layer">
+      <type kind="kind_phys" units="kg m-2">real</type>
+    </standard_name>
+    <standard_name name="cloud_area_fraction_in_atmosphere_layer">
+      <type kind="kind_phys" units="1">real</type>
+    </standard_name>
+    <standard_name name="relative_humidity">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
   </section>
@@ -350,11 +374,21 @@
     <standard_name name="mole_fraction_of_water_vapor">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
-    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air">
+    <standard_name name="mole_fraction_of_ozone_in_air">
+      <type kind="kind_phys" units="mol mol-1">real</type>
+    </standard_name>
+    <standard_name name="mole_fraction_of_carbon_dioxide_in_air">
+      <type kind="kind_phys" units="mol mol-1">real</type>
+    </standard_name>
+    <standard_name name="water_vapor_mixing_ratio_wrt_dry_air"
+                   long_name="Ratio of the mass of water vapor to the mass of dry air">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air"
                    long_name="Ratio of the mass of liquid water to the mass of moist air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_dry_air">
+    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_dry_air"
                    long_name="Ratio of the mass of liquid water to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
