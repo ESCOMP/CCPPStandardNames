@@ -316,7 +316,7 @@
                    long_name="A constant reference pressure value of 1000 hPa">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="reference_pressure_of_atmosphere_layer"
+    <standard_name name="reference_pressure_in_atmosphere_layer"
                    long_name="The reference pressure for a given atmosphere layer">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
