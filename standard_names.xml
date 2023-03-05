@@ -221,7 +221,12 @@
                    long_name="inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
-    <standard_name name="geopotential_height">
+    <standard_name name="geopotential_height"
+                   long_name="geopotential height w.r.t. sea level">
+      <type kind="kind_phys" units="m">real</type>
+    </standard_name>
+    <standard_name name="geopotential_height_wrt_surface"
+                   long_name="geopotential height w.r.t. local surface">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
     <standard_name name="potentially_advected_quantities">
@@ -303,17 +308,17 @@
     <standard_name name="cumulative_boundary_flux_of_total_water">
       <type kind="kind_phys" units="W m-2">real</type>
     </standard_name>
-    <standard_name name="reference_pressure"
-                   long_name="reference pressure ">
-      <type kind="kind_phys" units="Pa">real</type>
-    </standard_name>
     <standard_name name="US_standard_air_pressure_at_sea_level"
                    long_name="US Standard Atmospheric pressure at sea level">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="reference_pressure_at_surface"
-                   long_name="reference pressure at surface">
+    <standard_name name="reference_pressure"
+                   long_name="A constant reference pressure value of 1000 hPa">
       <type kind="kind_phys" units="Pa">real</type>
+    </standard_name>
+    <standard_name name="reference_pressure_of_atmosphere_layer"
+                   long_name="The reference pressure for a given atmosphere layer">
+      <type kind="kind_phys" unites="Pa">real</type>
     </standard_name>
     <standard_name name="reference_air_pressure_normalized_by_surface_air_pressure"
                    long_name="reference pressure normalized by surface pressure">
