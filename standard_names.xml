@@ -318,7 +318,7 @@
     </standard_name>
     <standard_name name="reference_pressure_of_atmosphere_layer"
                    long_name="The reference pressure for a given atmosphere layer">
-      <type kind="kind_phys" unites="Pa">real</type>
+      <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="reference_air_pressure_normalized_by_surface_air_pressure"
                    long_name="reference pressure normalized by surface pressure">

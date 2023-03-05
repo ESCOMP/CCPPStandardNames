@@ -204,7 +204,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `reference_pressure`: A constant reference pressure value of 1000 hPa
     * `real(kind=kind_phys)`: units = Pa
 * `reference_pressure_of_atmosphere_layer`: The reference pressure for a given atmosphere layer
-    * `real(kind=kind_phys)`: units = None
+    * `real(kind=kind_phys)`: units = Pa
 * `reference_air_pressure_normalized_by_surface_air_pressure`: reference pressure normalized by surface pressure
     * `real(kind=kind_phys)`: units = 1
 * `dimensionless_exner_function`: exner function
