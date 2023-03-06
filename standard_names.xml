@@ -92,7 +92,7 @@
     <standard_name name="specific_heat_of_dry_air_at_constant_pressure">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
     </standard_name>
-    <standard_name name="specific_heat_of_liquid_water_at_20c" 
+    <standard_name name="specific_heat_of_liquid_water_at_20c"
               long_name="specific heat of liquid water at 20c">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
     </standard_name>
@@ -100,7 +100,7 @@
                    long_name="latent heat of vaporization of water at 0c">
       <type kind="kind_phys" units="J kg-1">real</type>
     </standard_name>
-    <standard_name name="dry_air_density_at_stp" 
+    <standard_name name="dry_air_density_at_stp"
               long_name="density of dry air at STP">
       <type kind="kind_phys" units="kg m-3">real</type>
     </standard_name>
@@ -250,7 +250,7 @@
     <standard_name name="do_molecular_diffusion">
       <type kind="kind_phys" units="flag">logical</type>
     </standard_name>
-    <standard_name name="is_initialized_physics_grid" 
+    <standard_name name="is_initialized_physics_grid"
               long_name="Flag to indicate if physics grid is initialized">
       <type kind="kind_phys" units="flag">logical</type>
     </standard_name>
@@ -317,7 +317,7 @@
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="reference_pressure_in_atmosphere_layer"
-                   long_name="The reference pressure for a given atmosphere layer">
+                   long_name="reference pressure in atmosphere layer">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="reference_air_pressure_normalized_by_surface_air_pressure"
