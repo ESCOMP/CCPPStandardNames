@@ -201,7 +201,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = W m-2
 * `US_standard_air_pressure_at_sea_level`: US Standard Atmospheric pressure at sea level
     * `real(kind=kind_phys)`: units = Pa
-* `reference_pressure`: A constant reference pressure value of 1000 hPa
+* `reference_pressure`: reference pressure used in definition of potential temperature, Exner function, etc.
     * `real(kind=kind_phys)`: units = Pa
 * `reference_pressure_in_atmosphere_layer`: reference pressure in atmosphere layer
     * `real(kind=kind_phys)`: units = Pa

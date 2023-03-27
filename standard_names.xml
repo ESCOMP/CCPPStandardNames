@@ -313,7 +313,7 @@
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="reference_pressure"
-                   long_name="A constant reference pressure value of 1000 hPa">
+                   long_name="reference pressure used in definition of potential temperature, Exner function, etc.">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="reference_pressure_in_atmosphere_layer"
