@@ -61,14 +61,14 @@ def main_func():
                 print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
             print('Removing duplicates and overwriting {}'.format(stdname_file))
             for dup in dup_std_names:
-                first_name = True #Logical that indicates the first of the duplicated names
+                first_use = True #Logical that indicates the first use of the duplicated name
                 rm_parents = root.findall('./section/standard_name[@name="%s"]..'%dup)
                 for par in rm_parents:
                     rm_ele = par.findall('./standard_name[@name="%s"]'%dup)
                     for ele in rm_ele:
-                        if first_name:
-                            #Now all future names will be removed:
-                            first_name = False
+                        if first_use:
+                            #Now all future uses of the name will be removed:
+                            first_use = False
                         else:
                             par.remove(ele)
             #Overwrite the xml file with the new, duplicate-free element tree:
