@@ -92,7 +92,7 @@
     <standard_name name="specific_heat_of_dry_air_at_constant_pressure">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
     </standard_name>
-    <standard_name name="specific_heat_of_liquid_water_at_20c" 
+    <standard_name name="specific_heat_of_liquid_water_at_20c"
               long_name="specific heat of liquid water at 20c">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
     </standard_name>
@@ -100,7 +100,7 @@
                    long_name="latent heat of vaporization of water at 0c">
       <type kind="kind_phys" units="J kg-1">real</type>
     </standard_name>
-    <standard_name name="dry_air_density_at_stp" 
+    <standard_name name="dry_air_density_at_stp"
               long_name="density of dry air at STP">
       <type kind="kind_phys" units="kg m-3">real</type>
     </standard_name>
@@ -221,7 +221,12 @@
                    long_name="inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
-    <standard_name name="geopotential_height">
+    <standard_name name="geopotential_height"
+                   long_name="geopotential height w.r.t. sea level">
+      <type kind="kind_phys" units="m">real</type>
+    </standard_name>
+    <standard_name name="geopotential_height_wrt_surface"
+                   long_name="geopotential height w.r.t. local surface">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
     <standard_name name="potentially_advected_quantities">
@@ -245,7 +250,7 @@
     <standard_name name="do_molecular_diffusion">
       <type kind="kind_phys" units="flag">logical</type>
     </standard_name>
-    <standard_name name="is_initialized_physics_grid" 
+    <standard_name name="is_initialized_physics_grid"
               long_name="Flag to indicate if physics grid is initialized">
       <type kind="kind_phys" units="flag">logical</type>
     </standard_name>
@@ -303,16 +308,16 @@
     <standard_name name="cumulative_boundary_flux_of_total_water">
       <type kind="kind_phys" units="W m-2">real</type>
     </standard_name>
-    <standard_name name="reference_pressure"
-                   long_name="reference pressure ">
-      <type kind="kind_phys" units="Pa">real</type>
-    </standard_name>
     <standard_name name="US_standard_air_pressure_at_sea_level"
                    long_name="US Standard Atmospheric pressure at sea level">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="reference_pressure_at_surface"
-                   long_name="reference pressure at surface">
+    <standard_name name="reference_pressure"
+                   long_name="reference pressure used in definition of potential temperature, Exner function, etc.">
+      <type kind="kind_phys" units="Pa">real</type>
+    </standard_name>
+    <standard_name name="reference_pressure_in_atmosphere_layer"
+                   long_name="reference pressure in atmosphere layer">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="reference_air_pressure_normalized_by_surface_air_pressure"

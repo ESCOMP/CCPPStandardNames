@@ -147,7 +147,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `reciprocal_of_dimensionless_exner_function_wrt_surface_air_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
     * `real(kind=kind_phys)`: units = 1
-* `geopotential_height`: Geopotential height
+* `geopotential_height`: geopotential height w.r.t. sea level
+    * `real(kind=kind_phys)`: units = m
+* `geopotential_height_wrt_surface`: geopotential height w.r.t. local surface
     * `real(kind=kind_phys)`: units = m
 * `potentially_advected_quantities`: Potentially advected quantities
     * `real(kind=kind_phys)`: units = various
@@ -197,11 +199,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = W m-2
 * `cumulative_boundary_flux_of_total_water`: Cumulative boundary flux of total water
     * `real(kind=kind_phys)`: units = W m-2
-* `reference_pressure`: reference pressure 
-    * `real(kind=kind_phys)`: units = Pa
 * `US_standard_air_pressure_at_sea_level`: US Standard Atmospheric pressure at sea level
     * `real(kind=kind_phys)`: units = Pa
-* `reference_pressure_at_surface`: reference pressure at surface
+* `reference_pressure`: reference pressure used in definition of potential temperature, Exner function, etc.
+    * `real(kind=kind_phys)`: units = Pa
+* `reference_pressure_in_atmosphere_layer`: reference pressure in atmosphere layer
     * `real(kind=kind_phys)`: units = Pa
 * `reference_air_pressure_normalized_by_surface_air_pressure`: reference pressure normalized by surface pressure
     * `real(kind=kind_phys)`: units = 1
