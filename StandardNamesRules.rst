@@ -58,27 +58,33 @@ CCPP Standard Name Rules
    use at_interface.
 
 #. By default, *mixing_ratio* refers to mass mixing ratios. The long name should
-   explicitly specify that it refers to the *mass* mixing ratio. 
-   Mass mixing ratios should contain information regarding 
-   with respect to what quantity they are defined, and options are *wrt_dry_air*, *wrt_moist_air*, 
+   explicitly specify that it refers to the *mass* mixing ratio.
+   Mass mixing ratios should contain information regarding
+   with respect to what quantity they are defined, and options are *wrt_dry_air*, *wrt_moist_air*,
    or *wrt_total_mass*, where *moist_air* refers to dry air plus vapor and *total_mass* refers
-   to dry air plus vapor and hydrometeors. A special case exists in the case of mixing ratio 
-   of vapor: the standard name *specific_humidity* should be used instead of 
-   *mixing_ratio_of_vapor_wrt_moist_air*. 
+   to dry air plus vapor and hydrometeors. A special case exists in the case of mixing ratio
+   of vapor: the standard name *specific_humidity* should be used instead of
+   *mixing_ratio_of_vapor_wrt_moist_air*.
 
 #. Volume mixing ratios should be qualified as *volume_mixing_ratio*.
 
 #. By default, *mole_fraction_of_X_in_Y* refers to the total amount of *Y*. So, for example,
    *mole_fraction_of_ozone_in_air* refers to the total amount of (moist) air. (In the case of air,
    the default meaning is moist air, as described in the *mixing ratio* rule.) When this is not
-   the case, a qualifier should be used to denote this. *e.g.*, *mole_fraction_of_ozone_in_dry_air*. 
+   the case, a qualifier should be used to denote this. *e.g.*, *mole_fraction_of_ozone_in_dry_air*.
 
-#. When referring to soil quantities, 
+#. When referring to soil quantities,
    *volume_fraction* should be used to express the volumetric soil moisture.
 
-#. Number concentration should appear as a prefix, that is, *number_concentration_of*. By default, 
+#. Number concentration should appear as a prefix, that is, *number_concentration_of*. By default,
    number concentrations are specified per unit of volume. When they are specified per
-   unit of mass, they should be written as *mass_number_concentration_of*. 
+   unit of mass, they should be written as *mass_number_concentration_of*.
+
+#. By default, *precipitation* refers to the sum of all phases of precipitating hydrometeors,
+   for example rain plus graupel plus hail.  The term *frozen_precipitation* refers to the
+   sum of all frozen precipitating hydrometers, for example graupel plus hail (but not rain).
+   Otherwise the standard name should explicitly state the type of hydrometeor(s) the
+   named quantity represents.
 
 #. If possible, qualifiers should be limited in order to allow for a wide
    applicability of the variable. In other words, don't qualify with _for ``_xyz``
