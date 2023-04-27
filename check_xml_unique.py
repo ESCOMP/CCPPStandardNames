@@ -22,7 +22,7 @@ def parse_command_line(args, description):
                         type=str, help="XML file with standard name library")
     parser.add_argument("--overwrite", action='store_true',
                         help="flag to remove duplicates and overwrite the file")
-    
+
     pargs = parser.parse_args(args)
     return pargs
 
@@ -33,14 +33,14 @@ def main_func():
     """
     # Parse command line arguments
     args = parse_command_line(sys.argv[1:], __doc__)
-    stdname_file = os.path.abspath(args.standard_name_file)    
-    _, root = read_xml_file(stdname_file)
-        
+    stdname_file = os.path.abspath(args.standard_name_file)
+    tree, root = read_xml_file(stdname_file)
+
     #get list of all standard names
     all_std_names = []
     for name in root.findall('./section/standard_name'):
         all_std_names.append(name.attrib['name'])
-    
+
     #get list of all unique and duplicate standard names, in source order
     seen = set()
     uniq_std_names = []
@@ -51,7 +51,7 @@ def main_func():
             seen.add(x)
         else:
             dup_std_names.append(x)
-    
+
     if args.overwrite:
         #delete all duplicate elements after the first
         if len(dup_std_names)>0:
@@ -61,13 +61,18 @@ def main_func():
                 print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
             print('Removing duplicates and overwriting {}'.format(stdname_file))
             for dup in dup_std_names:
-                rm_parents = root.findall('./section/standard_name[@name="%s"]...'%dup)[1:]
+                first_use = True #Logical that indicates the first use of the duplicated name
+                rm_parents = root.findall('./section/standard_name[@name="%s"]..'%dup)
                 for par in rm_parents:
                     rm_ele = par.findall('./standard_name[@name="%s"]'%dup)
                     for ele in rm_ele:
-                        par.remove(ele)
-            
-            _.write(stdname_file, "utf-8")
+                        if first_use:
+                            #Now all future uses of the name will be removed:
+                            first_use = False
+                        else:
+                            par.remove(ele)
+            #Overwrite the xml file with the new, duplicate-free element tree:
+            tree.write(stdname_file, "utf-8")
         else:
             print('No duplicate standard names were found.')
     else:
@@ -79,7 +84,7 @@ def main_func():
                 print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
         else:
             print('No duplicate standard names were found.')
-    
+
 ###############################################################################
 if __name__ == "__main__":
     main_func()
