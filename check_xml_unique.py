@@ -82,6 +82,7 @@ def main_func():
             for dup in dup_std_names:
                 rm_elements = root.findall('./section/standard_name[@name="%s"]'%dup)[1:]
                 print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
+            sys.exit(1)
         else:
             print('No duplicate standard names were found.')
 
