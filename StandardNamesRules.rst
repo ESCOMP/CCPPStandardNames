@@ -84,7 +84,7 @@ CCPP Standard Name Rules
    for example rain plus graupel plus hail.  The term *frozen_precipitation* refers to the
    sum of all frozen precipitating hydrometers, for example graupel plus hail (but not rain).
    Otherwise the standard name should explicitly state the type of hydrometeor(s) the
-   named quantity represents.
+   named quantity represents (e.g. *graupel*).
 
 #. If possible, qualifiers should be limited in order to allow for a wide
    applicability of the variable. In other words, don't qualify with _for ``_xyz``
