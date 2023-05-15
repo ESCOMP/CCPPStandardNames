@@ -8,7 +8,7 @@ import argparse
 import sys
 import os.path
 import xml.etree.ElementTree as ET
-from xml_tools import read_xml_file
+from xml_tools import find_schema_file, find_schema_version, validate_xml_file, read_xml_file
 import copy
 
 ###############################################################################
@@ -35,6 +35,22 @@ def main_func():
     args = parse_command_line(sys.argv[1:], __doc__)
     stdname_file = os.path.abspath(args.standard_name_file)
     tree, root = read_xml_file(stdname_file)
+
+    # Validate the XML file
+    version = find_schema_version(root)
+    schema_name = os.path.basename(stdname_file)[0:-4]
+    schema_root = os.path.dirname(stdname_file)
+    schema_file = find_schema_file(schema_name, version)
+    if schema_file:
+        try:
+            validate_xml_file(stdname_file, schema_name, version, None,
+                            schema_path=schema_root, error_on_noxmllint=True)
+        except ValueError:
+            raise ValueError("Invalid standard names file, {}".format(stdname_file))
+    else:
+        raise ValueError(
+            'Cannot find schema file, {}, for version {}'.format(schema_name, version)
+        )
 
     #get list of all standard names
     all_std_names = []
@@ -82,6 +98,7 @@ def main_func():
             for dup in dup_std_names:
                 rm_elements = root.findall('./section/standard_name[@name="%s"]'%dup)[1:]
                 print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
+            sys.exit(1)
         else:
             print('No duplicate standard names were found.')
 

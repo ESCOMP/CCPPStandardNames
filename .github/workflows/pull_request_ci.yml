@@ -1,0 +1,45 @@
+name: Pull request checks
+
+on:
+  pull_request:
+
+jobs:
+  check-unique-standard-names:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install xmllint
+        run: |
+            sudo apt-get update
+            sudo apt-get -y install libxml2-utils
+
+      - name: Check for duplicate standard names
+        run: python3 check_xml_unique.py standard_names.xml
+
+  check-rerendered-markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install xmllint
+        run: |
+            sudo apt-get update
+            sudo apt-get -y install libxml2-utils
+
+      - name: Check markdown has been rerendered
+        run: |
+            # Checks if the saved markdown matches freshly rendered markdown.
+            # If this fails you have likely forgotten to rerun the write script
+            # after adding a new name, or updating its description.
+            checksum=$(sha256sum Metadata-standard-names.md)
+            python3 write_standard_name_table.py standard_names.xml
+            test "$checksum" = "$(sha256sum Metadata-standard-names.md)"
