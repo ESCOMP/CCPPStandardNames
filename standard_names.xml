@@ -354,7 +354,9 @@
     <standard_name name="mass_content_of_cloud_liquid_water_in_atmosphere_layer">
       <type kind="kind_phys" units="kg m-2">real</type>
     </standard_name>
-    <standard_name name="cloud_area_fraction_in_atmosphere_layer">
+    <standard_name
+        name="non_convective_cloud_area_fraction_in_atmosphere_layer"
+        long_name="cloud area fraction in atmosphere layer excluding clouds produced by the convective schemes">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="relative_humidity">
@@ -1241,10 +1243,10 @@
       <standard_name name="index_of_air_temperature_two_timesteps_back_in_xyz_dimensioned_restart_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_cloud_area_fraction_in_atmosphere_layer_in_tracer_concentration_array">
+      <standard_name name="index_of_non_convective_cloud_area_fraction_in_atmosphere_layer_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_cloud_area_fraction_in_atmosphere_layer_in_xyz_dimensioned_restart_array">
+      <standard_name name="index_of_non_convective_cloud_area_fraction_in_atmosphere_layer_in_xyz_dimensioned_restart_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_cloud_liquid_water_effective_radius_in_xyz_dimensioned_restart_array">
@@ -2993,7 +2995,7 @@
       <standard_name name="mass_number_concentration_of_cloud_liquid_water_particles_in_air_of_new_state">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="cloud_area_fraction_in_atmosphere_layer_of_new_state">
+      <standard_name name="non_convective_cloud_area_fraction_in_atmosphere_layer_of_new_state">
          <type kind="kind_phys" units="frac">real</type>
       </standard_name>
       <standard_name name="graupel_mixing_ratio_wrt_moist_air_of_new_state">
