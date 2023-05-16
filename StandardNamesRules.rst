@@ -89,8 +89,8 @@ CCPP Standard Name Rules
 #. By default, the term *cloud* refers to all cloud phases and cloud types. Otherwise
    an additional prefix or suffix should be added to the standard name specifying what kind(s)
    of clouds the variable repesents (e.g. *ice_cloud* if only including glaciated clouds, or
-   *cloud_from_convective_scheme* if only including clouds produced by the parameterized
-   convection physics scheme).
+   *convective_cloud* if only including clouds produced by the parameterized convection
+   physics scheme).
 
 #. If possible, qualifiers should be limited in order to allow for a wide
    applicability of the variable. In other words, don't qualify with _for ``_xyz``
