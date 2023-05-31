@@ -235,7 +235,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `integer(kind=kind_phys)`: units = count
 * `number_of_tracers`: Number of tracers
     * `integer(kind=kind_phys)`: units = count
-* `specific_humidity`: Specific humidity
+* `water_vapor_mixing_ratio_wrt_moist_air`: Ratio of the mass of water vapor to the mass of moist air
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water`: Ratio of the mass of water vapor to the mass of moist air and hydrometeors
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mole_fraction_of_water_vapor`: Mole fraction of water vapor
     * `real(kind=kind_phys)`: units = mol mol-1
@@ -1527,7 +1529,9 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = K
 * `volumetric_soil_moisture_between_soil_bottom_and_water_table`: Volumetric soil moisture between soil bottom and water table
     * `real(kind=kind_phys)`: units = m3 m-3
-* `specific_humidity_at_2m`: Specific humidity at 2m
+* `water_vapor_mixing_ratio_wrt_moist_air_at_2m`: mixing ratio of the mass of water vapor to the mass of moist air, at two meters above surface
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_2m`: mixing ratio of the mass of water vapor to the mass of moist air and hydrometeors, at two meters above surface
     * `real(kind=kind_phys)`: units = kg kg-1
 * `specified_surface_upward_specific_humidity_flux`: Specified surface upward specific humidity flux
     * `real(kind=kind_phys)`: units = kg kg-1 m s-1
