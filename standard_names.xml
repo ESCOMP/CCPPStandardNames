@@ -1803,7 +1803,7 @@
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="filename_of_micm_configuration">
-         <type kind="len=64" units="none">character</type>
+         <type kind="len=*" units="none">character</type>
       </standard_name>
    </section>
    <section name="GFS_typedefs_GFS_interstitial_type">
