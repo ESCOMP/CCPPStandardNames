@@ -223,7 +223,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg m-2
 * `mass_content_of_cloud_liquid_water_in_atmosphere_layer`: Mass content of cloud liquid water in atmosphere layer
     * `real(kind=kind_phys)`: units = kg m-2
-* `non_convective_cloud_area_fraction_in_atmosphere_layer`: cloud area fraction in atmosphere layer excluding clouds produced by the convective schemes
+* `non-convective_cloud_area_fraction_in_atmosphere_layer`: cloud area fraction in atmosphere layer excluding clouds produced by the convective schemes
     * `real(kind=kind_phys)`: units = 1
 * `relative_humidity`: Relative humidity
     * `real(kind=kind_phys)`: units = 1
@@ -802,9 +802,9 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = index
 * `index_of_air_temperature_two_timesteps_back_in_xyz_dimensioned_restart_array`: Index of air temperature two timesteps back in xyz dimensioned restart array
     * `integer(kind=)`: units = index
-* `index_of_non_convective_cloud_area_fraction_in_atmosphere_layer_in_tracer_concentration_array`: Index of non convective cloud area fraction in atmosphere layer in tracer concentration array
+* `index_of_non-convective_cloud_area_fraction_in_atmosphere_layer_in_tracer_concentration_array`: Index of non-convective cloud area fraction in atmosphere layer in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_non_convective_cloud_area_fraction_in_atmosphere_layer_in_xyz_dimensioned_restart_array`: Index of non convective cloud area fraction in atmosphere layer in xyz dimensioned restart array
+* `index_of_non-convective_cloud_area_fraction_in_atmosphere_layer_in_xyz_dimensioned_restart_array`: Index of non-convective cloud area fraction in atmosphere layer in xyz dimensioned restart array
     * `integer(kind=)`: units = index
 * `index_of_cloud_liquid_water_effective_radius_in_xyz_dimensioned_restart_array`: Index of cloud liquid water effective radius in xyz dimensioned restart array
     * `integer(kind=)`: units = index
@@ -1967,7 +1967,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_cloud_liquid_water_particles_in_air_of_new_state`: Mass number concentration of cloud liquid water particles in air of new state
     * `real(kind=kind_phys)`: units = kg-1
-* `non_convective_cloud_area_fraction_in_atmosphere_layer_of_new_state`: Non convective cloud area fraction in atmosphere layer of new state
+* `non-convective_cloud_area_fraction_in_atmosphere_layer_of_new_state`: Non-convective cloud area fraction in atmosphere layer of new state
     * `real(kind=kind_phys)`: units = frac
 * `graupel_mixing_ratio_wrt_moist_air_of_new_state`: Graupel mixing ratio wrt moist air of new state
     * `real(kind=kind_phys)`: units = kg kg-1
