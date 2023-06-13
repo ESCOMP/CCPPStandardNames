@@ -60,11 +60,13 @@ CCPP Standard Name Rules
 #. By default, *mixing_ratio* refers to mass mixing ratios. The long name should
    explicitly specify that it refers to the *mass* mixing ratio.
    Mass mixing ratios should contain information regarding
-   with respect to what quantity they are defined, and options are *wrt_dry_air*, *wrt_moist_air*,
-   or *wrt_total_mass*, where *moist_air* refers to dry air plus vapor and *total_mass* refers
-   to dry air plus vapor and hydrometeors. A special case exists in the case of mixing ratio
-   of vapor: the standard name *specific_humidity* should be used instead of
-   *mixing_ratio_of_vapor_wrt_moist_air*.
+   with respect to what quantity they are defined, and options are *wrt_dry_air*,
+   *wrt_moist_air*, or *wrt_moist_air_and_condensed_water*, where *moist_air*
+   refers to dry air plus vapor and *moist_air_and_condensed_water* refers
+   to dry air plus vapor and hydrometeors. Use of *specific_humidity* should
+   be avoided as there is no consensus on whether it refers to
+   *mixing_ratio_of_water_vapor_wrt_moist_air* or
+   *mixing_ratio_of_water_vapor_wrt_moist_air_and_condensed_water*.
 
 #. Volume mixing ratios should be qualified as *volume_mixing_ratio*.
 

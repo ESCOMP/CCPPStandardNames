@@ -373,7 +373,12 @@
     <standard_name name="number_of_tracers">
       <type kind="kind_phys" units="count">integer</type>
     </standard_name>
-    <standard_name name="specific_humidity">
+    <standard_name name="water_vapor_mixing_ratio_wrt_moist_air"
+                   long_name="Ratio of the mass of water vapor to the mass of moist air">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water"
+                   long_name="Ratio of the mass of water vapor to the mass of moist air and hydrometeors">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="mole_fraction_of_water_vapor">
@@ -2330,7 +2335,12 @@
       <standard_name name="volumetric_soil_moisture_between_soil_bottom_and_water_table">
          <type kind="kind_phys" units="m3 m-3">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_at_2m">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_2m"
+                     long_name="mixing ratio of the mass of water vapor to the mass of moist air, at two meters above surface">
+         <type kind="kind_phys" units="kg kg-1">real</type>
+      </standard_name>
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_2m"
+                     long_name="mixing ratio of the mass of water vapor to the mass of moist air and hydrometeors, at two meters above surface">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="specified_surface_upward_specific_humidity_flux">
