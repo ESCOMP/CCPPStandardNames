@@ -288,6 +288,26 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `volume_mixing_ratio_of_so2`: SO2 volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
 #### aerosols
+* `mass_fraction_of_dust001_in_air`: Dust bin1 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_dust002_in_air`: Dust bin2 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_dust003_in_air`: Dust bin3 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_dust004_in_air`: Dust bin4 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_dust005_in_air`: Dust bin5 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_sea_salt001_in_air`: Sea Salt bin1 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_sea_salt002_in_air`: Sea Salt bin2 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_sea_salt003_in_air`: Sea Salt bin3 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_sea_salt004_in_air`: Sea Salt bin4 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_sea_salt005_in_air`: Sea Salt bin5 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
 
 ## standard_variables
 Standard / required CCPP variables
