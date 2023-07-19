@@ -5,7 +5,7 @@
 * [coordinates](#coordinates)
 * [state_variables](#state_variables)
 * [diagnostics](#diagnostics)
-* [constituents](#constituents)
+* [atmospheric composition](#atmospheric_composition)
 * [standard_variables](#standard_variables)
 * [GFS_typedefs_GFS_control_type](#GFS_typedefs_GFS_control_type)
 * [GFS_typedefs_GFS_interstitial_type](#GFS_typedefs_GFS_interstitial_type)
@@ -230,20 +230,17 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 ## diagnostics
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1
-## constituents
+## atmospheric_composition
 * `number_of_chemical_species`: Number of chemical species
     * `integer(kind=kind_phys)`: units = count
 * `number_of_tracers`: Number of tracers
     * `integer(kind=kind_phys)`: units = count
+#### water
 * `water_vapor_mixing_ratio_wrt_moist_air`: Ratio of the mass of water vapor to the mass of moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water`: Ratio of the mass of water vapor to the mass of moist air and hydrometeors
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mole_fraction_of_water_vapor`: Mole fraction of water vapor
-    * `real(kind=kind_phys)`: units = mol mol-1
-* `mole_fraction_of_ozone_in_air`: Mole fraction of ozone in air
-    * `real(kind=kind_phys)`: units = mol mol-1
-* `mole_fraction_of_carbon_dioxide_in_air`: Mole fraction of carbon dioxide in air
     * `real(kind=kind_phys)`: units = mol mol-1
 * `water_vapor_mixing_ratio_wrt_dry_air`: Ratio of the mass of water vapor to the mass of dry air
     * `real(kind=kind_phys)`: units = kg kg-1
@@ -255,6 +252,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `rain_mixing_ratio_wrt_moist_air`: ratio of the mass of rain to the mass of moist air
     * `real(kind=kind_phys)`: units = kg kg-1
+#### trace gas
+* `mole_fraction_of_ozone_in_air`: Mole fraction of ozone in air
+    * `real(kind=kind_phys)`: units = mol mol-1
+* `mole_fraction_of_carbon_dioxide_in_air`: Mole fraction of carbon dioxide in air
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_ch4`: CH4 volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_co`: CO volume mixing ratio
@@ -275,6 +277,18 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_n2o`: N2O volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
+* `volume_mixing_ratio_of_no2`: NO2 volume mixing ratio
+    * `real(kind=kind_phys)`: units = mol mol-1
+* `volume_mixing_ratio_of_no`: NO volume mixing ratio
+    * `real(kind=kind_phys)`: units = mol mol-1
+* `volume_mixing_ratio_of_hcho`: HCHO volume mixing ratio
+    * `real(kind=kind_phys)`: units = mol mol-1
+* `volume_mixing_ratio_of_c5h8`: C5H8 volume mixing ratio
+    * `real(kind=kind_phys)`: units = mol mol-1
+* `volume_mixing_ratio_of_so2`: SO2 volume mixing ratio
+    * `real(kind=kind_phys)`: units = mol mol-1
+#### aerosols
+
 ## standard_variables
 Standard / required CCPP variables
 * `ccpp_error_message`: Error message for error handling in CCPP
