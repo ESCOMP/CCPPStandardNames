@@ -5,7 +5,7 @@
 * [coordinates](#coordinates)
 * [state_variables](#state_variables)
 * [diagnostics](#diagnostics)
-* [atmospheric composition](#atmospheric_composition)
+* [atmospheric composition](#atmospheric composition)
 * [standard_variables](#standard_variables)
 * [GFS_typedefs_GFS_control_type](#GFS_typedefs_GFS_control_type)
 * [GFS_typedefs_GFS_interstitial_type](#GFS_typedefs_GFS_interstitial_type)
@@ -230,12 +230,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 ## diagnostics
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1
-## atmospheric_composition
+## atmospheric composition
 * `number_of_chemical_species`: Number of chemical species
     * `integer(kind=kind_phys)`: units = count
 * `number_of_tracers`: Number of tracers
     * `integer(kind=kind_phys)`: units = count
-#### water
 * `water_vapor_mixing_ratio_wrt_moist_air`: Ratio of the mass of water vapor to the mass of moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water`: Ratio of the mass of water vapor to the mass of moist air and hydrometeors
@@ -252,7 +251,6 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `rain_mixing_ratio_wrt_moist_air`: ratio of the mass of rain to the mass of moist air
     * `real(kind=kind_phys)`: units = kg kg-1
-#### trace gas
 * `mole_fraction_of_ozone_in_air`: Mole fraction of ozone in air
     * `real(kind=kind_phys)`: units = mol mol-1
 * `mole_fraction_of_carbon_dioxide_in_air`: Mole fraction of carbon dioxide in air
@@ -281,13 +279,14 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_no`: NO volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
+* `volume_mixing_ratio_of_o3`: O3 volume mixing ratio
+    * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_hcho`: HCHO volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_c5h8`: C5H8 volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_so2`: SO2 volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-#### aerosols
 * `mass_fraction_of_dust001_in_air`: Dust bin1 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_dust002_in_air`: Dust bin2 mass fraction
@@ -298,35 +297,38 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_dust005_in_air`: Dust bin5 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_sea_salt001_in_air`: Sea Salt bin1 mass fraction
+* `mass_fraction_of_sea_salt001_in_air`: Sea salt bin5 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_sea_salt002_in_air`: Sea Salt bin2 mass fraction
+* `mass_fraction_of_sea_salt002_in_air`: Sea salt bin2 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_sea_salt003_in_air`: Sea Salt bin3 mass fraction
+* `mass_fraction_of_sea_salt003_in_air`: Sea salt bin3 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_sea_salt004_in_air`: Sea Salt bin4 mass fraction
+* `mass_fraction_of_sea_salt004_in_air`: Sea salt bin4 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_sea_salt005_in_air`: Sea Salt bin5 mass fraction
+* `mass_fraction_of_sea_salt005_in_air`: Sea salt bin5 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_hydrophobic_black_carbon_in_air`: Hydrophobic black carbon mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_hydrophilic_black_carbon_in_air`: Hydrophilic black carbon mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_hydrophobic_organic_carbon_in_air`: Hydrophobic organic carbon mass fraction
+* `mass_fraction_of_hydrophobic_organic_carbon_in_air`: Hydrophobic black carbon mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_hydrophilic_organic_carbon_in_air`: Hydrophilic organic carbon mass fraction
+* `mass_fraction_of_hydrophilic_organic_carbon_in_air`: Hydrophilic black carbon mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_sulfate_in_air`: Sulfate mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_nitrate001_in_air`: Nitrate bin1 mass fraction
+* `mass_fraction_of_sea_nitratet001_in_air`: Nitrate bin1 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_nitrate002_in_air`: Nitrate bin2 mass fraction
+* `mass_fraction_of_sea_nitratet002_in_air`: Nitrate bin2 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_nitrate003_in_air`: Nitrate bin3 mass fraction
+* `mass_fraction_of_sea_nitratet003_in_air`: Nitrate bin3 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `volume_extinction_in_air_due_to_aerosol_particles`: Aerosol extinction at wavelength
+* `volume_extinction_in_air_due_to_aerosol_particles_lambda1`: Aerosol extinction at wavelength1
     * `real(kind=kind_phys)`: units = m-1
-
+* `volume_extinction_in_air_due_to_aerosol_particles_lambda2`: Aerosol extinction at wavelength2
+    * `real(kind=kind_phys)`: units = m-1
+* `volume_extinction_in_air_due_to_aerosol_particles_lambda3`: Aerosol extinction at wavelength3
+    * `real(kind=kind_phys)`: units = m-1
 ## standard_variables
 Standard / required CCPP variables
 * `ccpp_error_message`: Error message for error handling in CCPP
