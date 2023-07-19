@@ -324,7 +324,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_nitrate003_in_air`: Nitrate bin3 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-
+* `volume_extinction_in_air_due_to_aerosol_particles`: Aerosol extinction at wavelength
+    * `real(kind=kind_phys)`: units = m-1
 
 ## standard_variables
 Standard / required CCPP variables
