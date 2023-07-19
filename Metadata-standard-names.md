@@ -5,7 +5,7 @@
 * [coordinates](#coordinates)
 * [state_variables](#state_variables)
 * [diagnostics](#diagnostics)
-* [atmospheric composition](#atmospheric composition)
+* [atmospheric_composition](#atmospheric_composition)
 * [standard_variables](#standard_variables)
 * [GFS_typedefs_GFS_control_type](#GFS_typedefs_GFS_control_type)
 * [GFS_typedefs_GFS_interstitial_type](#GFS_typedefs_GFS_interstitial_type)
@@ -230,7 +230,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 ## diagnostics
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1
-## atmospheric composition
+## atmospheric_composition
 * `number_of_chemical_species`: Number of chemical species
     * `integer(kind=kind_phys)`: units = count
 * `number_of_tracers`: Number of tracers

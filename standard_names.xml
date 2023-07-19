@@ -368,7 +368,7 @@
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
   </section>
-  <section name="atmospheric composition">
+  <section name="atmospheric_composition">
 
     <standard_name name="number_of_chemical_species">
       <type kind="kind_phys" units="count">integer</type>
