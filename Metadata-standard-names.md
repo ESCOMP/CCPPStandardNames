@@ -308,6 +308,23 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_sea_salt005_in_air`: Sea Salt bin5 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_hydrophobic_black_carbon_in_air`: Hydrophobic black carbon mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_hydrophilic_black_carbon_in_air`: Hydrophilic black carbon mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_hydrophobic_organic_carbon_in_air`: Hydrophobic organic carbon mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_hydrophilic_organic_carbon_in_air`: Hydrophilic organic carbon mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_sulfate_in_air`: Sulfate mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_nitrate001_in_air`: Nitrate bin1 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_nitrate002_in_air`: Nitrate bin2 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+* `mass_fraction_of_nitrate003_in_air`: Nitrate bin3 mass fraction
+    * `real(kind=kind_phys)`: units = kg kg-1
+
 
 ## standard_variables
 Standard / required CCPP variables
