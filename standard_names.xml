@@ -369,14 +369,12 @@
     </standard_name>
   </section>
   <section name="atmospheric_composition">
-
     <standard_name name="number_of_chemical_species">
       <type kind="kind_phys" units="count">integer</type>
     </standard_name>
     <standard_name name="number_of_tracers">
       <type kind="kind_phys" units="count">integer</type>
     </standard_name>
-
     <standard_name name="water_vapor_mixing_ratio_wrt_moist_air"
                    long_name="Ratio of the mass of water vapor to the mass of moist air">
       <type kind="kind_phys" units="kg kg-1">real</type>
@@ -408,7 +406,6 @@
                    long_name="ratio of the mass of rain to the mass of moist air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-
     <standard_name name="mole_fraction_of_ozone_in_air">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
@@ -529,26 +526,26 @@
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="mass_fraction_of_hydrophobic_organic_carbon_in_air"
-                   long_name="Hydrophobic black carbon mass fraction">
+                   long_name="Hydrophobic organic carbon mass fraction">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="mass_fraction_of_hydrophilic_organic_carbon_in_air"
-                   long_name="Hydrophilic black carbon mass fraction">
+                   long_name="Hydrophilic organic carbon mass fraction">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="mass_fraction_of_sulfate_in_air"
                    long_name="Sulfate mass fraction">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-    <standard_name name="mass_fraction_of_sea_nitratet001_in_air"
+    <standard_name name="mass_fraction_of_sea_nitrate001_in_air"
                    long_name="Nitrate bin1 mass fraction">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-    <standard_name name="mass_fraction_of_sea_nitratet002_in_air"
+    <standard_name name="mass_fraction_of_sea_nitrate002_in_air"
                    long_name="Nitrate bin2 mass fraction">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
-    <standard_name name="mass_fraction_of_sea_nitratet003_in_air"
+    <standard_name name="mass_fraction_of_sea_nitrate003_in_air"
                    long_name="Nitrate bin3 mass fraction">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
@@ -564,7 +561,6 @@
                    long_name="Aerosol extinction at wavelength3">
       <type kind="kind_phys" units="m-1">real</type>
     </standard_name>
-
   </section>
   <section name="standard_variables"
            comment="Standard / required CCPP variables">
