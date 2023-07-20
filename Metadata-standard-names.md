@@ -311,17 +311,17 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_hydrophilic_black_carbon_in_air`: Hydrophilic black carbon mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_hydrophobic_organic_carbon_in_air`: Hydrophobic black carbon mass fraction
+* `mass_fraction_of_hydrophobic_organic_carbon_in_air`: Hydrophobic organic carbon mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_hydrophilic_organic_carbon_in_air`: Hydrophilic black carbon mass fraction
+* `mass_fraction_of_hydrophilic_organic_carbon_in_air`: Hydrophilic organic carbon mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_sulfate_in_air`: Sulfate mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_sea_nitratet001_in_air`: Nitrate bin1 mass fraction
+* `mass_fraction_of_sea_nitrate001_in_air`: Nitrate bin1 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_sea_nitratet002_in_air`: Nitrate bin2 mass fraction
+* `mass_fraction_of_sea_nitrate002_in_air`: Nitrate bin2 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
-* `mass_fraction_of_sea_nitratet003_in_air`: Nitrate bin3 mass fraction
+* `mass_fraction_of_sea_nitrate003_in_air`: Nitrate bin3 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
 * `volume_extinction_in_air_due_to_aerosol_particles_lambda1`: Aerosol extinction at wavelength1
     * `real(kind=kind_phys)`: units = m-1
