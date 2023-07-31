@@ -1274,7 +1274,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = m
 * `specific_humidity_on_previous_timestep`: Specific humidity on previous timestep
     * `real(kind=kind_phys)`: units = kg kg-1
-* `tendendy_of_specific_humidity_due_to_nonphysics`: Tendendy of specific humidity due to nonphysics
+* `tendency_of_specific_humidity_due_to_nonphysics`: Tendency of specific humidity due to nonphysics
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
 * `momentum_exchange_coefficient_for_myj_schemes`: Momentum exchange coefficient for myj schemes
     * `real(kind=kind_phys)`: units = m s-1
