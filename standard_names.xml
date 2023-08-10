@@ -164,11 +164,11 @@
       <type kind="kind_phys" units="K">real</type>
     </standard_name>
     <standard_name name="x_wind"
-                   long_name="Horizontal wind in a direction perdendicular to y_wind">
+                   long_name="Horizontal wind in a direction perpendicular to y_wind">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
     <standard_name name="y_wind"
-                   long_name="Horizontal wind in a direction perdendicular to x_wind">
+                   long_name="Horizontal wind in a direction perpendicular to x_wind">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
     <standard_name name="eastward_wind"
@@ -340,11 +340,11 @@
                    long_name="virtual temperature">
       <type kind="kind_phys" units="K">real</type>
     </standard_name>
-    <standard_name name="pressure_dependent_gas_constant_of_dry_air">
+    <standard_name name="composition_dependent_gas_constant_of_dry_air">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
     </standard_name>
     <standard_name
-        name="pressure_dependent_ratio_of_dry_air_to_water_vapor_gas_constants_minus_one"
+        name="ratio_of_water_vapor_gas_constant_to_composition_dependent_dry_air_gas_constant_minus_one"
         long_name="(Rwv / Rdair) - 1.0">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
