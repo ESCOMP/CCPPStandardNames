@@ -113,6 +113,11 @@
         long_name="(Rwv / Rdair) - 1.0">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
+    <standard_name
+        name="standard_gravitational_acceleration"
+        long_name="scalar constant epresenting gravitiational acceleration">
+      <type kind="kind_phys" units="m s-2">real</type>
+    </standard_name>
   </section>
   <section name="coordinates">
     <standard_name name="latitude">
@@ -120,9 +125,6 @@
     </standard_name>
     <standard_name name="longitude">
       <type kind="kind_phys" units="degree_east">real</type>
-    </standard_name>
-    <standard_name name="gravitational_acceleration">
-      <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
     <standard_name name="cell_area">
       <type kind="kind_phys" units="m2">real</type>
@@ -361,6 +363,9 @@
     </standard_name>
     <standard_name name="relative_humidity">
       <type kind="kind_phys" units="1">real</type>
+    </standard_name>
+    <standard_name name="gravitational_acceleration">
+      <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
   </section>
   <section name="diagnostics">

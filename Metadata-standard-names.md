@@ -82,13 +82,13 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `real(kind=kind_phys)`: units = kg m-3
 * `ratio_of_water_vapor_to_dry_air_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
     * `real(kind=kind_phys)`: units = 1
+* `standard_gravitational_acceleration`: scalar constant epresenting gravitiational acceleration
+    * `real(kind=kind_phys)`: units = m s-2
 ## coordinates
 * `latitude`: Latitude
     * `real(kind=kind_phys)`: units = degree_north
 * `longitude`: Longitude
     * `real(kind=kind_phys)`: units = degree_east
-* `gravitational_acceleration`: Gravitational acceleration
-    * `real(kind=kind_phys)`: units = m s-2
 * `cell_area`: Cell area
     * `real(kind=kind_phys)`: units = m2
 * `cell_weight`: Cell weight
@@ -115,9 +115,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = K
 * `air_temperature_on_previous_timestep`: Air temperature on previous timestep
     * `real(kind=kind_phys)`: units = K
-* `x_wind`: Horizontal wind in a direction perdendicular to y_wind
+* `x_wind`: Horizontal wind in a direction perpendicular to y_wind
     * `real(kind=kind_phys)`: units = m s-1
-* `y_wind`: Horizontal wind in a direction perdendicular to x_wind
+* `y_wind`: Horizontal wind in a direction perpendicular to x_wind
     * `real(kind=kind_phys)`: units = m s-1
 * `eastward_wind`: Wind vector component, positive when directed eastward
     * `real(kind=kind_phys)`: units = m s-1
@@ -215,9 +215,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = K
 * `virtual_temperature`: virtual temperature
     * `real(kind=kind_phys)`: units = K
-* `pressure_dependent_gas_constant_of_dry_air`: Pressure dependent gas constant of dry air
+* `composition_dependent_gas_constant_of_dry_air`: Composition dependent gas constant of dry air
     * `real(kind=kind_phys)`: units = J kg-1 K-1
-* `pressure_dependent_ratio_of_dry_air_to_water_vapor_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
+* `ratio_of_water_vapor_gas_constant_to_composition_dependent_dry_air_gas_constant_minus_one`: (Rwv / Rdair) - 1.0
     * `real(kind=kind_phys)`: units = 1
 * `mass_content_of_cloud_ice_in_atmosphere_layer`: Mass content of cloud ice in atmosphere layer
     * `real(kind=kind_phys)`: units = kg m-2
@@ -227,6 +227,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `relative_humidity`: Relative humidity
     * `real(kind=kind_phys)`: units = 1
+* `gravitational_acceleration`: Gravitational acceleration
+    * `real(kind=kind_phys)`: units = m s-2
 ## diagnostics
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1
