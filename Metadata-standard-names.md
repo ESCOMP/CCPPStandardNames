@@ -82,7 +82,7 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `real(kind=kind_phys)`: units = kg m-3
 * `ratio_of_water_vapor_to_dry_air_gas_constants_minus_one`: (Rwv / Rdair) - 1.0
     * `real(kind=kind_phys)`: units = 1
-* `standard_gravitational_acceleration`: scalar constant epresenting gravitiational acceleration
+* `standard_gravitational_acceleration`: scalar constant representing gravitiational acceleration
     * `real(kind=kind_phys)`: units = m s-2
 ## coordinates
 * `latitude`: Latitude
