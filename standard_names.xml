@@ -115,7 +115,7 @@
     </standard_name>
     <standard_name
         name="standard_gravitational_acceleration"
-        long_name="scalar constant epresenting gravitiational acceleration">
+        long_name="scalar constant representing gravitiational acceleration">
       <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
   </section>
