@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+
+"""
+
+This tool checks if all of the
+standard names present in a
+CCPP metadata file also exist
+in the standard names dictionary.
+
+The tool currently has two options:
+
+1.  A path to a single metadata file
+    is passed, in which case only that
+    file's standard names are checked, e.g.:
+
+./meta_stdname_check --metafile-loc /path/to/file.meta --stdname-dict /path/to/dict.xml
+
+2.  A path to a directory is passed, in
+    which case the directory is searched
+    for metadata files, and all found
+    files' standard names are checked, e.g.:
+
+./meta_stdname_check --metafile-loc /meta/path/ --stdname-dict /path/to/dict.xml
+
+"""
+
+#############################
+#Import needed python modules
+#############################
+
+import argparse
+
+#################
+#Helper functions
+#################
+
+#++++++++++++++++++++++++++++++
+#Input Argument parser function
+#++++++++++++++++++++++++++++++
+
+def parse_arguments():
+
+    """
+    Parses command-line input arguments
+    using the argparse python module and
+    outputs the final argument object.
+    """
+
+    #Create description:
+    desc = "Check if the metafile contains variable standard names\n"
+    desc += "that are not in the provided standard names dictionary."
+
+    #Create parser object:
+    parser = argparse.ArgumentParser(description=desc)
+
+    #Add input arguments to be parsed:
+    parser.add_argument('--metafile-loc',
+                        metavar='<path to directory or file>',
+                        action='store', type=str,
+                        help="Location of metadata file(s)")
+
+    parser.add_argument('--stdname-dict',
+                        metavar='<path to file>',
+                        action='store', type=str,
+                        help="Location of standard name dictionary (XML file)")
+
+    #Parse Argument inputs
+    args = parser.parse_args()
+    return args
+
+#++++++++++++++++++++++++++++++
+
+############
+#Main script
+############
+
+#Parse command-line arguments:
+input_args = parse_arguments()
+
+#Open standard name dictionary:
+#CONTINUE HERE!!!!!!!!
+
+#Extract all standard names from dictionary:
+
+#Find all CCPP metadata files:
+
+#Loop through all metadata files:
+
+    #Find all metadata standard names
+    #that are not in the dictionary
+
+#Print list of metadata file standard
+#names that are not in the dictionary:
+
+##############
+#End of script
