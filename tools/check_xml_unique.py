@@ -8,8 +8,20 @@ import argparse
 import sys
 import os.path
 import xml.etree.ElementTree as ET
-from xml_tools import find_schema_file, find_schema_version, validate_xml_file, read_xml_file
 import copy
+
+################################################
+#Add CCPP framework (lib) modules to python path
+################################################
+
+_CURR_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(_CURR_DIR, "lib"))
+
+#######################################
+#Import needed framework python modules
+#######################################
+
+from xml_tools import find_schema_file, find_schema_version, validate_xml_file, read_xml_file
 
 ###############################################################################
 def parse_command_line(args, description):
@@ -40,7 +52,8 @@ def main_func():
     version = find_schema_version(root)
     schema_name = os.path.basename(stdname_file)[0:-4]
     schema_root = os.path.dirname(stdname_file)
-    schema_file = find_schema_file(schema_name, version)
+    schema_path = os.path.join(schema_root,schema_name)
+    schema_file = find_schema_file(schema_path, version)
     if schema_file:
         try:
             validate_xml_file(stdname_file, schema_name, version, None,
