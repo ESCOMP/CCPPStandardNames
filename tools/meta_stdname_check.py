@@ -300,9 +300,11 @@ if os.path.isfile(metafile_loc):
     missing_stdnames = missing_metafile_names(metafile_loc,
                                               std_names)
 
-    #If miissing stdnames exist, then add the
+    #If missing stdnames exist, then add the
     #file and missing names to dictionary:
-    meta_miss_names_dict[metafile_loc] = missing_stdnames
+    if missing_stdnames:
+        meta_miss_names_dict[metafile_loc] = missing_stdnames
+    #End if
 
 #If not a file, then check if a directory:
 elif os.path.isdir(metafile_loc):
