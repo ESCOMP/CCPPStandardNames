@@ -321,9 +321,11 @@ elif os.path.isdir(metafile_loc):
         missing_stdnames = missing_metafile_names(meta_file,
                                               std_names)
 
-        #If miissing stdnames exist, then add the
+        #If missing stdnames exist, then add the
         #file and missing names to dictionary:
-        meta_miss_names_dict[meta_file] = missing_stdnames
+        if missing_stdnames:
+            meta_miss_names_dict[meta_file] = missing_stdnames
+        #End if
     #End for
 
 else:
