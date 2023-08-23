@@ -98,15 +98,15 @@ def get_dict_stdnames(xml_tree_root):
     """
 
     #Create empty set to store standard name names:
-    std_names = set()
+    std_dict_names = set()
 
     #Loop over all standard_name tags"
     for stdname in xml_tree_root.findall('./section/standard_name'):
         #Add the "name" attribute to the set:
-        std_names.add(stdname.attrib['name'])
+        std_dict_names.add(stdname.attrib['name'])
     #End for
 
-    return std_names
+    return std_dict_names
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #Function to parse a list of strings from a metadata file
@@ -187,10 +187,10 @@ def missing_metafile_names(metafile, stdname_set):
     """
 
     #Open metadata file:
-    with open(metafile,'r', encoding='utf-8') as meta_file:
+    with open(metafile,'r', encoding='utf-8') as mfile:
 
         #Find all standard names in metadata file
-        meta_stdname_set = find_metafile_stdnames(meta_file)
+        meta_stdname_set = find_metafile_stdnames(mfile)
     #End with
 
     #Create set of all standard names not in dictionary set:
