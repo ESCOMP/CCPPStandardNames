@@ -19,7 +19,7 @@ jobs:
             sudo apt-get -y install libxml2-utils
 
       - name: Check for duplicate standard names
-        run: python3 tools/check_xml_unique.py standard_names.xml
+        run: tools/check_xml_unique.py standard_names.xml
 
   check-rerendered-markdown:
     runs-on: ubuntu-latest
