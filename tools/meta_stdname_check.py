@@ -70,12 +70,12 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description=desc)
 
     #Add input arguments to be parsed:
-    parser.add_argument('--metafile-loc',
+    parser.add_argument('-m', '--metafile-loc',
                         metavar='<path to directory or file>',
                         action='store', type=str,
                         help="Location of metadata file(s)")
 
-    parser.add_argument('--stdname-dict',
+    parser.add_argument('-s', '--stdname-dict',
                         metavar='<path to file>',
                         action='store', type=str,
                         help="Location of standard name dictionary (XML file)")
