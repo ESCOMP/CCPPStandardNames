@@ -409,19 +409,19 @@
     <standard_name name="mole_fraction_of_ozone_in_air">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
-    <standard_name name="mole_fraction_of_carbon_dioxide_in_air">
+    <standard_name name="mole_fraction_of_carbon_dioxide_in_air"
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_ch4"
-                   long_name="CH4 volume mixing ratio">
+                   long_name="Methane volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_co"
-                   long_name="CO volume mixing ratio">
+                   long_name="Carbon monoxide volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_co2"
-                   long_name="CO2 volume mixing ratio">
+                   long_name="Carbon dioxide volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_ccl4"
@@ -429,51 +429,51 @@
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc11"
-                   long_name="CFC11 volume mixing ratio">
+                   long_name="Trichlorofluoromethane volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc12"
-                   long_name="CFC12 volume mixing ratio">
+                   long_name="Dichlorodifluoromethane volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc113"
-                   long_name="CFC113 volume mixing ratio">
+                   long_name="1,1,2-Trichloro-1,2,2-trifluoroethane volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc22"
-                   long_name="CFC22 volume mixing ratio">
+                   long_name="Chlorodifluoromethane volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_o2"
-                   long_name="O2 volume mixing ratio">
+                   long_name="Dioxygen volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_n2o"
-                   long_name="N2O volume mixing ratio">
+                   long_name="Nitrous oxide volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_no2"
-                   long_name="NO2 volume mixing ratio">
+                   long_name="Nitrogen dioxide volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_no"
-                   long_name="NO volume mixing ratio">
+                   long_name="Nitrogen oxide volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_o3"
-                   long_name="O3 volume mixing ratio">
+                   long_name="Ozone volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_hcho"
-                   long_name="HCHO volume mixing ratio">
+                   long_name="Formaldehyde volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_c5h8"
-                   long_name="C5H8 volume mixing ratio">
+                   long_name="Isoprene volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_so2"
-                   long_name="SO2 volume mixing ratio">
+                   long_name="Sulfur dioxide volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
   </section>
