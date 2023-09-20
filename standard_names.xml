@@ -409,7 +409,7 @@
     <standard_name name="mole_fraction_of_ozone_in_air">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
-    <standard_name name="mole_fraction_of_carbon_dioxide_in_air"
+    <standard_name name="mole_fraction_of_carbon_dioxide_in_air">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_ch4"

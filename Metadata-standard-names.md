@@ -256,37 +256,37 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = mol mol-1
 * `mole_fraction_of_carbon_dioxide_in_air`: Mole fraction of carbon dioxide in air
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_ch4`: CH4 volume mixing ratio
+* `volume_mixing_ratio_of_ch4`: Methane volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_co`: CO volume mixing ratio
+* `volume_mixing_ratio_of_co`: Carbon monoxide volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_co2`: CO2 volume mixing ratio
+* `volume_mixing_ratio_of_co2`: Carbon dioxide volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_ccl4`: CCL4 volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_cfc11`: CFC11 volume mixing ratio
+* `volume_mixing_ratio_of_cfc11`: Trichlorofluoromethane volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_cfc12`: CFC12 volume mixing ratio
+* `volume_mixing_ratio_of_cfc12`: Dichlorodifluoromethane volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_cfc113`: CFC113 volume mixing ratio
+* `volume_mixing_ratio_of_cfc113`: 1,1,2-Trichloro-1,2,2-trifluoroethane volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_cfc22`: CFC22 volume mixing ratio
+* `volume_mixing_ratio_of_cfc22`: Chlorodifluoromethane volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_o2`: O2 volume mixing ratio
+* `volume_mixing_ratio_of_o2`: Dioxygen volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_n2o`: N2O volume mixing ratio
+* `volume_mixing_ratio_of_n2o`: Nitrous oxide volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_no2`: NO2 volume mixing ratio
+* `volume_mixing_ratio_of_no2`: Nitrogen dioxide volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_no`: NO volume mixing ratio
+* `volume_mixing_ratio_of_no`: Nitrogen oxide volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_o3`: O3 volume mixing ratio
+* `volume_mixing_ratio_of_o3`: Ozone volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_hcho`: HCHO volume mixing ratio
+* `volume_mixing_ratio_of_hcho`: Formaldehyde volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_c5h8`: C5H8 volume mixing ratio
+* `volume_mixing_ratio_of_c5h8`: Isoprene volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_so2`: SO2 volume mixing ratio
+* `volume_mixing_ratio_of_so2`: Sulfur dioxide volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
 ## atmospheric_composition: GOCART aerosols
 * `mass_fraction_of_dust001_in_air`: Dust bin1 mass fraction
