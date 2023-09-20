@@ -6,6 +6,7 @@
 * [state_variables](#state_variables)
 * [diagnostics](#diagnostics)
 * [atmospheric_composition](#atmospheric_composition)
+* [atmospheric_composition: GOCART aerosols](#atmospheric_composition: GOCART aerosols)
 * [standard_variables](#standard_variables)
 * [GFS_typedefs_GFS_control_type](#GFS_typedefs_GFS_control_type)
 * [GFS_typedefs_GFS_interstitial_type](#GFS_typedefs_GFS_interstitial_type)
@@ -287,6 +288,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_so2`: SO2 volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
+## atmospheric_composition: GOCART aerosols
 * `mass_fraction_of_dust001_in_air`: Dust bin1 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_fraction_of_dust002_in_air`: Dust bin2 mass fraction

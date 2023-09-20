@@ -476,7 +476,8 @@
                    long_name="SO2 volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
-
+  </section>
+    <section name="atmospheric_composition: GOCART aerosols">
     <standard_name name="mass_fraction_of_dust001_in_air"
                    long_name="Dust bin1 mass fraction">
       <type kind="kind_phys" units="kg kg-1">real</type>
