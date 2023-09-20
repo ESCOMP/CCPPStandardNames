@@ -425,7 +425,7 @@
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_ccl4"
-                   long_name="CCL4 volume mixing ratio">
+                   long_name="Tetrachloromethane volume mixing ratio">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
     <standard_name name="volume_mixing_ratio_of_cfc11"

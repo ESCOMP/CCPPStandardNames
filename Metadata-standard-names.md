@@ -262,7 +262,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_co2`: Carbon dioxide volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
-* `volume_mixing_ratio_of_ccl4`: CCL4 volume mixing ratio
+* `volume_mixing_ratio_of_ccl4`: Tetrachloromethane volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_cfc11`: Trichlorofluoromethane volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
