@@ -32,6 +32,7 @@ import argparse
 import sys
 import os
 import os.path
+import datetime
 
 ################################################
 #Add CCPP framework (lib) modules to python path
@@ -250,14 +251,19 @@ def print_missing_names(missing_names_dict):
     file a list of each "missing" standard name.
     """
 
-    #Loop over dictionary keys, which should be
-    #paths to metadata files:
+    #Get current date/time:
+    curr_time = datetime.datetime.now()
 
     print("\n#######################")
-    msg = "Non-dictionary standard names found in the following"
+    print("Date/time of when script was run:")
+    print(curr_time)
+    print("#######################")
+    msg = "\nNon-dictionary standard names found in the following"
     msg += " metadata files:"
     print(msg)
 
+    #Loop over dictionary keys, which should be
+    #paths to metadata files:
     for metafile in missing_names_dict:
 
         print("\n--------------------------\n")
