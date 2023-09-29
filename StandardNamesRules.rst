@@ -156,6 +156,7 @@ Suffixes
 | **at_pressure_levels**
 | **at_top_of_viscous_sublayer**
 | **at_various_atmosphere_layers**
+| **including_point_above_model_top**
 
 
 Component
