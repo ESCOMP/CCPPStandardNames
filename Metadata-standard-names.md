@@ -162,6 +162,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `ln_air_pressure_of_dry_air_at_interface`: Ln air pressure of dry air at interface
     * `real(kind=kind_phys)`: units = 1
+* `air_pressure_including_point_above_model_top`: Air pressure including point above model top
+    * `real(kind=kind_phys)`: units = Pa
 * `largest_model_top_pressure_that_allows_molecular_diffusion`: Largest model top pressure that allows molecular diffusion
     * `real(kind=kind_phys)`: units = Pa
 * `do_molecular_diffusion`: Do molecular diffusion

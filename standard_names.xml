@@ -246,6 +246,9 @@
     <standard_name name="ln_air_pressure_of_dry_air_at_interface">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
+    <standard_name name="air_pressure_including_point_above_model_top">
+      <type kind="kind_phys" units="Pa">real</type>
+    </standard_name>
     <standard_name name="largest_model_top_pressure_that_allows_molecular_diffusion">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
