@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Convert a metadata standard-name XML library file to a documentation format.
@@ -10,9 +10,22 @@ import os.path
 import argparse
 import sys
 import re
-# Copied from CCPP framework
+
+################################################
+#Add CCPP framework (lib) modules to python path
+################################################
+
+_CURR_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(_CURR_DIR, "lib"))
+
+#######################################
+#Import needed framework python modules
+#######################################
+
 from xml_tools import validate_xml_file, read_xml_file
 from xml_tools import find_schema_file, find_schema_version
+
+#######################################
 
 _REAL_SUBST_RE = re.compile(r"(.*\d)p(\d.*)")
 

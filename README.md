@@ -8,7 +8,7 @@ A Markdown file describing the standard names
 
 To regenerate the standard name Markdown file, run:
 ```
-python write_standard_name_table.py standard_names.xml
+tools/write_standard_name_table.py standard_names.xml
 ```
 
 Then, commit the new Metadata-standard-names.md file and push to GitHub.
