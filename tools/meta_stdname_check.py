@@ -16,9 +16,10 @@ The tool currently has two options:
 ./meta_stdname_check --metafile-loc /path/to/file.meta --stdname-dict /path/to/dict.xml
 
 2.  A path to a directory is passed, in
-    which case the directory is searched
-    for metadata files, and all found
-    files' standard names are checked, e.g.:
+    which case the directory is searched,
+    along with any subdirectories, for
+    metadata files, and all found files'
+    standard names are checked, e.g.:
 
 ./meta_stdname_check --metafile-loc /meta/path/ --stdname-dict /path/to/dict.xml
 
