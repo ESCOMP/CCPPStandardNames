@@ -7,10 +7,12 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+
 
 jobs:
-  python_functests:
-    name: Python Functional Tests
+  check_name_rules:
+    name: Check standard names against rules
     runs-on: ubuntu-latest
 
     steps:
