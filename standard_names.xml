@@ -910,7 +910,7 @@
       <standard_name name="control_for_land_surface_scheme_frozen_soil_permeability">
          <type kind="" units="1">integer</type>
       </standard_name>
-      <standard_name name=" do_cellular_automata_gaussian_spatial_filter">
+      <standard_name name="do_cellular_automata_gaussian_spatial_filter">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_gcycle_surface_option">
@@ -946,7 +946,7 @@
       <standard_name name="do_global_cellular_automata_closure">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name=" do_global_cellular_automata_deep_convective_entrainment">
+      <standard_name name="do_global_cellular_automata_deep_convective_entrainment">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_global_cellular_automata_trigger">
@@ -1858,7 +1858,7 @@
       <standard_name name="thickness_of_soil_layers_for_land_surface_model">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
-      <standard_name name=" cellular_automata_vertical_velocity_perturbation_threshold_for_deep_convection">
+      <standard_name name="cellular_automata_vertical_velocity_perturbation_threshold_for_deep_convection">
          <type kind="kind_phys" units="m s-1">real</type>
       </standard_name>
       <standard_name name="period_of_maximum_diagnostics_reset">
