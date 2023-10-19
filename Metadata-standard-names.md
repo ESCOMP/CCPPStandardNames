@@ -200,7 +200,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = W m-2
 * `cumulative_boundary_flux_of_total_water`: Cumulative boundary flux of total water
     * `real(kind=kind_phys)`: units = W m-2
-* `US_standard_air_pressure_at_sea_level`: US Standard Atmospheric pressure at sea level
+* `us_standard_air_pressure_at_sea_level`: US Standard Atmospheric pressure at sea level
     * `real(kind=kind_phys)`: units = Pa
 * `reference_pressure`: reference pressure used in definition of potential temperature, Exner function, etc.
     * `real(kind=kind_phys)`: units = Pa
@@ -428,9 +428,9 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = frac
 * `critical_relative_humidity_at_toa`: Critical relative humidity at toa
     * `real(kind=kind_phys)`: units = frac
-* `date_and_time_at_model_initialization_in_ISO_order`: Date and time at model initialization in ISO order
+* `date_and_time_at_model_initialization_in_iso_order`: Date and time at model initialization in iso order
     * `integer(kind=)`: units = 1
-* `date_and_time_at_model_initialization_in_United_States_order`: Date and time at model initialization in United States order
+* `date_and_time_at_model_initialization_in_united_states_order`: Date and time at model initialization in united states order
     * `integer(kind=)`: units = 1
 * `decorrelation_length_used_by_overlap_method`: Decorrelation length used by overlap method
     * `real(kind=kind_phys)`: units = km
@@ -496,13 +496,13 @@ Standard / required CCPP variables
     * `logical(kind=)`: units = flag
 * `do_diagnostics`: Do diagnostics
     * `logical(kind=)`: units = flag
-* `do_XYZ_dimensioned_diagnostics`: Do XYZ dimensioned diagnostics
+* `do_xyz_dimensioned_diagnostics`: Do xyz dimensioned diagnostics
     * `logical(kind=)`: units = flag
 * `do_flip`: Do flip
     * `logical(kind=)`: units = flag
 * `control_for_flux_adjusting_surface_data_assimilation_system`: Control for flux adjusting surface data assimilation system
     * `integer(kind=)`: units = 1
-* `do_flux_form_in chikira_sugiyama_deep_convection_scheme`: Do flux form in chikira sugiyama deep convection scheme
+* `do_flux_form_in_chikira_sugiyama_deep_convection_scheme`: Do flux form in chikira sugiyama deep convection scheme
     * `logical(kind=)`: units = flag
 * `do_nrl_2015_ozone_scheme`: Do nrl 2015 ozone scheme
     * `logical(kind=)`: units = flag
@@ -560,7 +560,7 @@ Standard / required CCPP variables
     * `logical(kind=)`: units = flag
 * `control_for_land_surface_scheme_frozen_soil_permeability`: Control for land surface scheme frozen soil permeability
     * `integer(kind=)`: units = 1
-* ` do_cellular_automata_gaussian_spatial_filter`:  do cellular automata gaussian spatial filter
+* `do_cellular_automata_gaussian_spatial_filter`: Do cellular automata gaussian spatial filter
     * `logical(kind=)`: units = flag
 * `do_gcycle_surface_option`: Do gcycle surface option
     * `logical(kind=)`: units = flag
@@ -584,7 +584,7 @@ Standard / required CCPP variables
     * `logical(kind=)`: units = flag
 * `do_global_cellular_automata_closure`: Do global cellular automata closure
     * `logical(kind=)`: units = flag
-* ` do_global_cellular_automata_deep_convective_entrainment`:  do global cellular automata deep convective entrainment
+* `do_global_cellular_automata_deep_convective_entrainment`: Do global cellular automata deep convective entrainment
     * `logical(kind=)`: units = flag
 * `do_global_cellular_automata_trigger`: Do global cellular automata trigger
     * `logical(kind=)`: units = flag
@@ -826,11 +826,11 @@ Standard / required CCPP variables
     * `logical(kind=)`: units = flag
 * `do_longwave_scattering_in_cloud_optics`: Do longwave scattering in cloud optics
     * `logical(kind=)`: units = flag
-* `do_tracer_XYZ_dimensioned_diagnostics`: Do tracer XYZ dimensioned diagnostics
+* `do_tracer_xyz_dimensioned_diagnostics`: Do tracer xyz dimensioned diagnostics
     * `logical(kind=)`: units = flag
 * `control_for_variable_bulk_richardson_number`: Control for variable bulk richardson number
     * `real(kind=kind_phys)`: units = 1
-* `date_and_time_of_forecast_in_United_States_order`: Date and time of forecast in United States order
+* `date_and_time_of_forecast_in_united_states_order`: Date and time of forecast in united states order
     * `integer(kind=)`: units = 1
 * `forecast_utc_hour`: Forecast utc hour
     * `real(kind=kind_phys)`: units = h
@@ -1048,11 +1048,11 @@ Standard / required CCPP variables
     * `character(kind=len=64)`: units = none
 * `filename_of_internal_namelist`: Filename of internal namelist
     * `character(kind=len=256)`: units = none
-* `number_of_XY_dimensioned_auxiliary_arrays`: Number of XY dimensioned auxiliary arrays
+* `number_of_xy_dimensioned_auxiliary_arrays`: Number of xy dimensioned auxiliary arrays
     * `integer(kind=)`: units = count
 * `number_of_pdf_based_variables_in_xyz_dimensioned_restart_array`: Number of pdf based variables in xyz dimensioned restart array
     * `integer(kind=)`: units = count
-* `number_of_XYZ_dimensioned_auxiliary_arrays`: Number of XYZ dimensioned auxiliary arrays
+* `number_of_xyz_dimensioned_auxiliary_arrays`: Number of xyz dimensioned auxiliary arrays
     * `integer(kind=)`: units = count
 * `number_of_radiatively_active_gases`: Number of radiatively active gases
     * `integer(kind=)`: units = count
@@ -1192,7 +1192,7 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = 1
 * `thickness_of_soil_layers_for_land_surface_model`: Thickness of soil layers for land surface model
     * `real(kind=kind_phys)`: units = m
-* ` cellular_automata_vertical_velocity_perturbation_threshold_for_deep_convection`:  cellular automata vertical velocity perturbation threshold for deep convection
+* `cellular_automata_vertical_velocity_perturbation_threshold_for_deep_convection`: Cellular automata vertical velocity perturbation threshold for deep convection
     * `real(kind=kind_phys)`: units = m s-1
 * `period_of_maximum_diagnostics_reset`: Period of maximum diagnostics reset
     * `real(kind=kind_phys)`: units = s
