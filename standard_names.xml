@@ -823,7 +823,7 @@
       <standard_name name="control_for_flux_adjusting_surface_data_assimilation_system">
          <type kind="" units="1">integer</type>
       </standard_name>
-      <standard_name name="do_flux_form_in chikira_sugiyama_deep_convection_scheme">
+      <standard_name name="do_flux_form_in_chikira_sugiyama_deep_convection_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_nrl_2015_ozone_scheme">
