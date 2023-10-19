@@ -65,7 +65,7 @@ def main():
             violations.append('First character is not a lowercase letter')
         testchars = re.sub('[a-z0-9_]', '', sname)
         if testchars:
-            violations.append(f'Invalid characters are present: {testchars}')
+            violations.append(f'Invalid characters are present: "{testchars}"')
 
         # If any violations were detected, add an entry to "violators" dictionary
         if violations:
