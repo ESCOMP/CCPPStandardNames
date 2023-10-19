@@ -3,7 +3,7 @@ name: Check all Standard Names are following character rules
 on:
   push:
     branches:
-      - '*'
+      - '**'
   pull_request:
     branches:
       - main
@@ -27,4 +27,4 @@ jobs:
 
       - name: Run script that checks standard names against character rules
         run: |
-          python3 tools/check_name_rules.py
+          python3 tools/check_name_rules.py -s standard_names.xml
