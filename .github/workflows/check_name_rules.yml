@@ -23,7 +23,8 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install python3
+          sudo apt-get install python3 libxml2-utils
+
 
       - name: Run script that checks standard names against character rules
         run: |
