@@ -1924,6 +1924,9 @@
       <standard_name name="index_of_water_vegetation_category">
          <type kind="" units="index">integer</type>
       </standard_name>
+      <standard_name name="filename_of_micm_configuration">
+         <type kind="len=*" units="none">character</type>
+      </standard_name>
    </section>
    <section name="GFS_typedefs_GFS_interstitial_type">
       <standard_name name="cloud_ice_mixing_ratio_wrt_moist_air_interstitial">
