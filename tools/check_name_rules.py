@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
 """
-Remove duplicates from a metadata standard-name XML library file.
+Check standard names database file for violations of standard name character rules
 """
 
 import argparse
 import sys
 import os.path
-import copy
 import re
 
 ################################################
@@ -50,20 +49,20 @@ def main():
             validate_xml_file(stdname_file, schema_name, version, None,
                             schema_path=schema_root, error_on_noxmllint=True)
         except ValueError:
-            raise ValueError("Invalid standard names file, {}".format(stdname_file))
+            raise ValueError(f"Invalid standard names file, {stdname_file}")
     else:
-        raise ValueError(
-            'Cannot find schema file, {}, for version {}'.format(schema_name, version)
-        )
+        raise ValueError(f'Cannot find schema file, {schema_name}, for {version=}')
 
     #Parse list of standard names and see if any names violate one or more rules
     violators = {}
+    legal_first_char = re.compile('[a-z]')
+    valid_chars = re.compile('[a-z0-9_]')
     for name in root.findall('./section/standard_name'):
         sname = name.attrib['name']
         violations = []
-        if re.sub('[a-z]', '', sname[0]):
+        if legal_first_char.sub('', sname[0]):
             violations.append('First character is not a lowercase letter')
-        testchars = re.sub('[a-z0-9_]', '', sname)
+        testchars = valid_chars.sub('', sname)
         if testchars:
             violations.append(f'Invalid characters are present: "{testchars}"')
 

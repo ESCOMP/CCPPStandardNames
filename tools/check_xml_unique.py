@@ -59,11 +59,9 @@ def main_func():
             validate_xml_file(stdname_file, schema_name, version, None,
                             schema_path=schema_root, error_on_noxmllint=True)
         except ValueError:
-            raise ValueError("Invalid standard names file, {}".format(stdname_file))
+            raise ValueError(f"Invalid standard names file, {stdname_file}")
     else:
-        raise ValueError(
-            'Cannot find schema file, {}, for version {}'.format(schema_name, version)
-        )
+        raise ValueError(f'Cannot find schema file, {schema_name}, for {version=}')
 
     #get list of all standard names
     all_std_names = []
@@ -87,8 +85,8 @@ def main_func():
             print('The following duplicate standard names were found:')
             for dup in dup_std_names:
                 rm_elements = root.findall('./section/standard_name[@name="%s"]'%dup)[1:]
-                print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
-            print('Removing duplicates and overwriting {}'.format(stdname_file))
+                print("{dup}, ({len(rm_elements)} duplicate(s))")
+            print('Removing duplicates and overwriting {stdname_file}')
             for dup in dup_std_names:
                 first_use = True #Logical that indicates the first use of the duplicated name
                 rm_parents = root.findall('./section/standard_name[@name="%s"]..'%dup)
@@ -110,7 +108,7 @@ def main_func():
             print('The following duplicate standard names were found:')
             for dup in dup_std_names:
                 rm_elements = root.findall('./section/standard_name[@name="%s"]'%dup)[1:]
-                print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
+                print("{dup}, ({len(rm_elements)} duplicate(s))")
             sys.exit(1)
         else:
             print('No duplicate standard names were found.')
