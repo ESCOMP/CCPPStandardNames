@@ -16,7 +16,7 @@ jobs:
       - name: Install xmllint
         run: |
             sudo apt-get update
-            sudo apt-get -y install libxml2-utils
+            sudo apt-get -y install libxml2-utils python3-distutils
 
       - name: Check for duplicate standard names
         run: tools/check_xml_unique.py standard_names.xml
@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get -y install libxml2-utils
+          sudo apt-get -y install libxml2-utils python3-distutils
 
 
       - name: Checks standard names against character rules
@@ -56,7 +56,7 @@ jobs:
       - name: Install xmllint
         run: |
             sudo apt-get update
-            sudo apt-get -y install libxml2-utils
+            sudo apt-get -y install libxml2-utils python3-distutils
 
       - name: Check markdown has been rerendered
         run: |
