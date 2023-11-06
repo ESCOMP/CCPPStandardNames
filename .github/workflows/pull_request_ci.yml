@@ -7,7 +7,7 @@ jobs:
   check-unique-standard-names:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v4
         with:
@@ -21,10 +21,33 @@ jobs:
       - name: Check for duplicate standard names
         run: tools/check_xml_unique.py standard_names.xml
 
+  check-name-rules:
+    name: Check standard names against rules
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install libxml2-utils
+
+
+      - name: Checks standard names against character rules
+        run: |
+          python3 tools/check_name_rules.py -s standard_names.xml
+
   check-rerendered-markdown:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v4
         with:
@@ -43,3 +66,5 @@ jobs:
             checksum=$(sha256sum Metadata-standard-names.md)
             tools/write_standard_name_table.py standard_names.xml
             test "$checksum" = "$(sha256sum Metadata-standard-names.md)"
+
+
