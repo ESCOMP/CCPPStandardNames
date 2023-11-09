@@ -2,7 +2,6 @@ name: Pull request checks
 
 on:
   pull_request:
-  workflow_dispatch:
 
 jobs:
   check-unique-standard-names:
@@ -69,8 +68,8 @@ jobs:
             #Debug  -JN:
             #----------
             echo $checksum
-            echo sha256sum Metadata-standard-names.md
+            sha256sum Metadata-standard-names.md
             #----------
             test "$checksum" = "$(sha256sum Metadata-standard-names.md)"
-
+            echo $? #Debug -JN
 
