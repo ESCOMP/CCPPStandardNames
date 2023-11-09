@@ -2,6 +2,7 @@ name: Pull request checks
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   check-unique-standard-names:
@@ -65,6 +66,11 @@ jobs:
             # after adding a new name, or updating its description.
             checksum=$(sha256sum Metadata-standard-names.md)
             tools/write_standard_name_table.py standard_names.xml
+            #Debug  -JN:
+            #----------
+            echo $checksum
+            echo sha256sum Metadata-standard-names.md
+            #----------
             test "$checksum" = "$(sha256sum Metadata-standard-names.md)"
 
 
