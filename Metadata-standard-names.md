@@ -1236,6 +1236,8 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = mm
 * `index_of_water_vegetation_category`: Index of water vegetation category
     * `integer(kind=)`: units = index
+* `filename_of_micm_configuration`: Filename of micm configuration
+    * `character(kind=len=*)`: units = none
 ## GFS_typedefs_GFS_interstitial_type
 * `cloud_ice_mixing_ratio_wrt_moist_air_interstitial`: Cloud ice mixing ratio wrt moist air interstitial
     * `real(kind=kind_phys)`: units = kg kg-1
