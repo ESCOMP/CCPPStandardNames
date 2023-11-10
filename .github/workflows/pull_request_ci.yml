@@ -64,12 +64,15 @@ jobs:
             # If this fails you have likely forgotten to rerun the write script
             # after adding a new name, or updating its description.
             checksum=$(sha256sum Metadata-standard-names.md)
+            cp Metadata-standard-names.md stdnames_orig.md #DEBUG -JN
             tools/write_standard_name_table.py standard_names.xml
             #Debug  -JN:
             #----------
             echo $checksum
+            sha256sum stdnames_orig.md
             sha256sum Metadata-standard-names.md
+            echo "What is the difference?"
+            diff Metadata-standard-names.md stdnames_orig.md
             #----------
             test "$checksum" = "$(sha256sum Metadata-standard-names.md)"
-            echo $? #Debug -JN
 
