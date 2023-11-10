@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#MM!/usr/bin/env python3
 
 """
 Remove duplicates from a metadata standard-name XML library file.
@@ -85,8 +85,8 @@ def main_func():
             print('The following duplicate standard names were found:')
             for dup in dup_std_names:
                 rm_elements = root.findall('./section/standard_name[@name="%s"]'%dup)[1:]
-                print("{dup}, ({len(rm_elements)} duplicate(s))")
-            print('Removing duplicates and overwriting {stdname_file}')
+                print(f"{dup}, ({len(rm_elements)} duplicate(s))")
+            print(f'Removing duplicates and overwriting {stdname_file}')
             for dup in dup_std_names:
                 first_use = True #Logical that indicates the first use of the duplicated name
                 rm_parents = root.findall('./section/standard_name[@name="%s"]..'%dup)
@@ -108,7 +108,7 @@ def main_func():
             print('The following duplicate standard names were found:')
             for dup in dup_std_names:
                 rm_elements = root.findall('./section/standard_name[@name="%s"]'%dup)[1:]
-                print("{dup}, ({len(rm_elements)} duplicate(s))")
+                print(f"{dup}, ({len(rm_elements)} duplicate(s))")
             sys.exit(1)
         else:
             print('No duplicate standard names were found.')
