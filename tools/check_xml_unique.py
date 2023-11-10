@@ -1,4 +1,4 @@
-#MM!/usr/bin/env python3
+#!/usr/bin/env python3
 
 """
 Remove duplicates from a metadata standard-name XML library file.
