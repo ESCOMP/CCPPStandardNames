@@ -6,18 +6,18 @@
 * [state_variables](#state_variables)
 * [diagnostics](#diagnostics)
 * [atmospheric_composition](#atmospheric_composition)
-* [atmospheric_composition: GOCART aerosols](#atmospheric_composition: GOCART aerosols)
+* [atmospheric_composition: GOCART aerosols](#atmospheric_composition-gocart-aerosols)
 * [standard_variables](#standard_variables)
-* [GFS_typedefs_GFS_control_type](#GFS_typedefs_GFS_control_type)
-* [GFS_typedefs_GFS_interstitial_type](#GFS_typedefs_GFS_interstitial_type)
-* [GFS_typedefs_GFS_tbd_type](#GFS_typedefs_GFS_tbd_type)
-* [GFS_typedefs_GFS_sfcprop_type](#GFS_typedefs_GFS_sfcprop_type)
-* [GFS_typedefs_GFS_coupling_type](#GFS_typedefs_GFS_coupling_type)
-* [GFS_typedefs_GFS_statein_type](#GFS_typedefs_GFS_statein_type)
-* [GFS_typedefs_GFS_cldprop_type](#GFS_typedefs_GFS_cldprop_type)
-* [GFS_typedefs_GFS_radtend_type](#GFS_typedefs_GFS_radtend_type)
-* [GFS_typedefs_GFS_grid_type](#GFS_typedefs_GFS_grid_type)
-* [GFS_typedefs_GFS_stateout_type](#GFS_typedefs_GFS_stateout_type)
+* [GFS_typedefs_GFS_control_type](#gfs_typedefs_gfs_control_type)
+* [GFS_typedefs_GFS_interstitial_type](#gfs_typedefs_gfs_interstitial_type)
+* [GFS_typedefs_GFS_tbd_type](#gfs_typedefs_gfs_tbd_type)
+* [GFS_typedefs_GFS_sfcprop_type](#gfs_typedefs_gfs_sfcprop_type)
+* [GFS_typedefs_GFS_coupling_type](#gfs_typedefs_gfs_coupling_type)
+* [GFS_typedefs_GFS_statein_type](#gfs_typedefs_gfs_statein_type)
+* [GFS_typedefs_GFS_cldprop_type](#gfs_typedefs_gfs_cldprop_type)
+* [GFS_typedefs_GFS_radtend_type](#gfs_typedefs_gfs_radtend_type)
+* [GFS_typedefs_GFS_grid_type](#gfs_typedefs_gfs_grid_type)
+* [GFS_typedefs_GFS_stateout_type](#gfs_typedefs_gfs_stateout_type)
 
 ## dimensions
 Dimension standard names may come in sets of six related standard names for each dimension:
@@ -1236,6 +1236,8 @@ Standard / required CCPP variables
     * `integer(kind=)`: units = mm
 * `index_of_water_vegetation_category`: Index of water vegetation category
     * `integer(kind=)`: units = index
+* `filename_of_micm_configuration`: Filename of micm configuration
+    * `character(kind=len=*)`: units = none
 ## GFS_typedefs_GFS_interstitial_type
 * `cloud_ice_mixing_ratio_wrt_moist_air_interstitial`: Cloud ice mixing ratio wrt moist air interstitial
     * `real(kind=kind_phys)`: units = kg kg-1
