@@ -48,7 +48,7 @@ def convert_text_to_link(text_str):
     link_str = text_str.strip()
 
     #Next, make sure all text is lowercase:
-    link_str = link_str.lower() #all text is lowercase
+    link_str = link_str.lower()
 
     #Then, replace all spaces with dashes:
     link_str = link_str.replace(" ", "-")
