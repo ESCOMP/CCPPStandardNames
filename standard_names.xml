@@ -310,7 +310,7 @@
     <standard_name name="cumulative_boundary_flux_of_total_water">
       <type kind="kind_phys" units="W m-2">real</type>
     </standard_name>
-    <standard_name name="US_standard_air_pressure_at_sea_level"
+    <standard_name name="us_standard_air_pressure_at_sea_level"
                    long_name="US Standard Atmospheric pressure at sea level">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
@@ -712,10 +712,10 @@
       <standard_name name="critical_relative_humidity_at_toa">
          <type kind="kind_phys" units="frac">real</type>
       </standard_name>
-      <standard_name name="date_and_time_at_model_initialization_in_ISO_order">
+      <standard_name name="date_and_time_at_model_initialization_in_iso_order">
          <type kind="" units="1">integer</type>
       </standard_name>
-      <standard_name name="date_and_time_at_model_initialization_in_United_States_order">
+      <standard_name name="date_and_time_at_model_initialization_in_united_states_order">
          <type kind="" units="1">integer</type>
       </standard_name>
       <standard_name name="decorrelation_length_used_by_overlap_method">
@@ -814,7 +814,7 @@
       <standard_name name="do_diagnostics">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="do_XYZ_dimensioned_diagnostics">
+      <standard_name name="do_xyz_dimensioned_diagnostics">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_flip">
@@ -823,7 +823,7 @@
       <standard_name name="control_for_flux_adjusting_surface_data_assimilation_system">
          <type kind="" units="1">integer</type>
       </standard_name>
-      <standard_name name="do_flux_form_in chikira_sugiyama_deep_convection_scheme">
+      <standard_name name="do_flux_form_in_chikira_sugiyama_deep_convection_scheme">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_nrl_2015_ozone_scheme">
@@ -910,7 +910,7 @@
       <standard_name name="control_for_land_surface_scheme_frozen_soil_permeability">
          <type kind="" units="1">integer</type>
       </standard_name>
-      <standard_name name=" do_cellular_automata_gaussian_spatial_filter">
+      <standard_name name="do_cellular_automata_gaussian_spatial_filter">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_gcycle_surface_option">
@@ -946,7 +946,7 @@
       <standard_name name="do_global_cellular_automata_closure">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name=" do_global_cellular_automata_deep_convective_entrainment">
+      <standard_name name="do_global_cellular_automata_deep_convective_entrainment">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_global_cellular_automata_trigger">
@@ -1309,13 +1309,13 @@
       <standard_name name="do_longwave_scattering_in_cloud_optics">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="do_tracer_XYZ_dimensioned_diagnostics">
+      <standard_name name="do_tracer_xyz_dimensioned_diagnostics">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="control_for_variable_bulk_richardson_number">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
-      <standard_name name="date_and_time_of_forecast_in_United_States_order">
+      <standard_name name="date_and_time_of_forecast_in_united_states_order">
          <type kind="" units="1">integer</type>
       </standard_name>
       <standard_name name="forecast_utc_hour">
@@ -1642,13 +1642,13 @@
       <standard_name name="filename_of_internal_namelist">
          <type kind="len=256" units="none">character</type>
       </standard_name>
-      <standard_name name="number_of_XY_dimensioned_auxiliary_arrays">
+      <standard_name name="number_of_xy_dimensioned_auxiliary_arrays">
          <type kind="" units="count">integer</type>
       </standard_name>
       <standard_name name="number_of_pdf_based_variables_in_xyz_dimensioned_restart_array">
          <type kind="" units="count">integer</type>
       </standard_name>
-      <standard_name name="number_of_XYZ_dimensioned_auxiliary_arrays">
+      <standard_name name="number_of_xyz_dimensioned_auxiliary_arrays">
          <type kind="" units="count">integer</type>
       </standard_name>
       <standard_name name="number_of_radiatively_active_gases">
@@ -1858,7 +1858,7 @@
       <standard_name name="thickness_of_soil_layers_for_land_surface_model">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
-      <standard_name name=" cellular_automata_vertical_velocity_perturbation_threshold_for_deep_convection">
+      <standard_name name="cellular_automata_vertical_velocity_perturbation_threshold_for_deep_convection">
          <type kind="kind_phys" units="m s-1">real</type>
       </standard_name>
       <standard_name name="period_of_maximum_diagnostics_reset">
