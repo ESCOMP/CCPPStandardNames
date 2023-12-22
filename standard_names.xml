@@ -40,6 +40,10 @@
                    long_name="number of vertical layers">
       <type units="count">integer</type>
     </standard_name>
+    <standard_name name="vertical_layer_dimension_extended_up_by_1"
+                   long_name="number of vertical layers extended up by 1">
+      <type units="count">integer</type>
+    </standard_name>
     <standard_name name="vertical_interface_dimension"
                    long_name="number of vertical interfaces">
       <type units="count">integer</type>
@@ -245,6 +249,9 @@
     </standard_name>
     <standard_name name="ln_air_pressure_of_dry_air_at_interface">
       <type kind="kind_phys" units="1">real</type>
+    </standard_name>
+    <standard_name name="air_pressure_extended_up_by_1">
+      <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="largest_model_top_pressure_that_allows_molecular_diffusion">
       <type kind="kind_phys" units="Pa">real</type>

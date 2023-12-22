@@ -42,6 +42,8 @@ Currently, the only dimension which supports all six dimension types is horizont
     * `integer`: units = count
 * `vertical_layer_dimension`: number of vertical layers
     * `integer`: units = count
+* `vertical_layer_dimension_extended_up_by_1`: number of vertical layers extended up by 1
+    * `integer`: units = count
 * `vertical_interface_dimension`: number of vertical interfaces
     * `integer`: units = count
 * `vertical_layer_index`: index of a particular vertical layer
@@ -162,6 +164,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `ln_air_pressure_of_dry_air_at_interface`: Ln air pressure of dry air at interface
     * `real(kind=kind_phys)`: units = 1
+* `air_pressure_extended_up_by_1`: Air pressure extended up by 1
+    * `real(kind=kind_phys)`: units = Pa
 * `largest_model_top_pressure_that_allows_molecular_diffusion`: Largest model top pressure that allows molecular diffusion
     * `real(kind=kind_phys)`: units = Pa
 * `do_molecular_diffusion`: Do molecular diffusion
