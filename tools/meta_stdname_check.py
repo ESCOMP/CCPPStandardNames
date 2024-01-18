@@ -34,6 +34,7 @@ import sys
 import os
 import os.path
 import datetime
+from collections import OrderedDict
 
 ################################################
 #Add CCPP framework (lib) modules to python path
@@ -198,8 +199,8 @@ def missing_metafile_names(metafile, stdname_set):
     #Create set of all standard names not in dictionary set:
     missing_stdname_set = meta_stdname_set.difference(stdname_set)
 
-    #Return list of missing standard names:
-    return list(missing_stdname_set)
+    #Return sorted list of missing standard names:
+    return sorted(missing_stdname_set)
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #Function to find the paths to all metadata files within
@@ -297,7 +298,7 @@ _, stdname_dict_root = read_xml_file(stdname_xml)
 std_names = get_dict_stdnames(stdname_dict_root)
 
 #Create new meta file/missing names dictionary:
-meta_miss_names_dict = {}
+meta_miss_names_dict = OrderedDict()
 
 #Check if user passed in single metadata file:
 if os.path.isfile(metafile_loc):
