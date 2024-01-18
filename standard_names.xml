@@ -193,7 +193,7 @@
                    long_name="Vertical pressure velocity">
       <type kind="kind_phys" units="Pa s-1">real</type>
     </standard_name>
-    <standard_name name="density_of_dry_air"
+    <standard_name name="dry_air_density"
                    long_name="Density of dry air">
       <type kind="kind_phys" units="kg m-3">real</type>
     </standard_name>
@@ -264,7 +264,7 @@
               long_name="Flag to indicate if physics grid is initialized">
       <type kind="kind_phys" units="flag">logical</type>
     </standard_name>
-    <standard_name name="print_qneg_warn"
+    <standard_name name="control_for_negative_constituent_warning"
               long_name="Logging setting for negative constituent mass fixer">
       <type kind="len=*" units="1">character</type>
     </standard_name>
@@ -292,7 +292,7 @@
       <type kind="kind_phys" units="K s-1">real</type>
     </standard_name>
     <standard_name name="tendency_of_air_temperature_due_to_model_physics"
-                   long_name="Total change in temperature from a physics suite">
+                   long_name="Total change in air temperature from a physics suite">
       <type kind="kind_phys" units="K s-1">real</type>
     </standard_name>
     <standard_name name="tendency_of_air_potential_temperature"
@@ -623,8 +623,8 @@
       <type kind="kind_phys" units="m-1">real</type>
     </standard_name>
   </section>
-  <section name="required standard variables"
-           comment="Standard / required CCPP variables">
+  <section name="required framework-provided variables"
+           comment="Required CCPP framework-provided variables">
     <standard_name name="ccpp_error_message"
                    long_name="Error message for error handling in CCPP">
       <type kind="len=512" units="none">character</type>
@@ -634,8 +634,8 @@
       <type kind="" units="1">integer</type>
     </standard_name>
   </section>
-  <section name="optional standard variables"
-           comment="Optional CCPP variables">
+  <section name="optional framework-provided variables"
+           comment="Optional CCPP framework-provided variables">
     <standard_name name="scheme_name"
                    long_name="CCPP physics scheme name">
       <type kind="len=64" units="none">character</type>
