@@ -26,8 +26,38 @@ from xml_tools import validate_xml_file, read_xml_file
 from xml_tools import find_schema_file, find_schema_version
 
 #######################################
+#Regular expressions
+#######################################
 
 _REAL_SUBST_RE = re.compile(r"(.*\d)p(\d.*)")
+
+_DROPPED_LINK_CHARS_RE = re.compile(r"[^a-z_-]")
+
+########################################################################
+def convert_text_to_link(text_str):
+
+    """
+    When Markdown converts a header string into
+    an internal document link it applies certain
+    text conversion rules.  This function thus
+    applies those same rules to a given string
+    in order to produce the correct link.
+    """
+
+    #First trim the string to remove leading/trailing white space:
+    link_str = text_str.strip()
+
+    #Next, make sure all text is lowercase:
+    link_str = link_str.lower()
+
+    #Then, replace all spaces with dashes:
+    link_str = link_str.replace(" ", "-")
+
+    #Finally, remove all characters that aren't
+    #letters, underscores, or dashes:
+    link_str = _DROPPED_LINK_CHARS_RE.sub("",link_str)
+
+    return link_str
 
 ########################################################################
 def standard_name_to_long_name(prop_dict, context=None):
@@ -103,7 +133,8 @@ def convert_xml_to_markdown(root, library_name, snl):
     snl.write('#### Table of Contents\n')
     for section in root:
         sec_name = section.get('name')
-        snl.write("* [{name}](#{name})\n".format(name=sec_name))
+        sec_name_link = convert_text_to_link(sec_name) #convert string to link text
+        snl.write(f"* [{sec_name}](#{sec_name_link})\n")
     # end for
     snl.write('\n')
     for section in root:
