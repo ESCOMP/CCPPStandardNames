@@ -6,20 +6,20 @@
 * [state_variables](#state_variables)
 * [diagnostics](#diagnostics)
 * [atmospheric_composition](#atmospheric_composition)
-* [atmospheric_composition: GOCART aerosols](#atmospheric_composition: GOCART aerosols)
-* [required standard variables](#required standard variables)
-* [optional standard variables](#optional standard variables)
-* [system variables](#system variables)
-* [GFS_typedefs_GFS_control_type](#GFS_typedefs_GFS_control_type)
-* [GFS_typedefs_GFS_interstitial_type](#GFS_typedefs_GFS_interstitial_type)
-* [GFS_typedefs_GFS_tbd_type](#GFS_typedefs_GFS_tbd_type)
-* [GFS_typedefs_GFS_sfcprop_type](#GFS_typedefs_GFS_sfcprop_type)
-* [GFS_typedefs_GFS_coupling_type](#GFS_typedefs_GFS_coupling_type)
-* [GFS_typedefs_GFS_statein_type](#GFS_typedefs_GFS_statein_type)
-* [GFS_typedefs_GFS_cldprop_type](#GFS_typedefs_GFS_cldprop_type)
-* [GFS_typedefs_GFS_radtend_type](#GFS_typedefs_GFS_radtend_type)
-* [GFS_typedefs_GFS_grid_type](#GFS_typedefs_GFS_grid_type)
-* [GFS_typedefs_GFS_stateout_type](#GFS_typedefs_GFS_stateout_type)
+* [atmospheric_composition: GOCART aerosols](#atmospheric_composition-gocart-aerosols)
+* [required framework-provided variables](#required-framework-provided-variables)
+* [optional framework-provided variables](#optional-framework-provided-variables)
+* [system variables](#system-variables)
+* [GFS_typedefs_GFS_control_type](#gfs_typedefs_gfs_control_type)
+* [GFS_typedefs_GFS_interstitial_type](#gfs_typedefs_gfs_interstitial_type)
+* [GFS_typedefs_GFS_tbd_type](#gfs_typedefs_gfs_tbd_type)
+* [GFS_typedefs_GFS_sfcprop_type](#gfs_typedefs_gfs_sfcprop_type)
+* [GFS_typedefs_GFS_coupling_type](#gfs_typedefs_gfs_coupling_type)
+* [GFS_typedefs_GFS_statein_type](#gfs_typedefs_gfs_statein_type)
+* [GFS_typedefs_GFS_cldprop_type](#gfs_typedefs_gfs_cldprop_type)
+* [GFS_typedefs_GFS_radtend_type](#gfs_typedefs_gfs_radtend_type)
+* [GFS_typedefs_GFS_grid_type](#gfs_typedefs_gfs_grid_type)
+* [GFS_typedefs_GFS_stateout_type](#gfs_typedefs_gfs_stateout_type)
 
 ## dimensions
 Dimension standard names may come in sets of six related standard names for each dimension:
@@ -43,6 +43,8 @@ Currently, the only dimension which supports all six dimension types is horizont
 * `horizontal_dimension`: Size horizontal dimension
     * `integer`: units = count
 * `vertical_layer_dimension`: number of vertical layers
+    * `integer`: units = count
+* `vertical_layer_dimension_extended_up_by_1`: number of vertical layers extended up by 1
     * `integer`: units = count
 * `vertical_interface_dimension`: number of vertical interfaces
     * `integer`: units = count
@@ -132,7 +134,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `logical(kind=)`: units = flag
 * `lagrangian_tendency_of_air_pressure`: Vertical pressure velocity
     * `real(kind=kind_phys)`: units = Pa s-1
-* `density_of_dry_air`: Density of dry air
+* `dry_air_density`: Density of dry air
     * `real(kind=kind_phys)`: units = kg m-3
 * `air_pressure`: Midpoint air pressure
     * `real(kind=kind_phys)`: units = Pa
@@ -168,13 +170,15 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `ln_air_pressure_of_dry_air_at_interface`: Ln air pressure of dry air at interface
     * `real(kind=kind_phys)`: units = 1
+* `air_pressure_extended_up_by_1`: Air pressure extended up by 1
+    * `real(kind=kind_phys)`: units = Pa
 * `largest_model_top_pressure_that_allows_molecular_diffusion`: Largest model top pressure that allows molecular diffusion
     * `real(kind=kind_phys)`: units = Pa
 * `do_molecular_diffusion`: Do molecular diffusion
     * `logical(kind=kind_phys)`: units = flag
 * `is_initialized_physics_grid`: Flag to indicate if physics grid is initialized
     * `logical(kind=kind_phys)`: units = flag
-* `print_qneg_warn`: Logging setting for negative constituent mass fixer
+* `control_for_negative_constituent_warning`: Logging setting for negative constituent mass fixer
     * `character(kind=len=*)`: units = 1
 * `geopotential_height_at_interface`: Geopotential height at interface
     * `real(kind=kind_phys)`: units = m
@@ -190,7 +194,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = J kg-1 s-1
 * `tendency_of_air_temperature`: Change in temperature from a parameterization
     * `real(kind=kind_phys)`: units = K s-1
-* `tendency_of_air_temperature_due_to_model_physics`: Total change in temperature from a physics suite
+* `tendency_of_air_temperature_due_to_model_physics`: Total change in air temperature from a physics suite
     * `real(kind=kind_phys)`: units = K s-1
 * `tendency_of_air_potential_temperature`: Change in potential temperature from a parameterization
     * `real(kind=kind_phys)`: units = K s-1
@@ -363,14 +367,14 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m-1
 * `volume_extinction_in_air_due_to_aerosol_particles_lambda3`: Aerosol extinction at wavelength3
     * `real(kind=kind_phys)`: units = m-1
-## required standard variables
-Standard / required CCPP variables
+## required framework-provided variables
+Required CCPP framework-provided variables
 * `ccpp_error_message`: Error message for error handling in CCPP
     * `character(kind=len=512)`: units = none
 * `ccpp_error_code`: Error code for error handling in CCPP
     * `integer(kind=)`: units = 1
-## optional standard variables
-Optional CCPP variables
+## optional framework-provided variables
+Optional CCPP framework-provided variables
 * `scheme_name`: CCPP physics scheme name
     * `character(kind=len=64)`: units = none
 * `ccpp_constituent_properties`: CCPP Constituent Properties

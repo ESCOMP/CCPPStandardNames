@@ -160,6 +160,7 @@ Suffixes
 | **at_pressure_levels**
 | **at_top_of_viscous_sublayer**
 | **at_various_atmosphere_layers**
+| **extended_up_by_1**
 
 
 Component
