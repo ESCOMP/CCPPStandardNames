@@ -190,7 +190,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg m-2
 * `vertically_integrated_total_water_of_current_state`: Vertically integrated total water of current state
     * `real(kind=kind_phys)`: units = kg m-2
-* `heating_rate`: heating rate
+* `tendency_of_dry_air_enthalpy_at_constant_pressure`: Tendency of dry air enthalpy at constant pressure
     * `real(kind=kind_phys)`: units = J kg-1 s-1
 * `tendency_of_air_temperature`: Change in temperature from a parameterization
     * `real(kind=kind_phys)`: units = K s-1
@@ -224,13 +224,13 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = W m-2
 * `us_standard_air_pressure_at_sea_level`: US Standard Atmospheric pressure at sea level
     * `real(kind=kind_phys)`: units = Pa
-* `reference_pressure`: reference pressure used in definition of potential temperature, Exner function, etc.
+* `surface_reference_pressure`: Reference pressure used in definition of potential temperature, Exner function, etc.
     * `real(kind=kind_phys)`: units = Pa
 * `reference_pressure_in_atmosphere_layer`: reference pressure in atmosphere layer
     * `real(kind=kind_phys)`: units = Pa
 * `reference_air_pressure_normalized_by_surface_air_pressure`: reference pressure normalized by surface pressure
     * `real(kind=kind_phys)`: units = 1
-* `reference_pressure_in_atmosphere_layer_normalized_by_reference_pressure`: reference pressure in atmosphere layer normalized by reference pressure
+* `reference_pressure_in_atmosphere_layer_normalized_by_surface_reference_pressure`: Reference pressure in atmosphere layer normalized by surface reference pressure
     * `real(kind=kind_phys)`: units = 1
 * `dimensionless_exner_function`: exner function
     * `real(kind=kind_phys)`: units = 1

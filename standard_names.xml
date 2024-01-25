@@ -290,8 +290,8 @@
     <standard_name name="vertically_integrated_total_water_of_current_state">
       <type kind="kind_phys" units="kg m-2">real</type>
     </standard_name>
-    <standard_name name="heating_rate"
-                   long_name="heating rate">
+    <standard_name name="tendency_of_dry_air_enthalpy_at_constant_pressure"
+                   long_name="Tendency of dry air enthalpy at constant pressure">
       <type kind="kind_phys" units="J kg-1 s-1">real</type>
     </standard_name>
     <standard_name name="tendency_of_air_temperature"
@@ -352,8 +352,8 @@
                    long_name="US Standard Atmospheric pressure at sea level">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="reference_pressure"
-                   long_name="reference pressure used in definition of potential temperature, Exner function, etc.">
+    <standard_name name="surface_reference_pressure"
+                   long_name="Reference pressure used in definition of potential temperature, Exner function, etc.">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="reference_pressure_in_atmosphere_layer"
@@ -364,8 +364,8 @@
                    long_name="reference pressure normalized by surface pressure">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
-    <standard_name name="reference_pressure_in_atmosphere_layer_normalized_by_reference_pressure"
-                   long_name="reference pressure in atmosphere layer normalized by reference pressure">
+    <standard_name name="reference_pressure_in_atmosphere_layer_normalized_by_surface_reference_pressure"
+                   long_name="Reference pressure in atmosphere layer normalized by surface reference pressure">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="dimensionless_exner_function"
