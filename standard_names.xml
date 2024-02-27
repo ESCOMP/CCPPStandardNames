@@ -197,6 +197,10 @@
                    long_name="Vertical pressure velocity">
       <type kind="kind_phys" units="Pa s-1">real</type>
     </standard_name>
+    <standard_name name="dry_air_density"
+                   long_name="Density of dry air">
+      <type kind="kind_phys" units="kg m-3">real</type>
+    </standard_name>
     <standard_name name="air_pressure"
                    long_name="Midpoint air pressure">
       <type kind="kind_phys" units="Pa">real</type>
@@ -235,6 +239,10 @@
                    long_name="geopotential height w.r.t. local surface">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
+    <standard_name name="geopotential_height_wrt_surface_at_interface"
+                   long_name="geopotential height w.r.t. local surface at interface">
+      <type kind="kind_phys" units="m">real</type>
+    </standard_name>
     <standard_name name="potentially_advected_quantities">
       <type kind="kind_phys" units="various">real</type>
     </standard_name>
@@ -263,6 +271,10 @@
               long_name="Flag to indicate if physics grid is initialized">
       <type kind="kind_phys" units="flag">logical</type>
     </standard_name>
+    <standard_name name="control_for_negative_constituent_warning"
+              long_name="Logging setting for negative constituent mass fixer">
+      <type kind="len=*" units="1">character</type>
+    </standard_name>
     <standard_name name="geopotential_height_at_interface">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
@@ -278,13 +290,16 @@
     <standard_name name="vertically_integrated_total_water_of_current_state">
       <type kind="kind_phys" units="kg m-2">real</type>
     </standard_name>
+    <standard_name name="tendency_of_dry_air_enthalpy_at_constant_pressure"
+                   long_name="Tendency of dry air enthalpy at constant pressure">
+      <type kind="kind_phys" units="J kg-1 s-1">real</type>
+    </standard_name>
     <standard_name name="tendency_of_air_temperature"
                    long_name="Change in temperature from a parameterization">
       <type kind="kind_phys" units="K s-1">real</type>
     </standard_name>
     <standard_name name="tendency_of_air_temperature_due_to_model_physics"
-                   long_name="Total change in temperature from a
-                              physics suite">
+                   long_name="Total change in air temperature from a physics suite">
       <type kind="kind_phys" units="K s-1">real</type>
     </standard_name>
     <standard_name name="tendency_of_air_potential_temperature"
@@ -308,6 +323,22 @@
     <standard_name name="tendency_of_y_wind_due_to_model_physics">
       <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
+    <standard_name name="tendency_of_eastward_wind"
+                   long_name="Change in eastward wind from a parameterization">
+      <type kind="kind_phys" units="m s-2">real</type>
+    </standard_name>
+    <standard_name name="tendency_of_eastward_wind_due_to_model_physics"
+                   long_name="Total change in eastward wind from a physics suite">
+      <type kind="kind_phys" units="m s-2">real</type>
+    </standard_name>
+    <standard_name name="tendency_of_northward_wind"
+                   long_name="Change in northward wind from a parameterization">
+      <type kind="kind_phys" units="m s-2">real</type>
+    </standard_name>
+    <standard_name name="tendency_of_northward_wind_due_to_model_physics"
+                   long_name="Total change in northward wind from a physics suite">
+      <type kind="kind_phys" units="m s-2">real</type>
+    </standard_name>
     <standard_name name="surface_upward_heat_flux_in_air">
       <type kind="kind_phys" units="W m-2">real</type>
     </standard_name>
@@ -321,8 +352,8 @@
                    long_name="US Standard Atmospheric pressure at sea level">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="reference_pressure"
-                   long_name="reference pressure used in definition of potential temperature, Exner function, etc.">
+    <standard_name name="surface_reference_pressure"
+                   long_name="Reference pressure used in definition of potential temperature, Exner function, etc.">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="reference_pressure_in_atmosphere_layer"
@@ -331,6 +362,10 @@
     </standard_name>
     <standard_name name="reference_air_pressure_normalized_by_surface_air_pressure"
                    long_name="reference pressure normalized by surface pressure">
+      <type kind="kind_phys" units="1">real</type>
+    </standard_name>
+    <standard_name name="reference_pressure_in_atmosphere_layer_normalized_by_surface_reference_pressure"
+                   long_name="Reference pressure in atmosphere layer normalized by surface reference pressure">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="dimensionless_exner_function"
@@ -351,6 +386,14 @@
     </standard_name>
     <standard_name name="composition_dependent_gas_constant_of_dry_air">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
+    </standard_name>
+    <standard_name name="composition_dependent_specific_heat_of_dry_air_at_constant_pressure"
+                   long_name="composition dependent specific heat of dry air at constant pressure">
+      <type kind="kind_phys" units="J kg-1 K-1">real</type>
+    </standard_name>
+    <standard_name name="composition_dependent_ratio_of_dry_air_gas_constant_to_specific_heat_of_dry_air_at_constant_pressure"
+                   long_name="composition dependent ratio of dry air gas constant to specific heat of dry air at constant pressure">
+      <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name
         name="ratio_of_water_vapor_gas_constant_to_composition_dependent_dry_air_gas_constant_minus_one"
@@ -402,6 +445,10 @@
                    long_name="Ratio of the mass of water vapor to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
+    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air_and_condensed_water"
+                   long_name="Ratio of the mass of liquid water to the mass of moist air and condensed water">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
     <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air"
                    long_name="Ratio of the mass of liquid water to the mass of moist air">
       <type kind="kind_phys" units="kg kg-1">real</type>
@@ -414,8 +461,16 @@
                    long_name="Ratio of the mass of ice to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
+    <standard_name name="rain_mixing_ratio_wrt_moist_air_and_condensed_water"
+                   long_name="ratio of the mass of rain to the mass of moist air and condensed water">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
     <standard_name name="rain_mixing_ratio_wrt_moist_air"
                    long_name="ratio of the mass of rain to the mass of moist air">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="rain_mixing_ratio_wrt_dry_air"
+                   long_name="ratio of the mass of rain to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="mole_fraction_of_ozone_in_air">
@@ -575,14 +630,48 @@
       <type kind="kind_phys" units="m-1">real</type>
     </standard_name>
   </section>
-  <section name="standard_variables"
-           comment="Standard / required CCPP variables">
+  <section name="required framework-provided variables"
+           comment="Required CCPP framework-provided variables">
     <standard_name name="ccpp_error_message"
                    long_name="Error message for error handling in CCPP">
       <type kind="len=512" units="none">character</type>
     </standard_name>
     <standard_name name="ccpp_error_code"
                    long_name="Error code for error handling in CCPP">
+      <type kind="" units="1">integer</type>
+    </standard_name>
+  </section>
+  <section name="optional framework-provided variables"
+           comment="Optional CCPP framework-provided variables">
+    <standard_name name="scheme_name"
+                   long_name="CCPP physics scheme name">
+      <type kind="len=64" units="none">character</type>
+    </standard_name>
+    <standard_name name="ccpp_constituent_properties"
+                   long_name="CCPP Constituent Properties">
+      <type kind="" units="none">ccpp_constituent_prop_ptr_t</type>
+    </standard_name>
+    <standard_name name="ccpp_constituents"
+                   long_name="Array of constituents managed by CCPP Framework">
+      <type kind="kind_phys" units="none">real</type>
+    </standard_name>
+    <standard_name name="ccpp_constituent_minimum_values"
+                   long_name="CCPP constituent minimum values">
+      <type kind="kind_phys" units="none">real</type>
+    </standard_name>
+    <standard_name name="number_of_ccpp_constituents"
+                   long_name="Number of constituents managed by CCPP Framework">
+      <type kind="" units="count">integer</type>
+    </standard_name>
+  </section>
+  <section name="system variables"
+           comment="Variables related to the compute environment">
+    <standard_name name="flag_for_mpi_root"
+                   long_name="Flag for MPI root">
+      <type kind="" units="flag">logical</type>
+    </standard_name>
+    <standard_name name="log_output_unit"
+                   long_name="Log output unit">
       <type kind="" units="1">integer</type>
     </standard_name>
   </section>
