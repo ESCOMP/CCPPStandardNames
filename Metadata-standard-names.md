@@ -4,6 +4,7 @@
 * [constants](#constants)
 * [coordinates](#coordinates)
 * [state_variables](#state_variables)
+* [land_surface](#land_surface)
 * [diagnostics](#diagnostics)
 * [atmospheric_composition](#atmospheric_composition)
 * [atmospheric_composition: GOCART aerosols](#atmospheric_composition-gocart-aerosols)
@@ -258,6 +259,21 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
+## land_surface
+* `land_ice_area_fraction`: fraction of horizontal area of grid cell that is land ice
+    * `real(kind=kind_phys)`: units = frac
+* `mass_content_of_water_in_top_soil_layer`: content per unit area of water in top layer of soil
+    * `real(kind=kind_phys)`: units = kg m-2
+* `surface_snow_density`: Surface snow density
+    * `real(kind=kind_phys)`: units = kg m-3
+* `urban_area_fraction`: fraction of horizontal area of grid cell that is urban
+    * `real(kind=kind_phys)`: units = frac
+* `volume_fraction_of_liquid_water_in_soil_at_critical_point`: volume fraction of water in liquid phase in soil at critical point
+    * `real(kind=kind_phys)`: units = m3 m-3
+* `volume_fraction_of_liquid_water_in_soil_at_saturation`: volume fraction of water in liquid phase in soil at saturation
+    * `real(kind=kind_phys)`: units = m3 m-3
+* `volume_fraction_of_liquid_water_in_soil_at_wilting_point`: volume fraction of water in liquid phase in soil at wilting point
+    * `real(kind=kind_phys)`: units = m3 m-3
 ## diagnostics
 * `total_precipitation_rate_at_surface`: Total precipitation rate at surface
     * `real(kind=kind_phys)`: units = m s-1

@@ -418,6 +418,35 @@
       <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
   </section>
+  <section name="land_surface">
+    <standard_name name="land_ice_area_fraction"
+                   long_name="fraction of horizontal area of grid cell that is land ice">
+      <type kind="kind_phys" units="frac">real</type>
+    </standard_name>
+    <standard_name name="mass_content_of_water_in_top_soil_layer"
+                   long_name="content per unit area of water in top layer of soil">
+      <type kind="kind_phys" units="kg m-2">real</type>
+    </standard_name>
+    <standard_name name="surface_snow_density">
+      <type kind="kind_phys" units="kg m-3">real</type>
+    </standard_name>
+    <standard_name name="urban_area_fraction"
+                   long_name="fraction of horizontal area of grid cell that is urban">
+      <type kind="kind_phys" units="frac">real</type>
+    </standard_name>
+    <standard_name name="volume_fraction_of_liquid_water_in_soil_at_critical_point"
+                   long_name="volume fraction of water in liquid phase in soil at critical point">
+      <type kind="kind_phys" units="m3 m-3">real</type>
+    </standard_name>
+    <standard_name name="volume_fraction_of_liquid_water_in_soil_at_saturation"
+                   long_name="volume fraction of water in liquid phase in soil at saturation">
+      <type kind="kind_phys" units="m3 m-3">real</type>
+    </standard_name>
+    <standard_name name="volume_fraction_of_liquid_water_in_soil_at_wilting_point"
+                   long_name="volume fraction of water in liquid phase in soil at wilting point">
+      <type kind="kind_phys" units="m3 m-3">real</type>
+    </standard_name>
+  </section>
   <section name="diagnostics">
     <standard_name name="total_precipitation_rate_at_surface">
       <type kind="kind_phys" units="m s-1">real</type>
