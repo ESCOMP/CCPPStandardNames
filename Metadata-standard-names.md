@@ -253,9 +253,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `mass_content_of_cloud_liquid_water_in_atmosphere_layer`: Mass content of cloud liquid water in atmosphere layer
     * `real(kind=kind_phys)`: units = kg m-2
 * `nonconvective_cloud_area_fraction_in_atmosphere_layer`: cloud area fraction in atmosphere layer excluding clouds produced by the convective schemes
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = frac
 * `relative_humidity`: Relative humidity
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = frac
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
 ## diagnostics
@@ -517,7 +517,7 @@ Variables related to the compute environment
 * `do_unified_gravity_wave_physics_gravity_wave_drag_scheme`: Do unified gravity wave physics gravity wave drag scheme
     * `logical(kind=)`: units = flag
 * `downdraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme`: Downdraft area fraction in scale aware tke moist edmf pbl scheme
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = frac
 * `downdraft_fraction_reaching_surface_over_land_for_deep_convection`: Downdraft fraction reaching surface over land for deep convection
     * `real(kind=kind_phys)`: units = frac
 * `downdraft_fraction_reaching_surface_over_water_for_deep_convection`: Downdraft fraction reaching surface over water for deep convection
@@ -541,7 +541,7 @@ Variables related to the compute environment
 * `equation_of_time`: Equation of time
     * `real(kind=kind_phys)`: units = radian
 * `relative_humidity_threshold_for_condensation`: Relative humidity threshold for condensation
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = frac
 * `do_arakawa_wu_downdrafts_for_deep_convection`: Do arakawa wu downdrafts for deep convection
     * `logical(kind=)`: units = flag
 * `do_debug_output`: Do debug output
@@ -1055,7 +1055,7 @@ Variables related to the compute environment
 * `minimum_cloud_ice_mixing_ratio_wrt_moist_air_threshold`: Minimum cloud ice mixing ratio wrt moist air threshold
     * `real(kind=kind_phys)`: units = kg kg-1
 * `relative_humidity_threshold_for_ice_nucleation`: Relative humidity threshold for ice nucleation
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = frac
 * `timescale_for_autoconversion_to_snow`: Timescale for autoconversion to snow
     * `real(kind=kind_phys)`: units = s
 * `alpha_tuning_coefficient_for_morrison_gettelman_microphysics_scheme`: Alpha tuning coefficient for morrison gettelman microphysics scheme
@@ -1265,7 +1265,7 @@ Variables related to the compute environment
 * `do_turbulent_orographic_form_drag_in_unified_gravity_wave_physics_gravitiy_wave_drag_scheme`: Do turbulent orographic form drag in unified gravity wave physics gravitiy wave drag scheme
     * `logical(kind=)`: units = flag
 * `updraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme`: Updraft area fraction in scale aware tke moist edmf pbl scheme
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = frac
 * `tunable_parameter_1_for_maximum_cloud_base_updraft_velocity_in_chikira_sugiyama_deep_convection`: Tunable parameter 1 for maximum cloud base updraft velocity in chikira sugiyama deep convection
     * `real(kind=kind_phys)`: units = m s-1
 * `tunable_parameter_2_for_maximum_cloud_base_updraft_velocity_in_chikira_sugiyama_deep_convection`: Tunable parameter 2 for maximum cloud base updraft velocity in chikira sugiyama deep convection
@@ -1458,7 +1458,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = 1
 ## GFS_typedefs_GFS_sfcprop_type
 * `wet_canopy_area_fraction`: Wet canopy area fraction
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = frac
 * `baseline_surface_longwave_emissivity`: Baseline surface longwave emissivity
     * `real(kind=kind_phys)`: units = frac
 * `baseline_surface_roughness_length`: Baseline surface roughness length
