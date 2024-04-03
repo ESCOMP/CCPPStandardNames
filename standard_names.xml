@@ -419,7 +419,7 @@
     </standard_name>
   </section>
   <section name="land_surface">
-    <standard_name name="land_ice_area_fraction"
+    <standard_name name="land_ice_area_fraction_of_cell_area"
                    long_name="fraction of horizontal area of grid cell that is land ice">
       <type kind="kind_phys" units="frac">real</type>
     </standard_name>
@@ -430,7 +430,7 @@
     <standard_name name="surface_snow_density">
       <type kind="kind_phys" units="kg m-3">real</type>
     </standard_name>
-    <standard_name name="urban_area_fraction"
+    <standard_name name="urban_area_fraction_of_cell_area"
                    long_name="fraction of horizontal area of grid cell that is urban">
       <type kind="kind_phys" units="frac">real</type>
     </standard_name>

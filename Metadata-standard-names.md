@@ -260,13 +260,13 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
 ## land_surface
-* `land_ice_area_fraction`: fraction of horizontal area of grid cell that is land ice
+* `land_ice_area_fraction_of_cell_area`: fraction of horizontal area of grid cell that is land ice
     * `real(kind=kind_phys)`: units = frac
 * `mass_content_of_water_in_top_soil_layer`: content per unit area of water in top layer of soil
     * `real(kind=kind_phys)`: units = kg m-2
 * `surface_snow_density`: Surface snow density
     * `real(kind=kind_phys)`: units = kg m-3
-* `urban_area_fraction`: fraction of horizontal area of grid cell that is urban
+* `urban_area_fraction_of_cell_area`: fraction of horizontal area of grid cell that is urban
     * `real(kind=kind_phys)`: units = frac
 * `volume_fraction_of_liquid_water_in_soil_at_critical_point`: volume fraction of water in liquid phase in soil at critical point
     * `real(kind=kind_phys)`: units = m3 m-3
