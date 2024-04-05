@@ -60,7 +60,7 @@ CCPP Standard Name Rules
    * ``[variable]``, with no location suffix, is defined at vertical-cell centers or
      as vertical-cell averages.
 
-   * ``[variable]_at_interface`` is defined at the interfaces between grid cells
+   * ``[variable]_at_all_interfaces`` is defined at the interfaces between grid cells
      vertically, including the bottom-most and top-most interfaces.
    * ``[variable]_at_top_interfaces`` is defined at the interfaces between grid cells
      vertically, including the top-most interface *but excluding the bottom-most
@@ -71,7 +71,7 @@ CCPP Standard Name Rules
      top-most interface*.
 
    This implies that if ``[variable]`` is defined on `n` points vertically,
-   ``[variable]_at_interface`` is defined on `n+1` points,
+   ``[variable]_at_all_interfaces`` is defined on `n+1` points,
    ``[variable]_at_top_interfaces`` is defined on `n` points, and
    ``[variable]_at_bottom_interfaces`` is defined on `n` points.
 
@@ -159,7 +159,7 @@ Suffixes
 | at_top_of_atmosphere_boundary_layer
 | at_top_of_atmosphere_model
 | at_top_of_dry_convection
-| **at_interface**
+| **at_all_interfaces**
 | **at_surface_adjacent_layer**
 | **at_2m**
 | **at_10m**

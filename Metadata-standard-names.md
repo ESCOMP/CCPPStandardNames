@@ -153,13 +153,13 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m
 * `potentially_advected_quantities`: Potentially advected quantities
     * `real(kind=kind_phys)`: units = various
-* `air_pressure_at_interface`: Air pressure at interface
+* `air_pressure_at_all_interfaces`: Air pressure at interfaces between vertical grid cells
     * `real(kind=kind_phys)`: units = Pa
-* `air_pressure_of_dry_air_at_interface`: Air pressure of dry air at interface
+* `air_pressure_of_dry_air_at_all_interfaces`: Air pressure of dry air at interfaces between vertical grid cells
     * `real(kind=kind_phys)`: units = Pa
-* `ln_air_pressure_at_interface`: Ln air pressure at interface
+* `ln_air_pressure_at_all_interfaces`: Ln air pressure at interfaces between vertical grid cells
     * `real(kind=kind_phys)`: units = 1
-* `ln_air_pressure_of_dry_air_at_interface`: Ln air pressure of dry air at interface
+* `ln_air_pressure_of_dry_air_at_all_interfaces`: Ln air pressure of dry air at interfaces between vertical grid cells
     * `real(kind=kind_phys)`: units = 1
 * `largest_model_top_pressure_that_allows_molecular_diffusion`: Largest model top pressure that allows molecular diffusion
     * `real(kind=kind_phys)`: units = Pa
@@ -167,7 +167,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `logical(kind=kind_phys)`: units = flag
 * `is_initialized_physics_grid`: Flag to indicate if physics grid is initialized
     * `logical(kind=kind_phys)`: units = flag
-* `geopotential_height_at_interface`: Geopotential height at interface
+* `geopotential_height_at_all_interfaces`: Geopotential height at interfaces between vertical grid cells
     * `real(kind=kind_phys)`: units = m
 * `vertically_integrated_total_energy_of_initial_state`: Vertically integrated total energy of initial state
     * `real(kind=kind_phys)`: units = J m-2
@@ -1839,13 +1839,13 @@ Standard / required CCPP variables
     * `real(kind=kind_phys)`: units = 1
 * `dimensionless_exner_function_at_surface_adjacent_layer`: Dimensionless exner function at surface adjacent layer
     * `real(kind=kind_phys)`: units = 1
-* `dimensionless_exner_function_at_interface`: Dimensionless exner function at interface
+* `dimensionless_exner_function_at_all_interfaces`: Dimensionless exner function at interfaces between vertical grid cells
     * `real(kind=kind_phys)`: units = 1
 * `dissipation_estimate_of_air_temperature_at_model_layers`: Dissipation estimate of air temperature at model layers
     * `real(kind=kind_phys)`: units = K
 * `geopotential`: Geopotential
     * `real(kind=kind_phys)`: units = m2 s-2
-* `geopotential_at_interface`: Geopotential at interface
+* `geopotential_at_all_interfaces`: Geopotential at interfaces between vertical grid cells
     * `real(kind=kind_phys)`: units = m2 s-2
 * `graupel_mixing_ratio_wrt_moist_air`: Graupel mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
