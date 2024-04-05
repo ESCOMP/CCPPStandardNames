@@ -54,21 +54,26 @@ CCPP Standard Name Rules
 #. By default (when not specified otherwise), variables are grid means or centers
    (defined by the host). If a variable is defined at a different physical location,
    a qualifier should be used to denote this. For example, to specify the vertical
-   location of a variable with respect to vertical grid cells, the following rules
-   apply. If ``[variable]`` doesn't have a vertical location suffix and is defined
-   on `n` levels:
+   location of a variable with respect to vertical grid cells, the following variants
+   are possible:
+
+   * ``[variable]``, with no location suffix, is defined at vertical-cell centers or
+     as vertical-cell averages.
 
    * ``[variable]_at_interface`` is defined at the interfaces between grid cells
-     vertically, including the bottom-most and top-most interfaces. It is defined on
-     `n+1` levels.
-
-   * ``[variable]_at_top_interfaces`` is defined at the interfaces between grid
-     cells vertically, including the top-most interface *but excluding the
-     bottom-most interface*. It is defined on `n` levels.
+     vertically, including the bottom-most and top-most interfaces.
+   * ``[variable]_at_top_interfaces`` is defined at the interfaces between grid cells
+     vertically, including the top-most interface *but excluding the bottom-most
+     interface*.
 
    * ``[variable]_at_bottom_interfaces`` is defined at the interfaces between grid
      cells vertically, including the bottom-most interface *but excluding the
-     top-most interface*. It is defined on `n` levels.
+     top-most interface*.
+
+   This implies that if ``[variable]`` is defined on `n` points vertically,
+   ``[variable]_at_interface`` is defined on `n+1` points,
+   ``[variable]_at_top_interfaces`` is defined on `n` points, and
+   ``[variable]_at_bottom_interfaces`` is defined on `n` points.
 
 #. By default, *mixing_ratio* refers to mass mixing ratios. The long name should
    explicitly specify that it refers to the *mass* mixing ratio.
