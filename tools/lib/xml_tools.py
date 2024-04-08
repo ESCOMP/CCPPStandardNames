@@ -11,10 +11,10 @@ import os.path
 import subprocess
 import sys
 import logging
-from distutils.spawn import find_executable
+from shutil import which
 import xml.etree.ElementTree as ET
 try:
-    _XMLLINT = find_executable('xmllint')
+    _XMLLINT = which('xmllint')
 except ImportError:
     _XMLLINT = None
 # end try

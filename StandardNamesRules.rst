@@ -78,11 +78,13 @@ CCPP Standard Name Rules
 #. By default, *mixing_ratio* refers to mass mixing ratios. The long name should
    explicitly specify that it refers to the *mass* mixing ratio.
    Mass mixing ratios should contain information regarding
-   with respect to what quantity they are defined, and options are *wrt_dry_air*, *wrt_moist_air*,
-   or *wrt_total_mass*, where *moist_air* refers to dry air plus vapor and *total_mass* refers
-   to dry air plus vapor and hydrometeors. A special case exists in the case of mixing ratio
-   of vapor: the standard name *specific_humidity* should be used instead of
-   *mixing_ratio_of_vapor_wrt_moist_air*.
+   with respect to what quantity they are defined, and options are *wrt_dry_air*,
+   *wrt_moist_air*, or *wrt_moist_air_and_condensed_water*, where *moist_air*
+   refers to dry air plus vapor and *moist_air_and_condensed_water* refers
+   to dry air plus vapor and hydrometeors. Use of *specific_humidity* should
+   be avoided as there is no consensus on whether it refers to
+   *mixing_ratio_of_water_vapor_wrt_moist_air* or
+   *mixing_ratio_of_water_vapor_wrt_moist_air_and_condensed_water*.
 
 #. Volume mixing ratios should be qualified as *volume_mixing_ratio*.
 
@@ -104,6 +106,11 @@ CCPP Standard Name Rules
    Otherwise the standard name should explicitly state the type of hydrometeor(s) the
    named quantity represents (e.g. *graupel*).
 
+#. By default, the term *cloud* refers to all cloud phases and cloud types. Otherwise
+   an additional prefix or suffix should be added to the standard name specifying what kind(s)
+   of clouds the variable repesents (e.g. *ice_cloud* if only including glaciated clouds, or
+   *cloud_at_500hPa* if only including clouds that exist at 500 hPa).
+
 #. If possible, qualifiers should be limited in order to allow for a wide
    applicability of the variable. In other words, don't qualify with _for ``_xyz``
    unless a variable could not conceivably be used outside of the more
@@ -117,6 +124,10 @@ CCPP Standard Name Rules
 #. For control-oriented variables, if the variable is a Fortran logical,
    use flag_for ``_X``. If it is any other data type, use control_for ``_X``. All flags
    should be Fortran logicals.
+
+#. Standard names that start with ``ccpp_`` represent CCPP framework-provided variables.
+   All other standard names should avoid the use of ``ccpp`` in their name in order
+   to avoid any confusion.
 
 #. No punctuation should appear in standard names except for underscores (_).
 
@@ -167,6 +178,7 @@ Suffixes
 | **at_pressure_levels**
 | **at_top_of_viscous_sublayer**
 | **at_various_atmosphere_layers**
+| **extended_up_by_1**
 
 
 Component

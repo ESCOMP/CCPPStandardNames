@@ -8,8 +8,20 @@ import argparse
 import sys
 import os.path
 import xml.etree.ElementTree as ET
-from xml_tools import find_schema_file, find_schema_version, validate_xml_file, read_xml_file
 import copy
+
+################################################
+#Add CCPP framework (lib) modules to python path
+################################################
+
+_CURR_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(_CURR_DIR, "lib"))
+
+#######################################
+#Import needed framework python modules
+#######################################
+
+from xml_tools import find_schema_file, find_schema_version, validate_xml_file, read_xml_file
 
 ###############################################################################
 def parse_command_line(args, description):
@@ -40,17 +52,16 @@ def main_func():
     version = find_schema_version(root)
     schema_name = os.path.basename(stdname_file)[0:-4]
     schema_root = os.path.dirname(stdname_file)
-    schema_file = find_schema_file(schema_name, version)
+    schema_path = os.path.join(schema_root,schema_name)
+    schema_file = find_schema_file(schema_path, version)
     if schema_file:
         try:
             validate_xml_file(stdname_file, schema_name, version, None,
                             schema_path=schema_root, error_on_noxmllint=True)
         except ValueError:
-            raise ValueError("Invalid standard names file, {}".format(stdname_file))
+            raise ValueError(f"Invalid standard names file, {stdname_file}")
     else:
-        raise ValueError(
-            'Cannot find schema file, {}, for version {}'.format(schema_name, version)
-        )
+        raise ValueError(f'Cannot find schema file, {schema_name}, for {version=}')
 
     #get list of all standard names
     all_std_names = []
@@ -74,8 +85,8 @@ def main_func():
             print('The following duplicate standard names were found:')
             for dup in dup_std_names:
                 rm_elements = root.findall('./section/standard_name[@name="%s"]'%dup)[1:]
-                print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
-            print('Removing duplicates and overwriting {}'.format(stdname_file))
+                print(f"{dup}, ({len(rm_elements)} duplicate(s))")
+            print(f'Removing duplicates and overwriting {stdname_file}')
             for dup in dup_std_names:
                 first_use = True #Logical that indicates the first use of the duplicated name
                 rm_parents = root.findall('./section/standard_name[@name="%s"]..'%dup)
@@ -97,7 +108,7 @@ def main_func():
             print('The following duplicate standard names were found:')
             for dup in dup_std_names:
                 rm_elements = root.findall('./section/standard_name[@name="%s"]'%dup)[1:]
-                print("{0}, ({1} duplicate(s))".format(dup, len(rm_elements)))
+                print(f"{dup}, ({len(rm_elements)} duplicate(s))")
             sys.exit(1)
         else:
             print('No duplicate standard names were found.')
