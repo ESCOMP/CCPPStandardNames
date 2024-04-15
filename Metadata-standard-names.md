@@ -463,7 +463,7 @@ Variables related to the compute environment
 * `autoconversion_to_rain_coefficient_for_deep_convection`: Autoconversion to rain coefficient for deep convection
     * `real(kind=kind_phys)`: units = 1
 * `chemical_tracer_scavenging_fractions`: Chemical tracer scavenging fractions
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `cloud_condensate_detrainment_coefficient`: Cloud condensate detrainment coefficient
     * `real(kind=kind_phys)`: units = 1
 * `control_for_convective_cloud_diagnostics`: Control for convective cloud diagnostics

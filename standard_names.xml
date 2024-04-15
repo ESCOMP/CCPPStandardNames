@@ -782,7 +782,7 @@
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="chemical_tracer_scavenging_fractions">
-         <type kind="kind_phys" units="1">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="cloud_condensate_detrainment_coefficient">
          <type kind="kind_phys" units="1">real</type>
