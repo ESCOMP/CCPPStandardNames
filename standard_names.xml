@@ -409,10 +409,10 @@
     <standard_name
         name="nonconvective_cloud_area_fraction_in_atmosphere_layer"
         long_name="cloud area fraction in atmosphere layer excluding clouds produced by the convective schemes">
-      <type kind="kind_phys" units="1">real</type>
+      <type kind="kind_phys" units="fraction">real</type>
     </standard_name>
     <standard_name name="relative_humidity">
-      <type kind="kind_phys" units="1">real</type>
+      <type kind="kind_phys" units="fraction">real</type>
     </standard_name>
     <standard_name name="gravitational_acceleration">
       <type kind="kind_phys" units="m s-2">real</type>
@@ -811,7 +811,7 @@
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="chemical_tracer_scavenging_fractions">
-         <type kind="kind_phys" units="1">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="cloud_condensate_detrainment_coefficient">
          <type kind="kind_phys" units="1">real</type>
@@ -829,13 +829,13 @@
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="critical_relative_humidity_at_top_of_atmosphere_boundary_layer">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="critical_relative_humidity_at_surface">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="critical_relative_humidity_at_toa">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="date_and_time_at_model_initialization_in_iso_order">
          <type kind="" units="1">integer</type>
@@ -892,13 +892,13 @@
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="downdraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme">
-         <type kind="kind_phys" units="1">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="downdraft_fraction_reaching_surface_over_land_for_deep_convection">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="downdraft_fraction_reaching_surface_over_water_for_deep_convection">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="control_for_edmf_in_mellor_yamada_nakanishi_niino_pbl_scheme">
          <type kind="" units="1">integer</type>
@@ -928,7 +928,7 @@
          <type kind="kind_phys" units="radian">real</type>
       </standard_name>
       <standard_name name="relative_humidity_threshold_for_condensation">
-         <type kind="kind_phys" units="1">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="do_arakawa_wu_downdrafts_for_deep_convection">
          <type kind="" units="flag">logical</type>
@@ -1612,7 +1612,7 @@
          <type kind="kind_phys" units="days">real</type>
       </standard_name>
       <standard_name name="min_lake_ice_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="multiplicative_tuning_parameter_for_reduced_latent_heat_flux_due_to_canopy_heat_storage">
          <type kind="kind_phys" units="1">real</type>
@@ -1627,7 +1627,7 @@
          <type kind="kind_phys" units="variable">real</type>
       </standard_name>
       <standard_name name="max_critical_relative_humidity">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="max_grid_scale">
          <type kind="kind_phys" units="m2 rad-2">real</type>
@@ -1642,7 +1642,7 @@
          <type kind="kind_phys" units="um">real</type>
       </standard_name>
       <standard_name name="bergeron_findeisen_process_efficiency_factor">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="relative_variance_of_subgrid_cloud_condensate_distribution">
          <type kind="kind_phys" units="kg2 kg-2">real</type>
@@ -1699,7 +1699,7 @@
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="relative_humidity_threshold_for_ice_nucleation">
-         <type kind="kind_phys" units="1">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="timescale_for_autoconversion_to_snow">
          <type kind="kind_phys" units="s">real</type>
@@ -1711,7 +1711,7 @@
          <type kind="len=16" units="none">character</type>
       </standard_name>
       <standard_name name="minimum_large_ice_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="minimum_pressure_in_rrtmgp">
          <type kind="kind_phys" units="Pa">real</type>
@@ -1732,10 +1732,10 @@
          <type kind="" units="1">integer</type>
       </standard_name>
       <standard_name name="momentum_transport_reduction_factor_due_to_pressure_gradient_force_for_deep_convection">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="momentum_transport_reduction_factor_due_to_pressure_gradient_force_for_shallow_convection">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="mpi_communicator">
          <type kind="" units="index">integer</type>
@@ -1906,10 +1906,10 @@
          <type kind="kind_phys" units="m-1">real</type>
       </standard_name>
       <standard_name name="rain_evaporation_coefficient_over_ocean_for_deep_convection">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="rain_evaporation_coefficient_over_land_for_deep_convection">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="filename_of_rrtmgp_longwave_cloud_optics_coefficients">
          <type kind="len=128" units="none">character</type>
@@ -1927,7 +1927,7 @@
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="min_sea_ice_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="forecast_time_in_seconds">
          <type kind="kind_phys" units="s">real</type>
@@ -2014,7 +2014,7 @@
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="updraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme">
-         <type kind="kind_phys" units="1">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="tunable_parameter_1_for_maximum_cloud_base_updraft_velocity_in_chikira_sugiyama_deep_convection">
          <type kind="kind_phys" units="m s-1">real</type>
@@ -2141,13 +2141,13 @@
          <type kind="kind_phys" units="kg m-2 s-1">real</type>
       </standard_name>
       <standard_name name="cloud_fraction_for_mg">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="counter_for_grell_freitas_convection">
          <type kind="" units="count">integer</type>
       </standard_name>
       <standard_name name="convective_cloud_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="convective_cloud_condensate_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1">real</type>
@@ -2231,7 +2231,7 @@
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="subgrid_scale_cloud_area_fraction_in_atmosphere_layer">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="subgrid_scale_cloud_ice_mixing_ratio_wrt_moist_air">
          <type kind="kind_phys" units="kg kg-1">real</type>
@@ -2240,7 +2240,7 @@
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="subgrid_scale_cloud_fraction_from_shoc">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_air_pressure_on_previous_timestep">
          <type kind="kind_phys" units="Pa">real</type>
@@ -2305,10 +2305,10 @@
    </section>
    <section name="GFS_typedefs_GFS_sfcprop_type">
       <standard_name name="wet_canopy_area_fraction">
-         <type kind="kind_phys" units="1">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="baseline_surface_longwave_emissivity">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="baseline_surface_roughness_length">
          <type kind="kind_phys" units="m">real</type>
@@ -2386,10 +2386,10 @@
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="strong_cosz_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="weak_cosz_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="free_convection_layer_thickness_in_sea_water">
          <type kind="kind_phys" units="m">real</type>
@@ -2419,7 +2419,7 @@
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
       <standard_name name="lake_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="lake_depth">
          <type kind="kind_phys" units="m">real</type>
@@ -2428,7 +2428,7 @@
          <type kind="kind_phys" units="mm">real</type>
       </standard_name>
       <standard_name name="land_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="depth_from_snow_surface_at_bottom_interface">
          <type kind="kind_phys" units="m">real</type>
@@ -2455,22 +2455,22 @@
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
       <standard_name name="max_vegetation_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="nir_albedo_strong_cosz">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="nir_albedo_weak_cosz">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="vis_albedo_strong_cosz">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="vis_albedo_weak_cosz">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="min_vegetation_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="monin_obukhov_similarity_function_for_heat">
          <type kind="kind_phys" units="1">real</type>
@@ -2485,7 +2485,7 @@
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
       <standard_name name="normalized_soil_wetness_for_land_surface_model">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="number_of_snow_layers">
          <type kind="kind_phys" units="1">real</type>
@@ -2509,10 +2509,10 @@
          <type kind="kind_phys" units="m-1">real</type>
       </standard_name>
       <standard_name name="sea_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="sea_ice_area_fraction_of_sea_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="sea_ice_temperature">
          <type kind="kind_phys" units="K">real</type>
@@ -2545,7 +2545,7 @@
          <type kind="kind_phys" units="g m-2">real</type>
       </standard_name>
       <standard_name name="surface_albedo_assuming_deep_snow_on_previous_timestep">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="lwe_thickness_of_ice_in_surface_snow">
          <type kind="kind_phys" units="mm">real</type>
@@ -2613,34 +2613,34 @@
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
       <standard_name name="surface_albedo_diffuse_nir_over_ice">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_albedo_diffuse_nir_over_land">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_albedo_diffuse_visible_over_ice">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_albedo_diffuse_visible_over_land">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_albedo_direct_nir_over_ice">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_albedo_direct_nir_over_land">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_albedo_direct_visible_over_ice">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_albedo_direct_visible_over_land">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_diffused_shortwave_albedo_over_ice">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_diffused_shortwave_albedo_over_land">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_drag_coefficient_for_heat_and_moisture_for_noahmp">
          <type kind="kind_phys" units="1">real</type>
@@ -2670,10 +2670,10 @@
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="surface_longwave_emissivity_over_ice">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_longwave_emissivity_over_land">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_roughness_length">
          <type kind="kind_phys" units="cm">real</type>
@@ -2697,13 +2697,13 @@
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
       <standard_name name="surface_snow_area_fraction_over_ice">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_snow_area_fraction_over_land">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_snow_free_albedo_over_land">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="lwe_surface_snow">
          <type kind="kind_phys" units="mm">real</type>
@@ -2730,28 +2730,28 @@
          <type kind="kind_phys" units="kg m-2">real</type>
       </standard_name>
       <standard_name name="upper_bound_of_max_albedo_assuming_deep_snow">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="vegetation_area_fraction">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="canopy_temperature">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
       <standard_name name="volume_fraction_of_frozen_soil_moisture_for_land_surface_model">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="volume_fraction_of_condensed_water_in_soil">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="volume_fraction_of_soil_moisture_for_land_surface_model">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="volume_fraction_of_unfrozen_water_in_soil">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="volume_fraction_of_unfrozen_soil_moisture_for_land_surface_model">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="lwe_thickness_of_surface_snow_amount">
          <type kind="kind_phys" units="mm">real</type>
@@ -2837,7 +2837,7 @@
          <type kind="kind_phys" units="Pa s">real</type>
       </standard_name>
       <standard_name name="cellular_automata_area_fraction_for_deep_convection_from_coupled_process">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="atmosphere_heat_diffusivity_for_chemistry_coupling">
          <type kind="kind_phys" units="m2 s-1">real</type>
@@ -2960,10 +2960,10 @@
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="surface_nir_albedo_diffuse_rad_for_coupling">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_nir_albedo_direct_rad_for_coupling">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="lwe_surface_snow_from_coupled_process">
          <type kind="kind_phys" units="m">real</type>
@@ -2993,10 +2993,10 @@
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="surface_vis_albedo_diffuse_rad_for_coupling">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_vis_albedo_direct_rad_for_coupling">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_x_momentum_flux_from_coupled_process">
          <type kind="kind_phys" units="Pa">real</type>
@@ -3014,7 +3014,7 @@
          <type kind="kind_phys" units="K s-1">real</type>
       </standard_name>
       <standard_name name="cellular_automata_vertical_weight">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="shum_weights_from_coupled_process">
          <type kind="kind_phys" units="1">real</type>
@@ -3111,7 +3111,7 @@
    </section>
    <section name="GFS_typedefs_GFS_cldprop_type">
       <standard_name name="convective_cloud_area_fraction_between_sw_radiation_calls_from_cnvc90">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="pressure_at_convective_cloud_base_between_sw_radiation_calls_from_cnvc90">
          <type kind="kind_phys" units="Pa">real</type>
@@ -3131,10 +3131,10 @@
          <type kind="" units="W m-2">sfcflw_type</type>
       </standard_name>
       <standard_name name="surface_albedo_for_diffused_shortwave_on_radiation_timestep">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_longwave_emissivity">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="air_temperature_at_surface_adjacent_layer_on_radiation_timestep">
          <type kind="kind_phys" units="K">real</type>
@@ -3249,7 +3249,7 @@
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
       <standard_name name="nonconvective_cloud_area_fraction_in_atmosphere_layer_of_new_state">
-         <type kind="kind_phys" units="frac">real</type>
+         <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="graupel_mixing_ratio_wrt_moist_air_of_new_state">
          <type kind="kind_phys" units="kg kg-1">real</type>

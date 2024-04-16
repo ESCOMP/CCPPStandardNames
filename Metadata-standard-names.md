@@ -254,9 +254,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `mass_content_of_cloud_liquid_water_in_atmosphere_layer`: Mass content of cloud liquid water in atmosphere layer
     * `real(kind=kind_phys)`: units = kg m-2
 * `nonconvective_cloud_area_fraction_in_atmosphere_layer`: cloud area fraction in atmosphere layer excluding clouds produced by the convective schemes
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `relative_humidity`: Relative humidity
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
 ## land_surface
@@ -479,7 +479,7 @@ Variables related to the compute environment
 * `autoconversion_to_rain_coefficient_for_deep_convection`: Autoconversion to rain coefficient for deep convection
     * `real(kind=kind_phys)`: units = 1
 * `chemical_tracer_scavenging_fractions`: Chemical tracer scavenging fractions
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `cloud_condensate_detrainment_coefficient`: Cloud condensate detrainment coefficient
     * `real(kind=kind_phys)`: units = 1
 * `control_for_convective_cloud_diagnostics`: Control for convective cloud diagnostics
@@ -491,11 +491,11 @@ Variables related to the compute environment
 * `tunable_parameter_for_critical_cloud_top_entrainment_instability_criteria`: Tunable parameter for critical cloud top entrainment instability criteria
     * `real(kind=kind_phys)`: units = 1
 * `critical_relative_humidity_at_top_of_atmosphere_boundary_layer`: Critical relative humidity at top of atmosphere boundary layer
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `critical_relative_humidity_at_surface`: Critical relative humidity at surface
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `critical_relative_humidity_at_toa`: Critical relative humidity at toa
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `date_and_time_at_model_initialization_in_iso_order`: Date and time at model initialization in iso order
     * `integer(kind=)`: units = 1
 * `date_and_time_at_model_initialization_in_united_states_order`: Date and time at model initialization in united states order
@@ -533,11 +533,11 @@ Variables related to the compute environment
 * `do_unified_gravity_wave_physics_gravity_wave_drag_scheme`: Do unified gravity wave physics gravity wave drag scheme
     * `logical(kind=)`: units = flag
 * `downdraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme`: Downdraft area fraction in scale aware tke moist edmf pbl scheme
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `downdraft_fraction_reaching_surface_over_land_for_deep_convection`: Downdraft fraction reaching surface over land for deep convection
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `downdraft_fraction_reaching_surface_over_water_for_deep_convection`: Downdraft fraction reaching surface over water for deep convection
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `control_for_edmf_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for edmf in mellor yamada nakanishi niino pbl scheme
     * `integer(kind=)`: units = 1
 * `control_for_edmf_momentum_transport_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for edmf momentum transport in mellor yamada nakanishi niino pbl scheme
@@ -557,7 +557,7 @@ Variables related to the compute environment
 * `equation_of_time`: Equation of time
     * `real(kind=kind_phys)`: units = radian
 * `relative_humidity_threshold_for_condensation`: Relative humidity threshold for condensation
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `do_arakawa_wu_downdrafts_for_deep_convection`: Do arakawa wu downdrafts for deep convection
     * `logical(kind=)`: units = flag
 * `do_debug_output`: Do debug output
@@ -1013,7 +1013,7 @@ Variables related to the compute environment
 * `forecast_julian_day`: Forecast julian day
     * `real(kind=kind_phys)`: units = days
 * `min_lake_ice_area_fraction`: Min lake ice area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `multiplicative_tuning_parameter_for_reduced_latent_heat_flux_due_to_canopy_heat_storage`: Multiplicative tuning parameter for reduced latent heat flux due to canopy heat storage
     * `real(kind=kind_phys)`: units = 1
 * `max_tendency_of_air_potential_temperature_due_to_large_scale_precipitation`: Max tendency of air potential temperature due to large scale precipitation
@@ -1023,7 +1023,7 @@ Variables related to the compute environment
 * `land_surface_perturbation_magnitudes`: Land surface perturbation magnitudes
     * `real(kind=kind_phys)`: units = variable
 * `max_critical_relative_humidity`: Max critical relative humidity
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `max_grid_scale`: Max grid scale
     * `real(kind=kind_phys)`: units = m2 rad-2
 * `maximum_soil_moisture_content_for_land_surface_model`: Maximum soil moisture content for land surface model
@@ -1033,7 +1033,7 @@ Variables related to the compute environment
 * `autoconverion_to_snow_size_threshold`: Autoconverion to snow size threshold
     * `real(kind=kind_phys)`: units = um
 * `bergeron_findeisen_process_efficiency_factor`: Bergeron findeisen process efficiency factor
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `relative_variance_of_subgrid_cloud_condensate_distribution`: Relative variance of subgrid cloud condensate distribution
     * `real(kind=kind_phys)`: units = kg2 kg-2
 * `prescribed_number_concentration_of_cloud_droplets`: Prescribed number concentration of cloud droplets
@@ -1071,7 +1071,7 @@ Variables related to the compute environment
 * `minimum_cloud_ice_mixing_ratio_wrt_moist_air_threshold`: Minimum cloud ice mixing ratio wrt moist air threshold
     * `real(kind=kind_phys)`: units = kg kg-1
 * `relative_humidity_threshold_for_ice_nucleation`: Relative humidity threshold for ice nucleation
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `timescale_for_autoconversion_to_snow`: Timescale for autoconversion to snow
     * `real(kind=kind_phys)`: units = s
 * `alpha_tuning_coefficient_for_morrison_gettelman_microphysics_scheme`: Alpha tuning coefficient for morrison gettelman microphysics scheme
@@ -1079,7 +1079,7 @@ Variables related to the compute environment
 * `control_for_precipitation_area_fraction_method`: Control for precipitation area fraction method
     * `character(kind=len=16)`: units = none
 * `minimum_large_ice_fraction`: Minimum large ice fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `minimum_pressure_in_rrtmgp`: Minimum pressure in rrtmgp
     * `real(kind=kind_phys)`: units = Pa
 * `min_grid_scale`: Min grid scale
@@ -1093,9 +1093,9 @@ Variables related to the compute environment
 * `control_for_mixing_length_in_mellor_yamada_nakanishi_niino_pbl_scheme`: Control for mixing length in mellor yamada nakanishi niino pbl scheme
     * `integer(kind=)`: units = 1
 * `momentum_transport_reduction_factor_due_to_pressure_gradient_force_for_deep_convection`: Momentum transport reduction factor due to pressure gradient force for deep convection
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `momentum_transport_reduction_factor_due_to_pressure_gradient_force_for_shallow_convection`: Momentum transport reduction factor due to pressure gradient force for shallow convection
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `mpi_communicator`: Mpi communicator
     * `integer(kind=)`: units = index
 * `mpi_rank`: Mpi rank
@@ -1209,9 +1209,9 @@ Variables related to the compute environment
 * `rain_conversion_parameter_for_shallow_convection`: Rain conversion parameter for shallow convection
     * `real(kind=kind_phys)`: units = m-1
 * `rain_evaporation_coefficient_over_ocean_for_deep_convection`: Rain evaporation coefficient over ocean for deep convection
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `rain_evaporation_coefficient_over_land_for_deep_convection`: Rain evaporation coefficient over land for deep convection
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `filename_of_rrtmgp_longwave_cloud_optics_coefficients`: Filename of rrtmgp longwave cloud optics coefficients
     * `character(kind=len=128)`: units = none
 * `filename_of_rrtmgp_shortwave_cloud_optics_coefficients`: Filename of rrtmgp shortwave cloud optics coefficients
@@ -1223,7 +1223,7 @@ Variables related to the compute environment
 * `do_rrtmgp_shortwave_and_rrtmg_longwave_radiation`: Do rrtmgp shortwave and rrtmg longwave radiation
     * `logical(kind=)`: units = flag
 * `min_sea_ice_area_fraction`: Min sea ice area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `forecast_time_in_seconds`: Forecast time in seconds
     * `real(kind=kind_phys)`: units = s
 * `random_number_seed_for_cellular_automata`: Random number seed for cellular automata
@@ -1281,7 +1281,7 @@ Variables related to the compute environment
 * `do_turbulent_orographic_form_drag_in_unified_gravity_wave_physics_gravitiy_wave_drag_scheme`: Do turbulent orographic form drag in unified gravity wave physics gravitiy wave drag scheme
     * `logical(kind=)`: units = flag
 * `updraft_area_fraction_in_scale_aware_tke_moist_edmf_pbl_scheme`: Updraft area fraction in scale aware tke moist edmf pbl scheme
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `tunable_parameter_1_for_maximum_cloud_base_updraft_velocity_in_chikira_sugiyama_deep_convection`: Tunable parameter 1 for maximum cloud base updraft velocity in chikira sugiyama deep convection
     * `real(kind=kind_phys)`: units = m s-1
 * `tunable_parameter_2_for_maximum_cloud_base_updraft_velocity_in_chikira_sugiyama_deep_convection`: Tunable parameter 2 for maximum cloud base updraft velocity in chikira sugiyama deep convection
@@ -1365,11 +1365,11 @@ Variables related to the compute environment
 * `atmosphere_updraft_convective_mass_flux_at_cloud_base_by_cloud_type`: Atmosphere updraft convective mass flux at cloud base by cloud type
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `cloud_fraction_for_mg`: Cloud fraction for mg
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `counter_for_grell_freitas_convection`: Counter for grell freitas convection
     * `integer(kind=)`: units = count
 * `convective_cloud_area_fraction`: Convective cloud area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `convective_cloud_condensate_mixing_ratio_wrt_moist_air`: Convective cloud condensate mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `effective_radius_of_stratiform_cloud_graupel_particle`: Effective radius of stratiform cloud graupel particle
@@ -1425,13 +1425,13 @@ Variables related to the compute environment
 * `stability_function_for_heat`: Stability function for heat
     * `real(kind=kind_phys)`: units = 1
 * `subgrid_scale_cloud_area_fraction_in_atmosphere_layer`: Subgrid scale cloud area fraction in atmosphere layer
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `subgrid_scale_cloud_ice_mixing_ratio_wrt_moist_air`: Subgrid scale cloud ice mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `subgrid_scale_cloud_liquid_water_mixing_ratio_wrt_moist_air`: Subgrid scale cloud liquid water mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
 * `subgrid_scale_cloud_fraction_from_shoc`: Subgrid scale cloud fraction from shoc
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_air_pressure_on_previous_timestep`: Surface air pressure on previous timestep
     * `real(kind=kind_phys)`: units = Pa
 * `surface_air_pressure_two_timesteps_back`: Surface air pressure two timesteps back
@@ -1474,9 +1474,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = 1
 ## GFS_typedefs_GFS_sfcprop_type
 * `wet_canopy_area_fraction`: Wet canopy area fraction
-    * `real(kind=kind_phys)`: units = 1
+    * `real(kind=kind_phys)`: units = fraction
 * `baseline_surface_longwave_emissivity`: Baseline surface longwave emissivity
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `baseline_surface_roughness_length`: Baseline surface roughness length
     * `real(kind=kind_phys)`: units = m
 * `air_temperature_in_canopy`: Air temperature in canopy
@@ -1528,9 +1528,9 @@ Variables related to the compute environment
 * `precipitation_type`: Precipitation type
     * `real(kind=kind_phys)`: units = 1
 * `strong_cosz_area_fraction`: Strong cosz area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `weak_cosz_area_fraction`: Weak cosz area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `free_convection_layer_thickness_in_sea_water`: Free convection layer thickness in sea water
     * `real(kind=kind_phys)`: units = m
 * `consecutive_calls_for_grell_freitas_convection`: Consecutive calls for grell freitas convection
@@ -1550,13 +1550,13 @@ Variables related to the compute environment
 * `surface_upward_temperature_flux`: Surface upward temperature flux
     * `real(kind=kind_phys)`: units = K m s-1
 * `lake_area_fraction`: Lake area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `lake_depth`: Lake depth
     * `real(kind=kind_phys)`: units = m
 * `water_storage_in_lake`: Water storage in lake
     * `real(kind=kind_phys)`: units = mm
 * `land_area_fraction`: Land area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `depth_from_snow_surface_at_bottom_interface`: Depth from snow surface at bottom interface
     * `real(kind=kind_phys)`: units = m
 * `leaf_area_index`: Leaf area index
@@ -1574,17 +1574,17 @@ Variables related to the compute environment
 * `snow_mass_on_previous_timestep`: Snow mass on previous timestep
     * `real(kind=kind_phys)`: units = m
 * `max_vegetation_area_fraction`: Max vegetation area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `nir_albedo_strong_cosz`: Nir albedo strong cosz
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `nir_albedo_weak_cosz`: Nir albedo weak cosz
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `vis_albedo_strong_cosz`: Vis albedo strong cosz
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `vis_albedo_weak_cosz`: Vis albedo weak cosz
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `min_vegetation_area_fraction`: Min vegetation area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `monin_obukhov_similarity_function_for_heat`: Monin obukhov similarity function for heat
     * `real(kind=kind_phys)`: units = 1
 * `monin_obukhov_similarity_function_for_momentum`: Monin obukhov similarity function for momentum
@@ -1594,7 +1594,7 @@ Variables related to the compute environment
 * `nonnegative_lwe_thickness_of_precipitation_amount_on_dynamics_timestep`: Nonnegative lwe thickness of precipitation amount on dynamics timestep
     * `real(kind=kind_phys)`: units = m
 * `normalized_soil_wetness_for_land_surface_model`: Normalized soil wetness for land surface model
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `number_of_snow_layers`: Number of snow layers
     * `real(kind=kind_phys)`: units = 1
 * `ocean_mixed_layer_thickness`: Ocean mixed layer thickness
@@ -1610,9 +1610,9 @@ Variables related to the compute environment
 * `reciprocal_of_obukhov_length`: Reciprocal of obukhov length
     * `real(kind=kind_phys)`: units = m-1
 * `sea_area_fraction`: Sea area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `sea_ice_area_fraction_of_sea_area_fraction`: Sea ice area fraction of sea area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `sea_ice_temperature`: Sea ice temperature
     * `real(kind=kind_phys)`: units = K
 * `sea_ice_thickness`: Sea ice thickness
@@ -1634,7 +1634,7 @@ Variables related to the compute environment
 * `slow_soil_pool_mass_content_of_carbon`: Slow soil pool mass content of carbon
     * `real(kind=kind_phys)`: units = g m-2
 * `surface_albedo_assuming_deep_snow_on_previous_timestep`: Surface albedo assuming deep snow on previous timestep
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `lwe_thickness_of_ice_in_surface_snow`: Lwe thickness of ice in surface snow
     * `real(kind=kind_phys)`: units = mm
 * `lwe_thickness_of_liquid_water_in_surface_snow`: Lwe thickness of liquid water in surface snow
@@ -1678,25 +1678,25 @@ Variables related to the compute environment
 * `molecular_sublayer_thickness_in_sea_water`: Molecular sublayer thickness in sea water
     * `real(kind=kind_phys)`: units = m
 * `surface_albedo_diffuse_nir_over_ice`: Surface albedo diffuse nir over ice
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_albedo_diffuse_nir_over_land`: Surface albedo diffuse nir over land
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_albedo_diffuse_visible_over_ice`: Surface albedo diffuse visible over ice
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_albedo_diffuse_visible_over_land`: Surface albedo diffuse visible over land
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_albedo_direct_nir_over_ice`: Surface albedo direct nir over ice
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_albedo_direct_nir_over_land`: Surface albedo direct nir over land
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_albedo_direct_visible_over_ice`: Surface albedo direct visible over ice
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_albedo_direct_visible_over_land`: Surface albedo direct visible over land
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_diffused_shortwave_albedo_over_ice`: Surface diffused shortwave albedo over ice
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_diffused_shortwave_albedo_over_land`: Surface diffused shortwave albedo over land
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_drag_coefficient_for_heat_and_moisture_for_noahmp`: Surface drag coefficient for heat and moisture for noahmp
     * `real(kind=kind_phys)`: units = 1
 * `surface_drag_coefficient_for_momentum_for_noahmp`: Surface drag coefficient for momentum for noahmp
@@ -1716,9 +1716,9 @@ Variables related to the compute environment
 * `surface_upward_latent_heat_flux`: Surface upward latent heat flux
     * `real(kind=kind_phys)`: units = W m-2
 * `surface_longwave_emissivity_over_ice`: Surface longwave emissivity over ice
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_longwave_emissivity_over_land`: Surface longwave emissivity over land
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_roughness_length`: Surface roughness length
     * `real(kind=kind_phys)`: units = cm
 * `surface_roughness_length_from_wave_model`: Surface roughness length from wave model
@@ -1734,11 +1734,11 @@ Variables related to the compute environment
 * `surface_skin_temperature_over_land`: Surface skin temperature over land
     * `real(kind=kind_phys)`: units = K
 * `surface_snow_area_fraction_over_ice`: Surface snow area fraction over ice
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_snow_area_fraction_over_land`: Surface snow area fraction over land
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_snow_free_albedo_over_land`: Surface snow free albedo over land
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `lwe_surface_snow`: Lwe surface snow
     * `real(kind=kind_phys)`: units = mm
 * `surface_specific_humidity`: Surface specific humidity
@@ -1756,21 +1756,21 @@ Variables related to the compute environment
 * `surface_snow_amount_over_land`: Surface snow amount over land
     * `real(kind=kind_phys)`: units = kg m-2
 * `upper_bound_of_max_albedo_assuming_deep_snow`: Upper bound of max albedo assuming deep snow
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `vegetation_area_fraction`: Vegetation area fraction
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `canopy_temperature`: Canopy temperature
     * `real(kind=kind_phys)`: units = K
 * `volume_fraction_of_frozen_soil_moisture_for_land_surface_model`: Volume fraction of frozen soil moisture for land surface model
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `volume_fraction_of_condensed_water_in_soil`: Volume fraction of condensed water in soil
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `volume_fraction_of_soil_moisture_for_land_surface_model`: Volume fraction of soil moisture for land surface model
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `volume_fraction_of_unfrozen_water_in_soil`: Volume fraction of unfrozen water in soil
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `volume_fraction_of_unfrozen_soil_moisture_for_land_surface_model`: Volume fraction of unfrozen soil moisture for land surface model
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `lwe_thickness_of_surface_snow_amount`: Lwe thickness of surface snow amount
     * `real(kind=kind_phys)`: units = mm
 * `water_storage_in_aquifer`: Water storage in aquifer
@@ -1827,7 +1827,7 @@ Variables related to the compute environment
 * `cumulative_surface_y_momentum_flux_for_coupling_multiplied_by_timestep`: Cumulative surface y momentum flux for coupling multiplied by timestep
     * `real(kind=kind_phys)`: units = Pa s
 * `cellular_automata_area_fraction_for_deep_convection_from_coupled_process`: Cellular automata area fraction for deep convection from coupled process
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `atmosphere_heat_diffusivity_for_chemistry_coupling`: Atmosphere heat diffusivity for chemistry coupling
     * `real(kind=kind_phys)`: units = m2 s-1
 * `specific_humidity_at_2m_for_coupling`: Specific humidity at 2m for coupling
@@ -1909,9 +1909,9 @@ Variables related to the compute environment
 * `surface_net_downwelling_shortwave_flux_on_radiation_timestep`: Surface net downwelling shortwave flux on radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
 * `surface_nir_albedo_diffuse_rad_for_coupling`: Surface nir albedo diffuse rad for coupling
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_nir_albedo_direct_rad_for_coupling`: Surface nir albedo direct rad for coupling
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `lwe_surface_snow_from_coupled_process`: Lwe surface snow from coupled process
     * `real(kind=kind_phys)`: units = m
 * `surface_upward_latent_heat_flux_from_coupled_process`: Surface upward latent heat flux from coupled process
@@ -1931,9 +1931,9 @@ Variables related to the compute environment
 * `surface_upwelling_longwave_flux_on_radiation_timestep`: Surface upwelling longwave flux on radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
 * `surface_vis_albedo_diffuse_rad_for_coupling`: Surface vis albedo diffuse rad for coupling
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_vis_albedo_direct_rad_for_coupling`: Surface vis albedo direct rad for coupling
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_x_momentum_flux_from_coupled_process`: Surface x momentum flux from coupled process
     * `real(kind=kind_phys)`: units = Pa
 * `surface_y_momentum_flux_from_coupled_process`: Surface y momentum flux from coupled process
@@ -1945,7 +1945,7 @@ Variables related to the compute environment
 * `updated_tendency_of_air_temperature_due_to_longwave_heating_on_physics_timestep`: Updated tendency of air temperature due to longwave heating on physics timestep
     * `real(kind=kind_phys)`: units = K s-1
 * `cellular_automata_vertical_weight`: Cellular automata vertical weight
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `shum_weights_from_coupled_process`: Shum weights from coupled process
     * `real(kind=kind_phys)`: units = 1
 * `skeb_x_wind_weights_from_coupled_process`: Skeb x wind weights from coupled process
@@ -2009,7 +2009,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = m s-1
 ## GFS_typedefs_GFS_cldprop_type
 * `convective_cloud_area_fraction_between_sw_radiation_calls_from_cnvc90`: Convective cloud area fraction between sw radiation calls from cnvc90
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `pressure_at_convective_cloud_base_between_sw_radiation_calls_from_cnvc90`: Pressure at convective cloud base between sw radiation calls from cnvc90
     * `real(kind=kind_phys)`: units = Pa
 * `pressure_at_convective_cloud_top_between_sw_radiation_calls_from_cnvc90`: Pressure at convective cloud top between sw radiation calls from cnvc90
@@ -2022,9 +2022,9 @@ Variables related to the compute environment
 * `surface_lw_fluxes_assuming_total_and_clear_sky_on_radiation_timestep`: Surface lw fluxes assuming total and clear sky on radiation timestep
     * `sfcflw_type(kind=)`: units = W m-2
 * `surface_albedo_for_diffused_shortwave_on_radiation_timestep`: Surface albedo for diffused shortwave on radiation timestep
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `surface_longwave_emissivity`: Surface longwave emissivity
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `air_temperature_at_surface_adjacent_layer_on_radiation_timestep`: Air temperature at surface adjacent layer on radiation timestep
     * `real(kind=kind_phys)`: units = K
 * `surface_sw_fluxes_assuming_total_and_clear_sky_on_radiation_timestep`: Surface sw fluxes assuming total and clear sky on radiation timestep
@@ -2100,7 +2100,7 @@ Variables related to the compute environment
 * `mass_number_concentration_of_cloud_liquid_water_particles_in_air_of_new_state`: Mass number concentration of cloud liquid water particles in air of new state
     * `real(kind=kind_phys)`: units = kg-1
 * `nonconvective_cloud_area_fraction_in_atmosphere_layer_of_new_state`: Nonconvective cloud area fraction in atmosphere layer of new state
-    * `real(kind=kind_phys)`: units = frac
+    * `real(kind=kind_phys)`: units = fraction
 * `graupel_mixing_ratio_wrt_moist_air_of_new_state`: Graupel mixing ratio wrt moist air of new state
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_graupel_of_new_state`: Mass number concentration of graupel of new state
