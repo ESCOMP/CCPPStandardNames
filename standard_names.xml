@@ -246,16 +246,16 @@
     <standard_name name="potentially_advected_quantities">
       <type kind="kind_phys" units="various">real</type>
     </standard_name>
-    <standard_name name="air_pressure_at_all_interfaces">
+    <standard_name name="air_pressure_at_interfaces">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="air_pressure_of_dry_air_at_all_interfaces">
+    <standard_name name="air_pressure_of_dry_air_at_interfaces">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="ln_air_pressure_at_all_interfaces">
+    <standard_name name="ln_air_pressure_at_interfaces">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
-    <standard_name name="ln_air_pressure_of_dry_air_at_all_interfaces">
+    <standard_name name="ln_air_pressure_of_dry_air_at_interfaces">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="air_pressure_extended_up_by_1">
@@ -275,7 +275,7 @@
               long_name="Logging setting for negative constituent mass fixer">
       <type kind="len=*" units="1">character</type>
     </standard_name>
-    <standard_name name="geopotential_height_at_all_interfaces">
+    <standard_name name="geopotential_height_at_interfaces">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
     <standard_name name="vertically_integrated_total_energy_of_initial_state">
@@ -3025,7 +3025,7 @@
       <standard_name name="dimensionless_exner_function_at_surface_adjacent_layer">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
-      <standard_name name="dimensionless_exner_function_at_all_interfaces">
+      <standard_name name="dimensionless_exner_function_at_interfaces">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="dissipation_estimate_of_air_temperature_at_model_layers">
@@ -3034,7 +3034,7 @@
       <standard_name name="geopotential">
          <type kind="kind_phys" units="m2 s-2">real</type>
       </standard_name>
-      <standard_name name="geopotential_at_all_interfaces">
+      <standard_name name="geopotential_at_interfaces">
          <type kind="kind_phys" units="m2 s-2">real</type>
       </standard_name>
       <standard_name name="graupel_mixing_ratio_wrt_moist_air">

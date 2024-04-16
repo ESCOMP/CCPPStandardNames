@@ -162,13 +162,13 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m
 * `potentially_advected_quantities`: Potentially advected quantities
     * `real(kind=kind_phys)`: units = various
-* `air_pressure_at_all_interfaces`: Air pressure at all interfaces
+* `air_pressure_at_interfaces`: Air pressure at interfaces
     * `real(kind=kind_phys)`: units = Pa
-* `air_pressure_of_dry_air_at_all_interfaces`: Air pressure of dry air at all interfaces
+* `air_pressure_of_dry_air_at_interfaces`: Air pressure of dry air at interfaces
     * `real(kind=kind_phys)`: units = Pa
-* `ln_air_pressure_at_all_interfaces`: Ln air pressure at all interfaces
+* `ln_air_pressure_at_interfaces`: Ln air pressure at interfaces
     * `real(kind=kind_phys)`: units = 1
-* `ln_air_pressure_of_dry_air_at_all_interfaces`: Ln air pressure of dry air at all interfaces
+* `ln_air_pressure_of_dry_air_at_interfaces`: Ln air pressure of dry air at interfaces
     * `real(kind=kind_phys)`: units = 1
 * `air_pressure_extended_up_by_1`: Air pressure extended up by 1
     * `real(kind=kind_phys)`: units = Pa
@@ -180,7 +180,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `logical(kind=kind_phys)`: units = flag
 * `control_for_negative_constituent_warning`: Logging setting for negative constituent mass fixer
     * `character(kind=len=*)`: units = 1
-* `geopotential_height_at_all_interfaces`: Geopotential height at all interfaces
+* `geopotential_height_at_interfaces`: Geopotential height at interfaces
     * `real(kind=kind_phys)`: units = m
 * `vertically_integrated_total_energy_of_initial_state`: Vertically integrated total energy of initial state
     * `real(kind=kind_phys)`: units = J m-2
@@ -1955,13 +1955,13 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = 1
 * `dimensionless_exner_function_at_surface_adjacent_layer`: Dimensionless exner function at surface adjacent layer
     * `real(kind=kind_phys)`: units = 1
-* `dimensionless_exner_function_at_all_interfaces`: Dimensionless exner function at all interfaces
+* `dimensionless_exner_function_at_interfaces`: Dimensionless exner function at interfaces
     * `real(kind=kind_phys)`: units = 1
 * `dissipation_estimate_of_air_temperature_at_model_layers`: Dissipation estimate of air temperature at model layers
     * `real(kind=kind_phys)`: units = K
 * `geopotential`: Geopotential
     * `real(kind=kind_phys)`: units = m2 s-2
-* `geopotential_at_all_interfaces`: Geopotential at all interfaces
+* `geopotential_at_interfaces`: Geopotential at interfaces
     * `real(kind=kind_phys)`: units = m2 s-2
 * `graupel_mixing_ratio_wrt_moist_air`: Graupel mixing ratio wrt moist air
     * `real(kind=kind_phys)`: units = kg kg-1
