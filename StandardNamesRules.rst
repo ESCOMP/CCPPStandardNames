@@ -53,9 +53,27 @@ CCPP Standard Name Rules
 
 #. By default (when not specified otherwise), variables are grid means or centers
    (defined by the host). If a variable is defined at a different physical location,
-   a qualifier should be used to denote this. For example, for variables
-   representing quantities at the interface between grid cells vertically,
-   use at_interface.
+   a qualifier should be used to denote this. For example, to specify the vertical
+   location of a variable with respect to vertical grid cells, the following variants
+   are possible:
+
+   * ``[variable]``, with no location suffix, is defined at vertical-cell centers or
+     as vertical-cell averages.
+
+   * ``[variable]_at_interfaces`` is defined at the interfaces between grid cells
+     vertically, including the bottom-most and top-most interfaces.
+   * ``[variable]_at_top_interfaces`` is defined at the interfaces between grid cells
+     vertically, including the top-most interface *but excluding the bottom-most
+     interface*.
+
+   * ``[variable]_at_bottom_interfaces`` is defined at the interfaces between grid
+     cells vertically, including the bottom-most interface *but excluding the
+     top-most interface*.
+
+   This implies that if ``[variable]`` is defined on `n` points vertically,
+   ``[variable]_at_interfaces`` is defined on `n+1` points,
+   ``[variable]_at_top_interfaces`` is defined on `n` points, and
+   ``[variable]_at_bottom_interfaces`` is defined on `n` points.
 
 #. By default, *mixing_ratio* refers to mass mixing ratios. The long name should
    explicitly specify that it refers to the *mass* mixing ratio.
@@ -152,7 +170,7 @@ Suffixes
 | at_top_of_atmosphere_boundary_layer
 | at_top_of_atmosphere_model
 | at_top_of_dry_convection
-| **at_interface**
+| **at_interfaces**
 | **at_surface_adjacent_layer**
 | **at_2m**
 | **at_10m**
@@ -569,24 +587,26 @@ Units
 
 #. For dimensionless variables, the following units can be used:
 
-+------------------------+-------------------------------------------------------------------------------------+
-| **Unit**               |  **Use case**                                                                       |
-+========================+=====================================================================================+
-| count                  | integers that describe the dimension/length of an array                             |
-+------------------------+-------------------------------------------------------------------------------------+
-| flag                   | logicals/booleans that can be either true or false                                  |
-+------------------------+-------------------------------------------------------------------------------------+
-| index                  | integers that can be an index in an array                                           |
-+------------------------+-------------------------------------------------------------------------------------+
-| kg kg-1                | mass mixing ratios                                                                  |
-+------------------------+-------------------------------------------------------------------------------------+
-| m3 m-3                 | volume fraction (e.g. for soil moisture)                                            |
-+------------------------+-------------------------------------------------------------------------------------+
-| mol mol-1              | molar mixing ratios (also volumetric mixing ratio for gases)                        |
-+------------------------+-------------------------------------------------------------------------------------+
-| none                   | strings and character arrays                                                        |
-+------------------------+-------------------------------------------------------------------------------------+
-| 1                      | any number (integer, real, complex), e.g. fractions, scaling factors, ...           |
-+------------------------+-------------------------------------------------------------------------------------+
-| percent                | fractions etc. expressed in percent, ranging from 0 to 100%                         |
-+------------------------+-------------------------------------------------------------------------------------+
++------------------------+-----------------------------------------------------------------------------------------------+
+| **Unit**               |  **Use case**                                                                                 |
++========================+===============================================================================================+
+| count                  | integers that describe the dimension/length of an array                                       |
++------------------------+-----------------------------------------------------------------------------------------------+
+| flag                   | logicals/booleans that can be either true or false                                            |
++------------------------+-----------------------------------------------------------------------------------------------+
+| index                  | integers that can be an index in an array                                                     |
++------------------------+-----------------------------------------------------------------------------------------------+
+| kg kg-1                | mass mixing ratios                                                                            |
++------------------------+-----------------------------------------------------------------------------------------------+
+| m3 m-3                 | volume fraction (e.g. for soil moisture)                                                      |
++------------------------+-----------------------------------------------------------------------------------------------+
+| mol mol-1              | molar mixing ratios (also volumetric mixing ratio for gases)                                  |
++------------------------+-----------------------------------------------------------------------------------------------+
+| none                   | strings and character arrays                                                                  |
++------------------------+-----------------------------------------------------------------------------------------------+
+| fraction               | fractions not listed above, typically valid in the range [0,1]                                |
++------------------------+-----------------------------------------------------------------------------------------------+
+| percent                | fractions expressed in percent, typically ranging from 0% to 100%                             |
++------------------------+-----------------------------------------------------------------------------------------------+
+| 1                      | any number (integer, real, complex) not listed above, e.g. scaling factors, error codes, etc. |
++------------------------+-----------------------------------------------------------------------------------------------+
