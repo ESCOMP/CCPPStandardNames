@@ -3,23 +3,19 @@
 
 # These owners will be the default owners for everything in the repo.
 
-*       @cacraigucar    # NCAR/CGD
-*       @climbfuji      # NRL
-*       @dustinswales   # NOAA/GSL
-*       @gold2718       # Norway MET
-*       @grantfirl      # NOAA/GSL
-*       @mattldawson    # NCAR/ACOM
-*       @mkavulich      # DTC
-*       @mwaxmonsky     # NCAR/CGD
-*       @nusbaume       # NCAR/CGD
-*       @peverwhee      # NCAR/CGD
-*       @svahl991       # JCSDA
-
-# Add codeowners for these organizations or remove comments before merging PR:
-# UKMO     ?
-# NOAA/EMC ?
-# NCAR/MMM ?
-# ...      ?
+*       @cacraigucar      # NCAR/CGD
+*       @climbfuji        # NRL
+*       @dustinswales     # NOAA/GSL
+*       @gold2718         # Norway MET
+*       @grantfirl        # NOAA/GSL
+*       @mattldawson      # NCAR/ACOM
+*       @mkavulich        # DTC
+*       @mwaxmonsky       # NCAR/CGD
+*       @nusbaume         # NCAR/CGD
+*       @peverwhee        # NCAR/CGD
+*       @svahl991         # JCSDA
+*       @MayeulDestouches # UKMO
+*       @ss421            # UKMO
 
 # Order is important. The last matching pattern has the most precedence.
 # So if a pull request only touches javascript files, only these owners
