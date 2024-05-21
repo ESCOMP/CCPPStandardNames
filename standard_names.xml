@@ -519,7 +519,7 @@
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="cloud_ice_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces"
-                   long_name="Ratio of the mass of ice to the mass of moist air and condensed water">
+                   long_name="Ratio of the mass of ice to the mass of moist air and condensed water at all interfaces excluding surface">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="cloud_ice_mixing_ratio_wrt_dry_air"
