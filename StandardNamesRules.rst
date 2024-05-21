@@ -85,6 +85,8 @@ CCPP Standard Name Rules
    be avoided as there is no consensus on whether it refers to
    *mixing_ratio_of_water_vapor_wrt_moist_air* or
    *mixing_ratio_of_water_vapor_wrt_moist_air_and_condensed_water*.
+   *total_water* can be used to designate water in every form, i.e. water
+   vapor plus condensed water.
 
 #. Volume mixing ratios should be qualified as *volume_mixing_ratio*.
 
