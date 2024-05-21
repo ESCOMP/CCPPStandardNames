@@ -314,7 +314,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg kg-1
 * `cloud_ice_mixing_ratio_wrt_moist_air_and_condensed_water`: Ratio of the mass of ice to the mass of moist air and condensed water
     * `real(kind=kind_phys)`: units = kg kg-1
-* `cloud_ice_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces`: Ratio of the mass of ice to the mass of moist air and condensed water
+* `cloud_ice_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces`: Ratio of the mass of ice to the mass of moist air and condensed water at all interfaces excluding surface
     * `real(kind=kind_phys)`: units = kg kg-1
 * `cloud_ice_mixing_ratio_wrt_dry_air`: Ratio of the mass of ice to the mass of dry air
     * `real(kind=kind_phys)`: units = kg kg-1
