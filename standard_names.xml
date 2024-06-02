@@ -406,6 +406,18 @@
     <standard_name name="mass_content_of_cloud_liquid_water_in_atmosphere_layer">
       <type kind="kind_phys" units="kg m-2">real</type>
     </standard_name>
+    <standard_name name="mass_content_of_rain_in_atmosphere_layer">
+      <type kind="kind_phys" units="kg m-2">real</type>
+    </standard_name>
+    <standard_name name="mass_content_of_snow_in_atmosphere_layer">
+      <type kind="kind_phys" units="kg m-2">real</type>
+    </standard_name>
+    <standard_name name="mass_content_of_graupel_in_atmosphere_layer">
+      <type kind="kind_phys" units="kg m-2">real</type>
+    </standard_name>
+    <standard_name name="mass_content_of_hail_in_atmosphere_layer">
+      <type kind="kind_phys" units="kg m-2">real</type>
+    </standard_name>
     <standard_name
         name="nonconvective_cloud_area_fraction_in_atmosphere_layer"
         long_name="cloud area fraction in atmosphere layer excluding clouds produced by the convective schemes">
@@ -467,6 +479,10 @@
                    long_name="Ratio of the mass of water vapor to the mass of moist air and hydrometeors">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
+    <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces"
+                   long_name="Ratio of the mass of water vapor to the mass of moist air and hydrometeors at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
     <standard_name name="mole_fraction_of_water_vapor">
       <type kind="kind_phys" units="mol mol-1">real</type>
     </standard_name>
@@ -474,8 +490,16 @@
                    long_name="Ratio of the mass of water vapor to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
+    <standard_name name="water_vapor_mixing_ratio_wrt_dry_air_at_top_interfaces"
+                   long_name="Ratio of the mass of water vapor to the mass of dry air at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
     <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air_and_condensed_water"
                    long_name="Ratio of the mass of liquid water to the mass of moist air and condensed water">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces"
+                   long_name="Ratio of the mass of liquid water to the mass of moist air and condensed water at all interfaces excluding surface">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="cloud_liquid_water_mixing_ratio_wrt_moist_air"
@@ -486,12 +510,32 @@
                    long_name="Ratio of the mass of liquid water to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
+    <standard_name name="cloud_liquid_water_mixing_ratio_wrt_dry_air_at_top_interfaces"
+                   long_name="Ratio of the mass of liquid water to the mass of dry air at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="cloud_ice_mixing_ratio_wrt_moist_air_and_condensed_water"
+                   long_name="Ratio of the mass of ice to the mass of moist air and condensed water">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="cloud_ice_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces"
+                   long_name="Ratio of the mass of ice to the mass of moist air and condensed water at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
     <standard_name name="cloud_ice_mixing_ratio_wrt_dry_air"
                    long_name="Ratio of the mass of ice to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
+    <standard_name name="cloud_ice_mixing_ratio_wrt_dry_air_at_top_interfaces"
+                   long_name="Ratio of the mass of ice to the mass of dry air at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
     <standard_name name="rain_mixing_ratio_wrt_moist_air_and_condensed_water"
                    long_name="ratio of the mass of rain to the mass of moist air and condensed water">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="rain_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces"
+                   long_name="ratio of the mass of rain to the mass of moist air and condensed water at all interfaces excluding surface">
       <type kind="kind_phys" units="kg kg-1">real</type>
     </standard_name>
     <standard_name name="rain_mixing_ratio_wrt_moist_air"
@@ -501,6 +545,42 @@
     <standard_name name="rain_mixing_ratio_wrt_dry_air"
                    long_name="ratio of the mass of rain to the mass of dry air">
       <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="rain_mixing_ratio_wrt_dry_air_at_top_interfaces"
+                   long_name="ratio of the mass of rain to the mass of dry air at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="total_water_mixing_ratio_wrt_moist_air_and_condensed_water"
+                   long_name="ratio of the mass of water to the mass of moist air and condensed water">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="total_water_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces"
+                   long_name="ratio of the mass of water to the mass of moist air and condensed water at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="total_water_mixing_ratio_wrt_dry_air"
+                   long_name="ratio of the mass of water to the mass of dry air">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="total_water_mixing_ratio_wrt_dry_air_at_top_interfaces"
+                   long_name="ratio of the mass of water to the mass of dry air at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_assuming_saturation"
+                   long_name="saturated water vapor mixing ratio with respect to moist air and condensed water">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_top_interfaces_assuming_saturation"
+                   long_name="saturated water vapor mixing ratio with respect to moist air and condensed water at all interfaces excluding surface">
+      <type kind="kind_phys" units="kg kg-1">real</type>
+    </standard_name>
+    <standard_name name="derivative_of_ln_water_vapor_partial_pressure_assuming_saturation_wrt_air_temperature"
+                   long_name="log derivative of the water vapor partial pressure at saturation with respect to air temperature">
+      <type kind="kind_phys" units="K-1">real</type>
+    </standard_name>
+    <standard_name name="derivative_of_ln_water_vapor_partial_pressure_assuming_saturation_wrt_air_temperature_at_top_interfaces"
+                   long_name="log derivative of the water vapor partial pressure at saturation with respect to air temperature at all interfaces excluding surface">
+      <type kind="kind_phys" units="K-1">real</type>
     </standard_name>
     <standard_name name="mole_fraction_of_ozone_in_air">
       <type kind="kind_phys" units="mol mol-1">real</type>
