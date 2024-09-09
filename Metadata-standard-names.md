@@ -277,6 +277,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = fraction
 * `relative_humidity`: Relative humidity
     * `real(kind=kind_phys)`: units = fraction
+* `relative_humidity_at_2m`: Relative humidity at 2m
+    * `real(kind=kind_phys)`: units = fraction
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
 ## land_surface

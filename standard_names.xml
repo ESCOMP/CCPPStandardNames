@@ -450,6 +450,9 @@
     <standard_name name="relative_humidity">
       <type kind="kind_phys" units="fraction">real</type>
     </standard_name>
+    <standard_name name="relative_humidity_at_2m">
+      <type kind="kind_phys" units="fraction">real</type>
+    </standard_name>
     <standard_name name="gravitational_acceleration">
       <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
