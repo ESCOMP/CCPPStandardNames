@@ -408,6 +408,10 @@
                    long_name="virtual temperature">
       <type kind="kind_phys" units="K">real</type>
     </standard_name>
+    <standard_name name="virtual_potential_temperature"
+                   long_name="virtual potential temperature">
+      <type kind="kind_phys" units="K">real</type>
+    </standard_name>
     <standard_name name="composition_dependent_gas_constant_of_dry_air">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
     </standard_name>
