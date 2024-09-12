@@ -42,7 +42,7 @@ CCPP Standard Name Rules
    words or phrases to be substituted. The new standard name is constructed by
    joining the base standard name to the qualifiers using underscores.
 
-   [``surface``] [``component``] standard_name [*at* ``surface``] [*in* ``medium``]
+   [``component``] standard_name [*at* ``level``] [*in* ``medium``]
    [*due_to* ``process``] [*assuming* ``condition``]
 
    See the list of currently-used qualifiers below for help.
@@ -152,9 +152,9 @@ XY-surface
 Prefixes
 ^^^^^^^^
 
-| toa
-| tropopause
-| surface
+None. Note that this is a departure from the CF conventions, which use
+surface_ as a prefix. This is to maintain consistency with all other
+level qualifiers that are used as _at_level-qualifier as suffix.
 
 Suffixes
 ^^^^^^^^
@@ -173,6 +173,9 @@ Suffixes
 | at_top_of_atmosphere_model
 | at_top_of_dry_convection
 | **at_interfaces**
+| **at_toa**
+| **at_tropopause**
+| **at_surface**
 | **at_surface_adjacent_layer**
 | **at_2m**
 | **at_10m**
