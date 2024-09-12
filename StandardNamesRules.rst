@@ -154,7 +154,7 @@ Prefixes
 
 None. Note that this is a departure from the CF conventions, which use
 surface_ as a prefix. This is to maintain consistency with all other
-level qualifiers that are used as _at_level-qualifier as suffix.
+level qualifiers that are used as _at_level-qualifier (i.e. as suffix).
 
 Suffixes
 ^^^^^^^^
