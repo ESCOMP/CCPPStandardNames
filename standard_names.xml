@@ -351,7 +351,7 @@
                    long_name="The curl of the vector wind field">
       <type kind="kind_phys" units="s-1">real</type>
     </standard_name>
-    <standard_name name="horizontal_divergence_of_wind"
+    <standard_name name="divergence_of_wind"
                    long_name="The divergence of the vector wind field">
       <type kind="kind_phys" units="s-1">real</type>
     </standard_name>
