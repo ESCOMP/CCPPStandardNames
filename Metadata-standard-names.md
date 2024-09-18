@@ -223,7 +223,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m2 s-1
 * `atmosphere_upward_absolute_vorticity`: The curl of the vector wind field
     * `real(kind=kind_phys)`: units = s-1
-* `divergence_of_wind`: The divergence of the vector wind field
+* `divergence_of_wind`: The (horizontal) divergence of the 2-D vector wind field
     * `real(kind=kind_phys)`: units = s-1
 * `surface_upward_heat_flux_in_air`: Surface upward heat flux in air
     * `real(kind=kind_phys)`: units = W m-2
