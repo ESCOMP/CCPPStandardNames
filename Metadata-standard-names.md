@@ -129,18 +129,10 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-1
 * `northward_wind`: Wind vector component, positive when directed northward
     * `real(kind=kind_phys)`: units = m s-1
-* `surface_eastward_wind`: Surface wind vector component, positive when directed eastward
-    * `real(kind=kind_phys)`: units = m s-1
-* `surface_northward_wind`: Surface wind vector component, positive when directed northward
-    * `real(kind=kind_phys)`: units = m s-1
 * `eastward_wind_at_10m`: Wind vector component at 10m, positive when directed eastward
     * `real(kind=kind_phys)`: units = m s-1
 * `northward_wind_at_10m`: Wind vector component at 10m, positive when directed northward
     * `real(kind=kind_phys)`: units = m s-1
-* `surface_wind_speed`: Scalar wind speed at surface
-    * `real(kind=kind_phys)`: units = m s-1
-* `surface_wind_from_direction`: Direction, from north, of wind speed at surface
-    * `real(kind=kind_phys)`: units = degrees
 * `dry_static_energy`: Dry static energy Content of Atmosphere Layer
     * `real(kind=kind_phys)`: units = J kg-1
 * `do_lagrangian_vertical_coordinate`: flag indicating if vertical coordinate is lagrangian
