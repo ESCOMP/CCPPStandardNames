@@ -347,6 +347,22 @@
                    long_name="Total change in northward wind from a physics suite">
       <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
+    <standard_name name="atmosphere_horizontal_streamfunction"
+                   long_name="Scalar function describing the stream lines of the wind">
+      <type kind="kind_phys" units="m2 s-1">real</type>
+    </standard_name>
+    <standard_name name="atmosphere_horizontal_velocity_potential"
+                   long_name="Scalar potential of the wind">
+      <type kind="kind_phys" units="m2 s-1">real</type>
+    </standard_name>
+    <standard_name name="atmosphere_upward_absolute_vorticity"
+                   long_name="The curl of the vector wind field">
+      <type kind="kind_phys" units="s-1">real</type>
+    </standard_name>
+    <standard_name name="divergence_of_wind"
+                   long_name="The (horizontal) divergence of the 2-D vector wind field">
+      <type kind="kind_phys" units="s-1">real</type>
+    </standard_name>
     <standard_name name="surface_upward_heat_flux_in_air">
       <type kind="kind_phys" units="W m-2">real</type>
     </standard_name>
