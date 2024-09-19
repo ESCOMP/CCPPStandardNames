@@ -185,6 +185,14 @@
                    long_name="Wind vector component, positive when directed northward">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
+    <standard_name name="eastward_wind_at_10m"
+                   long_name="Wind vector component at 10m, positive when directed eastward">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
+    <standard_name name="northward_wind_at_10m"
+                   long_name="Wind vector component at 10m, positive when directed northward">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
     <standard_name name="dry_static_energy"
                    long_name="Dry static energy Content of Atmosphere Layer">
       <type kind="kind_phys" units="J kg-1">real</type>
@@ -400,6 +408,10 @@
                    long_name="virtual temperature">
       <type kind="kind_phys" units="K">real</type>
     </standard_name>
+    <standard_name name="virtual_potential_temperature"
+                   long_name="virtual potential temperature">
+      <type kind="kind_phys" units="K">real</type>
+    </standard_name>
     <standard_name name="composition_dependent_gas_constant_of_dry_air">
       <type kind="kind_phys" units="J kg-1 K-1">real</type>
     </standard_name>
@@ -440,6 +452,9 @@
       <type kind="kind_phys" units="fraction">real</type>
     </standard_name>
     <standard_name name="relative_humidity">
+      <type kind="kind_phys" units="fraction">real</type>
+    </standard_name>
+    <standard_name name="relative_humidity_at_2m">
       <type kind="kind_phys" units="fraction">real</type>
     </standard_name>
     <standard_name name="gravitational_acceleration">
