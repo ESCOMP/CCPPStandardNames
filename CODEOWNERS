@@ -3,19 +3,7 @@
 
 # These owners will be the default owners for everything in the repo.
 
-*       @cacraigucar      # NCAR/CGD
-*       @climbfuji        # NRL
-*       @dustinswales     # NOAA/GSL
-*       @gold2718         # Norway MET
-*       @grantfirl        # NOAA/GSL
-*       @mattldawson      # NCAR/ACOM
-*       @mkavulich        # DTC
-*       @mwaxmonsky       # NCAR/CGD
-*       @nusbaume         # NCAR/CGD
-*       @peverwhee        # NCAR/CGD
-*       @svahl991         # JCSDA
-*       @MayeulDestouches # UKMO
-*       @ss421            # UKMO
+*       @cacraigucar @climbfuji @dustinswales @gold2718 @grantfirl @mattldawson @mkavulich @mwaxmonsky @nusbaume @peverwhee @svahl991 @MayeulDestouches @ss421
 
 # Order is important. The last matching pattern has the most precedence.
 # So if a pull request only touches javascript files, only these owners
