@@ -129,6 +129,10 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-1
 * `northward_wind`: Wind vector component, positive when directed northward
     * `real(kind=kind_phys)`: units = m s-1
+* `eastward_wind_at_10m`: Wind vector component at 10m, positive when directed eastward
+    * `real(kind=kind_phys)`: units = m s-1
+* `northward_wind_at_10m`: Wind vector component at 10m, positive when directed northward
+    * `real(kind=kind_phys)`: units = m s-1
 * `dry_static_energy`: Dry static energy Content of Atmosphere Layer
     * `real(kind=kind_phys)`: units = J kg-1
 * `do_lagrangian_vertical_coordinate`: flag indicating if vertical coordinate is lagrangian
@@ -217,6 +221,14 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-2
 * `tendency_of_northward_wind_due_to_model_physics`: Total change in northward wind from a physics suite
     * `real(kind=kind_phys)`: units = m s-2
+* `atmosphere_horizontal_streamfunction`: Scalar function describing the stream lines of the wind
+    * `real(kind=kind_phys)`: units = m2 s-1
+* `atmosphere_horizontal_velocity_potential`: Scalar potential of the wind
+    * `real(kind=kind_phys)`: units = m2 s-1
+* `atmosphere_upward_absolute_vorticity`: The curl of the vector wind field
+    * `real(kind=kind_phys)`: units = s-1
+* `divergence_of_wind`: The (horizontal) divergence of the 2-D vector wind field
+    * `real(kind=kind_phys)`: units = s-1
 * `surface_upward_heat_flux_in_air`: Surface upward heat flux in air
     * `real(kind=kind_phys)`: units = W m-2
 * `cumulative_boundary_flux_of_total_energy`: Cumulative boundary flux of total energy
@@ -241,6 +253,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = K
 * `virtual_temperature`: virtual temperature
     * `real(kind=kind_phys)`: units = K
+* `virtual_potential_temperature`: virtual potential temperature
+    * `real(kind=kind_phys)`: units = K
 * `composition_dependent_gas_constant_of_dry_air`: Composition dependent gas constant of dry air
     * `real(kind=kind_phys)`: units = J kg-1 K-1
 * `composition_dependent_specific_heat_of_dry_air_at_constant_pressure`: composition dependent specific heat of dry air at constant pressure
@@ -264,6 +278,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `nonconvective_cloud_area_fraction_in_atmosphere_layer`: cloud area fraction in atmosphere layer excluding clouds produced by the convective schemes
     * `real(kind=kind_phys)`: units = fraction
 * `relative_humidity`: Relative humidity
+    * `real(kind=kind_phys)`: units = fraction
+* `relative_humidity_at_2m`: Relative humidity at 2m
     * `real(kind=kind_phys)`: units = fraction
 * `gravitational_acceleration`: Gravitational acceleration
     * `real(kind=kind_phys)`: units = m s-2
