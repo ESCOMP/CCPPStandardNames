@@ -192,6 +192,14 @@
     <standard_name name="northward_wind_at_10m"
                    long_name="Wind vector component at 10m, positive when directed northward">
       <type kind="kind_phys" units="m s-1">real</type>
+    <standard_name name="eastward_wind_at_surface"
+                   long_name="Wind vector component at surface, positive when directed eastward">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
+    <standard_name name="northward_wind_at_surface"
+                   long_name="Wind vector component at surface, positive when directed northward">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
     </standard_name>
        <standard_name name="wind_speed_at_surface"
                    long_name="Scalar wind speed at surface">
