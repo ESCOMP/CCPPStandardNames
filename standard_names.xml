@@ -193,6 +193,14 @@
                    long_name="Wind vector component at 10m, positive when directed northward">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
+       <standard_name name="wind_speed_at_surface"
+                   long_name="Scalar wind speed at surface">
+      <type kind="kind_phys" units="m s-1">real</type>
+    </standard_name>
+    <standard_name name="wind_from_direction_at_surface"
+                   long_name="Direction, from north, of wind speed at surface">
+      <type kind="kind_phys" units="degrees">real</type>
+    </standard_name>
     <standard_name name="dry_static_energy"
                    long_name="Dry static energy Content of Atmosphere Layer">
       <type kind="kind_phys" units="J kg-1">real</type>
