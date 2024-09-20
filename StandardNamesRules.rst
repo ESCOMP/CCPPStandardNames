@@ -24,9 +24,10 @@ CCPP Standard Name Rules
 #. Standard names should be identical to those from the latest version
    of the `Climate and Forecast (CF) metadata
    conventions <https://cfconventions.org/standard-names.html>`_ unless
-   an appropriate name does not exist in that standard.
+   an appropriate name does not exist in that standard, or the adoption
+   of said names leads to inconsistencies in the naming convention.
 
-#. When a standard name doesn’t exist in the CF conventions, follow their
+#. When no suitable standard name exists in the CF conventions, follow their
    guidelines for standard name construction at this URL:
    http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html. Standard
    names may be qualified by the addition of phrases in certain standard forms and
@@ -152,9 +153,10 @@ XY-surface
 Prefixes
 ^^^^^^^^
 
-None. Note that this is a departure from the CF conventions, which use
-surface_ as a prefix. This is to maintain consistency with all other
-level qualifiers that are used as _at_level-qualifier (i.e. as suffix).
+None. Note that this is a departure from the CF conventions, which in
+many cases - but not all - use surface_ as a prefix. This departure from
+the CF convention is to maintain consistency with all other level
+qualifiers that are used as _at_level-qualifier (i.e. as suffix).
 
 Suffixes
 ^^^^^^^^
