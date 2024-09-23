@@ -243,6 +243,10 @@
                    long_name="geopotential height w.r.t. sea level">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
+    <standard_name name="geopotential_height_at_surface"
+                   long_name="geopotential height at local surface">
+      <type kind="kind_phys" units="m">real</type>
+    </standard_name>
     <standard_name name="geopotential_height_wrt_surface"
                    long_name="geopotential height w.r.t. local surface">
       <type kind="kind_phys" units="m">real</type>

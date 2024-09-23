@@ -161,6 +161,8 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `geopotential_height`: geopotential height w.r.t. sea level
     * `real(kind=kind_phys)`: units = m
+* `geopotential_height_at_surface`: geopotential height at local surface
+    * `real(kind=kind_phys)`: units = m
 * `geopotential_height_wrt_surface`: geopotential height w.r.t. local surface
     * `real(kind=kind_phys)`: units = m
 * `geopotential_height_wrt_surface_at_interface`: geopotential height w.r.t. local surface at interface
