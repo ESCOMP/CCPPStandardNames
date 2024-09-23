@@ -1661,6 +1661,8 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = m
 * `height_above_mean_sea_level`: Height above mean sea level
     * `real(kind=kind_phys)`: units = m
+* `height_above_mean_sea_level_at_surface`: Height above mean sea level at local surface
+    * `real(kind=kind_phys)`: units = m
 * `unfiltered_height_above_mean_sea_level`: Unfiltered height above mean sea level
     * `real(kind=kind_phys)`: units = m
 * `air_potential_temperature_at_2m`: Air potential temperature at 2m

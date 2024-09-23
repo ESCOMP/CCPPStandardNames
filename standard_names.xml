@@ -2611,6 +2611,10 @@
       <standard_name name="height_above_mean_sea_level">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
+      <standard_name name="height_above_mean_sea_level_at_surface"
+                     long_name="height above mean sea level at local surface">
+         <type kind="kind_phys" units="m">real</type>
+      </standard_name>
       <standard_name name="unfiltered_height_above_mean_sea_level">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
