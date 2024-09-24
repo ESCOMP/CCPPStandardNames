@@ -111,7 +111,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = Pa
 * `air_pressure_at_sea_level`: Air pressure at sea level
     * `real(kind=kind_phys)`: units = Pa
-* `air_pressure_at_surface`: Air pressure at local surface
+* `air_pressure_at_surface`: Air pressure at surface
     * `real(kind=kind_phys)`: units = Pa
 * `surface_pressure_of_dry_air`: Surface pressure of dry air
     * `real(kind=kind_phys)`: units = Pa
@@ -1661,7 +1661,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = m
 * `height_above_mean_sea_level`: Height above mean sea level
     * `real(kind=kind_phys)`: units = m
-* `height_above_mean_sea_level_at_surface`: Height above mean sea level at local surface
+* `height_above_mean_sea_level_at_surface`: height above mean sea level at local surface
     * `real(kind=kind_phys)`: units = m
 * `unfiltered_height_above_mean_sea_level`: Unfiltered height above mean sea level
     * `real(kind=kind_phys)`: units = m
