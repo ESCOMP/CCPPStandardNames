@@ -194,19 +194,19 @@
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
     <standard_name name="eastward_wind_at_surface"
-                   long_name="Wind vector component at surface, positive when directed eastward">
+                   long_name="Wind vector component closest to surface, positive when directed eastward">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
     <standard_name name="northward_wind_at_surface"
-                   long_name="Wind vector component at surface, positive when directed northward">
+                   long_name="Wind vector component closest to surface, positive when directed northward">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
     <standard_name name="wind_speed_at_surface"
-                   long_name="Scalar wind speed at surface">
+                   long_name="Scalar wind speed closest to surface">
       <type kind="kind_phys" units="m s-1">real</type>
     </standard_name>
     <standard_name name="wind_from_direction_at_surface"
-                   long_name="Direction, from north, of wind speed at surface">
+                   long_name="Direction, from north, of wind speed closest to surface">
       <type kind="kind_phys" units="degrees">real</type>
     </standard_name>
     <standard_name name="dry_static_energy"
