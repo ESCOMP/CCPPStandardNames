@@ -154,7 +154,8 @@
     <standard_name name="air_pressure_at_sea_level">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="air_pressure_at_surface">
+    <standard_name name="air_pressure_at_surface"
+                   long_name="Air pressure at local surface">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
     <standard_name name="surface_pressure_of_dry_air">
@@ -244,7 +245,7 @@
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
     <standard_name name="geopotential_height_at_surface"
-                   long_name="geopotential height at local surface">
+                   long_name="Geopotential height at local surface w.r.t. sea level">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
     <standard_name name="geopotential_height_wrt_surface"
@@ -2612,7 +2613,7 @@
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
       <standard_name name="height_above_mean_sea_level_at_surface"
-                     long_name="height above mean sea level at local surface">
+                     long_name="Height above mean sea level at local surface">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
       <standard_name name="unfiltered_height_above_mean_sea_level">
