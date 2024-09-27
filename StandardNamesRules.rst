@@ -24,9 +24,10 @@ CCPP Standard Name Rules
 #. Standard names should be identical to those from the latest version
    of the `Climate and Forecast (CF) metadata
    conventions <https://cfconventions.org/standard-names.html>`_ unless
-   an appropriate name does not exist in that standard.
+   an appropriate name does not exist in that standard, or the adoption
+   of said names leads to inconsistencies in the naming convention.
 
-#. When a standard name doesn’t exist in the CF conventions, follow their
+#. When no suitable standard name exists in the CF conventions, follow their
    guidelines for standard name construction at this URL:
    http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html. Standard
    names may be qualified by the addition of phrases in certain standard forms and
@@ -42,7 +43,7 @@ CCPP Standard Name Rules
    words or phrases to be substituted. The new standard name is constructed by
    joining the base standard name to the qualifiers using underscores.
 
-   [``surface``] [``component``] standard_name [*at* ``surface``] [*in* ``medium``]
+   [``component``] standard_name [*at* ``level``] [*in* ``medium``]
    [*due_to* ``process``] [*assuming* ``condition``]
 
    See the list of currently-used qualifiers below for help.
@@ -152,9 +153,10 @@ XY-surface
 Prefixes
 ^^^^^^^^
 
-| toa
-| tropopause
-| surface
+None. Note that this is a departure from the CF conventions, which in
+many cases - but not all - use surface_ as a prefix. This departure from
+the CF convention is to maintain consistency with all other level
+qualifiers that are used as _at_level-qualifier (i.e. as suffix).
 
 Suffixes
 ^^^^^^^^
@@ -173,6 +175,9 @@ Suffixes
 | at_top_of_atmosphere_model
 | at_top_of_dry_convection
 | **at_interfaces**
+| **at_toa**
+| **at_tropopause**
+| **at_surface**
 | **at_surface_adjacent_layer**
 | **at_2m**
 | **at_10m**
