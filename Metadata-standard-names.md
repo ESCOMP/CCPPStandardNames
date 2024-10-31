@@ -173,7 +173,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m
 * `geopotential_height_wrt_surface`: geopotential height w.r.t. local surface
     * `real(kind=kind_phys)`: units = m
-* `geopotential_height_wrt_surface_at_interface`: geopotential height w.r.t. local surface at interface
+* `geopotential_height_wrt_surface_at_interfaces`: geopotential height w.r.t. local surface at interfaces
     * `real(kind=kind_phys)`: units = m
 * `potentially_advected_quantities`: Potentially advected quantities
     * `real(kind=kind_phys)`: units = various

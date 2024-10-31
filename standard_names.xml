@@ -268,8 +268,8 @@
                    long_name="geopotential height w.r.t. local surface">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
-    <standard_name name="geopotential_height_wrt_surface_at_interface"
-                   long_name="geopotential height w.r.t. local surface at interface">
+    <standard_name name="geopotential_height_wrt_surface_at_interfaces"
+                   long_name="geopotential height w.r.t. local surface at interfaces">
       <type kind="kind_phys" units="m">real</type>
     </standard_name>
     <standard_name name="potentially_advected_quantities">
