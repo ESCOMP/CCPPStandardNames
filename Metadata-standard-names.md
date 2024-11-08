@@ -111,7 +111,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = Pa
 * `air_pressure_at_sea_level`: Air pressure at sea level
     * `real(kind=kind_phys)`: units = Pa
-* `surface_air_pressure`: Surface air pressure
+* `air_pressure_at_surface`: Air pressure at local surface
     * `real(kind=kind_phys)`: units = Pa
 * `surface_pressure_of_dry_air`: Surface pressure of dry air
     * `real(kind=kind_phys)`: units = Pa
@@ -133,6 +133,14 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-1
 * `northward_wind_at_10m`: Wind vector component at 10m, positive when directed northward
     * `real(kind=kind_phys)`: units = m s-1
+* `eastward_wind_at_surface`: Wind vector component closest to surface, positive when directed eastward
+    * `real(kind=kind_phys)`: units = m s-1
+* `northward_wind_at_surface`: Wind vector component closest to surface, positive when directed northward
+    * `real(kind=kind_phys)`: units = m s-1
+* `wind_speed_at_surface`: Scalar wind speed closest to surface
+    * `real(kind=kind_phys)`: units = m s-1
+* `wind_from_direction_at_surface`: Direction, from north, of wind speed closest to surface
+    * `real(kind=kind_phys)`: units = degrees
 * `dry_static_energy`: Dry static energy Content of Atmosphere Layer
     * `real(kind=kind_phys)`: units = J kg-1
 * `do_lagrangian_vertical_coordinate`: flag indicating if vertical coordinate is lagrangian
@@ -161,9 +169,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `geopotential_height`: geopotential height w.r.t. sea level
     * `real(kind=kind_phys)`: units = m
+* `geopotential_height_at_surface`: Geopotential height at local surface w.r.t. sea level
+    * `real(kind=kind_phys)`: units = m
 * `geopotential_height_wrt_surface`: geopotential height w.r.t. local surface
     * `real(kind=kind_phys)`: units = m
-* `geopotential_height_wrt_surface_at_interface`: geopotential height w.r.t. local surface at interface
+* `geopotential_height_wrt_surface_at_interfaces`: geopotential height w.r.t. local surface at interfaces
     * `real(kind=kind_phys)`: units = m
 * `potentially_advected_quantities`: Potentially advected quantities
     * `real(kind=kind_phys)`: units = various
@@ -221,13 +231,13 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-2
 * `tendency_of_northward_wind_due_to_model_physics`: Total change in northward wind from a physics suite
     * `real(kind=kind_phys)`: units = m s-2
-* `atmosphere_horizontal_streamfunction`: Scalar function describing the stream lines of the wind
+* `air_horizontal_streamfunction`: Scalar function describing the stream lines of the wind
     * `real(kind=kind_phys)`: units = m2 s-1
-* `atmosphere_horizontal_velocity_potential`: Scalar potential of the wind
+* `air_horizontal_velocity_potential`: Scalar potential of the wind
     * `real(kind=kind_phys)`: units = m2 s-1
-* `atmosphere_upward_absolute_vorticity`: The curl of the vector wind field
+* `air_upward_absolute_vorticity`: The upward (kth) component of the curl of the vector wind field
     * `real(kind=kind_phys)`: units = s-1
-* `divergence_of_wind`: The (horizontal) divergence of the 2-D vector wind field
+* `air_horizontal_divergence`: The (horizontal) divergence of the 2-D vector wind field
     * `real(kind=kind_phys)`: units = s-1
 * `surface_upward_heat_flux_in_air`: Surface upward heat flux in air
     * `real(kind=kind_phys)`: units = W m-2
@@ -1658,6 +1668,8 @@ Variables related to the compute environment
 * `ocean_mixed_layer_thickness`: Ocean mixed layer thickness
     * `real(kind=kind_phys)`: units = m
 * `height_above_mean_sea_level`: Height above mean sea level
+    * `real(kind=kind_phys)`: units = m
+* `height_above_mean_sea_level_at_surface`: Height above mean sea level at local surface
     * `real(kind=kind_phys)`: units = m
 * `unfiltered_height_above_mean_sea_level`: Unfiltered height above mean sea level
     * `real(kind=kind_phys)`: units = m
