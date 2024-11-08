@@ -1805,7 +1805,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = K
 * `skin_temperature_at_surface_over_land`: Skin temperature at surface over (or where) land
     * `real(kind=kind_phys)`: units = K
-* `skin_temperature_at_surface_over_sea`: Skin temperature at surface over (or where)sea
+* `skin_temperature_at_surface_over_sea`: Skin temperature at surface over (or where) sea
     * `real(kind=kind_phys)`: units = K
 * `skin_temperature_at_surface_over_snow`: Skin temperature at surface over (or where) snow
     * `real(kind=kind_phys)`: units = K
