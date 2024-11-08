@@ -2826,7 +2826,8 @@
       <standard_name name="surface_roughness_length_over_water">
          <type kind="kind_phys" units="cm">real</type>
       </standard_name>
-      <standard_name name="skin_temperature_at_surface">
+      <standard_name name="skin_temperature_at_surface"
+                     long_name="Skin temperature at surface">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
       <standard_name name="skin_temperature_at_surface_over_ice"
