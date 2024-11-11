@@ -261,6 +261,7 @@ Suffixes
 | due_to_moist_convection
 | due_to_overturning
 | due_to_shallow_convection
+| **due_to_planetary_boundary_layer**
 | due_to_shortwave_heating
 | due_to_thermodynamics
 | due_to_background
