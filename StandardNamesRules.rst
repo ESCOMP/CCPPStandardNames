@@ -394,6 +394,10 @@ Prefixes
 | **sine_of** ``_X``
 | **variance_of** ``_X``
 
+Suffixes
+^^^^^^^^
+| ``X_`` mixing_ratio_wrt ``_Y``
+
 Other common standard name components
 =====================================
 
