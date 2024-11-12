@@ -231,11 +231,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-2
 * `tendency_of_northward_wind_due_to_model_physics`: Total change in northward wind from a physics suite
     * `real(kind=kind_phys)`: units = m s-2
-* `air_horizontal_streamfunction`: Scalar function describing the stream lines of the wind
+* `air_horizontal_streamfunction`: Scalar function describing the stream lines of the horizontal wind
     * `real(kind=kind_phys)`: units = m2 s-1
 * `air_horizontal_velocity_potential`: Scalar potential of the wind
     * `real(kind=kind_phys)`: units = m2 s-1
-* `air_upward_absolute_vorticity`: The upward (kth) component of the curl of the vector wind field
+* `air_upward_absolute_vorticity`: The upward (kth) component of the curl of the horizontal vector wind field
     * `real(kind=kind_phys)`: units = s-1
 * `air_horizontal_divergence`: The (horizontal) divergence of the 2-D vector wind field
     * `real(kind=kind_phys)`: units = s-1
