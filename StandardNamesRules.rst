@@ -27,26 +27,30 @@ CCPP Standard Name Rules
    an appropriate name does not exist in that standard, or the adoption
    of said names leads to inconsistencies in the naming convention.
 
-#. When no suitable standard name exists in the CF conventions, follow their
-   guidelines for standard name construction at this URL:
-   http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html. Standard
-   names may be qualified by the addition of phrases in certain standard forms and
-   order. The "Qualifications" section of the CF guidelines should be used to
-   provide information about a variable's horizontal surface (e.g. at_cloud_base),
-   component (i.e. direction of variable, e.g. downward), medium (e.g.
-   in_stratosphere), process (e.g. due_to_deep convection), or condition (e.g.,
-   assuming_clear_sky). The order defined by the CF rules should be observed. These
-   qualifications do not change the units of the quantity.
+#. When no suitable standard name exists in the CF conventions, the following guidelines should be followed for constructing a new name.
+   The phrases in brackets are optional. The words in *italic* appear explicitly as stated,
+   while the words in ``this font`` indicate other words or phrases to be substituted.
+   The new standard name is constructed by joining the base standard name to the qualifiers using underscores.
 
-   All of the following phrases in brackets are optional. The words in *italic*
-   appear explicitly as stated, while the words in ``this font`` indicate other
-   words or phrases to be substituted. The new standard name is constructed by
-   joining the base standard name to the qualifiers using underscores.
+   [``transformation``] [``component``] base_name [*at* ``level``] [*in* ``medium``] [*due_to* ``process``] [*assuming* ``condition``]
 
-   [``component``] standard_name [*at* ``level``] [*in* ``medium``]
-   [*due_to* ``process``] [*assuming* ``condition``]
+   This construction was originally based on rules set forth in the
+   `CF guidelines <http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html>`),
+   but have since evolved for better consistency and generality across a broader set of fields
+   than was originally envisioned by the CF conventions. "``medium``" should be specified when
+   the variable in question is a substance or other quantity contained within some other the medium
+   (e.g. for with air as the medium, mole_fraction_of_ozone_in_air, the base name is ozone, while the medium is air). 
+   "Transformation" refers to descriptors such as "``tendency of``", "``log10``", or other operations or processes describing some transformation or adjustment of a variable.
+   Other parts of the construction provide information about a variable's horizontal surface
+   (e.g. ``at_cloud_base``), component (i.e. direction of variable, e.g. ``downward``), process (e.g.
+   ``due_to_deep_convection``), or condition (e.g., ``assuming_clear_sky``). These qualifications do not
+   change the units of the quantity. This is not an exhaustive list of qualifiers that may be needed for a given standard name;
+   see subsequent rules below for more information.
 
-   See the list of currently-used qualifiers below for help.
+   The following table provides a few concrete examples of standard names and how they are constructed
+   with respect to the guideline template.
+
+   ![image of table providing standard name construction examples](https://raw.githubusercontent.com/wiki/ESCOMP/CCPPStandardNames/images/standard_name_construction_examples.png)
 
 #. Variables are current and instantaneous unless specified. Variables that are not
    current (e.g., previous timestep) or non-instantaneous (e.g., accumulated values)
@@ -115,10 +119,14 @@ CCPP Standard Name Rules
    *cloud_at_500hPa* if only including clouds that exist at 500 hPa).
 
 #. If possible, qualifiers should be limited in order to allow for a wide
-   applicability of the variable. In other words, don't qualify with _for ``_xyz``
+   applicability of the variable. In other words, don't qualify with ``_for_xyz``
    unless a variable could not conceivably be used outside of the more
    narrowly-defined context or a variable without the scope-narrowing qualifiers
    already exists and cannot be reused.
+
+   **Discouraged:** surface_upward_specific_humidity_flux_for_mellor_yamada_janjic_surface_layer_scheme
+
+   **Preferred:** surface_upward_specific_humidity_flux
 
 #. Spell out acronyms unless they are obvious to a vast majority of
    scientists/developers who may come across them. A
@@ -128,9 +136,8 @@ CCPP Standard Name Rules
    use flag_for ``_X``. If it is any other data type, use control_for ``_X``. All flags
    should be Fortran logicals.
 
-#. Standard names that start with ``ccpp_`` represent CCPP framework-provided variables.
-   All other standard names should avoid the use of ``ccpp`` in their name in order
-   to avoid any confusion.
+#. Reserved names: The prefix ``ccpp_`` represents CCPP framework-provided variables.
+   All other standard names should avoid the use of ``ccpp`` in their name.
 
 #. No punctuation should appear in standard names except for underscores (_).
 
@@ -388,6 +395,18 @@ Prefixes
 
 Other common standard name components
 =====================================
+
+Reserved phrase
+---------------
+
+These words/phrases should not be used outside of the described context
+
++------------------------+-------------------------------------------------------------------------------------+
+| **Phrase**             |  **Usage**                                                                          |
++========================+=====================================================================================+
+| ccpp                   | Variable names provided by the CCPP framework                                       |
++------------------------+-------------------------------------------------------------------------------------+
+
 
 Special phrases
 ---------------
