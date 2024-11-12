@@ -50,7 +50,8 @@ CCPP Standard Name Rules
    The following table provides a few concrete examples of standard names and how they are constructed
    with respect to the guideline template.
 
-   ![image of table providing standard name construction examples](https://raw.githubusercontent.com/wiki/ESCOMP/CCPPStandardNames/images/standard_name_construction_examples.png)
+.. image:: https://raw.githubusercontent.com/wiki/ESCOMP/CCPPStandardNames/images/standard_name_construction_examples.png
+   :alt: image of table providing standard name construction examples
 
 #. Variables are current and instantaneous unless specified. Variables that are not
    current (e.g., previous timestep) or non-instantaneous (e.g., accumulated values)
