@@ -116,7 +116,7 @@ CCPP Standard Name Rules
 
 #. By default, the term *cloud* refers to all cloud phases and cloud types. Otherwise
    an additional prefix or suffix should be added to the standard name specifying what kind(s)
-   of clouds the variable repesents (e.g. *ice_cloud* if only including glaciated clouds, or
+   of clouds the variable represents (e.g. *ice_cloud* if only including glaciated clouds, or
    *cloud_at_500hPa* if only including clouds that exist at 500 hPa).
 
 #. If possible, qualifiers should be limited in order to allow for a wide
@@ -583,7 +583,7 @@ Acronyms, Abbreviations, and Aliases
 +---------------------+---------------------------------------------------------+
 | **Short**           |  **Meaning**                                            |
 +=====================+=========================================================+
-| ir                  | infared                                                 |
+| ir                  | infrared                                                |
 +---------------------+---------------------------------------------------------+
 | lwe                 | liquid water equivalent                                 |
 +---------------------+---------------------------------------------------------+
