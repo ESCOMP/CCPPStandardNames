@@ -2591,16 +2591,20 @@
       <standard_name name="max_vegetation_area_fraction">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="nir_albedo_strong_cosz">
+      <standard_name name="nir_albedo_strong_cosz"
+                     long_name="albedo for near-infrared radiation with strong dependence on cosine of the zenith angle">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="nir_albedo_weak_cosz">
+                     long_name="albedo for near-infrared radiation with weak dependence on cosine of the zenith angle">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="vis_albedo_strong_cosz">
+                     long_name="albedo for visible radiation with strong dependence on cosine of the zenith angle">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="vis_albedo_weak_cosz">
+                     long_name="albedo for visible radiation with weak dependence on cosine of the zenith angle">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="min_vegetation_area_fraction">
@@ -2682,7 +2686,7 @@
       <standard_name name="slow_soil_pool_mass_content_of_carbon">
          <type kind="kind_phys" units="g m-2">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_assuming_deep_snow_on_previous_timestep">
+      <standard_name name="albedo_on_previous_timestep_assuming_deep_snow">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="lwe_thickness_of_ice_in_surface_snow">
@@ -2750,34 +2754,44 @@
       <standard_name name="molecular_sublayer_thickness_in_sea_water">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_diffuse_nir_over_ice">
+      <standard_name name="diffuse_nir_albedo_of_ice"
+                     long_name="ice surface albedo for diffuse near-infrared radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_diffuse_nir_over_land">
+      <standard_name name="diffuse_nir_albedo_of_land"
+                     long_name="land surface albedo for diffuse near-infrared radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_diffuse_visible_over_ice">
+      <standard_name name="diffuse_visible_albedo_of_ice"
+                     long_name="ice surface albedo for diffuse visible radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_diffuse_visible_over_land">
+      <standard_name name="diffuse_visible_albedo_of_land"
+                     long_name="land surface albedo for diffuse visible radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_direct_nir_over_ice">
+      <standard_name name="direct_nir_albedo_of_ice"
+                     long_name="ice surface albedo for direct near-infrared radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_direct_nir_over_land">
+      <standard_name name="direct_nir_albedo_of_land"
+                     long_name="land surface albedo for direct near-infrared radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_direct_visible_over_ice">
+      <standard_name name="direct_visible_albedo_of_ice"
+                     long_name="ice surface albedo for direct visible radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_albedo_direct_visible_over_land">
+      <standard_name name="direct_visible_albedo_of_land"
+                     long_name="land surface albedo for direct visible radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_diffused_shortwave_albedo_over_ice">
+      <standard_name name="diffuse_shortwave_albedo_of_ice"
+                     long_name="ice surface albedo for diffuse shortwave radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_diffused_shortwave_albedo_over_land">
+      <standard_name name="diffuse_shortwave_albedo_of_land"
+                     long_name="land surface albedo for diffuse shortwave radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_drag_coefficient_for_heat_and_moisture_for_noahmp">
@@ -2845,7 +2859,8 @@
       <standard_name name="surface_snow_area_fraction_over_land">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_snow_free_albedo_over_land">
+      <standard_name name="albedo_of_land_assuming_no_snow_cover"
+                   long_name="surface snow-free albedo over land">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="lwe_surface_snow">
@@ -3102,10 +3117,12 @@
       <standard_name name="surface_net_downwelling_shortwave_flux_on_radiation_timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="surface_nir_albedo_diffuse_rad_for_coupling">
+      <standard_name name="diffuse_nir_albedo_for_coupling"
+                     long_name="surface albedo for diffuse near-infrared radiation for coupling">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_nir_albedo_direct_rad_for_coupling">
+      <standard_name name="direct_nir_albedo_for_coupling"
+                     long_name="surface albedo for direct near-infrared radiation for coupling">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="lwe_surface_snow_from_coupled_process">
@@ -3135,10 +3152,12 @@
       <standard_name name="surface_upwelling_longwave_flux_on_radiation_timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="surface_vis_albedo_diffuse_rad_for_coupling">
+      <standard_name name="diffuse_visible_albedo_for_coupling"
+                     long_name="surface albedo for diffuse visible radiation for coupling">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_vis_albedo_direct_rad_for_coupling">
+      <standard_name name="direct_visible_albedo_for_coupling"
+                     long_name="surface albedo for direct visible radiation for coupling">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_x_momentum_flux_from_coupled_process">
@@ -3276,7 +3295,8 @@
       <standard_name name="surface_lw_fluxes_assuming_total_and_clear_sky_on_radiation_timestep">
          <type kind="" units="W m-2">sfcflw_type</type>
       </standard_name>
-      <standard_name name="surface_albedo_for_diffused_shortwave_on_radiation_timestep">
+      <standard_name name="diffuse_shortwave_albedo_on_radiation_timestep"
+                     long_name="surface albedo for diffuse shortwave radiation on the timestep for radiation physics">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="surface_longwave_emissivity">

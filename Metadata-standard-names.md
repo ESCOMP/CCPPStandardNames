@@ -1643,7 +1643,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = m
 * `max_vegetation_area_fraction`: Max vegetation area fraction
     * `real(kind=kind_phys)`: units = fraction
-* `nir_albedo_strong_cosz`: Nir albedo strong cosz
+* `nir_albedo_strong_cosz`: albedo for near-infrared radiation with strong dependence on cosine of the zenith angle
     * `real(kind=kind_phys)`: units = fraction
 * `nir_albedo_weak_cosz`: Nir albedo weak cosz
     * `real(kind=kind_phys)`: units = fraction
@@ -1703,7 +1703,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = m K-1
 * `slow_soil_pool_mass_content_of_carbon`: Slow soil pool mass content of carbon
     * `real(kind=kind_phys)`: units = g m-2
-* `surface_albedo_assuming_deep_snow_on_previous_timestep`: Surface albedo assuming deep snow on previous timestep
+* `albedo_on_previous_timestep_assuming_deep_snow`: Albedo on previous timestep assuming deep snow
     * `real(kind=kind_phys)`: units = fraction
 * `lwe_thickness_of_ice_in_surface_snow`: Lwe thickness of ice in surface snow
     * `real(kind=kind_phys)`: units = mm
@@ -1747,25 +1747,25 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = K
 * `molecular_sublayer_thickness_in_sea_water`: Molecular sublayer thickness in sea water
     * `real(kind=kind_phys)`: units = m
-* `surface_albedo_diffuse_nir_over_ice`: Surface albedo diffuse nir over ice
+* `diffuse_nir_albedo_of_ice`: ice surface albedo for diffuse near-infrared radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_albedo_diffuse_nir_over_land`: Surface albedo diffuse nir over land
+* `diffuse_nir_albedo_of_land`: land surface albedo for diffuse near-infrared radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_albedo_diffuse_visible_over_ice`: Surface albedo diffuse visible over ice
+* `diffuse_visible_albedo_of_ice`: ice surface albedo for diffuse visible radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_albedo_diffuse_visible_over_land`: Surface albedo diffuse visible over land
+* `diffuse_visible_albedo_of_land`: land surface albedo for diffuse visible radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_albedo_direct_nir_over_ice`: Surface albedo direct nir over ice
+* `direct_nir_albedo_of_ice`: ice surface albedo for direct near-infrared radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_albedo_direct_nir_over_land`: Surface albedo direct nir over land
+* `direct_nir_albedo_of_land`: land surface albedo for direct near-infrared radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_albedo_direct_visible_over_ice`: Surface albedo direct visible over ice
+* `direct_visible_albedo_of_ice`: ice surface albedo for direct visible radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_albedo_direct_visible_over_land`: Surface albedo direct visible over land
+* `direct_visible_albedo_of_land`: land surface albedo for direct visible radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_diffused_shortwave_albedo_over_ice`: Surface diffused shortwave albedo over ice
+* `diffuse_shortwave_albedo_of_ice`: ice surface albedo for diffuse shortwave radiation
     * `real(kind=kind_phys)`: units = fraction
-* `surface_diffused_shortwave_albedo_over_land`: Surface diffused shortwave albedo over land
+* `diffuse_shortwave_albedo_of_land`: land surface albedo for diffuse shortwave radiation
     * `real(kind=kind_phys)`: units = fraction
 * `surface_drag_coefficient_for_heat_and_moisture_for_noahmp`: Surface drag coefficient for heat and moisture for noahmp
     * `real(kind=kind_phys)`: units = 1
@@ -1807,7 +1807,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = fraction
 * `surface_snow_area_fraction_over_land`: Surface snow area fraction over land
     * `real(kind=kind_phys)`: units = fraction
-* `surface_snow_free_albedo_over_land`: Surface snow free albedo over land
+* `albedo_of_land_assuming_no_snow_cover`: surface snow-free albedo over land
     * `real(kind=kind_phys)`: units = fraction
 * `lwe_surface_snow`: Lwe surface snow
     * `real(kind=kind_phys)`: units = mm
@@ -1978,9 +1978,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = W m-2
 * `surface_net_downwelling_shortwave_flux_on_radiation_timestep`: Surface net downwelling shortwave flux on radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `surface_nir_albedo_diffuse_rad_for_coupling`: Surface nir albedo diffuse rad for coupling
+* `diffuse_nir_albedo_for_coupling`: surface albedo for diffuse near-infrared radiation for coupling
     * `real(kind=kind_phys)`: units = fraction
-* `surface_nir_albedo_direct_rad_for_coupling`: Surface nir albedo direct rad for coupling
+* `direct_nir_albedo_for_coupling`: surface albedo for direct near-infrared radiation for coupling
     * `real(kind=kind_phys)`: units = fraction
 * `lwe_surface_snow_from_coupled_process`: Lwe surface snow from coupled process
     * `real(kind=kind_phys)`: units = m
@@ -2000,9 +2000,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = W m-2
 * `surface_upwelling_longwave_flux_on_radiation_timestep`: Surface upwelling longwave flux on radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `surface_vis_albedo_diffuse_rad_for_coupling`: Surface vis albedo diffuse rad for coupling
+* `diffuse_visible_albedo_for_coupling`: surface albedo for diffuse visible radiation for coupling
     * `real(kind=kind_phys)`: units = fraction
-* `surface_vis_albedo_direct_rad_for_coupling`: Surface vis albedo direct rad for coupling
+* `direct_visible_albedo_for_coupling`: surface albedo for direct visible radiation for coupling
     * `real(kind=kind_phys)`: units = fraction
 * `surface_x_momentum_flux_from_coupled_process`: Surface x momentum flux from coupled process
     * `real(kind=kind_phys)`: units = Pa
@@ -2091,7 +2091,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = 1
 * `surface_lw_fluxes_assuming_total_and_clear_sky_on_radiation_timestep`: Surface lw fluxes assuming total and clear sky on radiation timestep
     * `sfcflw_type(kind=)`: units = W m-2
-* `surface_albedo_for_diffused_shortwave_on_radiation_timestep`: Surface albedo for diffused shortwave on radiation timestep
+* `diffuse_shortwave_albedo_on_radiation_timestep`: surface albedo for diffuse shortwave radiation on the timestep for radiation physics
     * `real(kind=kind_phys)`: units = fraction
 * `surface_longwave_emissivity`: Surface longwave emissivity
     * `real(kind=kind_phys)`: units = fraction
