@@ -165,7 +165,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `ln_air_pressure_of_dry_air`: Ln air pressure of dry air
     * `real(kind=kind_phys)`: units = 1
-* `reciprocal_of_dimensionless_exner_function_wrt_surface_air_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
+* `reciprocal_of_exner_function_wrt_surface_air_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
     * `real(kind=kind_phys)`: units = 1
 * `geopotential_height`: geopotential height w.r.t. sea level
     * `real(kind=kind_phys)`: units = m
@@ -255,7 +255,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `reference_pressure_in_atmosphere_layer_normalized_by_surface_reference_pressure`: Reference pressure in atmosphere layer normalized by surface reference pressure
     * `real(kind=kind_phys)`: units = 1
-* `dimensionless_exner_function`: exner function
+* `exner_function`: exner function, (p/p0)^(Rd/cp)
     * `real(kind=kind_phys)`: units = 1
 * `air_potential_temperature`: air potential temperature
     * `real(kind=kind_phys)`: units = K
@@ -836,7 +836,7 @@ Variables related to the compute environment
     * `logical(kind=)`: units = flag
 * `do_read_surface_albedo_for_diffused_shortwave_from_input`: Do read surface albedo for diffused shortwave from input
     * `logical(kind=)`: units = flag
-* `do_limited_surface_roughness_length_over_ocean`: Do limited surface roughness length over ocean
+* `do_limited_roughness_length_over_ocean`: Do limited surface roughness length over ocean
     * `logical(kind=)`: units = flag
 * `do_reference_pressure_theta`: Do reference pressure theta
     * `logical(kind=)`: units = flag
@@ -1545,7 +1545,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = fraction
 * `baseline_surface_longwave_emissivity`: Baseline surface longwave emissivity
     * `real(kind=kind_phys)`: units = fraction
-* `baseline_surface_roughness_length`: Baseline surface roughness length
+* `baseline_roughness_length`: Baseline surface roughness length
     * `real(kind=kind_phys)`: units = m
 * `air_temperature_in_canopy`: Air temperature in canopy
     * `real(kind=kind_phys)`: units = K
@@ -1789,15 +1789,15 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = fraction
 * `surface_longwave_emissivity_over_land`: Surface longwave emissivity over land
     * `real(kind=kind_phys)`: units = fraction
-* `surface_roughness_length`: Surface roughness length
+* `roughness_length`: surface roughness length
     * `real(kind=kind_phys)`: units = cm
-* `surface_roughness_length_from_wave_model`: Surface roughness length from wave model
+* `roughness_length_from_wave_model`: surface roughness length from wave model
     * `real(kind=kind_phys)`: units = cm
-* `surface_roughness_length_over_ice`: Surface roughness length over ice
+* `roughness_length_over_ice`: surface roughness length over ice
     * `real(kind=kind_phys)`: units = cm
-* `surface_roughness_length_over_land`: Surface roughness length over land
+* `roughness_length_over_land`: surface roughness length over land
     * `real(kind=kind_phys)`: units = cm
-* `surface_roughness_length_over_water`: Surface roughness length over water
+* `roughness_length_over_water`: surface roughness length over water
     * `real(kind=kind_phys)`: units = cm
 * `surface_skin_temperature`: Surface skin temperature
     * `real(kind=kind_phys)`: units = K
@@ -2037,11 +2037,11 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_cloud_liquid_water_particles_in_air`: Mass number concentration of cloud liquid water particles in air
     * `real(kind=kind_phys)`: units = kg-1
-* `surface_dimensionless_exner_function`: Surface dimensionless exner function
+* `exner_function_wrt_surface_pressure`: exner function w.r.t. surface pressure, (p/ps)^(Rd/cp)
     * `real(kind=kind_phys)`: units = 1
-* `dimensionless_exner_function_at_surface_adjacent_layer`: Dimensionless exner function at surface adjacent layer
+* `exner_function_at_surface_adjacent_layer`: exner function (p/p0)^(Rd/cp), where p0 is the pressure at the surface adjacent layer
     * `real(kind=kind_phys)`: units = 1
-* `dimensionless_exner_function_at_interfaces`: Dimensionless exner function at interfaces
+* `exner_function_at_interfaces`: exner function (p/p0)^(Rd/cp), where p0 is the pressure at vertical layer interfaces
     * `real(kind=kind_phys)`: units = 1
 * `dissipation_estimate_of_air_temperature_at_model_layers`: Dissipation estimate of air temperature at model layers
     * `real(kind=kind_phys)`: units = K

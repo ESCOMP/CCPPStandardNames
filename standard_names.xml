@@ -252,7 +252,7 @@
     <standard_name name="ln_air_pressure_of_dry_air">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
-    <standard_name name="reciprocal_of_dimensionless_exner_function_wrt_surface_air_pressure"
+    <standard_name name="reciprocal_of_exner_function_wrt_surface_air_pressure"
                    long_name="inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
@@ -413,8 +413,8 @@
                    long_name="Reference pressure in atmosphere layer normalized by surface reference pressure">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
-    <standard_name name="dimensionless_exner_function"
-                   long_name="exner function">
+    <standard_name name="exner_function"
+                   long_name="exner function, (p/p0)^(Rd/cp)">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="air_potential_temperature"
@@ -1377,7 +1377,8 @@
       <standard_name name="do_read_surface_albedo_for_diffused_shortwave_from_input">
          <type kind="" units="flag">logical</type>
       </standard_name>
-      <standard_name name="do_limited_surface_roughness_length_over_ocean">
+      <standard_name name="do_limited_roughness_length_over_ocean"
+                   long_name="Do limited surface roughness length over ocean">
          <type kind="" units="flag">logical</type>
       </standard_name>
       <standard_name name="do_reference_pressure_theta">
@@ -2442,7 +2443,8 @@
       <standard_name name="baseline_surface_longwave_emissivity">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="baseline_surface_roughness_length">
+      <standard_name name="baseline_roughness_length"
+                   long_name="Baseline surface roughness length">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
       <standard_name name="air_temperature_in_canopy">
@@ -2811,19 +2813,24 @@
       <standard_name name="surface_longwave_emissivity_over_land">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_roughness_length">
+      <standard_name name="roughness_length"
+                   long_name="surface roughness length">
          <type kind="kind_phys" units="cm">real</type>
       </standard_name>
-      <standard_name name="surface_roughness_length_from_wave_model">
+      <standard_name name="roughness_length_from_wave_model"
+                   long_name="surface roughness length from wave model">
          <type kind="kind_phys" units="cm">real</type>
       </standard_name>
-      <standard_name name="surface_roughness_length_over_ice">
+      <standard_name name="roughness_length_over_ice"
+                   long_name="surface roughness length over ice">
          <type kind="kind_phys" units="cm">real</type>
       </standard_name>
-      <standard_name name="surface_roughness_length_over_land">
+      <standard_name name="roughness_length_over_land"
+                   long_name="surface roughness length over land">
          <type kind="kind_phys" units="cm">real</type>
       </standard_name>
-      <standard_name name="surface_roughness_length_over_water">
+      <standard_name name="roughness_length_over_water"
+                   long_name="surface roughness length over water">
          <type kind="kind_phys" units="cm">real</type>
       </standard_name>
       <standard_name name="surface_skin_temperature">
@@ -3184,13 +3191,16 @@
       <standard_name name="mass_number_concentration_of_cloud_liquid_water_particles_in_air">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="surface_dimensionless_exner_function">
+      <standard_name name="exner_function_wrt_surface_pressure"
+                   long_name="exner function w.r.t. surface pressure, (p/ps)^(Rd/cp)">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
-      <standard_name name="dimensionless_exner_function_at_surface_adjacent_layer">
+      <standard_name name="exner_function_at_surface_adjacent_layer"
+                   long_name="exner function (p/p0)^(Rd/cp), where p0 is the pressure at the surface adjacent layer">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
-      <standard_name name="dimensionless_exner_function_at_interfaces">
+      <standard_name name="exner_function_at_interfaces"
+                   long_name="exner function (p/p0)^(Rd/cp), where p0 is the pressure at vertical layer interfaces">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="dissipation_estimate_of_air_temperature_at_model_layers">
