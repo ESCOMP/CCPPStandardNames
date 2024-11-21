@@ -161,7 +161,7 @@
     <standard_name name="surface_pressure_of_dry_air">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="surface_geopotential">
+    <standard_name name="geopotential_at_surface">
       <type kind="kind_phys" units="m2 s-2">real</type>
     </standard_name>
     <standard_name name="air_temperature">
@@ -252,7 +252,7 @@
     <standard_name name="ln_air_pressure_of_dry_air">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
-    <standard_name name="reciprocal_of_exner_function_wrt_surface_air_pressure"
+    <standard_name name="reciprocal_of_exner_function_wrt_air_pressure_at_surface"
                    long_name="inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
@@ -368,23 +368,23 @@
                    long_name="Total change in northward wind from a physics suite">
       <type kind="kind_phys" units="m s-2">real</type>
     </standard_name>
-    <standard_name name="air_horizontal_streamfunction"
+    <standard_name name="horizontal_streamfunction_of_air"
                    long_name="Scalar function describing the streamlines of the horizontal wind">
       <type kind="kind_phys" units="m2 s-1">real</type>
     </standard_name>
-    <standard_name name="air_horizontal_velocity_potential"
+    <standard_name name="horizontal_velocity_potential_of_air"
                    long_name="Scalar potential of the horizontal wind">
       <type kind="kind_phys" units="m2 s-1">real</type>
     </standard_name>
-    <standard_name name="air_upward_absolute_vorticity"
+    <standard_name name="upward_absolute_vorticity_of_air"
                    long_name="The upward (kth) component of the curl of the vector wind field">
       <type kind="kind_phys" units="s-1">real</type>
     </standard_name>
-    <standard_name name="air_horizontal_divergence"
+    <standard_name name="horizontal_divergence_of_air"
                    long_name="The (horizontal) divergence of the 2-D vector wind field">
       <type kind="kind_phys" units="s-1">real</type>
     </standard_name>
-    <standard_name name="surface_upward_heat_flux_in_air">
+    <standard_name name="upward_heat_flux_in_air_at_surface">
       <type kind="kind_phys" units="W m-2">real</type>
     </standard_name>
     <standard_name name="cumulative_boundary_flux_of_total_energy">
@@ -405,7 +405,7 @@
                    long_name="reference pressure in atmosphere layer">
       <type kind="kind_phys" units="Pa">real</type>
     </standard_name>
-    <standard_name name="reference_air_pressure_normalized_by_surface_air_pressure"
+    <standard_name name="reference_air_pressure_normalized_by_air_pressure_at_surface"
                    long_name="reference pressure normalized by surface pressure">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
@@ -491,7 +491,7 @@
                    long_name="content per unit area of water in top layer of soil">
       <type kind="kind_phys" units="kg m-2">real</type>
     </standard_name>
-    <standard_name name="surface_snow_density">
+    <standard_name name="density_of_snow_at_surface">
       <type kind="kind_phys" units="kg m-3">real</type>
     </standard_name>
     <standard_name name="urban_area_fraction_of_cell_area"
@@ -1702,10 +1702,10 @@
       <standard_name name="control_for_stochastic_land_surface_perturbation">
          <type kind="" units="1">integer</type>
       </standard_name>
-      <standard_name name="index_of_surface_air_pressure_on_previous_timestep_in_xyz_dimensioned_restart_array">
+      <standard_name name="index_of_air_pressure_at_surface_on_previous_timestep_in_xyz_dimensioned_restart_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_surface_air_pressure_two_timesteps_back_in_xyz_dimensioned_tracer_array">
+      <standard_name name="index_of_air_pressure_at_surface_two_timesteps_back_in_xyz_dimensioned_tracer_array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_enhancement_to_wind_speed_at_surface_adjacent_layer_due_to_convectionin_in_xy_dimensioned_restart_array">
@@ -2312,7 +2312,7 @@
       <standard_name name="upward_virtual_potential_temperature_flux">
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
-      <standard_name name="surface_upward_specific_humidity_flux_for_mellor_yamada_janjic_surface_layer_scheme">
+      <standard_name name="upward_specific_humidity_flux_at_surface_for_mellor_yamada_janjic_surface_layer_scheme">
          <type kind="kind_phys" units="m s-1 kg kg-1">real</type>
       </standard_name>
       <standard_name name="cumulative_max_vertical_index_at_cloud_base_between_sw_radiation_calls">
@@ -2375,10 +2375,10 @@
       <standard_name name="subgrid_scale_cloud_fraction_from_shoc">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_air_pressure_on_previous_timestep">
+      <standard_name name="air_pressure_at_surface_on_previous_timestep">
          <type kind="kind_phys" units="Pa">real</type>
       </standard_name>
-      <standard_name name="surface_air_pressure_two_timesteps_back">
+      <standard_name name="air_pressure_at_surface_two_timesteps_back">
          <type kind="kind_phys" units="Pa">real</type>
       </standard_name>
       <standard_name name="control_for_surface_layer_evaporation">
@@ -2546,10 +2546,10 @@
       <standard_name name="temperature_in_ice_layer">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="surface_upward_specific_humidity_flux">
+      <standard_name name="upward_specific_humidity_flux_at_surface">
          <type kind="kind_phys" units="kg kg-1 m s-1">real</type>
       </standard_name>
-      <standard_name name="surface_upward_temperature_flux">
+      <standard_name name="upward_temperature_flux_at_surface">
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
       <standard_name name="lake_area_fraction">
@@ -2730,10 +2730,10 @@
                      long_name="mixing ratio of the mass of water vapor to the mass of moist air and hydrometeors, at two meters above surface">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="specified_surface_upward_specific_humidity_flux">
+      <standard_name name="specified_upward_specific_humidity_flux_at_surface">
          <type kind="kind_phys" units="kg kg-1 m s-1">real</type>
       </standard_name>
-      <standard_name name="specified_surface_upward_temperature_flux">
+      <standard_name name="specified_upward_temperature_flux_at_surface">
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
       <standard_name name="standard_deviation_of_subgrid_orography">
@@ -2853,10 +2853,10 @@
       <standard_name name="surface_skin_temperature_over_land">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="surface_snow_area_fraction_over_ice">
+      <standard_name name="snow_area_fraction_at_surface_over_ice">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_snow_area_fraction_over_land">
+      <standard_name name="snow_area_fraction_at_surface_over_land">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
       <standard_name name="albedo_of_land_assuming_no_snow_cover"
@@ -3003,7 +3003,7 @@
       <standard_name name="specific_humidity_at_2m_for_coupling">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="surface_air_pressure_for_coupling">
+      <standard_name name="air_pressure_at_surface_for_coupling">
          <type kind="kind_phys" units="Pa">real</type>
       </standard_name>
       <standard_name name="surface_downwelling_diffuse_nir_shortwave_flux_for_coupling">
@@ -3160,10 +3160,10 @@
                      long_name="surface albedo for direct visible radiation for coupling">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="surface_x_momentum_flux_from_coupled_process">
+      <standard_name name="x_momentum_flux_at_surface_from_coupled_process">
          <type kind="kind_phys" units="Pa">real</type>
       </standard_name>
-      <standard_name name="surface_y_momentum_flux_from_coupled_process">
+      <standard_name name="y_momentum_flux_at_surface_from_coupled_process">
          <type kind="kind_phys" units="Pa">real</type>
       </standard_name>
       <standard_name name="tendency_of_nonhygroscopic_ice_nucleating_aerosols_at_surface_adjacent_layer">

@@ -115,7 +115,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = Pa
 * `surface_pressure_of_dry_air`: Surface pressure of dry air
     * `real(kind=kind_phys)`: units = Pa
-* `surface_geopotential`: Surface geopotential
+* `geopotential_at_surface`: Geopotential at surface
     * `real(kind=kind_phys)`: units = m2 s-2
 * `air_temperature`: Air temperature
     * `real(kind=kind_phys)`: units = K
@@ -165,7 +165,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `ln_air_pressure_of_dry_air`: Ln air pressure of dry air
     * `real(kind=kind_phys)`: units = 1
-* `reciprocal_of_exner_function_wrt_surface_air_pressure`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
+* `reciprocal_of_exner_function_wrt_air_pressure_at_surface`: inverse exner function w.r.t. surface pressure, (ps/p)^(R/cp)
     * `real(kind=kind_phys)`: units = 1
 * `geopotential_height`: geopotential height w.r.t. sea level
     * `real(kind=kind_phys)`: units = m
@@ -231,15 +231,15 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m s-2
 * `tendency_of_northward_wind_due_to_model_physics`: Total change in northward wind from a physics suite
     * `real(kind=kind_phys)`: units = m s-2
-* `air_horizontal_streamfunction`: Scalar function describing the streamlines of the horizontal wind
+* `horizontal_streamfunction_of_air`: Scalar function describing the streamlines of the horizontal wind
     * `real(kind=kind_phys)`: units = m2 s-1
-* `air_horizontal_velocity_potential`: Scalar potential of the horizontal wind
+* `horizontal_velocity_potential_of_air`: Scalar potential of the horizontal wind
     * `real(kind=kind_phys)`: units = m2 s-1
-* `air_upward_absolute_vorticity`: The upward (kth) component of the curl of the vector wind field
+* `upward_absolute_vorticity_of_air`: The upward (kth) component of the curl of the vector wind field
     * `real(kind=kind_phys)`: units = s-1
-* `air_horizontal_divergence`: The (horizontal) divergence of the 2-D vector wind field
+* `horizontal_divergence_of_air`: The (horizontal) divergence of the 2-D vector wind field
     * `real(kind=kind_phys)`: units = s-1
-* `surface_upward_heat_flux_in_air`: Surface upward heat flux in air
+* `upward_heat_flux_in_air_at_surface`: Upward heat flux in air at surface
     * `real(kind=kind_phys)`: units = W m-2
 * `cumulative_boundary_flux_of_total_energy`: Cumulative boundary flux of total energy
     * `real(kind=kind_phys)`: units = W m-2
@@ -251,7 +251,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = Pa
 * `reference_pressure_in_atmosphere_layer`: reference pressure in atmosphere layer
     * `real(kind=kind_phys)`: units = Pa
-* `reference_air_pressure_normalized_by_surface_air_pressure`: reference pressure normalized by surface pressure
+* `reference_air_pressure_normalized_by_air_pressure_at_surface`: reference pressure normalized by surface pressure
     * `real(kind=kind_phys)`: units = 1
 * `reference_pressure_in_atmosphere_layer_normalized_by_surface_reference_pressure`: Reference pressure in atmosphere layer normalized by surface reference pressure
     * `real(kind=kind_phys)`: units = 1
@@ -298,7 +298,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = frac
 * `mass_content_of_water_in_top_soil_layer`: content per unit area of water in top layer of soil
     * `real(kind=kind_phys)`: units = kg m-2
-* `surface_snow_density`: Surface snow density
+* `density_of_snow_at_surface`: Density of snow at surface
     * `real(kind=kind_phys)`: units = kg m-3
 * `urban_area_fraction_of_cell_area`: fraction of horizontal area of grid cell that is urban
     * `real(kind=kind_phys)`: units = frac
@@ -1052,9 +1052,9 @@ Variables related to the compute environment
     * `integer(kind=)`: units = index
 * `control_for_stochastic_land_surface_perturbation`: Control for stochastic land surface perturbation
     * `integer(kind=)`: units = 1
-* `index_of_surface_air_pressure_on_previous_timestep_in_xyz_dimensioned_restart_array`: Index of surface air pressure on previous timestep in xyz dimensioned restart array
+* `index_of_air_pressure_at_surface_on_previous_timestep_in_xyz_dimensioned_restart_array`: Index of air pressure at surface on previous timestep in xyz dimensioned restart array
     * `integer(kind=)`: units = index
-* `index_of_surface_air_pressure_two_timesteps_back_in_xyz_dimensioned_tracer_array`: Index of surface air pressure two timesteps back in xyz dimensioned tracer array
+* `index_of_air_pressure_at_surface_two_timesteps_back_in_xyz_dimensioned_tracer_array`: Index of air pressure at surface two timesteps back in xyz dimensioned tracer array
     * `integer(kind=)`: units = index
 * `index_of_enhancement_to_wind_speed_at_surface_adjacent_layer_due_to_convectionin_in_xy_dimensioned_restart_array`: Index of enhancement to wind speed at surface adjacent layer due to convectionin in xy dimensioned restart array
     * `integer(kind=)`: units = index
@@ -1458,7 +1458,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = kg-1
 * `upward_virtual_potential_temperature_flux`: Upward virtual potential temperature flux
     * `real(kind=kind_phys)`: units = K m s-1
-* `surface_upward_specific_humidity_flux_for_mellor_yamada_janjic_surface_layer_scheme`: Surface upward specific humidity flux for mellor yamada janjic surface layer scheme
+* `upward_specific_humidity_flux_at_surface_for_mellor_yamada_janjic_surface_layer_scheme`: Upward specific humidity flux at surface for mellor yamada janjic surface layer scheme
     * `real(kind=kind_phys)`: units = m s-1 kg kg-1
 * `cumulative_max_vertical_index_at_cloud_base_between_sw_radiation_calls`: Cumulative max vertical index at cloud base between sw radiation calls
     * `real(kind=kind_phys)`: units = 1
@@ -1500,9 +1500,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = kg kg-1
 * `subgrid_scale_cloud_fraction_from_shoc`: Subgrid scale cloud fraction from shoc
     * `real(kind=kind_phys)`: units = fraction
-* `surface_air_pressure_on_previous_timestep`: Surface air pressure on previous timestep
+* `air_pressure_at_surface_on_previous_timestep`: Air pressure at surface on previous timestep
     * `real(kind=kind_phys)`: units = Pa
-* `surface_air_pressure_two_timesteps_back`: Surface air pressure two timesteps back
+* `air_pressure_at_surface_two_timesteps_back`: Air pressure at surface two timesteps back
     * `real(kind=kind_phys)`: units = Pa
 * `control_for_surface_layer_evaporation`: Control for surface layer evaporation
     * `real(kind=kind_phys)`: units = 1
@@ -1613,9 +1613,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = 1
 * `temperature_in_ice_layer`: Temperature in ice layer
     * `real(kind=kind_phys)`: units = K
-* `surface_upward_specific_humidity_flux`: Surface upward specific humidity flux
+* `upward_specific_humidity_flux_at_surface`: Upward specific humidity flux at surface
     * `real(kind=kind_phys)`: units = kg kg-1 m s-1
-* `surface_upward_temperature_flux`: Surface upward temperature flux
+* `upward_temperature_flux_at_surface`: Upward temperature flux at surface
     * `real(kind=kind_phys)`: units = K m s-1
 * `lake_area_fraction`: Lake area fraction
     * `real(kind=kind_phys)`: units = fraction
@@ -1731,9 +1731,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = kg kg-1
 * `water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_2m`: mixing ratio of the mass of water vapor to the mass of moist air and hydrometeors, at two meters above surface
     * `real(kind=kind_phys)`: units = kg kg-1
-* `specified_surface_upward_specific_humidity_flux`: Specified surface upward specific humidity flux
+* `specified_upward_specific_humidity_flux_at_surface`: Specified upward specific humidity flux at surface
     * `real(kind=kind_phys)`: units = kg kg-1 m s-1
-* `specified_surface_upward_temperature_flux`: Specified surface upward temperature flux
+* `specified_upward_temperature_flux_at_surface`: Specified upward temperature flux at surface
     * `real(kind=kind_phys)`: units = K m s-1
 * `standard_deviation_of_subgrid_orography`: Standard deviation of subgrid orography
     * `real(kind=kind_phys)`: units = m
@@ -1803,9 +1803,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = K
 * `surface_skin_temperature_over_land`: Surface skin temperature over land
     * `real(kind=kind_phys)`: units = K
-* `surface_snow_area_fraction_over_ice`: Surface snow area fraction over ice
+* `snow_area_fraction_at_surface_over_ice`: Snow area fraction at surface over ice
     * `real(kind=kind_phys)`: units = fraction
-* `surface_snow_area_fraction_over_land`: Surface snow area fraction over land
+* `snow_area_fraction_at_surface_over_land`: Snow area fraction at surface over land
     * `real(kind=kind_phys)`: units = fraction
 * `albedo_of_land_assuming_no_snow_cover`: surface snow-free albedo over land
     * `real(kind=kind_phys)`: units = fraction
@@ -1902,7 +1902,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = m2 s-1
 * `specific_humidity_at_2m_for_coupling`: Specific humidity at 2m for coupling
     * `real(kind=kind_phys)`: units = kg kg-1
-* `surface_air_pressure_for_coupling`: Surface air pressure for coupling
+* `air_pressure_at_surface_for_coupling`: Air pressure at surface for coupling
     * `real(kind=kind_phys)`: units = Pa
 * `surface_downwelling_diffuse_nir_shortwave_flux_for_coupling`: Surface downwelling diffuse nir shortwave flux for coupling
     * `real(kind=kind_phys)`: units = W m-2
@@ -2004,9 +2004,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = fraction
 * `direct_visible_albedo_for_coupling`: surface albedo for direct visible radiation for coupling
     * `real(kind=kind_phys)`: units = fraction
-* `surface_x_momentum_flux_from_coupled_process`: Surface x momentum flux from coupled process
+* `x_momentum_flux_at_surface_from_coupled_process`: X momentum flux at surface from coupled process
     * `real(kind=kind_phys)`: units = Pa
-* `surface_y_momentum_flux_from_coupled_process`: Surface y momentum flux from coupled process
+* `y_momentum_flux_at_surface_from_coupled_process`: Y momentum flux at surface from coupled process
     * `real(kind=kind_phys)`: units = Pa
 * `tendency_of_nonhygroscopic_ice_nucleating_aerosols_at_surface_adjacent_layer`: Tendency of nonhygroscopic ice nucleating aerosols at surface adjacent layer
     * `real(kind=kind_phys)`: units = kg-1 s-1
