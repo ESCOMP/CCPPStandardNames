@@ -87,10 +87,10 @@ CCPP Standard Name Rules
    with respect to what quantity they are defined, and options are *wrt_dry_air*,
    *wrt_moist_air*, or *wrt_moist_air_and_condensed_water*, where *moist_air*
    refers to dry air plus vapor and *moist_air_and_condensed_water* refers
-   to dry air plus vapor and hydrometeors. Use of *specific_humidity* should
+   to dry air plus vapor and hydrometeors. Use of the term *specific_humidity* should
    be avoided as there is no consensus on whether it refers to
-   *mixing_ratio_of_water_vapor_wrt_moist_air* or
-   *mixing_ratio_of_water_vapor_wrt_moist_air_and_condensed_water*.
+   *water_vapor_mixing_ratio_wrt_moist_air* or
+   *water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water*.
    *total_water* can be used to designate water in every form, i.e. water
    vapor plus condensed water.
 

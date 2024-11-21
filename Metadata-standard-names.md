@@ -1046,9 +1046,9 @@ Variables related to the compute environment
     * `integer(kind=)`: units = index
 * `index_of_snow_mixing_ratio_wrt_moist_air_in_tracer_concentration_array`: Index of snow mixing ratio wrt moist air in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_specific_humidity_on_previous_timestep_in_xyz_dimensioned_restart_array`: Index of specific humidity on previous timestep in xyz dimensioned restart array
+* `index_of_water_vapor_mixing_ratio_wrt_moist_air_on_previous_timestep_in_xyz_dimensioned_restart_array`: Index of specific humidity (qv) on previous timestep in xyz dimensioned restart array
     * `integer(kind=)`: units = index
-* `index_of_specific_humidity_two_timesteps_back_in_xyz_dimensioned_restart_array`: Index of specific humidity two timesteps back in xyz dimensioned restart array
+* `index_of_water_vapor_mixing_ratio_wrt_moist_air_two_timesteps_back_in_xyz_dimensioned_restart_array`: Index of specific humidity (qv) two timesteps back in xyz dimensioned restart array
     * `integer(kind=)`: units = index
 * `control_for_stochastic_land_surface_perturbation`: Control for stochastic land surface perturbation
     * `integer(kind=)`: units = 1
@@ -1062,7 +1062,7 @@ Variables related to the compute environment
     * `integer(kind=)`: units = index
 * `index_of_mass_number_concentration_of_hygroscopic_aerosols_in_tracer_concentration_array`: Index of mass number concentration of hygroscopic aerosols in tracer concentration array
     * `integer(kind=)`: units = index
-* `index_of_specific_humidity_in_tracer_concentration_array`: Index of specific humidity in tracer concentration array
+* `index_of_water_vapor_mixing_ratio_wrt_moist_air_in_tracer_concentration_array`: Index of specific humidity (qv) in tracer concentration array
     * `integer(kind=)`: units = index
 * `index_of_atmosphere_heat_diffusivity_in_xyz_dimensioned_restart_array`: Index of atmosphere heat diffusivity in xyz dimensioned restart array
     * `integer(kind=)`: units = index
@@ -1407,7 +1407,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = J s-1
 * `process_split_cumulative_tendency_of_mass_number_concentration_of_hygroscopic_aerosols`: Process split cumulative tendency of mass number concentration of hygroscopic aerosols
     * `real(kind=kind_phys)`: units = kg-1 s-1
-* `process_split_cumulative_tendency_of_specific_humidity`: Process split cumulative tendency of specific humidity
+* `process_split_cumulative_tendency_of_water_vapor_mixing_ratio_wrt_moist_air`: Process-split cumulative tendency of specific humidity (qv)
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
 * `process_split_cumulative_tendency_of_x_wind`: Process split cumulative tendency of x wind
     * `real(kind=kind_phys)`: units = m s-2
@@ -1458,7 +1458,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = kg-1
 * `upward_virtual_potential_temperature_flux`: Upward virtual potential temperature flux
     * `real(kind=kind_phys)`: units = K m s-1
-* `upward_specific_humidity_flux_at_surface_for_mellor_yamada_janjic_surface_layer_scheme`: Upward specific humidity flux at surface for mellor yamada janjic surface layer scheme
+* `upward_flux_of_water_vapor_mixing_ratio_wrt_moist_air_at_surface_for_mellor_yamada_janjic_surface_layer_scheme`: Upward flux of specific humidity (qv) at surface for MYJ surface layer scheme
     * `real(kind=kind_phys)`: units = m s-1 kg kg-1
 * `cumulative_max_vertical_index_at_cloud_base_between_sw_radiation_calls`: Cumulative max vertical index at cloud base between sw radiation calls
     * `real(kind=kind_phys)`: units = 1
@@ -1468,9 +1468,9 @@ Variables related to the compute environment
     * `integer(kind=)`: units = index
 * `turbulent_mixing_length`: Turbulent mixing length
     * `real(kind=kind_phys)`: units = m
-* `specific_humidity_on_previous_timestep`: Specific humidity on previous timestep
+* `water_vapor_mixing_ratio_wrt_moist_air_on_previous_timestep`: Specific humidity (qv) on previous timestep
     * `real(kind=kind_phys)`: units = kg kg-1
-* `tendency_of_specific_humidity_due_to_nonphysics`: Tendency of specific humidity due to nonphysics
+* `tendency_of_water_vapor_mixing_ratio_wrt_moist_air_due_to_nonphysics`: Tendency of specific humidity (qv) due to nonphysics
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
 * `momentum_exchange_coefficient_for_myj_schemes`: Momentum exchange coefficient for myj schemes
     * `real(kind=kind_phys)`: units = m s-1
@@ -1478,7 +1478,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = various
 * `air_potential_temperature_at_top_of_viscous_sublayer`: Air potential temperature at top of viscous sublayer
     * `real(kind=kind_phys)`: units = K
-* `variance_of_specific_humidity`: Variance of specific humidity
+* `variance_of_water_vapor_mixing_ratio_wrt_moist_air`: Variance of specific humidity (qv)
     * `real(kind=kind_phys)`: units = kg2 kg-2
 * `random_number`: Random number
     * `real(kind=kind_phys)`: units = 1
@@ -1488,7 +1488,7 @@ Variables related to the compute environment
     * `integer(kind=)`: units = 1
 * `cumulative_min_vertical_index_at_cloud_base_between_sw_radiation_calls`: Cumulative min vertical index at cloud base between sw radiation calls
     * `real(kind=kind_phys)`: units = 1
-* `specific_humidity_at_top_of_viscous_sublayer`: Specific humidity at top of viscous sublayer
+* `water_vapor_mixing_ratio_wrt_moist_air_at_top_of_viscous_sublayer`: Water vapor mixing ratio wrt moist air at top of viscous sublayer
     * `real(kind=kind_phys)`: units = kg kg-1
 * `stability_function_for_heat`: Stability function for heat
     * `real(kind=kind_phys)`: units = 1
@@ -1506,11 +1506,11 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = Pa
 * `control_for_surface_layer_evaporation`: Control for surface layer evaporation
     * `real(kind=kind_phys)`: units = 1
-* `surface_specific_humidity_for_myj_schemes`: Surface specific humidity for myj schemes
+* `water_vapor_mixing_ratio_wrt_moist_air_at_surface_for_myj_schemes`: Surface specific humidity (qv) for MYJ schemes
     * `real(kind=kind_phys)`: units = kg kg-1
 * `enhancement_to_wind_speed_at_surface_adjacent_layer_due_to_convection`: Enhancement to wind speed at surface adjacent layer due to convection
     * `real(kind=kind_phys)`: units = m s-1
-* `covariance_of_air_temperature_and_specific_humidity`: Covariance of air temperature and specific humidity
+* `covariance_of_air_temperature_and_water_vapor_mixing_ratio_wrt_moist_air`: Covariance of air temperature and specific humidity (qv)
     * `real(kind=kind_phys)`: units = K kg kg-1
 * `variance_of_air_temperature`: Variance of air temperature
     * `real(kind=kind_phys)`: units = K2
@@ -1530,15 +1530,15 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = m s-1
 * `y_wind_at_top_of_viscous_sublayer`: Y wind at top of viscous sublayer
     * `real(kind=kind_phys)`: units = m s-1
-* `specific_humidity_on_previous_timestep_in_xyz_dimensioned_restart_array`: Specific humidity on previous timestep in xyz dimensioned restart array
+* `water_vapor_mixing_ratio_wrt_moist_air_on_previous_timestep_in_xyz_dimensioned_restart_array`: Specific humidity (qv) on previous timestep in XYZ-dimensioned restart array
     * `real(kind=kind_phys)`: units = kg kg-1
-* `specific_humidity_two_timesteps_back`: Specific humidity two timesteps back
+* `water_vapor_mixing_ratio_wrt_moist_air_two_timesteps_back`: Specific humidity (qv) two timesteps back
     * `real(kind=kind_phys)`: units = kg kg-1
 * `weight_for_momentum_at_top_of_viscous_sublayer`: Weight for momentum at top of viscous sublayer
     * `real(kind=kind_phys)`: units = 1
 * `weight_for_potential_temperature_at_top_of_viscous_sublayer`: Weight for potential temperature at top of viscous sublayer
     * `real(kind=kind_phys)`: units = 1
-* `weight_for_specific_humidity_at_top_of_viscous_sublayer`: Weight for specific humidity at top of viscous sublayer
+* `weight_for_water_vapor_mixing_ratio_wrt_moist_air_at_top_of_viscous_sublayer`: Weight for specific humidity (qv) at the top of the viscous sublayer
     * `real(kind=kind_phys)`: units = 1
 ## GFS_typedefs_GFS_sfcprop_type
 * `wet_canopy_area_fraction`: Wet canopy area fraction
@@ -1613,7 +1613,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = 1
 * `temperature_in_ice_layer`: Temperature in ice layer
     * `real(kind=kind_phys)`: units = K
-* `upward_specific_humidity_flux_at_surface`: Upward specific humidity flux at surface
+* `upward_flux_of_water_vapor_mixing_ratio_wrt_moist_air_at_surface`: Upward flux of water vapor mixing ratio wrt moist air at surface
     * `real(kind=kind_phys)`: units = kg kg-1 m s-1
 * `upward_temperature_flux_at_surface`: Upward temperature flux at surface
     * `real(kind=kind_phys)`: units = K m s-1
@@ -1727,11 +1727,11 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = K
 * `volumetric_soil_moisture_between_soil_bottom_and_water_table`: Volumetric soil moisture between soil bottom and water table
     * `real(kind=kind_phys)`: units = m3 m-3
-* `water_vapor_mixing_ratio_wrt_moist_air_at_2m`: mixing ratio of the mass of water vapor to the mass of moist air, at two meters above surface
+* `water_vapor_mixing_ratio_wrt_moist_air_at_2m`: Specific humidity (qv) at two meters above surface
     * `real(kind=kind_phys)`: units = kg kg-1
 * `water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_2m`: mixing ratio of the mass of water vapor to the mass of moist air and hydrometeors, at two meters above surface
     * `real(kind=kind_phys)`: units = kg kg-1
-* `specified_upward_specific_humidity_flux_at_surface`: Specified upward specific humidity flux at surface
+* `specified_upward_flux_of_water_vapor_mixing_ratio_wrt_moist_air_at_surface`: Specified upward specific humidity (qv) flux at surface
     * `real(kind=kind_phys)`: units = kg kg-1 m s-1
 * `specified_upward_temperature_flux_at_surface`: Specified upward temperature flux at surface
     * `real(kind=kind_phys)`: units = K m s-1
@@ -1811,7 +1811,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = fraction
 * `lwe_surface_snow`: Lwe surface snow
     * `real(kind=kind_phys)`: units = mm
-* `surface_specific_humidity`: Surface specific humidity
+* `water_vapor_mixing_ratio_wrt_moist_air_at_surface`: Specific humidity (qv) at surface
     * `real(kind=kind_phys)`: units = kg kg-1
 * `ratio_of_height_to_monin_obukhov_length`: Ratio of height to monin obukhov length
     * `real(kind=kind_phys)`: units = 1
@@ -1900,7 +1900,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = fraction
 * `atmosphere_heat_diffusivity_for_chemistry_coupling`: Atmosphere heat diffusivity for chemistry coupling
     * `real(kind=kind_phys)`: units = m2 s-1
-* `specific_humidity_at_2m_for_coupling`: Specific humidity at 2m for coupling
+* `water_vapor_mixing_ratio_wrt_moist_air_at_2m_for_coupling`: Specific humidity (qv) at 2 meters above surface used for coupling
     * `real(kind=kind_phys)`: units = kg kg-1
 * `air_pressure_at_surface_for_coupling`: Air pressure at surface for coupling
     * `real(kind=kind_phys)`: units = Pa
@@ -1942,7 +1942,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = Pa
 * `temperature_at_2m_for_coupling`: Temperature at 2m for coupling
     * `real(kind=kind_phys)`: units = K
-* `tendency_of_specific_humidity_due_to_moist_convection_for_coupling`: Tendency of specific humidity due to moist convection for coupling
+* `tendency_of_water_vapor_mixing_ratio_wrt_moist_air_due_to_moist_convection_for_coupling`: Tendency of water vapor mixing ratio wrt moist air due to moist convection for coupling
     * `real(kind=kind_phys)`: units = kg kg-1 s-1
 * `x_wind_at_10m_for_coupling`: X wind at 10m for coupling
     * `real(kind=kind_phys)`: units = m s-1
@@ -2071,7 +2071,7 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = J
 * `mass_number_concentration_of_hygroscopic_aerosols`: Mass number concentration of hygroscopic aerosols
     * `real(kind=kind_phys)`: units = kg-1
-* `specific_humidity_at_surface_adjacent_layer`: Specific humidity at surface adjacent layer
+* `water_vapor_mixing_ratio_wrt_moist_air_at_surface_adjacent_layer`: Specific humidity (qv) at surface-adjacent layer
     * `real(kind=kind_phys)`: units = kg kg-1
 * `x_wind_at_surface_adjacent_layer`: X wind at surface adjacent layer
     * `real(kind=kind_phys)`: units = m s-1
@@ -2197,9 +2197,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = kg kg-1
 * `mass_number_concentration_of_hygroscopic_aerosols_of_new_state`: Mass number concentration of hygroscopic aerosols of new state
     * `real(kind=kind_phys)`: units = kg-1
-* `specific_humidity_of_new_state_at_surface_adjacent_layer`: Specific humidity of new state at surface adjacent layer
+* `water_vapor_mixing_ratio_wrt_moist_air_of_new_state_at_surface_adjacent_layer`: Specific humidity (qv) of new state at surface-adjacent layer
     * `real(kind=kind_phys)`: units = kg kg-1
-* `specific_humidity_of_new_state`: Specific humidity of new state
+* `water_vapor_mixing_ratio_wrt_moist_air_of_new_state`: Specific humidity (qv) of new state
     * `real(kind=kind_phys)`: units = kg kg-1
 * `x_wind_of_new_state_at_surface_adjacent_layer`: X wind of new state at surface adjacent layer
     * `real(kind=kind_phys)`: units = m s-1

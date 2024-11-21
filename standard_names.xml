@@ -1693,10 +1693,12 @@
       <standard_name name="index_of_snow_mixing_ratio_wrt_moist_air_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_specific_humidity_on_previous_timestep_in_xyz_dimensioned_restart_array">
+      <standard_name name="index_of_water_vapor_mixing_ratio_wrt_moist_air_on_previous_timestep_in_xyz_dimensioned_restart_array"
+                   long_name="Index of specific humidity (qv) on previous timestep in xyz dimensioned restart array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_specific_humidity_two_timesteps_back_in_xyz_dimensioned_restart_array">
+      <standard_name name="index_of_water_vapor_mixing_ratio_wrt_moist_air_two_timesteps_back_in_xyz_dimensioned_restart_array"
+                   long_name="Index of specific humidity (qv) two timesteps back in xyz dimensioned restart array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="control_for_stochastic_land_surface_perturbation">
@@ -1717,7 +1719,8 @@
       <standard_name name="index_of_mass_number_concentration_of_hygroscopic_aerosols_in_tracer_concentration_array">
          <type kind="" units="index">integer</type>
       </standard_name>
-      <standard_name name="index_of_specific_humidity_in_tracer_concentration_array">
+      <standard_name name="index_of_water_vapor_mixing_ratio_wrt_moist_air_in_tracer_concentration_array"
+                   long_name="Index of specific humidity (qv) in tracer concentration array">
          <type kind="" units="index">integer</type>
       </standard_name>
       <standard_name name="index_of_atmosphere_heat_diffusivity_in_xyz_dimensioned_restart_array">
@@ -2235,7 +2238,8 @@
       <standard_name name="process_split_cumulative_tendency_of_mass_number_concentration_of_hygroscopic_aerosols">
          <type kind="kind_phys" units="kg-1 s-1">real</type>
       </standard_name>
-      <standard_name name="process_split_cumulative_tendency_of_specific_humidity">
+      <standard_name name="process_split_cumulative_tendency_of_water_vapor_mixing_ratio_wrt_moist_air"
+                   long_name="Process-split cumulative tendency of specific humidity (qv)">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
       <standard_name name="process_split_cumulative_tendency_of_x_wind">
@@ -2312,7 +2316,8 @@
       <standard_name name="upward_virtual_potential_temperature_flux">
          <type kind="kind_phys" units="K m s-1">real</type>
       </standard_name>
-      <standard_name name="upward_specific_humidity_flux_at_surface_for_mellor_yamada_janjic_surface_layer_scheme">
+      <standard_name name="upward_flux_of_water_vapor_mixing_ratio_wrt_moist_air_at_surface_for_mellor_yamada_janjic_surface_layer_scheme"
+                   long_name="Upward flux of specific humidity (qv) at surface for MYJ surface layer scheme">
          <type kind="kind_phys" units="m s-1 kg kg-1">real</type>
       </standard_name>
       <standard_name name="cumulative_max_vertical_index_at_cloud_base_between_sw_radiation_calls">
@@ -2327,10 +2332,12 @@
       <standard_name name="turbulent_mixing_length">
          <type kind="kind_phys" units="m">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_on_previous_timestep">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_on_previous_timestep"
+                   long_name="Specific humidity (qv) on previous timestep">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="tendency_of_specific_humidity_due_to_nonphysics">
+      <standard_name name="tendency_of_water_vapor_mixing_ratio_wrt_moist_air_due_to_nonphysics"
+                   long_name="Tendency of specific humidity (qv) due to nonphysics">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
       <standard_name name="momentum_exchange_coefficient_for_myj_schemes">
@@ -2342,7 +2349,8 @@
       <standard_name name="air_potential_temperature_at_top_of_viscous_sublayer">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="variance_of_specific_humidity">
+      <standard_name name="variance_of_water_vapor_mixing_ratio_wrt_moist_air"
+                   long_name="Variance of specific humidity (qv)">
          <type kind="kind_phys" units="kg2 kg-2">real</type>
       </standard_name>
       <standard_name name="random_number">
@@ -2357,7 +2365,8 @@
       <standard_name name="cumulative_min_vertical_index_at_cloud_base_between_sw_radiation_calls">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_at_top_of_viscous_sublayer">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_top_of_viscous_sublayer">
+                   long_name="Specific humidity (qv) at the top of the viscous sublayer">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="stability_function_for_heat">
@@ -2384,13 +2393,15 @@
       <standard_name name="control_for_surface_layer_evaporation">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
-      <standard_name name="surface_specific_humidity_for_myj_schemes">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_surface_for_myj_schemes"
+                   long_name="Surface specific humidity (qv) for MYJ schemes">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="enhancement_to_wind_speed_at_surface_adjacent_layer_due_to_convection">
          <type kind="kind_phys" units="m s-1">real</type>
       </standard_name>
-      <standard_name name="covariance_of_air_temperature_and_specific_humidity">
+      <standard_name name="covariance_of_air_temperature_and_water_vapor_mixing_ratio_wrt_moist_air"
+                   long_name="Covariance of air temperature and specific humidity (qv)">
          <type kind="kind_phys" units="K kg kg-1">real</type>
       </standard_name>
       <standard_name name="variance_of_air_temperature">
@@ -2420,10 +2431,12 @@
       <standard_name name="y_wind_at_top_of_viscous_sublayer">
          <type kind="kind_phys" units="m s-1">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_on_previous_timestep_in_xyz_dimensioned_restart_array">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_on_previous_timestep_in_xyz_dimensioned_restart_array"
+                   long_name="Specific humidity (qv) on previous timestep in XYZ-dimensioned restart array">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_two_timesteps_back">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_two_timesteps_back"
+                   long_name="Specific humidity (qv) two timesteps back">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="weight_for_momentum_at_top_of_viscous_sublayer">
@@ -2432,7 +2445,8 @@
       <standard_name name="weight_for_potential_temperature_at_top_of_viscous_sublayer">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
-      <standard_name name="weight_for_specific_humidity_at_top_of_viscous_sublayer">
+      <standard_name name="weight_for_water_vapor_mixing_ratio_wrt_moist_air_at_top_of_viscous_sublayer"
+                   long_name="Weight for specific humidity (qv) at the top of the viscous sublayer">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
    </section>
@@ -2546,7 +2560,8 @@
       <standard_name name="temperature_in_ice_layer">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="upward_specific_humidity_flux_at_surface">
+      <standard_name name="upward_flux_of_water_vapor_mixing_ratio_wrt_moist_air_at_surface">
+                   long_name="Upward specific humidity (qv) flux at surface">
          <type kind="kind_phys" units="kg kg-1 m s-1">real</type>
       </standard_name>
       <standard_name name="upward_temperature_flux_at_surface">
@@ -2723,14 +2738,15 @@
          <type kind="kind_phys" units="m3 m-3">real</type>
       </standard_name>
       <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_2m"
-                     long_name="mixing ratio of the mass of water vapor to the mass of moist air, at two meters above surface">
+                     long_name="Specific humidity (qv) at two meters above surface"> 
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_and_condensed_water_at_2m"
                      long_name="mixing ratio of the mass of water vapor to the mass of moist air and hydrometeors, at two meters above surface">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="specified_upward_specific_humidity_flux_at_surface">
+      <standard_name name="specified_upward_flux_of_water_vapor_mixing_ratio_wrt_moist_air_at_surface"
+                   long_name="Specified upward specific humidity (qv) flux at surface"> 
          <type kind="kind_phys" units="kg kg-1 m s-1">real</type>
       </standard_name>
       <standard_name name="specified_upward_temperature_flux_at_surface">
@@ -2866,7 +2882,8 @@
       <standard_name name="lwe_surface_snow">
          <type kind="kind_phys" units="mm">real</type>
       </standard_name>
-      <standard_name name="surface_specific_humidity">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_surface"
+                   long_name="Specific humidity (qv) at surface">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="ratio_of_height_to_monin_obukhov_length">
@@ -3000,7 +3017,8 @@
       <standard_name name="atmosphere_heat_diffusivity_for_chemistry_coupling">
          <type kind="kind_phys" units="m2 s-1">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_at_2m_for_coupling">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_2m_for_coupling"
+                   long_name="Specific humidity (qv) at 2 meters above surface used for coupling">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="air_pressure_at_surface_for_coupling">
@@ -3063,7 +3081,8 @@
       <standard_name name="temperature_at_2m_for_coupling">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="tendency_of_specific_humidity_due_to_moist_convection_for_coupling">
+      <standard_name name="tendency_of_water_vapor_mixing_ratio_wrt_moist_air_due_to_moist_convection_for_coupling">
+                   long_name="Tendency of specific humidity (qv) due to moist convection used for coupling">
          <type kind="kind_phys" units="kg kg-1 s-1">real</type>
       </standard_name>
       <standard_name name="x_wind_at_10m_for_coupling">
@@ -3264,7 +3283,8 @@
       <standard_name name="mass_number_concentration_of_hygroscopic_aerosols">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_at_surface_adjacent_layer">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_at_surface_adjacent_layer"
+                   long_name="Specific humidity (qv) at surface-adjacent layer">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="x_wind_at_surface_adjacent_layer">
@@ -3456,10 +3476,12 @@
       <standard_name name="mass_number_concentration_of_hygroscopic_aerosols_of_new_state">
          <type kind="kind_phys" units="kg-1">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_of_new_state_at_surface_adjacent_layer">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_of_new_state_at_surface_adjacent_layer"
+                   long_name="Specific humidity (qv) of new state at surface-adjacent layer">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="specific_humidity_of_new_state">
+      <standard_name name="water_vapor_mixing_ratio_wrt_moist_air_of_new_state"
+                   long_name="Specific humidity (qv) of new state">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
       <standard_name name="x_wind_of_new_state_at_surface_adjacent_layer">
