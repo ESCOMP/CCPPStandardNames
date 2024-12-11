@@ -408,6 +408,26 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_so2`: Sulfur dioxide volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
+* `emissions_of_co_anthropogenic_total`: Carbon monoxide emissions from anthropogenic total
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_no_anthropogenic_total`: Nitric oxide emissions from anthropogenic total
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_co_anthropogenic_industry`: Carbon monoxide emissions from anthropogenic industry
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_no_anthropogenic_industry`: Nitric oxide emissions from anthropogenic industry
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_co_anthropogenic_power`: Carbon monoxide emissions from anthropogenic power production
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_no_anthropogenic_power`: Nitric oxide emissions from anthropogenic power production
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_co_anthropogenic_traffic`: Carbon monoxide emissions from anthropogenic road traffic
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_no_anthropogenic_traffic`: Nitric oxide emissions from anthropogenic road traffic
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_co_anthropogenic_residential`: Carbon monoxide emissions from anthropogenic residential and commercial
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
+* `emissions_of_no_anthropogenic_residential`: Nitric oxide emissions from anthropogenic residential and commercial 
+    * `real(kind=kind_phys)`: units = kg m-2 s-1
 ## atmospheric_composition: GOCART aerosols
 * `mass_fraction_of_dust001_in_air`: Dust bin1 mass fraction
     * `real(kind=kind_phys)`: units = kg kg-1
