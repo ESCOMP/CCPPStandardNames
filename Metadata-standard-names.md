@@ -1,5 +1,6 @@
 # CCPP Standard Name Library
 #### Table of Contents
+* [base_names](#base_names)
 * [dimensions](#dimensions)
 * [constants](#constants)
 * [coordinates](#coordinates)
@@ -22,6 +23,100 @@
 * [GFS_typedefs_GFS_grid_type](#gfs_typedefs_gfs_grid_type)
 * [GFS_typedefs_GFS_stateout_type](#gfs_typedefs_gfs_stateout_type)
 
+## base_names
+Base names are the 'elemental' quantities from which
+the more complex standard names are constructed.
+Base names can roughly be broken down into three categories:
+### generic_names
+The following names are too general to be chosen as
+standard names, but they can serve as base names for
+more specific standard names.
+* `amount`: amount
+    * `real`: units = kg m-2
+* `area`: area
+    * `real`: units = m2
+* `area_fraction`: area_fraction
+    * `real`: units = 1
+* `binary_mask`: binary_mask
+    * `integer`: units = 1
+* `coefficient`: coefficient
+    * `real`: units = 1
+* `coefficient`: coefficient
+    * `real`: units = 1
+* `data_mask`: data_mask
+    * `real`: units = 1
+* `density`: density
+    * `real`: units = kg m-3
+* `energy`: energy
+    * `real`: units = J
+* `energy_content`: energy_content
+    * `real`: units = J m-2
+* `energy_density`: energy_density
+    * `real`: units = J m-3
+* `frequency`: frequency
+    * `real`: units = s-1
+* `heat_flux`: heat_flux
+    * `real`: units = W m-2
+* `heat_transport`: heat_transport
+    * `real`: units = W
+* `mass`: mass
+    * `real`: units = kg
+* `mass_flux`: mass_flux
+    * `real`: units = kg m-2 s-1
+* `mass_fraction`: mass_fraction
+    * `real`: units = 1
+* `mixing_ratio`: mixing_ratio
+    * `real`: units = kg kg-1
+* `mass_transport`: mass_transport
+    * `real`: units = kg s-1
+* `mole_fraction`: mole_fraction
+    * `real`: units = 1
+* `mole_flux`: mole_flux
+    * `real`: units = mol m-2 s-1
+* `momentum_flux`: momentum_flux
+    * `real`: units = Pa
+* `partial_pressure`: partial_pressure
+    * `real`: units = Pa
+* `period`: period
+    * `real`: units = s
+* `power`: power
+    * `real`: units = W
+* `pressure`: pressure
+    * `real`: units = Pa
+* `probability`: probability
+    * `real`: units = 1
+* `radiative_flux`: radiative_flux
+    * `real`: units = W m-2
+* `radius`: radius
+    * `real`: units = m
+* `specific_eddy_kinetic_energy`: specific_eddy_kinetic_energy
+    * `real`: units = m2 s-2
+* `speed`: speed
+    * `real`: units = m s-1
+* `stress`: stress
+    * `real`: units = Pa
+* `streamfunction`: streamfunction
+    * `real`: units = m2 s-1
+* `temperature`: temperature
+    * `real`: units = K
+* `thickness`: thickness
+    * `real`: units = m
+* `velocity`: velocity
+    * `real`: units = m s-1
+* `velocity_potential`: velocity_potential
+    * `real`: units = m2 s-1
+* `volume`: volume
+    * `real`: units = m3
+* `volume_flux`: volume_flux
+    * `real`: units = m s-1
+* `volume_fraction`: volume_fraction
+    * `real`: units = 1
+* `volume_mixing_ratio`: volume_mixing_ratio
+    * `real`: units = mol mol-1
+* `volume_transport`: volume_transport
+    * `real`: units = m3 s-1
+* `vorticity`: vorticity
+    * `real`: units = s-1
 ## dimensions
 Dimension standard names may come in sets of six related standard names for each dimension:
 ```
