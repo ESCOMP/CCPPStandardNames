@@ -261,7 +261,6 @@
                      long_name="so2">
       </standard_name>
     </section>
-  </section>
     <section name="base_standard_names"
              comment="These names are used as bases for other names, but may\n
                       also be considered standard names on their own. See the\n
@@ -495,6 +494,7 @@
                      long_name="wind_speed">
       </standard_name>
     </section>
+  </section>
   <section name="dimensions"
            comment="Dimension standard names may come in sets of six
                     related standard names for each dimension:\n

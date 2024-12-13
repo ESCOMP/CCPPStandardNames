@@ -1,7 +1,6 @@
 # CCPP Standard Name Library
 #### Table of Contents
 * [base_names](#base_names)
-* [base_standard_names](#base_standard_names)
 * [dimensions](#dimensions)
 * [constants](#constants)
 * [coordinates](#coordinates)
@@ -146,7 +145,7 @@ These are the base names for specific chemical species
 * `silicate`: Chemical species containing the silicate ion
 * `sulfate`: Chemical species containing the sulfate ion
 * `sulfur_dioxide`: so2
-## base_standard_names
+### base_standard_names
 These names are used as bases for other names, but may
 also be considered standard names on their own. See the
 full list of standard names for further details.
