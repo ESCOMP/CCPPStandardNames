@@ -1,6 +1,7 @@
 # CCPP Standard Name Library
 #### Table of Contents
 * [base_names](#base_names)
+* [base_standard_names](#base_standard_names)
 * [dimensions](#dimensions)
 * [constants](#constants)
 * [coordinates](#coordinates)
@@ -117,6 +118,114 @@ more specific standard names.
     * `real`: units = m3 s-1
 * `vorticity`: vorticity
     * `real`: units = s-1
+### chemical_species
+These are the base names for specific chemical species
+* `c5h8`: Isoprene
+* `co2`: Carbon dioxide
+* `co`: Carbon monoxide
+* `ccl4`: Tetrachloromethane
+* `cfc11`: Trichlorofluoromethane
+* `cfc12`: Dichlorodifluoromethane
+* `cfc113`: 1,1,2-Trichloro-1,2,2-trifluoroethane
+* `cfc22`: Chlorodifluoromethane
+* `dimethyl_sulfide`: Dimethyl sulfide; DMS
+* `hcho`: Formaldehyde
+* `hydrophilic_black_carbon`: hydrophilic_black_carbon
+* `hydrophobic_black_carbon`: hydrophobic_black_carbon
+* `hydrophilic_organic_carbon`: hydrophilic_organic_carbon
+* `hydrophobic_organic_carbon`: hydrophobic_organic_carbon
+* `methane`: ch4
+* `n2o`: Nitrous Oxide, N₂O
+* `nitrate`: Chemical species containing the nitrate ion
+* `nitrite`: Chemical species containing the nitrite ion
+* `no2`: Nitrogen dioxide
+* `no`: Nitric oxide NO (Nitrogen oxide, Nitrogen monoxide)
+* `oxygen`: Molecular oxygen, O₂
+* `ozone`: Ozone, O₃
+* `phosphate`: Chemical species containing the phosphate ion
+* `silicate`: Chemical species containing the silicate ion
+* `sulfate`: Chemical species containing the sulfate ion
+* `sulfur_dioxide`: so2
+## base_standard_names
+These names are used as bases for other names, but may
+also be considered standard names on their own. See the
+full list of standard names for further details.
+* `absolute_vorticity`: absolute_vorticity
+* `air_potential_temperature`: air_potential_temperature
+* `air_pressure`: air_pressure
+* `air_pressure_thickness`: air_pressure_thickness
+* `air_temperature`: air_temperature
+* `air_temperature/water_vapor`: air_temperature/water_vapor
+* `albedo`: albedo
+* `atmosphere_heat_diffusivity`: atmosphere_heat_diffusivity
+* `cloud_area_fraction`: cloud_area_fraction
+* `cloud_condensate`: cloud_condensate
+* `cloud_ice`: cloud_ice
+* `cloud_liquid_water`: cloud_liquid_water
+* `date`: date
+* `density`: density
+* `diffuse_nir_albedo`: diffuse_nir_albedo
+* `diffuse_nir_shortwave_flux`: diffuse_nir_shortwave_flux
+* `diffuse_shortwave_albedo`: diffuse_shortwave_albedo
+* `diffuse_uv_and_vis_shortwave_flux`: diffuse_uv_and_vis_shortwave_flux
+* `diffuse_visible_albedo`: diffuse_visible_albedo
+* `direct_nir_albedo`: direct_nir_albedo
+* `direct_nir_shortwave_flux`: direct_nir_shortwave_flux
+* `direct_uv_and_vis_shortwave_flux`: direct_uv_and_vis_shortwave_flux
+* `direct_visible_albedo`: direct_visible_albedo
+* `divergence`: divergence
+* `dry_air_density`: dry_air_density
+* `dry_air_enthalpy`: dry_air_enthalpy
+* `exner_function`: exner_function
+* `filename`: filename
+* `forecast_time`: forecast_time
+* `geopotential`: geopotential
+* `geopotential_height`: geopotential_height
+* `graupel`: graupel
+* `gravitational_acceleration`: gravitational_acceleration
+* `hail`: hail
+* `heat_flux`: heat_flux
+* `hygroscopic_aerosols`: hygroscopic_aerosols
+* `ice`: ice
+* `latent_heat_flux`: latent_heat_flux
+* `liquid_water`: liquid_water
+* `longwave_flux`: longwave_flux
+* `momentum_flux`: momentum_flux
+* `nonhygroscopic_ice_nucleating_aerosols`: nonhygroscopic_ice_nucleating_aerosols
+* `ozone`: ozone
+* `pressure`: pressure
+* `rain`: rain
+* `rain_water`: rain_water
+* `random_number`: random_number
+* `random_number_seed`: random_number_seed
+* `reference_pressure`: reference_pressure
+* `relative_humidity`: relative_humidity
+* `roughness_length`: roughness_length
+* `sensible_heat_flux`: sensible_heat_flux
+* `shortwave_flux`: shortwave_flux
+* `snow`: snow
+* `snow_area_fraction`: snow_area_fraction
+* `soil_moisture`: soil_moisture
+* `soil_temperature`: soil_temperature
+* `solar_declination_angle`: solar_declination_angle
+* `solar_zenith_angle`: solar_zenith_angle
+* `streamfunction`: streamfunction
+* `surface_skin_temperature`: surface_skin_temperature
+* `temperature`: temperature
+* `temperature_flux`: temperature_flux
+* `time`: time
+* `total_energy`: total_energy
+* `total_water`: total_water
+* `tracer`: tracer
+* `tracers`: tracers
+* `turbulent_kinetic_energy`: turbulent_kinetic_energy
+* `velocity_potential`: velocity_potential
+* `virtual_potential_temperature`: virtual_potential_temperature
+* `virtual_temperature`: virtual_temperature
+* `water`: water
+* `water_vapor`: water_vapor
+* `wind`: wind
+* `wind_speed`: wind_speed
 ## dimensions
 Dimension standard names may come in sets of six related standard names for each dimension:
 ```
@@ -469,7 +578,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = K-1
 * `mole_fraction_of_ozone_in_air`: Mole fraction of ozone in air
     * `real(kind=kind_phys)`: units = mol mol-1
-* `mole_fraction_of_carbon_dioxide_in_air`: Mole fraction of carbon dioxide in air
+* `mole_fraction_of_co2_in_air`: Mole fraction of co2 in air
     * `real(kind=kind_phys)`: units = mol mol-1
 * `volume_mixing_ratio_of_ch4`: Methane volume mixing ratio
     * `real(kind=kind_phys)`: units = mol mol-1
