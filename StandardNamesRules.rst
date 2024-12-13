@@ -40,7 +40,7 @@ CCPP Standard Name Rules
    than was originally envisioned by the CF conventions. "``medium``" should be specified when
    the variable in question is a substance or other quantity contained within some other the medium
    (e.g. for with air as the medium, mole_fraction_of_ozone_in_air, the base name is ozone, while the medium is air). 
-   "Transformation" refers to descriptors such as "``tendency of``", "``log10``", or other operations or processes describing some transformation or adjustment of a variable; a detailed list of possible transformations can be found `later in this document <#transformations>`_. 
+   "Transformation" refers to descriptors such as "``tendency_of``", "``log10``", or other operations or processes describing some transformation or adjustment of a variable; a detailed list of possible transformations can be found `later in this document <#transformations>`_.
    Other parts of the construction provide information about a variable's horizontal surface
    (e.g. ``at_cloud_base``), component (i.e. direction of variable, e.g. ``downward``), process (e.g.
    ``due_to_deep_convection``), or condition (e.g., ``assuming_clear_sky``). These qualifications do not
