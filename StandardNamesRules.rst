@@ -35,12 +35,12 @@ CCPP Standard Name Rules
    [``transformation``] [``component``] base_name [*at* ``level``] [*in* ``medium``] [*due_to* ``process``] [*assuming* ``condition``]
 
    This construction was originally based on rules set forth in the
-   `CF guidelines <http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html>`_),
+   `CF guidelines <http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html>`),
    but have since evolved for better consistency and generality across a broader set of fields
    than was originally envisioned by the CF conventions. "``medium``" should be specified when
-   the variable in question is a substance or other quantity contained within some other medium
-   (e.g. for "mole_fraction_of_ozone_in_air", the base name is "ozone", while the medium is "air"). 
-   "Transformation" refers to descriptors such as "``tendency_of``", "``log10``", or other operations or processes describing some transformation or adjustment of a variable; a detailed list of possible transformations can be found `later in this document <#transformations>`_.
+   the variable in question is a substance or other quantity contained within some other the medium
+   (e.g. for with air as the medium, mole_fraction_of_ozone_in_air, the base name is ozone, while the medium is air). 
+   "Transformation" refers to descriptors such as "``tendency of``", "``log10``", or other operations or processes describing some transformation or adjustment of a variable.
    Other parts of the construction provide information about a variable's horizontal surface
    (e.g. ``at_cloud_base``), component (i.e. direction of variable, e.g. ``downward``), process (e.g.
    ``due_to_deep_convection``), or condition (e.g., ``assuming_clear_sky``). These qualifications do not
@@ -50,8 +50,7 @@ CCPP Standard Name Rules
    The following table provides a few concrete examples of standard names and how they are constructed
    with respect to the guideline template.
 
-.. image:: https://raw.githubusercontent.com/wiki/ESCOMP/CCPPStandardNames/images/standard_name_construction_examples.png
-   :alt: image of table providing standard name construction examples
+   ![image of table providing standard name construction examples](https://raw.githubusercontent.com/wiki/ESCOMP/CCPPStandardNames/images/standard_name_construction_examples.png)
 
 #. Variables are current and instantaneous unless specified. Variables that are not
    current (e.g., previous timestep) or non-instantaneous (e.g., accumulated values)
@@ -120,7 +119,7 @@ CCPP Standard Name Rules
    *cloud_at_500hPa* if only including clouds that exist at 500 hPa).
 
 #. If possible, qualifiers should be limited in order to allow for a wide
-   applicability of the variable. In other words, don't qualify with ``_for_specific_context``
+   applicability of the variable. In other words, don't qualify with ``_for_xyz``
    unless a variable could not conceivably be used outside of the more
    narrowly-defined context or a variable without the scope-narrowing qualifiers
    already exists and cannot be reused.
