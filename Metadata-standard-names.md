@@ -8,7 +8,7 @@
 * [diagnostics](#diagnostics)
 * [atmospheric_composition](#atmospheric_composition)
 * [atmospheric_composition: GOCART aerosols](#atmospheric_composition-gocart-aerosols)
-* [emissions: CEDS](#emissions_ceds)
+* [emissions: Community Emissions Data System (CEDS)](#emissions_ceds)
 * [required framework-provided variables](#required-framework-provided-variables)
 * [optional framework-provided variables](#optional-framework-provided-variables)
 * [system variables](#system-variables)
@@ -452,7 +452,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m-1
 * `volume_extinction_in_air_due_to_aerosol_particles_lambda3`: Aerosol extinction at wavelength3
     * `real(kind=kind_phys)`: units = m-1
-## emissions_ceds
+## emissions: Community Emissions Data System (CEDS)
 * `emissions_of_co_due_to_anthropogenic`: Carbon monoxide emissions from anthropogenic total
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_no_due_to_anthropogenic`: Nitric oxide emissions from anthropogenic total
