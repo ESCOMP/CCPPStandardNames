@@ -2838,8 +2838,8 @@
                      long_name="Skin temperature at surface over (or where) land">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
-      <standard_name name="skin_temperature_at_surface_over_sea"
-                     long_name="Skin temperature at surface over (or where) sea">
+      <standard_name name="skin_temperature_at_surface_over_ocean"
+                     long_name="Skin temperature at surface over (or where) ocean">
          <type kind="kind_phys" units="K">real</type>
       </standard_name>
       <standard_name name="skin_temperature_at_surface_over_snow"
