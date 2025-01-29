@@ -27,10 +27,6 @@
                      long_name="coefficient">
         <type units="1">real</type>
       </standard_name>
-      <standard_name name="coefficient"
-                     long_name="coefficient">
-        <type units="1">real</type>
-      </standard_name>
       <standard_name name="data_mask"
                      long_name="data_mask">
         <type units="1">real</type>

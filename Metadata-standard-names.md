@@ -41,8 +41,6 @@ more specific standard names.
     * `integer`: units = 1
 * `coefficient`: coefficient
     * `real`: units = 1
-* `coefficient`: coefficient
-    * `real`: units = 1
 * `data_mask`: data_mask
     * `real`: units = 1
 * `density`: density
