@@ -154,7 +154,6 @@ full list of standard names for further details.
 * `air_pressure`: air_pressure
 * `air_pressure_thickness`: air_pressure_thickness
 * `air_temperature`: air_temperature
-* `air_temperature/water_vapor`: air_temperature/water_vapor
 * `albedo`: albedo
 * `atmosphere_heat_diffusivity`: atmosphere_heat_diffusivity
 * `cloud_area_fraction`: cloud_area_fraction
@@ -163,14 +162,14 @@ full list of standard names for further details.
 * `cloud_liquid_water`: cloud_liquid_water
 * `date`: date
 * `density`: density
-* `diffuse_nir_albedo`: diffuse_nir_albedo
-* `diffuse_nir_shortwave_flux`: diffuse_nir_shortwave_flux
+* `diffuse_nir_albedo`: diffuse near-infrared albedo
+* `diffuse_nir_shortwave_flux`: diffuse near-infrared shortwave flux
 * `diffuse_shortwave_albedo`: diffuse_shortwave_albedo
-* `diffuse_uv_and_vis_shortwave_flux`: diffuse_uv_and_vis_shortwave_flux
+* `diffuse_uv_and_vis_shortwave_flux`: diffuse ultraviolet and visible shortwave flux
 * `diffuse_visible_albedo`: diffuse_visible_albedo
-* `direct_nir_albedo`: direct_nir_albedo
-* `direct_nir_shortwave_flux`: direct_nir_shortwave_flux
-* `direct_uv_and_vis_shortwave_flux`: direct_uv_and_vis_shortwave_flux
+* `direct_nir_albedo`: direct near-infrared albedo
+* `direct_nir_shortwave_flux`: direct near-infrared shortwave flux
+* `direct_uv_and_vis_shortwave_flux`: direct ultraviolet and visible shortwave flux
 * `direct_visible_albedo`: direct_visible_albedo
 * `divergence`: divergence
 * `dry_air_density`: dry_air_density
@@ -214,14 +213,13 @@ full list of standard names for further details.
 * `temperature_flux`: temperature_flux
 * `time`: time
 * `total_energy`: total_energy
-* `total_water`: total_water
+* `total_water`: All water phases (solid, liquid, gas)
 * `tracer`: tracer
 * `tracers`: tracers
 * `turbulent_kinetic_energy`: turbulent_kinetic_energy
 * `velocity_potential`: velocity_potential
 * `virtual_potential_temperature`: virtual_potential_temperature
 * `virtual_temperature`: virtual_temperature
-* `water`: water
 * `water_vapor`: water_vapor
 * `wind`: wind
 * `wind_speed`: wind_speed
@@ -2067,25 +2065,25 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = 1
 * `convective_cloud_condensate_after_rainout`: Convective cloud condensate after rainout
     * `real(kind=kind_phys)`: units = kg kg-1
-* `cumulative_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative downwelling diffuse nir shortwave flux at surface for coupling multiplied by timestep
+* `cumulative_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: cumulative downwelling diffuse near-infrared shortwave flux at the surface level for coupling multiplied by the duration of the timestep
     * `real(kind=kind_phys)`: units = J m-2
-* `cumulative_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative downwelling diffuse uv and vis shortwave flux at surface for coupling multiplied by timestep
+* `cumulative_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: cumulative downwelling diffuse ultraviolet and visible shortwave flux at the surface level for coupling multiplied by the duration of the timestep
     * `real(kind=kind_phys)`: units = J m-2
-* `cumulative_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative downwelling direct nir shortwave flux at surface for coupling multiplied by timestep
+* `cumulative_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: cumulative downwelling direct near-infrared shortwave flux at the surface level for coupling multiplied by the duration of the timestep
     * `real(kind=kind_phys)`: units = J m-2
-* `cumulative_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative downwelling direct uv and vis shortwave flux at surface for coupling multiplied by timestep
+* `cumulative_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: cumulative downwelling direct ultraviolet and visible shortwave flux at the surface level for coupling multiplied by the duration of the timestep
     * `real(kind=kind_phys)`: units = J m-2
 * `cumulative_downwelling_longwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative downwelling longwave flux at surface for coupling multiplied by timestep
     * `real(kind=kind_phys)`: units = J m-2
 * `cumulative_downwelling_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative downwelling shortwave flux at surface for coupling multiplied by timestep
     * `real(kind=kind_phys)`: units = J m-2
-* `cumulative_net_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative net downwelling diffuse nir shortwave flux at surface for coupling multiplied by timestep
+* `cumulative_net_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: cumulative net downwelling diffuse near-infrared shortwave flux at the surface level for coupling multiplied by the duration of the timestep
     * `real(kind=kind_phys)`: units = J m-2
-* `cumulative_net_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative net downwelling diffuse uv and vis shortwave flux at surface for coupling multiplied by timestep
+* `cumulative_net_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: cumulative net downwelling diffuse ultraviolet and visible shortwave flux at the surface level for coupling multiplied by the duration of the timestep
     * `real(kind=kind_phys)`: units = J m-2
-* `cumulative_net_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative net downwelling direct nir shortwave flux at surface for coupling multiplied by timestep
+* `cumulative_net_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: cumulative net downwelling direct near-infrared shortwave flux at the surface level for coupling multiplied by the duration of the timestep
     * `real(kind=kind_phys)`: units = J m-2
-* `cumulative_net_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative net downwelling direct uv and vis shortwave flux at surface for coupling multiplied by timestep
+* `cumulative_net_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep`: cumulative net downwelling direct ultraviolet and visible shortwave flux at the surface level for coupling multiplied by the duration of the timestep
     * `real(kind=kind_phys)`: units = J m-2
 * `cumulative_net_downwelling_longwave_flux_at_surface_for_coupling_multiplied_by_timestep`: Cumulative net downwelling longwave flux at surface for coupling multiplied by timestep
     * `real(kind=kind_phys)`: units = J m-2
@@ -2107,25 +2105,25 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = kg kg-1
 * `air_pressure_at_surface_for_coupling`: Air pressure at surface for coupling
     * `real(kind=kind_phys)`: units = Pa
-* `downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling`: Downwelling diffuse nir shortwave flux at surface for coupling
+* `downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling`: downwelling diffuse near-infrared shortwave flux at the surface level for coupling
     * `real(kind=kind_phys)`: units = W m-2
-* `downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling`: Downwelling diffuse uv and vis shortwave flux at surface for coupling
+* `downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling`: downwelling diffuse ultraviolet and visible shortwave flux at the surface level for coupling
     * `real(kind=kind_phys)`: units = W m-2
-* `downwelling_direct_nir_shortwave_flux_at_surface_for_coupling`: Downwelling direct nir shortwave flux at surface for coupling
+* `downwelling_direct_nir_shortwave_flux_at_surface_for_coupling`: downwelling direct near-infrared shortwave flux at the surface level for coupling
     * `real(kind=kind_phys)`: units = W m-2
-* `downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling`: Downwelling direct uv and vis shortwave flux at surface for coupling
+* `downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling`: downwelling direct ultraviolet and visible shortwave flux at the surface level for coupling
     * `real(kind=kind_phys)`: units = W m-2
 * `downwelling_longwave_flux_at_surface_for_coupling`: Downwelling longwave flux at surface for coupling
     * `real(kind=kind_phys)`: units = W m-2
 * `downwelling_shortwave_flux_at_surface_for_coupling`: Downwelling shortwave flux at surface for coupling
     * `real(kind=kind_phys)`: units = W m-2
-* `net_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling`: Net downwelling diffuse nir shortwave flux at surface for coupling
+* `net_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling`: net downwelling diffuse near-infrared shortwave flux at the surface level for coupling
     * `real(kind=kind_phys)`: units = W m-2
-* `net_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling`: Net downwelling diffuse uv and vis shortwave flux at surface for coupling
+* `net_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling`: net downwelling diffuse ultraviolet and visible shortwave flux at the surface level for coupling
     * `real(kind=kind_phys)`: units = W m-2
-* `net_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling`: Net downwelling direct nir shortwave flux at surface for coupling
+* `net_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling`: net downwelling direct near-infrared shortwave flux at the surface level for coupling
     * `real(kind=kind_phys)`: units = W m-2
-* `net_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling`: Net downwelling direct uv and vis shortwave flux at surface for coupling
+* `net_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling`: downwelling direct ultraviolet and visible shortwave flux at the surface level for coupling
     * `real(kind=kind_phys)`: units = W m-2
 * `net_downwelling_longwave_flux_at_surface_for_coupling`: Net downwelling longwave flux at surface for coupling
     * `real(kind=kind_phys)`: units = W m-2
@@ -2167,13 +2165,13 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = W m-2
 * `area_type_from_coupled_process`: Area type from coupled process
     * `real(kind=kind_phys)`: units = 1
-* `downwelling_diffuse_nir_shortwave_flux_at_surface_on_radiation_timestep`: Downwelling diffuse nir shortwave flux at surface on radiation timestep
+* `downwelling_diffuse_nir_shortwave_flux_at_surface_on_radiation_timestep`: downwelling diffuse near-infrared shortwave flux at the surface level on the radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep`: Downwelling diffuse uv and vis shortwave flux at surface on radiation timestep
+* `downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep`: downwelling diffuse ultraviolet and visible shortwave flux at the surface level on the radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `downwelling_direct_nir_shortwave_flux_at_surface_on_radiation_timestep`: Downwelling direct nir shortwave flux at surface on radiation timestep
+* `downwelling_direct_nir_shortwave_flux_at_surface_on_radiation_timestep`: downwelling direct near-infrared shortwave flux at the surface level on the radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `downwelling_direct_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep`: Downwelling direct uv and vis shortwave flux at surface on radiation timestep
+* `downwelling_direct_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep`: downwelling direct ultraviolet and visible shortwave flux at the surface level on the radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
 * `downwelling_longwave_flux_at_surface_on_radiation_timestep`: Downwelling longwave flux at surface on radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
@@ -2191,13 +2189,13 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = W m-2
 * `upward_sensible_heat_flux_at_surface_from_coupled_process`: Upward sensible heat flux at surface from coupled process
     * `real(kind=kind_phys)`: units = W m-2
-* `upwelling_diffuse_nir_shortwave_flux_at_surface_on_radiation_timestep`: Upwelling diffuse nir shortwave flux at surface on radiation timestep
+* `upwelling_diffuse_nir_shortwave_flux_at_surface_on_radiation_timestep`: upwelling diffuse near-infrared shortwave flux at the surface level on the radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `upwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep`: Upwelling diffuse uv and vis shortwave flux at surface on radiation timestep
+* `upwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep`: upwelling diffuse ultraviolet and visible shortwave flux at the surface level on the radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `upwelling_direct_nir_shortwave_flux_at_surface_on_radiation_timestep`: Upwelling direct nir shortwave flux at surface on radiation timestep
+* `upwelling_direct_nir_shortwave_flux_at_surface_on_radiation_timestep`: upwelling direct near-infrared shortwave flux at the surface level on the radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `upwelling_direct_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep`: Upwelling direct uv and vis shortwave flux at surface on radiation timestep
+* `upwelling_direct_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep`: upwelling direct ultraviolet and visible shortwave flux at the surface level on the radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
 * `upwelling_longwave_flux_at_surface_from_coupled_process`: Upwelling longwave flux at surface from coupled process
     * `real(kind=kind_phys)`: units = W m-2

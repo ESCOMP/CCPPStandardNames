@@ -280,9 +280,6 @@
       <standard_name name="air_temperature"
                      long_name="air_temperature">
       </standard_name>
-      <standard_name name="air_temperature/water_vapor"
-                     long_name="air_temperature/water_vapor">
-      </standard_name>
       <standard_name name="albedo"
                      long_name="albedo">
       </standard_name>
@@ -308,28 +305,28 @@
                      long_name="density">
       </standard_name>
       <standard_name name="diffuse_nir_albedo"
-                     long_name="diffuse_nir_albedo">
+                     long_name="diffuse near-infrared albedo">
       </standard_name>
       <standard_name name="diffuse_nir_shortwave_flux"
-                     long_name="diffuse_nir_shortwave_flux">
+                     long_name="diffuse near-infrared shortwave flux">
       </standard_name>
       <standard_name name="diffuse_shortwave_albedo"
                      long_name="diffuse_shortwave_albedo">
       </standard_name>
       <standard_name name="diffuse_uv_and_vis_shortwave_flux"
-                     long_name="diffuse_uv_and_vis_shortwave_flux">
+                     long_name="diffuse ultraviolet and visible shortwave flux">
       </standard_name>
       <standard_name name="diffuse_visible_albedo"
                      long_name="diffuse_visible_albedo">
       </standard_name>
       <standard_name name="direct_nir_albedo"
-                     long_name="direct_nir_albedo">
+                     long_name="direct near-infrared albedo">
       </standard_name>
       <standard_name name="direct_nir_shortwave_flux"
-                     long_name="direct_nir_shortwave_flux">
+                     long_name="direct near-infrared shortwave flux">
       </standard_name>
       <standard_name name="direct_uv_and_vis_shortwave_flux"
-                     long_name="direct_uv_and_vis_shortwave_flux">
+                     long_name="direct ultraviolet and visible shortwave flux">
       </standard_name>
       <standard_name name="direct_visible_albedo"
                      long_name="direct_visible_albedo">
@@ -461,7 +458,7 @@
                      long_name="total_energy">
       </standard_name>
       <standard_name name="total_water"
-                     long_name="total_water">
+                     long_name="All water phases (solid, liquid, gas)">
       </standard_name>
       <standard_name name="tracer"
                      long_name="tracer">
@@ -480,9 +477,6 @@
       </standard_name>
       <standard_name name="virtual_temperature"
                      long_name="virtual_temperature">
-      </standard_name>
-      <standard_name name="water"
-                     long_name="water">
       </standard_name>
       <standard_name name="water_vapor"
                      long_name="water_vapor">
@@ -3484,16 +3478,20 @@
       <standard_name name="convective_cloud_condensate_after_rainout">
          <type kind="kind_phys" units="kg kg-1">real</type>
       </standard_name>
-      <standard_name name="cumulative_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
+      <standard_name name="cumulative_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep"
+                     long_name="cumulative downwelling diffuse near-infrared shortwave flux at the surface level for coupling multiplied by the duration of the timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
-      <standard_name name="cumulative_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
+      <standard_name name="cumulative_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep"
+                     long_name="cumulative downwelling diffuse ultraviolet and visible shortwave flux at the surface level for coupling multiplied by the duration of the timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
-      <standard_name name="cumulative_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
+      <standard_name name="cumulative_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep"
+                     long_name="cumulative downwelling direct near-infrared shortwave flux at the surface level for coupling multiplied by the duration of the timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
-      <standard_name name="cumulative_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
+      <standard_name name="cumulative_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep"
+                     long_name="cumulative downwelling direct ultraviolet and visible shortwave flux at the surface level for coupling multiplied by the duration of the timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
       <standard_name name="cumulative_downwelling_longwave_flux_at_surface_for_coupling_multiplied_by_timestep">
@@ -3502,16 +3500,20 @@
       <standard_name name="cumulative_downwelling_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
-      <standard_name name="cumulative_net_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
+      <standard_name name="cumulative_net_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep"
+                     long_name="cumulative net downwelling diffuse near-infrared shortwave flux at the surface level for coupling multiplied by the duration of the timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
-      <standard_name name="cumulative_net_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
+      <standard_name name="cumulative_net_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep"
+                     long_name="cumulative net downwelling diffuse ultraviolet and visible shortwave flux at the surface level for coupling multiplied by the duration of the timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
-      <standard_name name="cumulative_net_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
+      <standard_name name="cumulative_net_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep"
+                     long_name="cumulative net downwelling direct near-infrared shortwave flux at the surface level for coupling multiplied by the duration of the timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
-      <standard_name name="cumulative_net_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep">
+      <standard_name name="cumulative_net_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling_multiplied_by_timestep"
+                     long_name="cumulative net downwelling direct ultraviolet and visible shortwave flux at the surface level for coupling multiplied by the duration of the timestep">
          <type kind="kind_phys" units="J m-2">real</type>
       </standard_name>
       <standard_name name="cumulative_net_downwelling_longwave_flux_at_surface_for_coupling_multiplied_by_timestep">
@@ -3545,16 +3547,20 @@
       <standard_name name="air_pressure_at_surface_for_coupling">
          <type kind="kind_phys" units="Pa">real</type>
       </standard_name>
-      <standard_name name="downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling">
+      <standard_name name="downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling"
+                     long_name="downwelling diffuse near-infrared shortwave flux at the surface level for coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling">
+      <standard_name name="downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling"
+                     long_name="downwelling diffuse ultraviolet and visible shortwave flux at the surface level for coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="downwelling_direct_nir_shortwave_flux_at_surface_for_coupling">
+      <standard_name name="downwelling_direct_nir_shortwave_flux_at_surface_for_coupling"
+                     long_name="downwelling direct near-infrared shortwave flux at the surface level for coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling">
+      <standard_name name="downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling"
+                     long_name="downwelling direct ultraviolet and visible shortwave flux at the surface level for coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="downwelling_longwave_flux_at_surface_for_coupling">
@@ -3563,16 +3569,20 @@
       <standard_name name="downwelling_shortwave_flux_at_surface_for_coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="net_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling">
+      <standard_name name="net_downwelling_diffuse_nir_shortwave_flux_at_surface_for_coupling"
+                     long_name="net downwelling diffuse near-infrared shortwave flux at the surface level for coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="net_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling">
+      <standard_name name="net_downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_for_coupling"
+                     long_name="net downwelling diffuse ultraviolet and visible shortwave flux at the surface level for coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="net_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling">
+      <standard_name name="net_downwelling_direct_nir_shortwave_flux_at_surface_for_coupling"
+                     long_name="net downwelling direct near-infrared shortwave flux at the surface level for coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="net_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling">
+      <standard_name name="net_downwelling_direct_uv_and_vis_shortwave_flux_at_surface_for_coupling"
+                     long_name="downwelling direct ultraviolet and visible shortwave flux at the surface level for coupling">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="net_downwelling_longwave_flux_at_surface_for_coupling">
@@ -3636,16 +3646,20 @@
       <standard_name name="area_type_from_coupled_process">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
-      <standard_name name="downwelling_diffuse_nir_shortwave_flux_at_surface_on_radiation_timestep">
+      <standard_name name="downwelling_diffuse_nir_shortwave_flux_at_surface_on_radiation_timestep"
+                     long_name="downwelling diffuse near-infrared shortwave flux at the surface level on the radiation timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep">
+      <standard_name name="downwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep"
+                     long_name="downwelling diffuse ultraviolet and visible shortwave flux at the surface level on the radiation timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="downwelling_direct_nir_shortwave_flux_at_surface_on_radiation_timestep">
+      <standard_name name="downwelling_direct_nir_shortwave_flux_at_surface_on_radiation_timestep"
+                     long_name="downwelling direct near-infrared shortwave flux at the surface level on the radiation timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="downwelling_direct_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep">
+      <standard_name name="downwelling_direct_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep"
+                     long_name="downwelling direct ultraviolet and visible shortwave flux at the surface level on the radiation timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="downwelling_longwave_flux_at_surface_on_radiation_timestep">
@@ -3674,16 +3688,20 @@
       <standard_name name="upward_sensible_heat_flux_at_surface_from_coupled_process">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="upwelling_diffuse_nir_shortwave_flux_at_surface_on_radiation_timestep">
+      <standard_name name="upwelling_diffuse_nir_shortwave_flux_at_surface_on_radiation_timestep"
+                     long_name="upwelling diffuse near-infrared shortwave flux at the surface level on the radiation timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="upwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep">
+      <standard_name name="upwelling_diffuse_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep"
+                     long_name="upwelling diffuse ultraviolet and visible shortwave flux at the surface level on the radiation timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="upwelling_direct_nir_shortwave_flux_at_surface_on_radiation_timestep">
+      <standard_name name="upwelling_direct_nir_shortwave_flux_at_surface_on_radiation_timestep"
+                     long_name="upwelling direct near-infrared shortwave flux at the surface level on the radiation timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="upwelling_direct_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep">
+      <standard_name name="upwelling_direct_uv_and_vis_shortwave_flux_at_surface_on_radiation_timestep"
+                     long_name="upwelling direct ultraviolet and visible shortwave flux at the surface level on the radiation timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
       <standard_name name="upwelling_longwave_flux_at_surface_from_coupled_process">

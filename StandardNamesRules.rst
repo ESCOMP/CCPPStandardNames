@@ -38,7 +38,7 @@ CCPP Standard Name Rules
    `CF guidelines <http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html>`_),
    but have since evolved for better consistency and generality across a broader set of fields
    than was originally envisioned by the CF conventions. "``medium``" should be specified when
-   the variable in question is a substance or other quantity contained within some other the medium
+   the variable in question is a substance or other quantity contained within some other medium
    (e.g. for ``mole_fraction_of_ozone_in_air``, the base name is "ozone", while the medium is "air"). 
    "Transformation" refers to descriptors such as "``tendency_of``", "``log10``", or other operations or processes describing some transformation or adjustment of a variable; a detailed list of possible transformations can be found `later in this document <#transformations>`_.
    Other parts of the construction provide information about a variable's horizontal surface
@@ -446,13 +446,13 @@ Special phrases
 +------------------------+-------------------------------------------------------------------------------------+
 |frozen_water            | ice                                                                                 |
 +------------------------+-------------------------------------------------------------------------------------+
-| longwave               | Longwave radiation. Defined as thermal emission of EM radiation from the planet.    |
+| longwave               | Longwave radiation. Defined as thermal emission of radiation from the planet.       |
 +------------------------+-------------------------------------------------------------------------------------+
 | moisture               | water in all phases contained in soil                                               |
 +------------------------+-------------------------------------------------------------------------------------+
 | ocean                  | used instead of in_sea_water for quantities which are large-scale rather than local |
 +------------------------+-------------------------------------------------------------------------------------+
-| shortwave              | Shortwave radiation. Defined as EM emissions from the sun                           |
+| shortwave              | Shortwave radiation. Defined as electromagnetic emissions from the sun              |
 +------------------------+-------------------------------------------------------------------------------------+
 | specific               | per unit mass unless otherwise stated                                               |
 +------------------------+-------------------------------------------------------------------------------------+
