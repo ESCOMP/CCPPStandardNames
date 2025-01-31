@@ -8,7 +8,7 @@
 * [diagnostics](#diagnostics)
 * [atmospheric_composition](#atmospheric_composition)
 * [atmospheric_composition: GOCART aerosols](#atmospheric_composition-gocart-aerosols)
-* [emissions: Community Emissions Data System (CEDS)](#emissions_ceds)
+* [emissions: Community Emissions Data System (CEDS)](#emissions-community-emissions-data-system-ceds)
 * [required framework-provided variables](#required-framework-provided-variables)
 * [optional framework-provided variables](#optional-framework-provided-variables)
 * [system variables](#system-variables)
@@ -452,7 +452,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = m-1
 * `volume_extinction_in_air_due_to_aerosol_particles_lambda3`: Aerosol extinction at wavelength3
     * `real(kind=kind_phys)`: units = m-1
-## emissions_ceds
+## emissions: Community Emissions Data System (CEDS)
 * `emissions_of_co_due_to_anthropogenic`: Carbon monoxide emissions from anthropogenic total
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_no_due_to_anthropogenic`: Nitric oxide emissions from anthropogenic total
@@ -463,13 +463,13 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_no_due_to_anthropogenic_agriculture`: Nitric oxide emissions from anthropogenic non-combustion agricultural sector
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_hcho_due_to_anthropogenic_agriculture`: Formaldehyde emissions from anthropogenic from non-combustion agricultural sector
+* `emissions_of_hcho_due_to_anthropogenic_agriculture`: Formaldehyde emissions from anthropogenic non-combustion agricultural sector
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_co_due_to_anthropogenic_energy`: Carbon monoxide emissions from anthropogenic energy transformation and extraction
+* `emissions_of_co_due_to_anthropogenic_energy`: Carbon monoxide emissions from anthropogenic non-combustion energy transformation and extraction
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_no_due_to_anthropogenic_energy`: Nitric oxide emissions from anthropogenic energy transformation and extraction
+* `emissions_of_no_due_to_anthropogenic_energy`: Nitric oxide emissions from anthropogenic non-combustion energy transformation and extraction
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_hcho_due_to_anthropogenic_energy`: Formaldehyde emissions from anthropogenic energy transformation and extraction
+* `emissions_of_hcho_due_to_anthropogenic_energy`: Formaldehyde emissions from anthropogenic non-combustion energy transformation and extraction
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_co_due_to_anthropogenic_industry`: Carbon monoxide emissions from anthropogenic industrial combustion and processes
     * `real(kind=kind_phys)`: units = kg m-2 s-1
@@ -479,9 +479,9 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_co_due_to_anthropogenic_residential_commercial`: Carbon monoxide emissions from anthropogenic residential, commercial, and others
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_no_due_to_anthropogenic_residential_commerical`: Nitric oxide emissions from anthropogenic residential, commercial, and other
+* `emissions_of_no_due_to_anthropogenic_residential_commercial`: Nitric oxide emissions from anthropogenic residential, commercial, and others
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_hcho_due_to_anthropogenic_residential_commercial`: Formaldehyde emissions from anthropogenic residential, commercial, and other
+* `emissions_of_hcho_due_to_anthropogenic_residential_commercial`: Formaldehyde emissions from anthropogenic residential, commercial, and others
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_co_due_to_anthropogenic_shipping`: Carbon monoxide emissions from anthropogenic international shipping
     * `real(kind=kind_phys)`: units = kg m-2 s-1
@@ -499,7 +499,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_no_due_to_anthropogenic_transportation`: Nitric oxide emissions from anthropogenic surface Transportation (Road, Rail, Other)
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_hcho_due_to_anthropogenic_waste`: Formaldehyde emissions from anthropogenic surface Transportation (Road, Rail, Other)
+* `emissions_of_hcho_due_to_anthropogenic_transportation`: Formaldehyde emissions from anthropogenic surface Transportation (Road, Rail, Other)
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_co_due_to_anthropogenic_waste`: Carbon monoxide emissions from anthropogenic waste disposal and handling
     * `real(kind=kind_phys)`: units = kg m-2 s-1
