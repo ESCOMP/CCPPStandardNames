@@ -1855,9 +1855,15 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = cm
 * `surface_roughness_length_over_water`: Surface roughness length over water
     * `real(kind=kind_phys)`: units = cm
-* `surface_skin_temperature`: Surface skin temperature
+* `skin_temperature_at_surface`: Skin temperature at surface
     * `real(kind=kind_phys)`: units = K
-* `surface_skin_temperature_over_land`: Surface skin temperature over land
+* `skin_temperature_at_surface_over_ice`: Skin temperature at surface over (or where) ice
+    * `real(kind=kind_phys)`: units = K
+* `skin_temperature_at_surface_over_land`: Skin temperature at surface over (or where) land
+    * `real(kind=kind_phys)`: units = K
+* `skin_temperature_at_surface_over_ocean`: Skin temperature at surface over (or where) ocean
+    * `real(kind=kind_phys)`: units = K
+* `skin_temperature_at_surface_over_snow`: Skin temperature at surface over (or where) snow
     * `real(kind=kind_phys)`: units = K
 * `surface_snow_area_fraction_over_ice`: Surface snow area fraction over ice
     * `real(kind=kind_phys)`: units = fraction
