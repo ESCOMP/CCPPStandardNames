@@ -477,7 +477,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_hcho_due_to_anthropogenic_industry`: Formaldehyde emissions from anthropogenic industrial combustion and processes
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_co_due_to_anthropogenic_residential_commercial`: Carbon monoxide emissions from anthropogenic residential, commercial, and others
+* `emissions_of_co_due_to_anthropogenic_rco`: Carbon monoxide emissions from anthropogenic residential, commercial, and others
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_no_due_to_anthropogenic_residential_commercial`: Nitric oxide emissions from anthropogenic residential, commercial, and others
     * `real(kind=kind_phys)`: units = kg m-2 s-1
