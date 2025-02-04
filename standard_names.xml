@@ -844,7 +844,7 @@
                    long_name="Carbon monoxide emissions from anthropogenic residential, commercial, and others">
       <type kind="kind_phys" units="kg m-2 s-1">real</type>
     </standard_name>
-    <standard_name name="emissions_of_no_due_to_anthropogenic_residential_commercial"
+    <standard_name name="emissions_of_no_due_to_anthropogenic_rco"
                    long_name="Nitric oxide emissions from anthropogenic residential, commercial, and others">
       <type kind="kind_phys" units="kg m-2 s-1">real</type>
     </standard_name>
