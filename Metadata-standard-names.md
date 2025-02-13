@@ -453,11 +453,11 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
 * `volume_extinction_in_air_due_to_aerosol_particles_lambda3`: Aerosol extinction at wavelength3
     * `real(kind=kind_phys)`: units = m-1
 ## emissions: Community Emissions Data System (CEDS)
-* `emissions_of_co_due_to_anthropogenic`: Carbon monoxide emissions from anthropogenic total
+* `emissions_of_co_due_to_anthropogenic`: Carbon monoxide emissions from anthropogenic sources, total
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_no_due_to_anthropogenic`: Nitric oxide emissions from anthropogenic total
+* `emissions_of_no_due_to_anthropogenic`: Nitric oxide emissions from anthropogenic sources, total
     * `real(kind=kind_phys)`: units = kg m-2 s-1
-* `emissions_of_hcho_due_to_anthropogenic`: Formaldehyde emissions from anthropogenic total
+* `emissions_of_hcho_due_to_anthropogenic`: Formaldehyde emissions from anthropogenic sources, total
     * `real(kind=kind_phys)`: units = kg m-2 s-1
 * `emissions_of_co_due_to_anthropogenic_agriculture`: Carbon monoxide emissions from anthropogenic non-combustion agricultural sector
     * `real(kind=kind_phys)`: units = kg m-2 s-1
