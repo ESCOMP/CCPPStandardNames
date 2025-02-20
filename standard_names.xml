@@ -900,7 +900,7 @@
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="exner_function"
-                   long_name="exner function, (p/p0)^(Rd/cp)">
+                   long_name="exner function, (p/p0)^(Rd/cp), where p0 is 1000 hPa">
       <type kind="kind_phys" units="1">real</type>
     </standard_name>
     <standard_name name="air_potential_temperature"
@@ -3770,11 +3770,11 @@
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="exner_function_at_surface_adjacent_layer"
-                   long_name="exner function (p/p0)^(Rd/cp), where p0 is the pressure at the surface adjacent layer">
+                   long_name="exner function (p/p0)^(Rd/cp), where p0 is 1000 hPa and p is the pressure at the surface adjacent layer">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="exner_function_at_interfaces"
-                   long_name="exner function (p/p0)^(Rd/cp), where p0 is the pressure at vertical layer interfaces">
+                   long_name="exner function (p/p0)^(Rd/cp), where p0 is 1000 hPa and p is the pressure at vertical layer interfaces">
          <type kind="kind_phys" units="1">real</type>
       </standard_name>
       <standard_name name="dissipation_estimate_of_air_temperature_at_model_layers">

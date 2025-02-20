@@ -454,7 +454,7 @@ Note that appending '_on_previous_timestep' to standard_names in this section yi
     * `real(kind=kind_phys)`: units = 1
 * `reference_pressure_in_atmosphere_layer_normalized_by_surface_reference_pressure`: Reference pressure in atmosphere layer normalized by surface reference pressure
     * `real(kind=kind_phys)`: units = 1
-* `exner_function`: exner function, (p/p0)^(Rd/cp)
+* `exner_function`: exner function, (p/p0)^(Rd/cp), where p0 is 1000 hPa
     * `real(kind=kind_phys)`: units = 1
 * `air_potential_temperature`: air potential temperature
     * `real(kind=kind_phys)`: units = K
@@ -2238,9 +2238,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = kg-1
 * `exner_function_wrt_surface_pressure`: exner function w.r.t. surface pressure, (p/ps)^(Rd/cp)
     * `real(kind=kind_phys)`: units = 1
-* `exner_function_at_surface_adjacent_layer`: exner function (p/p0)^(Rd/cp), where p0 is the pressure at the surface adjacent layer
+* `exner_function_at_surface_adjacent_layer`: exner function (p/p0)^(Rd/cp), where p0 is 1000 hPa and p is the pressure at the surface adjacent layer
     * `real(kind=kind_phys)`: units = 1
-* `exner_function_at_interfaces`: exner function (p/p0)^(Rd/cp), where p0 is the pressure at vertical layer interfaces
+* `exner_function_at_interfaces`: exner function (p/p0)^(Rd/cp), where p0 is 1000 hPa and p is the pressure at vertical layer interfaces
     * `real(kind=kind_phys)`: units = 1
 * `dissipation_estimate_of_air_temperature_at_model_layers`: Dissipation estimate of air temperature at model layers
     * `real(kind=kind_phys)`: units = K
