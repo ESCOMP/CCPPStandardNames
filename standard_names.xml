@@ -224,7 +224,7 @@
                      long_name="ch4">
       </standard_name>
       <standard_name name="n2o"
-                     long_name="Nitrous Oxide, N₂O">
+                     long_name="Nitrous Oxide, N_2O">
       </standard_name>
       <standard_name name="nitrate"
                      long_name="Chemical species containing the nitrate ion">
@@ -239,10 +239,10 @@
                      long_name="Nitric oxide NO (Nitrogen oxide, Nitrogen monoxide)">
       </standard_name>
       <standard_name name="oxygen"
-                     long_name="Molecular oxygen, O₂">
+                     long_name="Molecular oxygen, O_2">
       </standard_name>
       <standard_name name="ozone"
-                     long_name="Ozone, O₃">
+                     long_name="Ozone, O_3">
       </standard_name>
       <standard_name name="phosphate"
                      long_name="Chemical species containing the phosphate ion">

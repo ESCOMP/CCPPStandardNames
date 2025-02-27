@@ -132,13 +132,13 @@ These are the base names for specific chemical species
 * `hydrophilic_organic_carbon`: hydrophilic_organic_carbon
 * `hydrophobic_organic_carbon`: hydrophobic_organic_carbon
 * `methane`: ch4
-* `n2o`: Nitrous Oxide, N₂O
+* `n2o`: Nitrous Oxide, N_2O
 * `nitrate`: Chemical species containing the nitrate ion
 * `nitrite`: Chemical species containing the nitrite ion
 * `no2`: Nitrogen dioxide
 * `no`: Nitric oxide NO (Nitrogen oxide, Nitrogen monoxide)
-* `oxygen`: Molecular oxygen, O₂
-* `ozone`: Ozone, O₃
+* `oxygen`: Molecular oxygen, O_2
+* `ozone`: Ozone, O_3
 * `phosphate`: Chemical species containing the phosphate ion
 * `silicate`: Chemical species containing the silicate ion
 * `sulfate`: Chemical species containing the sulfate ion
