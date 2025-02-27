@@ -164,11 +164,11 @@ full list of standard names for further details.
 * `diffuse_nir_shortwave_flux`: diffuse near-infrared shortwave flux
 * `diffuse_shortwave_albedo`: diffuse_shortwave_albedo
 * `diffuse_uv_and_vis_shortwave_flux`: diffuse ultraviolet and visible shortwave flux
-* `diffuse_visible_albedo`: diffuse_visible_albedo
+* `diffuse_vis_albedo`: diffuse visible albedo
 * `direct_nir_albedo`: direct near-infrared albedo
 * `direct_nir_shortwave_flux`: direct near-infrared shortwave flux
 * `direct_uv_and_vis_shortwave_flux`: direct ultraviolet and visible shortwave flux
-* `direct_visible_albedo`: direct_visible_albedo
+* `direct_vis_albedo`: direct visible albedo
 * `divergence`: divergence
 * `dry_air_density`: dry_air_density
 * `dry_air_enthalpy`: dry_air_enthalpy
@@ -1950,17 +1950,17 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = fraction
 * `diffuse_nir_albedo_of_land`: land surface albedo for diffuse near-infrared radiation
     * `real(kind=kind_phys)`: units = fraction
-* `diffuse_visible_albedo_of_ice`: ice surface albedo for diffuse visible radiation
+* `diffuse_vis_albedo_of_ice`: ice surface albedo for diffuse visible radiation
     * `real(kind=kind_phys)`: units = fraction
-* `diffuse_visible_albedo_of_land`: land surface albedo for diffuse visible radiation
+* `diffuse_vis_albedo_of_land`: land surface albedo for diffuse visible radiation
     * `real(kind=kind_phys)`: units = fraction
 * `direct_nir_albedo_of_ice`: ice surface albedo for direct near-infrared radiation
     * `real(kind=kind_phys)`: units = fraction
 * `direct_nir_albedo_of_land`: land surface albedo for direct near-infrared radiation
     * `real(kind=kind_phys)`: units = fraction
-* `direct_visible_albedo_of_ice`: ice surface albedo for direct visible radiation
+* `direct_vis_albedo_of_ice`: ice surface albedo for direct visible radiation
     * `real(kind=kind_phys)`: units = fraction
-* `direct_visible_albedo_of_land`: land surface albedo for direct visible radiation
+* `direct_vis_albedo_of_land`: land surface albedo for direct visible radiation
     * `real(kind=kind_phys)`: units = fraction
 * `diffuse_shortwave_albedo_of_ice`: ice surface albedo for diffuse shortwave radiation
     * `real(kind=kind_phys)`: units = fraction
@@ -2199,9 +2199,9 @@ Variables related to the compute environment
     * `real(kind=kind_phys)`: units = W m-2
 * `upwelling_longwave_flux_at_surface_on_radiation_timestep`: Upwelling longwave flux at surface on radiation timestep
     * `real(kind=kind_phys)`: units = W m-2
-* `diffuse_visible_albedo_for_coupling`: surface albedo for diffuse visible radiation for coupling
+* `diffuse_vis_albedo_for_coupling`: surface albedo for diffuse visible radiation for coupling
     * `real(kind=kind_phys)`: units = fraction
-* `direct_visible_albedo_for_coupling`: surface albedo for direct visible radiation for coupling
+* `direct_vis_albedo_for_coupling`: surface albedo for direct visible radiation for coupling
     * `real(kind=kind_phys)`: units = fraction
 * `x_momentum_flux_at_surface_from_coupled_process`: X momentum flux at surface from coupled process
     * `real(kind=kind_phys)`: units = Pa

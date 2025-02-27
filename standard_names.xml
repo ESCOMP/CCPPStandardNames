@@ -312,8 +312,8 @@
       <standard_name name="diffuse_uv_and_vis_shortwave_flux"
                      long_name="diffuse ultraviolet and visible shortwave flux">
       </standard_name>
-      <standard_name name="diffuse_visible_albedo"
-                     long_name="diffuse_visible_albedo">
+      <standard_name name="diffuse_vis_albedo"
+                     long_name="diffuse visible albedo">
       </standard_name>
       <standard_name name="direct_nir_albedo"
                      long_name="direct near-infrared albedo">
@@ -324,8 +324,8 @@
       <standard_name name="direct_uv_and_vis_shortwave_flux"
                      long_name="direct ultraviolet and visible shortwave flux">
       </standard_name>
-      <standard_name name="direct_visible_albedo"
-                     long_name="direct_visible_albedo">
+      <standard_name name="direct_vis_albedo"
+                     long_name="direct visible albedo">
       </standard_name>
       <standard_name name="divergence"
                      long_name="divergence">
@@ -3287,11 +3287,11 @@
                      long_name="land surface albedo for diffuse near-infrared radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="diffuse_visible_albedo_of_ice"
+      <standard_name name="diffuse_vis_albedo_of_ice"
                      long_name="ice surface albedo for diffuse visible radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="diffuse_visible_albedo_of_land"
+      <standard_name name="diffuse_vis_albedo_of_land"
                      long_name="land surface albedo for diffuse visible radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
@@ -3303,11 +3303,11 @@
                      long_name="land surface albedo for direct near-infrared radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="direct_visible_albedo_of_ice"
+      <standard_name name="direct_vis_albedo_of_ice"
                      long_name="ice surface albedo for direct visible radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="direct_visible_albedo_of_land"
+      <standard_name name="direct_vis_albedo_of_land"
                      long_name="land surface albedo for direct visible radiation">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
@@ -3706,11 +3706,11 @@
       <standard_name name="upwelling_longwave_flux_at_surface_on_radiation_timestep">
          <type kind="kind_phys" units="W m-2">real</type>
       </standard_name>
-      <standard_name name="diffuse_visible_albedo_for_coupling"
+      <standard_name name="diffuse_vis_albedo_for_coupling"
                      long_name="surface albedo for diffuse visible radiation for coupling">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
-      <standard_name name="direct_visible_albedo_for_coupling"
+      <standard_name name="direct_vis_albedo_for_coupling"
                      long_name="surface albedo for direct visible radiation for coupling">
          <type kind="kind_phys" units="fraction">real</type>
       </standard_name>
